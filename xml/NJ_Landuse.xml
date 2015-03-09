@@ -1,0 +1,96 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_Landuse</title>
+        <geoform>raster digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This map was developed using New Jersey DEP's Geographic Information System digital data, but the secondary product has not been verified by NJDEP and is not state-authorized. This raster dataset displays land use type within our study area. It was converted from NJDEP 2007 Land Cover/ Land Use dataset, which has its own metadata: The 2007 LU/LC data set is the fourth in a series of land use mapping efforts that was begun in 1986. Revisions and additions to the initial baseline layer were done in subsequent years from imagery captured in 1995/97, 2002 and 2007. This present 2007 update was created by comparing the 2002 LU/LC layer from NJ DEP's Geographical Information Systems (GIS) database to 2007 color infrared (CIR) imagery and delineating and coding areas of change. Work for this data set was done by Aerial Information Systems, Inc., Redlands, CA, under direction of the New Jersey Department of Environmental Protection (NJDEP), Bureau of Geographic Information System (BGIS). LU/LC changes were captured by adding new line work and attribute data for the 2007 land use directly to the base data layer. All 2002 LU/LC polygons and attribute fields remain in this data set, so change analysis for the period 2002-2007 can be undertaken from this one layer. The classification system used was a modified Anderson et al., classification system. An impervious surface (IS) code was also assigned to each LU/LC polygon based on the percentage of impervious surface within each polygon as of 2007. Minimum mapping unit (MMU) is 1 acre. ADVISORY: This metadata file contains information for the 2007Land Use/Land Cover (LU/LC) data sets, which were mapped by Watershed Management Area (WMA). There are additional reference documents listed in this file under Supplemental Information which should also be examined by users of these data sets. As stated in this metadata record's Use Constraints section, NJDEP makes no representations of any kind, including, but not limited to, the warranties of merchantability or fitness for a particular use, nor are any such warranties to be implied with respect to the digital data layers furnished hereunder. NJDEP assumes no responsibility to maintain them in any manner or form. By downloading this data, user agrees to the data use constraints listed within this metadata record.</abstract>
+      <purpose>The data set will provide information for regulators, planners, and others interested in LU/LC changes, and allow them to quantify those changes over time using GIS. The use of the updated 2007 LU/LC in land use analyses will provide a means of monitoring "the health of the citizens and ecosystems of New Jersey" through the use of diverse applications. This data set is intended to serve as a resource data set. The NJDEP may change the line work or polygon coding based on more in depth analysis and field inspection.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.563094</westbc>
+        <eastbc>-73.893575</eastbc>
+        <northbc>41.089225</northbc>
+        <southbc>38.859326</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>land use</themekey>
+        <themekey>land cover</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <datacred>NJ Department of Environmental Protection (NJDEP), Office of Information Resources Management (OIRM), Bureau of Geographic Information System (BGIS)</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Grid Cell</rasttype>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-30241100148923141.92838538-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.000000006714873101998366</absres>
+            <ordres>0.000000006714873101998366</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>VAT_NJ_Landuse</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>VALUE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>COUNT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>TYPE07</attrlabl>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

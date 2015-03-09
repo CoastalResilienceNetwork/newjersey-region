@@ -1,0 +1,258 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_district_boundary</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This polygon layer delineates the US Congressional District boundaries in New Jersey, 2012 - 2022. The original layer was created by the New Jersey Redistricting Commission, 2011 Congressional Commission, based on geographic and demographic data from the US Census Bureau, 2010 census. Congressional Districts are areas bounded on all sides by visible features such as streets, roads, streams, railroad tracks, and/or by nonvisible boundaries such as census block, city, town, township, county limits, and short line-of-sight extensions of roads or other linear features. Municipalities split between congressional districts were split by snapping to these lines. This version of the layer uses high-quality base map spatial data published by the State of New Jersey, instead of Census Bureau geographic data (TIGER.) Districts established by the Redistricting Commission were re-created using Municipal Boundaries (nj_munis), roads (NJ_Roadway_Network), hydrography (streams), and 2007-2008 statewide orthoimagery; where no higher-quality data were available, the TIGER lines were used. Members of the 2011 Congressional Commission: 13th member John Farmer, Jr. , Chairman. Mr. Farmer was chosen by the 12 original commissioners. Democrats Michael Baker (Delegation Vice-Chair) Nilsa Cruz-Perez Edward Farmer Jeannine Frisby LaRue Joseph Roberts, Jr. (Delegation Chairman) Philip Thigpen Republicans Caroline Casagrande Michael DuHaime (Delegation Chairman) Sherine El-Abd Aubrey Fenton Eric Jaso M. Susan Sheppard</abstract>
+      <purpose>The data and map were created to re-apportion representation of the citizens of New Jersey in the United States House of Representatives, following the 2010 decennial census. These districts apply to the election of U.S. Representatives from New Jersey beginning in 2012 with the election of the 113th Congress.
+
+This revised version of the data was created in order to overlay properly with high-quality vector framework GIS data published by the State of New Jersey.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.587306</westbc>
+        <eastbc>-73.890363</eastbc>
+        <northbc>41.357565</northbc>
+        <southbc>38.924819</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>congress</themekey>
+        <themekey>districts</themekey>
+        <themekey>politics</themekey>
+        <themekey>boundary</themekey>
+        <themekey>boundaries</themekey>
+        <themekey>NJDEP</themekey>
+        <themekey>Congressional Districts</themekey>
+        <themekey>condis</themekey>
+        <themekey>boundaries</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <datacred>NJ Redistricting Commission; NJ Office of Legislative Services</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>12</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>NJ_district_boundary</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID_1</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>ID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>ID1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>AREA</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DISTRICT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>MEMBERS</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LOCKED</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>POPULATION</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>TOTPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>HSPPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHWPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHBPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHIPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHAPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHPPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHOPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>RHMPOP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>TOTVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>HSPVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHWVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHBVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHIVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHAVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHPVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NHOVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>RHMVAP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DEVIATION</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_DEVIATIO</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>IDEAL_VALU</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>AGF_LINK</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DISTRICT_1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>DIST_LABEL</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>US_REP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PARTY</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>CONTACT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SENATOR1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>S1_PARTY</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>S1_CONTACT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SENATOR2</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>S2_PARTY</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>S2_CONTACT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Congressional District boundary polygons (unofficial version, based on nj_munis). Attributes were copied from the shapefile released by the NJ Redistricting Commission in late December 2011. Although no descriptions were provided with that shapefile, field definitions should be available from the US Census Bureau documentation for 2010 census redistricting data (released in 2011).
+
+Please note that the Area attribute was copied directly from the provided shapefile, which is based on TIGER data and in geographic coordinates; it has not been recalculated. Units of this attribute are unknown. Shape.Area shows the areas of the polygons in this data set, in square feet for state plane version, square meters for web mercator version. Areas measured in web mercator are accurate only at the equator and are substantially distorted at the latitude of New Jersey.</eaover>
+      <eadetcit>http://www.census.gov/rdo/pdf/StrengthInNumbers2010.pdf</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

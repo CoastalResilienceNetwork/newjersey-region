@@ -1,0 +1,315 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_Railstation</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Data Source: New Jersey Geographic Information Network. New Jersey Transit Passenger Rail Station points, 2013 (NAD83, NJSP feet)This dataset includes rail station within study area. It was clipped from New Jersey Transit Passenger Rail Station points, which dataset is published with its own metadata. Passenger rail station points on rail, light rail, and subway service lines operated by New Jersey Transit and connecting commuter lines. The data set is in point shape file format (ESRI). Points were digitized from New Jersey 2007 High Resolution Orthophotography (NAD83 NJ State Plane Feet), which has an accuracy of +/-4 feet NSSDA, and a pixel size of 1 foot.</abstract>
+      <purpose>Dataset is intended only for general planning and mapping use.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.182325</westbc>
+        <eastbc>-73.988221</eastbc>
+        <northbc>41.113548</northbc>
+        <southbc>39.363312</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>transportation</themekey>
+        <themekey>njfw_transport</themekey>
+        <themekey>transit</themekey>
+        <themekey>public transportation</themekey>
+        <themekey>mass transit</themekey>
+        <themekey>rail</themekey>
+        <themekey>train</themekey>
+        <themekey>railroad</themekey>
+        <themekey>railway</themekey>
+        <themekey>passenger rail</themekey>
+        <themekey>commuter rail</themekey>
+        <themekey>commuter rail line</themekey>
+        <themekey>rail line</themekey>
+        <themekey>rail station</themekey>
+        <themekey>passenger station</themekey>
+        <themekey>rail stations</themekey>
+        <themekey>station stop</themekey>
+        <themekey>railway stations</themekey>
+        <themekey>railroad stations</themekey>
+        <themekey>light rail</themekey>
+        <themekey>light rail station</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <datacred>Source data in shapefile format are provided by Glenn D. Newman PLS, PP, Director of GIS-Transportation at NJ TRANSIT.</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>161</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xdt="http://www.w3.org/2005/xpath-datatypes">
+    <detailed>
+      <enttyp>
+        <enttypl>Tran_railroad_station</enttypl>
+        <enttypd>Passenger rail stations points</enttypd>
+        <enttypds>New Jersey Transit Corporation - Geographic Information Systems</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LOCATION</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>STATION_ID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>Name of county in which the station is located. Includes state abbreviation for most of those not in New Jersey. Some entries are in mixed case, some all upper case.</attrdef>
+        <attrdefs>New Jersey Transit Corporation</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Atlantic</edomv>
+            <edomvd>Atlantic County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Bergen</edomv>
+            <edomvd>Bergen County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Camden</edomv>
+            <edomvd>Camden County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Essex</edomv>
+            <edomvd>Essex County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hudson</edomv>
+            <edomvd>Hudson County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Hunterdon</edomv>
+            <edomvd>Hunterdon County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Mercer</edomv>
+            <edomvd>Mercer County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Middlesex</edomv>
+            <edomvd>Middlesex County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Monmouth</edomv>
+            <edomvd>Monmouth County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Montgomery, PA</edomv>
+            <edomvd>Montgomery County, Pennsylvania</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Morris</edomv>
+            <edomvd>Morris County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>New York</edomv>
+            <edomvd>New York County, New York (= Manhattan)</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Ocean</edomv>
+            <edomvd>Ocean County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Orange, NY</edomv>
+            <edomvd>Orange County, New York</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Passaic</edomv>
+            <edomvd>Passaic County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Rockland, NY</edomv>
+            <edomvd>Rockland County, New York</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Somerset</edomv>
+            <edomvd>Somerset County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Union</edomv>
+            <edomvd>Union County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Warren</edomv>
+            <edomvd>Warren County, NJ</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LATITUDE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>LONGITUDE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>RAIL_LINE</attrlabl>
+        <attrdef>Name of rail line used for named passenger service, on which the station is a stop. Rougly equivalent to RAIL_ID attribute in NJT_RAIL_LINES. However, cannot be used to join in current format; see following notes: For stations shared by more than one line, the lines are all included in the same entry, as abbreviations. Entries not well controlled, in some cases, names or abbreviations differ that refer to the same line.</attrdef>
+        <attrdefs>New Jersey Transit Corporation</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Atlantic City Line</edomv>
+            <edomvd>Station on Atlantic City Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Boonton Line</edomv>
+            <edomvd>Station on Boonton Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>M &amp; E/Boonton</edomv>
+            <edomvd>Station on Morris &amp; Essex Line and on Boonton Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Main Line</edomv>
+            <edomvd>Station on Main Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Main/Bergen Line</edomv>
+            <edomvd>Station on Main Line and on Bergen County Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Morris &amp; Essex</edomv>
+            <edomvd>Station on Morris &amp; Essex Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>NEC</edomv>
+            <edomvd>Station on Northeast Corridor Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>NEC / NJCL</edomv>
+            <edomvd>Station on Northeast Corridor Line and on North Jersey Coast Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>NEC / NJCL / M&amp;E</edomv>
+            <edomvd>Station on Northeast Corridor Line, on North Jersey Coast Line, and on Morris &amp; Essex Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>NEC / NJCL / RVL</edomv>
+            <edomvd>Station on Northeast Corridor Line, on North Jersey Coast Line, and on Raritan Valley Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>North Jersey Coast Line</edomv>
+            <edomvd>Station on North Jersey Coast Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Northeast Corridor</edomv>
+            <edomvd>Station on Northeast Corridor Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Pascack Valley Line</edomv>
+            <edomvd>Station on Pascack Valley Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Port Jervis Line</edomv>
+            <edomvd>Station on Port Jervis Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>Raritan Valley Line</edomv>
+            <edomvd>Station on Raritan Valley Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

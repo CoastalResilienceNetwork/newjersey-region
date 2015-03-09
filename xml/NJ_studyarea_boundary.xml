@@ -1,0 +1,204 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_studyarea_boundary</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This shapefile depicts the boundary of study area. Dataset was extracted from watershed management area (WMAS). Only watershed regions which are close to coastal line were defined as study area.Dataset was extracted from watershed management area (WMAS).The depwmas data is a simplified version of the ARC/INFO dephuc14 data. The dephuc14 is NJDEP's version of the U.S. Geological Survey (USGS) hydrologic-unit-code basins that delineates the extent of the DEP watershed management regions and areas to be used for the statewide watershed initiative. Both the depwmas and dephuc14 data comprise the Watershed Base Maps for New Jersey. Also, both were created from the USGS HUC14 by replacing the state boundary included with the USGS version with the DEP state and county border data(stco). The data was produced to address data-processing problems arising from combining the USGS huc14 with NJDEP GISdata due to the use of conflicting state boundaries.</abstract>
+      <purpose>This shapefile depicts the boundary of study area. Dataset was extracted from watershed management area (WMAS). Only watershed regions which are close to coastal line were defined as study area. </purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.563093</westbc>
+        <eastbc>-73.893681</eastbc>
+        <northbc>41.068184</northbc>
+        <southbc>38.859318</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>boundaries</themekey>
+        <themekey>Watersheds</themekey>
+        <themekey>water</themekey>
+        <themekey>watershed region</themekey>
+        <themekey>watershed management area</themekey>
+        <themekey>hydrologic-unit codes</themekey>
+        <themekey>hyrdrologic units</themekey>
+        <themekey>huc14</themekey>
+        <themekey>hucdiv</themekey>
+        <themekey>environmental protection</themekey>
+        <themekey>water management</themekey>
+        <themekey>dephuc14</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>9</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>WMA</enttypl>
+        <enttypd>Watershed Management Areas</enttypd>
+        <enttypds>NJDEP</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AREA</attrlabl>
+        <attrdef>Area</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DEPWMAS_</attrlabl>
+        <attrdef>DEP Watershed Management Area</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DEPWMAS_ID</attrlabl>
+        <attrdef>DEP Watershed Management Identification Number</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PERIMETER</attrlabl>
+        <attrdef>Perimeter</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WMA</attrlabl>
+        <attrdef>WMA</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WMA_NAME</attrlabl>
+        <attrdef>WMA Name</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WR_NAME</attrlabl>
+        <attrdef>Water Region Name</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WREGION</attrlabl>
+        <attrdef>Water Region</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>acres</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Shapefile</formname>
+          <transize>0.829</transize>
+        </digtinfo>
+        <digtopt />
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

@@ -1,0 +1,859 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_Colleges</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Data Source: New Jersey Geographic Information Network. HSIP New Jersey Colleges and Universities, NAD83 NJ State Plane feet.This dataset depicts all the colleges and universities within study area. It is extracted from HSIP New Jersey Colleges and Universities, which dataset has its own metedata. Colleges and Universities in New Jersey: The Colleges and Universities dataset is composed of any type of Post Secondary Education such as: colleges, universities, technical schools, trade schools, business schools, satellite (branch) campuses, etc. that grant First Professional, Associate, Bachelors, Masters, or Doctoral degrees. Secondary education facilities, Administrative offices, or Post Secondary Education facilities that are non degree granting schools are intended to be excluded from this dataset, but a few may be included. All data is non license restricted data that has been added from TGS research. The text fields in this dataset have been set to all upper case to facilitate consistent database engine search results. All diacritics (e.g. the German umlaut or the Spanish tilde) have been replaced with their closest equivalent English character to facilitate use with database systems that may not support diacritics. The currentness of this dataset is indicated by the [CONTDATE] attribute. Based upon this attribute, the oldest record dates from 2007/07/03 and the newest record dates from 2007/10/12.</abstract>
+      <purpose>Homeland Security Use Cases: Use cases help define and clarify requirements, and describe how the data may be used. 1) Identification of populations that may need to be evacuated in the event of an emergency. 2) Notification of groups of people who may be at risk from a contagious disease outbreak.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.488928</westbc>
+        <eastbc>-73.997791</eastbc>
+        <northbc>41.083084</northbc>
+        <southbc>39.438172</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Universities and colleges</themekey>
+        <themekey>Community colleges</themekey>
+        <themekey>Junior colleges</themekey>
+        <themekey>Cooking schools</themekey>
+        <themekey>Business schools</themekey>
+        <themekey>Medical colleges</themekey>
+        <themekey>Trade schools</themekey>
+        <themekey>Law schools</themekey>
+        <themekey>Dental schools</themekey>
+        <themekey>Military education</themekey>
+        <themekey>Sports camps</themekey>
+        <themekey>Conservatories of music</themekey>
+        <themekey>Art Study and teaching</themekey>
+        <themekey>Massage therapy</themekey>
+        <themekey>Aviation technician training course.</themekey>
+        <themekey>Theological seminaries</themekey>
+        <themekey>Executives Training of</themekey>
+        <themekey>Bible colleges</themekey>
+        <themekey>Technical institutes</themekey>
+        <themekey>Church and college</themekey>
+        <themekey>Health occupations schools</themekey>
+        <themekey>Islamic universities and colleges</themekey>
+        <themekey>Private universities and colleges</themekey>
+        <themekey>Public universities and colleges</themekey>
+        <themekey>Universities and colleges Religion</themekey>
+        <themekey>structure</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>28</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>Colleges and Universities in New Jersey</enttypl>
+        <enttypd>The Colleges and Universities dataset is composed of any type of Post Secondary Education such as: colleges, universities, technical schools, trade schools, business schools, satellite (branch) campuses, etc. that grant First Professional, Associate, Bachelors, Masters, or Doctoral degrees.</enttypd>
+        <enttypds>TGS</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>DEGREE</attrlabl>
+        <attrdef>
+Highest level of degree offered by the institution.
+
+The values for this attribution have not been verified by TGS.
+</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>ASSOCIATE'S DEGREE</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is an Associate's Degree.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>AT LEAST 2, BUT LESS THAN 4 ACADEMIC YRS</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is at least 2, but less than 4 academic yrs.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>AWARD OF LESS THAN ONE ACADEMIC YEAR</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is an award of less than one academic year.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>BACHELOR'S DEGREE</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is a Bachelor's Degree.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>DOCTOR'S DEGREE</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is a Doctor's Degree.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MASTER'S DEGREE</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is a Master's Degree.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NOT APPLICABLE, FIRST-PROFESSIONAL ONLY</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is not applicable, First-Professional Only.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>POST-MASTER'S CERTIFICATE</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is a Post-Master's Certificate.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>POST BACCALAUREATE CERTIFICATE</edomv>
+            <edomvd>Indicates the facility highest level of degree offered is a Post baccalaureate Certificate.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;BLANK&gt;</edomv>
+            <edomvd>Unknown or not provided.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ENROLL</attrlabl>
+        <attrdef>
+Indicates the total enrollment for the facility.
+
+The values for this attribution have not been verified by TGS.
+</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Number</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ID</attrlabl>
+        <attrdef>Unique identifier for feature.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>METLNKID</attrlabl>
+        <attrdef>Link to Metadata.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FEATTYPE</attrlabl>
+        <attrdef>Geometry type of feature.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>POINT</edomv>
+            <edomvd>Feature is represented by point.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SECCLASS</attrlabl>
+        <attrdef>Security classification of feature.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>UNCLASSIFIED</edomv>
+            <edomvd>Entity is unclassified.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>UNCLASSIFIED - TREAT AS FOUO</edomv>
+            <edomvd>Entity is unclassified and should be treated as "For Official Use Only".</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NAME</attrlabl>
+        <attrdef>Name of entity.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AREA</attrlabl>
+        <attrdef>Three (3) digit telephone area code for entity.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Valid area codes without punctuation. Only numeric digits are used. A list of valid area codes can be found at http://www.nanpa.com</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PHONE</attrlabl>
+        <attrdef>Seven (7) digit telephone number for entity formatted as nnn-nnnn. All alphabetic characters have been translated to the corresponding numeric digit.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Phone numbers formatted as nnn-nnnn. Only numeric digits are used. The first three (3) digits (the exchange) must form a valid combination with the area code. A list of valid area code and exchange combinations can be obtained from http://www.nanpa.com</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESS</attrlabl>
+        <attrdef>Physical street address for entity. "PO Box", "General Delivery", "Rural Route", and "Highway Contract" addresses are not considered physical addresses and should not appear in this attribute. Some areas do not have regular city style addressing so entities in those areas may not have a street number. In such cases, the name of the road they are located on is listed in this attribute.  Some rural areas may not have named roads.  In these rare cases, this attribute will be blank.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESS2</attrlabl>
+        <attrdef>Location within physical address, e.g., floor, suite, building.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CITY</attrlabl>
+        <attrdef>
+The name of the city associated with the entity's physical address. For physical addresses that the U.S. Postal Service (USPS) delivers to, this should be a "city" acceptable to the USPS as defined in their Address Information System (AIS). Sometimes the USPS does not deliver mail to a physical address but recognizes the location (i.e., they list the location as "undeliverable"). The cities associated with these locations are acceptable. In some cases, the USPS does not recognize individual physical addresses in a city, rather, they list the city as having "General Delivery". In these cases, the city and associated zip code are acceptable (the entity's [ADDRESS] attribute will contain a street address, not "general delivery"). The entity may not actually be located within the city limits of the "city" specified in its city field. Instead, it may actually be located within the city limits of another city. In some cases, the "city" that appears in this attribute may not even be a city in an administrative sense, but it is still an acceptable "city" to the USPS. An example of this is "Notre Dame, IN". There is no city in Indiana called "Notre Dame", but this is considered an acceptable city by the USPS for any delivery going to the University of Notre Dame which is actually located in the city of South Bend. "Notre Dame", like most USPS cities, is an easily recognized place, and it gives the user of the data a good general idea of where the entity is located (if the entity is located in a small municipality, the USPS "city" may be more recognizable than the name of the municipality), and it would be part of the address one would use to send a shipment to the entity's location. Using the USPS acceptable "city" also allows someone to do a logical consistency check between the zip code and the city by using the USPS AIS.
+
+Sometimes an entity may report a city that is not accepted by the USPS, and although TGS has tried to replace those cities with an acceptable alternative, some of them may remain in this dataset.
+</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STATE</attrlabl>
+        <attrdef>Two (2) character abbreviation for state associated with the entity's physical address. In almost all cases this is the same as the state where the entity has been depicted geospatially. However, there are cases, particularly where an entity is part of a larger facility that cuts across state lines, where the entity's location may be depicted in a state other than the one indicated in this attribute. Also, the state in which an entity appears to be located may change depending on the scale of the state boundary theme being used.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Official USPS Abbreviations - State Abbreviations</codesetn>
+            <codesets>United States Postal Service http://www.usps.com/ncsc/lookups/usps_abbreviations.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ZIP</attrlabl>
+        <attrdef>Five (5) digit USPS zip code for entity's physical location.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>USPS Address Information System - Domain is further restricted by only allowing physical (non PO Box) zip codes.</codesetn>
+            <codesets>United States Postal Service</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ZIPP4</attrlabl>
+        <attrdef>Four (4) digit USPS zip code extension. This attribute was automatically assigned using the entity's physical address and USPS address information system (AIS) data.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>USPS Address Information System (AIS) - ZIP9</codesetn>
+            <codesets>United States Postal Service</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County name where entity is located.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Geographic Names Information System (GNIS)</codesetn>
+            <codesets>US Department of the Interior - US Geologic Survey</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIPS</attrlabl>
+        <attrdef>Five (5) digit FIPS (Federal Information Processing Standards) Code for the County where entity is located. The first two (2) digits represent the state and the last three (3) digits identify the county within the state.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Federal Information Processing Standards Publications - Counties and Equivalent Entities of the U.S., Its Possessions, and Associated Areas</codesetn>
+            <codesets>National Institute of Standards (NIST) http://www.itl.nist.gov/fipspubs/co-codes/states.txt</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DIRECTIONS</attrlabl>
+        <attrdef>Directions to entity location, or description of the entity's location.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EMERGTITLE</attrlabl>
+        <attrdef>Title of person or name of office for emergency point of contact.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EMERGPHONE</attrlabl>
+        <attrdef>Ten (10) digit telephone number of emergency point of contact formatted as nnn-nnn-nnnn. All alphabetic characters have been translated to the corresponding numeric digit.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Phone numbers, including area code, formatted as nnn-nnn-nnnn. A list of valid area code and exchange combinations can be found at http://www.nanpa.com</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EMERGEXT</attrlabl>
+        <attrdef>Telephone extension for emergency point of contact.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CONTDATE</attrlabl>
+        <attrdef>Date entity was contacted by TGS.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Date</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CONTHOW</attrlabl>
+        <attrdef>Method by which entity was contacted.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>PHONE</edomv>
+            <edomvd>Entity was contacted by phone.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>FAX</edomv>
+            <edomvd>Entity was contacted by fax.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MAIL</edomv>
+            <edomvd>Entity was contacted by mail.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>EMAIL</edomv>
+            <edomvd>Entity was contacted by email.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>WEB</edomv>
+            <edomvd>Entity information was gathered and/or verified by official entity website as a last resort.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>ALT REF</edomv>
+            <edomvd>Geospatial reference information obtained from local authorities, e.g., downloadable parcel maps, 911 streets, and shapefiles.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GEODATE</attrlabl>
+        <attrdef>Date entity was geocoded by TGS.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Date</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GEOHOW</attrlabl>
+        <attrdef>Method by which entity was geocoded.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>AUTO</edomv>
+            <edomvd>Entity was automatically geocoded.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MANUAL</edomv>
+            <edomvd>Entity was manually geocoded.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>ADJUSTED</edomv>
+            <edomvd>Entity was shifted by TGS to an updated set of NAVTEQ streets. This only applies if the entity was manually geocoded by TGS to a previous version of NAVTEQ streets.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PROVIDED</edomv>
+            <edomvd>Entity was geocoded using coordinates provided by the state.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NAICSCODE</attrlabl>
+        <attrdef>NAICS (North American Industry Classification System) Code for entity. NAICS Codes (and NAICS Descriptions) have been assigned based upon the entity's primary function, regardless of if that is the function that qualified it to be included in this dataset.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>North American Industry Classification System (NAICS 2002)</codesetn>
+            <codesets>US Census Bureau - http://www.census.gov/epcd/www/naics.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>NAICSDESCR</attrlabl>
+        <attrdef>
+NAICS (North American Industry Classification System) Description for entity. The "Index Entries" that appear on the NAICS webpage (http://www.census.gov/epcd/www/naics.html) are being used to populate this attribute as opposed to the "NAICS Title". While there is a one to one correspondence between NAICS Codes and "NAICS Titles", there is a one to many relationship between NAICS Codes and the "Index Entries". By using the "Index Entries", we have placed the entities that make up this layer into more specific categories; however, the user of this data should be aware that this was not the intended purpose of these "Index Entries". The "Index Entries" were intended as a way to search the NAICS database and as a way of enumerating ways in which establishments falling under the given NAICS Code may be named. Thus, there are often two or more "Index Entries" that are synonyms, for example: "Prisons" and "Penitentiaries". In cases like this, we have standardized on one "Index Entry".
+
+NAICS Descriptions (and NAICS Codes) have been assigned based upon the entity's primary function, regardless of the function that qualified it to be included in this dataset.
+</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>ACADEMIES, COLLEGE OR UNIVERSITY</edomv>
+            <edomvd>ACADEMIES, COLLEGE OR UNIVERSITY - [NAICS Code 611310]: Entities that are institutions of higher learning based to educate and grant degrees.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>AVIATION SCHOOLS</edomv>
+            <edomvd>AVIATION SCHOOLS - [NAICS Code 611310]: Entities that are institutions of higher learning based to educate and grant degrees on aviation.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>BUSINESS COLLEGES OR SCHOOLS OFFERING BACCALAUREATE OR GRADUATE DEGREES</edomv>
+            <edomvd>BUSINESS COLLEGES OR SCHOOLS OFFERING BACCALAUREATE OR GRADUATE DEGREES - [NAICS Code 611310]: Entities that are institutions of higher learning based to educate and grant baccalaureate or graduate degrees on business.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>COLLEGES (EXCEPT JUNIOR COLLEGES)</edomv>
+            <edomvd>COLLEGES (EXCEPT JUNIOR COLLEGES)- [NAICS Code 611310]: Entities that are institutions of higher learning  in the liberal arts and/or sciences based to educate and grant bachelor degrees.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>COMMUNITY COLLEGES</edomv>
+            <edomvd>COMMUNITY COLLEGES - [NAICS Code 611210]: Entities that are a nonresidential institution of higher learning based to educate and grant degrees below the baccalaureate level, and are often funded by the government.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>COMPUTER TRAINING (EXCEPT REPAIR)</edomv>
+            <edomvd>COMPUTER TRAINING (EXCEPT REPAIR) - [NAICS Code 611420]: Entities that are institutions of higher learning based to educate and grant degrees on computers such as Business Information Systems, Networking &amp; Technical Management.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>COURT REPORTING SCHOOLS</edomv>
+            <edomvd>COURT REPORTING SCHOOLS - [NAICS Code 611410]: Entities that are institutions of higher learning based to educate and grant degrees on court reporting.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>CULINARY ARTS SCHOOLS</edomv>
+            <edomvd>CULINARY ARTS SCHOOLS - [NAICS Code 611519]: Entities that are institutions of higher learning based to educate and grant degrees on culinary arts.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>FINE ARTS SCHOOLS (EXCEPT ACADEMIC)</edomv>
+            <edomvd>FINE ARTS SCHOOLS (EXCEPT ACADEMIC) - [NAICS Code 611610]: Entities that are institutions of higher learning based to educate and grant degrees on fine arts.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>GOLF INSTRUCTION, CAMPS, OR SCHOOLS</edomv>
+            <edomvd>GOLF INSTRUCTION, CAMPS, OR SCHOOLS - [NAICS Code 611620]: Entities that are institutions of higher learning based to educate and grant degrees on athletic activities.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>HOSPITALITY MANAGEMENT SCHOOLS OFFERING BACCALAUREATE OR GRADUATE DEGREES</edomv>
+            <edomvd>HOSPITALITY MANAGEMENT SCHOOLS OFFERING BACCALAUREATE OR GRADUATE DEGREES - [NAICS Code 611310]: Entities that are institutions of higher learning based to educate and grant baccalaureate or graduate degrees on hospitality management.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>JUNIOR COLLEGES</edomv>
+            <edomvd>JUNIOR COLLEGES - [NAICS Code 611210]: Entities that are institutions of higher learning based to educate and granting a certificate of title instead of a degree for first two years of a four-year undergraduate course.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>LAW SCHOOLS</edomv>
+            <edomvd>LAW SCHOOLS - [NAICS Code 611310]: Entities that are institutions of higher learning based to educate and grant degrees on law.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MANAGEMENT DEVELOPMENT TRAINING</edomv>
+            <edomvd>MANAGEMENT DEVELOPMENT TRAINING - [NAICS Code 611430]: Entities that are institutions of higher learning based to educate and grant job-specific certification on management development.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MASSAGE THERAPIST INSTRUCTION</edomv>
+            <edomvd>MASSAGE THERAPIST INSTRUCTION - [NAICS Code 611519]: Entities that are institutions of higher learning based to educate and grant job-specific certification in massage therapy.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MECHANIC'S SCHOOLS (EXCEPT APPRENTICESHIP)</edomv>
+            <edomvd>MECHANIC'S SCHOOLS (EXCEPT APPRENTICESHIP) - [NAICS Code 611519]: Entities that are institutions of higher learning based to educate and grant job-specific certification on mechanics such as making, using, or repairing machines, vehicles, and tools.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MEDICAL SCHOOLS</edomv>
+            <edomvd>MEDICAL SCHOOLS - [NAICS Code 611310]: Entities that are institutions of higher learning based to educate and grant medical degrees.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MILITARY ACADEMIES, COLLEGE LEVEL</edomv>
+            <edomvd>MILITARY ACADEMIES, COLLEGE LEVEL - [NAICS Code 611310]: Entities that are institutions of higher learning based to educate and train men and women for military careers.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>MUSIC SCHOOLS (EXCEPT ACADEMIC)</edomv>
+            <edomvd>MUSIC SCHOOLS (EXCEPT ACADEMIC) - [NAICS Code 611610]: Entities that are institutions of higher learning based to educate specialize and study music.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PHOTOGRAPHY SCHOOLS, ART</edomv>
+            <edomvd>PHOTOGRAPHY SCHOOLS, ART - [NAICS Code 611610]: Entities that are institutions of higher learning based to educate and offering instruction of taking and printing photographs or making movies.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>PROFESSIONAL SCHOOLS (E.G., BUSINESS ADMINISTRATION, DENTAL, LAW, MEDICAL)</edomv>
+            <edomvd>PROFESSIONAL SCHOOLS (E.G., BUSINESS ADMINISTRATION, DENTAL, LAW, MEDICAL) - [NAICS Code 611310]: Entities that are institutions of higher learning based to offer courses and seminars for management and professional development.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TECHNICAL AND TRADE SCHOOLS</edomv>
+            <edomvd>TECHNICAL AND TRADE SCHOOLS - [NAICS Code 61151]: Entities that are institutions offering job or career vocational or technical courses of higher learning based to educate and grant job-specific certification.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>THEOLOGICAL SEMINARIES OFFERING BACCALAUREATE OR GRADUATE DEGREES</edomv>
+            <edomvd>THEOLOGICAL SEMINARIES OFFERING BACCALAUREATE OR GRADUATE DEGREES - [NAICS Code 611310]: Entities that are institutions of higher learning relating to theology or to specialized religious study based to educate and grant baccalaureate or graduate degrees.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>UNIVERSITIES</edomv>
+            <edomvd>UNIVERSITIES - [NAICS Code 611310]: Entities that are institutions of the highest level of education including a graduate school and/or professional schools that awards undergraduate bachelor, master, and/or doctorate degrees.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GEOLINKID</attrlabl>
+        <attrdef>Link ID for the street segment to which the entity was geocoded. Refer to the [ST_VENDOR] and [ST_VERSION] attributes for the street vendor and version that was used to geocode the entity.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <udom>Text</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>X</attrlabl>
+        <attrdef>Longitude in WGS 84 Decimal Degrees.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-180</rdommin>
+            <rdommax>180</rdommax>
+            <attrunit>WGS 84 Decimal Degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Y</attrlabl>
+        <attrdef>Latitude in WGS 84 Decimal Degrees.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-90</rdommin>
+            <rdommax>90</rdommax>
+            <attrunit>WGS 84 Decimal Degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ST_VENDOR</attrlabl>
+        <attrdef>Indicates name of vendor providing original street data used for geocoding.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>NAVTEQ</edomv>
+            <edomvd>NAVTEQ streets were used for geocoding.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TIGER</edomv>
+            <edomvd>Tiger streets were used for geocoding.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>TGS</edomv>
+            <edomvd>TGS drew in a new street segment that does not exist in the file supplied by NAVTEQ.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;BLANK&gt;</edomv>
+            <edomvd>Entity was geocoded using coordinates provided by the state; therefore, the street vendor is unknown.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ST_VERSION</attrlabl>
+        <attrdef>Indicates the year and quarter of streets used for geocoding.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>2006Q4</edomv>
+            <edomvd>2006Q4 NAVTEQ Street Data used for geocoding.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>2006FE</edomv>
+            <edomvd>2006fe version of TIGER/Line streets was used for geocoding in areas where NAVTEQ does not have coverage.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;BLANK&gt;</edomv>
+            <edomvd>Entity was geocoded using coordinates provided by the state; therefore, the street version is unknown.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>GEOPREC</attrlabl>
+        <attrdef>Geocoding precision.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>BLOCKFACE</edomv>
+            <edomvd>Entity is geocoded to correct block and correct side of street per street data indicated by [ST_VENDOR] and [ST_VERSION].</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>ONENTITY</edomv>
+            <edomvd>Entity is geocoded on entity rooftop per aerial imagery (in most cases USGS DOQQs).</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;BLANK&gt;</edomv>
+            <edomvd>Entity was geocoded using coordinates provided by the state; therefore, geocoding precision is unknown.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PHONELOC</attrlabl>
+        <attrdef>Indicates whether the phone number in the phone field rings to the actual location of the entity.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>YES</edomv>
+            <edomvd>Phone number rings to the actual entity location.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>NO</edomv>
+            <edomvd>Phone number does not ring to the actual entity location. It might ring to an administrative office or central location.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;BLANK&gt;</edomv>
+            <edomvd>Unknown - It is not known if the entity's phone number rings to the entity's location.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>QC_QA</attrlabl>
+        <attrdef>Organization that performed Quality Control/Quality Assurance on the record.</attrdef>
+        <attrdefs>TGS</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>TGS</edomv>
+            <edomvd>TGS has performed Quality Control/Quality Assurance on the entity record after 01/01/2005.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>&lt;BLANK&gt;</edomv>
+            <edomvd>The record is not TGS added or has not had Quality Control/Quality Assurance performed by TGS, or Quality Control/Quality Assurance was performed prior to 01/01/2005.</edomvd>
+            <edomvds>TGS</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

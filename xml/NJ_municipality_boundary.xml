@@ -1,0 +1,341 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_municipality_boundary</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Municipal boundaries in New Jersey were gathered from USGS topoquads and other sources in 1987. Since that time, updates to the data have been limited to noting consolidations of boundaries. The scale of the original data varies, relying primarily on 1:24,000 topoquads. Changes were made when inconsistancies with other maps were found based on preponderance of data. In area where the line was labeled as aproximate attempts were made to correctly locate the boundary. The 1986 photoquads were used to move the boundary lines to photo-identifiable features as needed. Changes less than 5 acres were not made. In July, 1997, the coverage was updated to reflect the consolidation of Pahaquarry Township with Hardwick Township. New jersey now has 566 municipalities. In March, 2000, the attributes were edited to properly label West Caldwell as a Township, as verified with the township clerk; it had been labelled as a borough. In January 2003 the Census 2000 population information was assessed to the former stmun coverage to create this stmun data layer. Additional attributes included population density by square mile. In May 2003 the FIPS codes and Township names were updated as identified. Essex Fells and North Caldwell were redsignated Boroughs in 1991 and Passaic Township is now Long Hill Township.</abstract>
+      <purpose>New Jersey municipal boundaries were digitized into NJDEP's GIS to provide basic jurisdictional information.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.587089</westbc>
+        <eastbc>-73.899178</eastbc>
+        <northbc>41.357794 </northbc>
+        <southbc>38.924577</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Municipalities</themekey>
+        <themekey>Municipal</themekey>
+        <themekey>Boundaries</themekey>
+        <themekey>Political Divisions</themekey>
+        <themekey>Statewide</themekey>
+        <themekey>Population</themekey>
+        <themekey>NJDEP</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <datacred>Delaware Geological Survey - New Jersey/Delaware boundary dataNew Jersey Department of Agriculture, State Agricultural Development Committee, Farmland Preservation Program - preserved farmland boundary data from property surveysNew Jersey Department of Environmental Protection, Green Acres Program - open space boundary data from property surveysNew Jersey Department of Environmental Protection, Bureau of Geographic Information Systems - New Jersey/New York boundary data for Ellis IslandNew Jersey Department of Environmental Protection, Bureau of Geographic Information Systems - hydro (stream) centerline dataNew Jersey Department of Environmental Protection, Bureau of Geographic Information Systems - land use/landcover dataNew Jersey Department of Environmental Protection, Bureau of Geographic Information Systems - municipal boundaries data from US Geological Survey topographic mapsNew Jersey Department of Environmental Protection, New Jersey Geological Survey - New Jersey/New York boundary data for the northern border of New Jersey, and New Jersey/New York boundary data through Shooters Island off the shoreline of BayonneNew Jersey Department of Transportation - road centerline dataNew Jersey Office of Information Technology, Office of Geographic Information Systems - New Jersey/Pennsylvania boundary data, and river and bay outlet dataVarious county or municipal agencies - State-certified digital tax map data and digital parcel data</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>581</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>
+stmun</enttypl>
+        <enttypd>State Municipal Boundaries</enttypd>
+        <enttypds>NJDEP</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MUN_TYPE</attrlabl>
+        <attrdef>Municipality Type Designation</attrdef>
+        <attrdefs>none</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LABEL</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>AREA</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>192058.67</rdommin>
+            <rdommax>3150000000</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>PERIMETER</attrlabl>
+        <attrdef>Perimeter of feature in internal units.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2156.094</rdommin>
+            <rdommax>376846.31</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIPSSTCO</attrlabl>
+        <attrdef>State - County codes - Federal Information Processing Standard</attrdef>
+        <attrdefs>Federal</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>FIPSSTCO</codesetn>
+            <codesets>Federal</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIPSCO</attrlabl>
+        <attrdef>County code - Federal Information Processing Standard</attrdef>
+        <attrdefs>Federal</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>FIPSCO</codesetn>
+            <codesets>Federal</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIPS</attrlabl>
+        <attrdef>2000 Municipality - Federal Information Processing Standard</attrdef>
+        <attrdefs>Federal</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>FIPS</codesetn>
+            <codesets>Federal</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SSN</attrlabl>
+        <attrdef>State Standard Numeric</attrdef>
+        <attrdefs>Federal</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>State Standard Numeric (SSN)</codesetn>
+            <codesets>Federal</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MUN</attrlabl>
+        <attrdef>Municipality Name</attrdef>
+        <attrdefs>none</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County Name</attrdef>
+        <attrdefs>none</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MUNCOUNTY</attrlabl>
+        <attrdef>Municipality and County</attrdef>
+        <attrdefs>none</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ACRES</attrlabl>
+        <attrdef>Area of municipality in acres</attrdef>
+        <attrdefs>unknown</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>4.41</rdommin>
+            <rdommax>72396.28</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SQ_MILES</attrlabl>
+        <attrdef>Area in square miles</attrdef>
+        <attrdefs>none</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>.01</rdommin>
+            <rdommax>113.12</rdommax>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POP2000</attrlabl>
+        <attrdef>Population 2000</attrdef>
+        <attrdefs>Census</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POP1990</attrlabl>
+        <attrdef>Population 1990</attrdef>
+        <attrdefs>Census</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POP1980</attrlabl>
+        <attrdef>Population 1980</attrdef>
+        <attrdefs>Census</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POPDEN2000</attrlabl>
+        <attrdef>Population Density per square mile in 2000</attrdef>
+        <attrdefs>unknown</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POPDEN1990</attrlabl>
+        <attrdef>Population Density per square mile in 1990</attrdef>
+        <attrdefs>unknown</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>POPDEN1980</attrlabl>
+        <attrdef>Population Density per square mile in 1980</attrdef>
+        <attrdefs>unknown</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIPS1990</attrlabl>
+        <attrdef>1990 Municipality - Federal Information Processing Standard</attrdef>
+        <attrdefs>Federal</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>FIPS</codesetn>
+            <codesets>Federal</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FIPS1980</attrlabl>
+        <attrdef>1980 Municipality - Federal Information Processing Standard</attrdef>
+        <attrdefs>Federal</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>FIPS</codesetn>
+            <codesets>Federal</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MUN_LABEL</attrlabl>
+        <attrdef>Proper Label of Municipality Name</attrdef>
+        <attrdefs>none</attrdefs>
+        <attrdomv>
+          <udom>unique value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STMUN_</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>STMUN_ID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Shapefile</formname>
+          <transize>4.065</transize>
+        </digtinfo>
+        <digtopt />
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

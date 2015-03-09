@@ -1,0 +1,45 @@
+{
+    "name": "Flood & Sea Level Rise",
+	"pluginHeight": 450,
+	"ddText": "Choose Data Source",
+	"regions": [
+		{
+			"name": "Coastal Resilience data",
+			"extent": {"xmin":-8411263.503882,"ymin":4711425.2421505,"xmax":-8226808.810870,"ymax":5042333.7092422,"spatialReference":{"wkid":102100,"latestWkid":3857}},
+			"methods": "http://coastalresilience.org/project-areas/new-jersey-introduction",
+			"variables": [
+				{"name":"Choose Storm Surge", "index":0, "values":[{"name":"Category 1","value":"0"},{"name":"Cat 2","value":"1"},{"name":"Cat 3", "value":"2"},{"name":"Cat 4", "value":"3"},{"name":"Sandy", "value":"4"}]}
+				],
+			"mainURL": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/NJ_Flood_and_SLR_Data/MapServer",
+			"combos": {
+			
+				"0": [{"type":"dynamic","show":[0]}],
+				"1": [{"type":"dynamic","show":[1]}],
+				"2": [{"type":"dynamic","show":[2]}],
+				"3": [{"type":"dynamic","show":[3]}],
+				"4": [{"type":"dynamic","show":[4]}]
+			
+			}
+		},
+		{
+			"name": "NOAA SLR Viewer data",
+			"extent": {"xmin":-8411263.503882,"ymin":4711425.2421505,"xmax":-8226808.810870,"ymax":5042333.7092422,"spatialReference":{"wkid":102100,"latestWkid":3857}},
+			"methods": "http://coast.noaa.gov/digitalcoast/tools/slr",
+			variables: [
+				{"name":"Choose Sea Level", "index":0, "values":[{"name":"Current","value":"0", "help": "Year 2010"},{"name":"1 ft", "value":"1"}, {"name":"2 ft", "value":"2"}, {"name":"3 ft", "value":"3"}, {"name":"4 ft", "value":"4"}, {"name":"5 ft", "value":"5"}, {"name":"6 ft", "value":"6"}]}
+				],
+			combos: {
+			
+				"0": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer"}],
+				"1": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer"}], 
+				"2": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer"}],
+				"3": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer"}],	
+				"4": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer"}],
+				"5": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer"}], 
+				"6": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer"}]
+
+			
+			}
+		}
+	]
+}

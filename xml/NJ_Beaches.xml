@@ -1,0 +1,465 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_Beaches</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This map was developed using New Jersey DEP's Geographic Information System digital data, but the secondary product has not been verified by NJDEP and is not state-authorized. This dataset displays beaches within study area. It was extracted from New Jersey DEP’s Land Use and Land Cover dataset. Beaches are predominantly composed of sand and may occur at the land-water interface of oceans, bays and estuaries. Beaches are generally elongated nonvegetated buffering systems subject to the action of waves and tides.</abstract>
+      <purpose>This layer is used to display how the beaches are distributed in  New Jersey and might be used in coastal resilience analysis in the future by planners, environmental managers or any organization who may be intereted in.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.553541</westbc>
+        <eastbc>-73.972027</eastbc>
+        <northbc>40.993838</northbc>
+        <southbc>38.928428</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>Beaches</themekey>
+        <themekey>Land use.</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <datacred>NJ Department of Environmental Protection (NJDEP), Office of Information Resources Management (OIRM), Bureau of Geographic Information System (BGIS)</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>1402</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>w01lu07</enttypl>
+        <enttypd>NJDEP 2007 Land use/Land Cover Update, Upper Delaware Watershed Management Area, WMA01</enttypd>
+        <enttypds>NJDEP/OIRM/BGIS</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ACRES</attrlabl>
+        <attrdef>Acreage of each polygon, calculated as SHAPE_AREA/43560</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Acreage varies for each polygon</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LU07</attrlabl>
+        <attrdef>Numeric 4 digit code representing land use/land cover category, (2007)</attrdef>
+        <attrdefs>Modified Anderson classification system (see Land Use/Land Cover Classification System (2007).html)</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Modified Anderson land use/land cover classification system</codesetn>
+            <codesets>Land Use/Land Cover Classification System (2007).html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LABEL07</attrlabl>
+        <attrdef>Description of land use/land cover category,  (2007)</attrdef>
+        <attrdefs>Modified Anderson classification system (see Land Use/Land Cover Classification System (2007).html)</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Modified Anderson land use/land cover classification system</codesetn>
+            <codesets>Land Use/Land Cover Classification System (2007).html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TYPE07</attrlabl>
+        <attrdef>Generalized (Level I) land use/land cover category, (2007)</attrdef>
+        <attrdefs>Modified Anderson classification system (see Land Use/Land Cover Classification System (2007).html)</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Modified Anderson land use/land cover classification system</codesetn>
+            <codesets>Land Use/Land Cover Classification System (2007).html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IS07</attrlabl>
+        <attrdef>Percent of each land use polygon covered by impervious surface for 2007</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>100</rdommax>
+            <attrunit>percent</attrunit>
+            <attrmres>5</attrmres>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ISACRES07</attrlabl>
+        <attrdef>Acreage of each polygon covered by impervious surfaces for 2007</attrdef>
+        <attrdefs>Calculated from expression [ACRES] * ([IS07]/100)</attrdefs>
+        <attrdomv>
+          <udom>Acreage varies for each polygon</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LU02</attrlabl>
+        <attrdef>Numeric 4 digit code representing land use/land cover category, (2002)</attrdef>
+        <attrdefs>Modified Anderson classification system (see Land Use/Land Cover Classification System (2007).html)</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Modified Anderson land use/land cover classification system</codesetn>
+            <codesets>Land Use/Land Cover Classification System (2007).html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LABEL02</attrlabl>
+        <attrdef>Description of land use/land cover category,  (2002)</attrdef>
+        <attrdefs>Modified Anderson classification system (see Land Use/Land Cover Classification System (2007).html)</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Modified Anderson land use/land cover classification system</codesetn>
+            <codesets>Land Use/Land Cover Classification System (2007).html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TYPE02</attrlabl>
+        <attrdef>Generalized (Level I) land use/land cover category, (2002)</attrdef>
+        <attrdefs>Modified Anderson classification system (see Land Use/Land Cover Classification System (2007).html)</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Modified Anderson land use/land cover classification system</codesetn>
+            <codesets>Land Use/Land Cover Classification System (2007).html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>IS02</attrlabl>
+        <attrdef>Percent of each land use polygon covered by impervious surface for 2002</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>100</rdommax>
+            <attrunit>percent</attrunit>
+            <attrmres>5</attrmres>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ISACRES02</attrlabl>
+        <attrdef>Acreage of each polygon covered by impervious surfaces for 2002</attrdef>
+        <attrdefs>Calculated from expression [ACRES] * ([IS02]/100)</attrdefs>
+        <attrdomv>
+          <udom>Acreage varies for each polygon</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CLASS86</attrlabl>
+        <attrdef>Numeric code used to identify specific wetland types in the New Jersey Freshwater Wetlands Mapping Program (FWW).  CLASS values refer to the original coding given a polygon as mapped from the 1986 imagery.</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>999</rdommax>
+            <attrunit>UNITS</attrunit>
+            <attrmres>1</attrmres>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COWARDIN86</attrlabl>
+        <attrdef>Alpha-numeric code used to describe wetland types, as mapped from the 1986 imagery</attrdef>
+        <attrdefs>Cowardin, L.M., V. Carter, F.C. Golet, and E.T.LaRoe. Classification of Wetlands and Deepwater Habitats of the United States, United States Fish and Wildlife Service. FWS/OBS-79/31.</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>Cowardin, L.M., V. Carter, F.C. Golet, and E.T.LaRoe. Classification of Wetlands and Deepwater Habitats of the United States, United States Fish and Wildlife Service. FWS/OBS-79/31.</codesetn>
+            <codesets>Cowardin et al.: Fww.doc</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CHANGE07</attrlabl>
+        <attrdef>Flag that identifies whether polygon has undergone a land use/land cover change between 2002 and 2007</attrdef>
+        <attrdefs>NJDEP </attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Polygon has not undergone change in land use classification between 2002 and 2007</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Polygon has undergone a change in land use classification between 2002 and 2007</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>ISCHANGE07</attrlabl>
+        <attrdef>Flag that identifies whether polygon has undergone a change in estimated impervious surface percent  between 2002 and 2007</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>Polygon has not undergone a change in estimated impervious surface percent between 2002 and 2007</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvd>Polygon has undergone a change in estimated impervious surface percent between 2002 and 2007</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STATUS</attrlabl>
+        <attrdef>Identifies development status of data set</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>DRAFT</edomv>
+            <edomvd>For internal review only</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>FINAL</edomv>
+            <edomvd>Final NJDEP approved data set</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>APPROVED</attrlabl>
+        <attrdef>Date data set was approved by NJDEP</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <udom>Unique date value</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>WMA</attrlabl>
+        <attrdef>Watershed Management Area</attrdef>
+        <attrdefs>NJDEP</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>01</edomv>
+            <edomvd>Upper Delaware Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>02</edomv>
+            <edomvd>Wallkill Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>03</edomv>
+            <edomvd>Pompton, Pequannock, Wanaque, Ramapo Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>04</edomv>
+            <edomvd>Lower Passaic, Saddle Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>05</edomv>
+            <edomvd>Hackensack, Hudson, Pascack Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>06</edomv>
+            <edomvds>NJDEP</edomvds>
+            <edomvd>Upper and Mid Passaic, Whippany, and Rockaway Watershed Management Area</edomvd>
+          </edom>
+          <edom>
+            <edomv>07</edomv>
+            <edomvd>Arthur Kill Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>08</edomv>
+            <edomvd>North and South Branch Raritan Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>09</edomv>
+            <edomvd>Lower Raritan, South River and Lawrence Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>10</edomv>
+            <edomvd>Millstone Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>11</edomv>
+            <edomvd>Central Delaware Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>12</edomv>
+            <edomvd>Monmouth Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>13</edomv>
+            <edomvd>Barnegat Bay Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>14</edomv>
+            <edomvd>Mullica Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>15</edomv>
+            <edomvd>Great Egg Harbor Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>16</edomv>
+            <edomvd>Cape May Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>17</edomv>
+            <edomvd>Maurice, Salem and Cohansey Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>18</edomv>
+            <edomvd>Lower Delaware Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>19</edomv>
+            <edomvd>Rancocas Watershed Management Area</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>20</edomv>
+            <edomvd>Assiscunk, Crosswicks and Doctors Watershed Management Area,</edomvd>
+            <edomvds>NJDEP</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DV</attrlabl>
+        <attrdef>Flag to identify vegetation polygons that show the effect of some stress</attrdef>
+        <attrdefs>AIS/NJDEP</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>0</edomv>
+            <edomvd>No vegetation stresses evident</edomvd>
+            <edomvds>AIS/NJDEP</edomvds>
+          </edom>
+          <edom>
+            <edomv>1</edomv>
+            <edomvds>AIS/NJDEP</edomvds>
+            <edomvd>Stress visible in needles of standing live conifers</edomvd>
+          </edom>
+          <edom>
+            <edomv>2</edomv>
+            <edomvds>AIS/NJDEP</edomvds>
+            <edomvd>Evidence of reduced vigor in non-conifer species</edomvd>
+          </edom>
+          <edom>
+            <edomv>3</edomv>
+            <edomvds>AIS/NJDEP</edomvds>
+            <edomvd>Man-made disturbance</edomvd>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>The attributes in this data set describe land use/land cover categories for each polygon from 2002 and 2007. The classification system used is a modified Anderson classification system.  In addition, some attributes are included for non-tidal wetlands that use the Cowardin classification system.  Percent impervious surface for each polygon is also given.</eaover>
+      <eadetcit>none</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <distliab>See access and use constraints information.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Shapefile</formname>
+          <transize>31.694</transize>
+        </digtinfo>
+        <digtopt />
+      </digform>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

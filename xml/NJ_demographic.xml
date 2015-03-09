@@ -1,0 +1,251 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_demographic</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Data Sources: United State Census Bureau. 2007-2011 American Community Survey 5-year Estimates Block Group DataThe demographic data was extracted from 2007-2011 American Community Survey 5-year Estimates Block Group Data, which was downloaded from U. S Census Bureau. This dataset mainly includes 6 demographic parameter- percent of 65 and older people, population density, percent of population below poverty line, percent of 5 and younger people, median household income, percent of renter occupied.</abstract>
+      <purpose>This dataset displays 6 important demographic factors within our study area, it will be used in coastal resilience analysis by planner, environment manager and any organizations who may be interested in. </purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.563586</westbc>
+        <eastbc>-73.885060</eastbc>
+        <northbc>41.072883</northbc>
+        <southbc>38.788657</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>2007-2011 Census</themekey>
+        <themekey>blockgroup</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>GT-polygon composed of chains</sdtstype>
+        <ptvctcnt>3615</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>NJ_demographic</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID_12</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>STATEFP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>COUNTYFP</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>TRACTCE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>BLKGRPCE</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>GEOID</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>NAMELSAD</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>MTFCC</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>INTPTLAT</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>INTPTLON</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>geo_id</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>OBJECTID_1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>GEOID_1</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Pop</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>M_un5</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_un_5</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>M_6566</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>M_6769</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>M_7074</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>M_7579</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>M_8084</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>M_ob_85</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_6566</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_6769</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_7074</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_7579</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_8084</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>F_ob_85</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>House_unit</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Renter_occ</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Med_ho_inc</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>be_poverty</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>ob_poverty</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>to_po_pop</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Under_5</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>per_un_5</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>ob_65</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>per_65</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>per_povert</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>per_renter</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Smile</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>pop_de</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>perit65</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>perit5</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>perit_pove</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>perit_rent</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Area</attrlabl>
+        <attrdef>Area of feature in internal units squared.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

@@ -1,0 +1,328 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>NJ_Railroad</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Data Source: New Jersey Geographic Information Network. New Jersey Transit Rail, Light Rail, and Subway Currently Operated Right-of-Way lines, 2013 (NAD83, NJSP feet)This dataset displays the main railroad within study area. It was extracted from New Jersey Transit Rail, Light Rail, and Subway Currently Operated Right-of-Way lines, which dataset is published with its own metadata. Line data delineating right-of-way centerlines for rail, light rail, and subway service lines operated by New Jersey Transit and connecting commuter lines. Data set is in shapefile format (ESRI). Most of the lines were heads-up digitized from New Jersey 2007 High Resolution Orthophotography, which has a 1 foot pixel size and tested accuracy of +/- 4 feet. Some of the lines were derived from other sources.</abstract>
+      <purpose>Provides location and attribute information for currently operated regional rail service.
+
+Data set is intended only for general planning and mapping use. Single lines represent approximate right-of-way centerlines, not track centerlines.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.197952</westbc>
+        <eastbc>-73.988220</eastbc>
+        <northbc>41.121199</northbc>
+        <southbc>39.363304</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>transportation</themekey>
+        <themekey>njfw_transport</themekey>
+        <themekey>transit</themekey>
+        <themekey>public transportation</themekey>
+        <themekey>mass transit</themekey>
+        <themekey>rail</themekey>
+        <themekey>train</themekey>
+        <themekey>railroad</themekey>
+        <themekey>railway</themekey>
+        <themekey>passenger rail</themekey>
+        <themekey>commuter rail</themekey>
+        <themekey>commuter rail line</themekey>
+        <themekey>rail line</themekey>
+        <themekey>ATLANTIC CITY RAIL LINE</themekey>
+        <themekey>BOONTON LINE</themekey>
+        <themekey>MAIN LINE</themekey>
+        <themekey>BERGEN COUNTY LINE</themekey>
+        <themekey>MORRIS &amp; ESSEX LINE</themekey>
+        <themekey>NORTH JERSEY COAST LINE</themekey>
+        <themekey>NORTHEAST CORRIDOR LINE</themekey>
+        <themekey>PASCACK VALLEY LINE</themekey>
+        <themekey>PORT JERVIS LINE</themekey>
+        <themekey>RARITAN VALLEY LINE</themekey>
+        <themekey>Hudson-Bergen Light Rail</themekey>
+        <themekey>Newark City Subway</themekey>
+        <themekey>PATH</themekey>
+        <themekey>Port Authority Trans Hudson</themekey>
+        <themekey>RiverLINE</themekey>
+        <themekey>Riverline</themekey>
+        <themekey>River line</themekey>
+        <themekey>Lindenwold high speed line</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <datacred>Source data in shapefile format are provided by Glenn D. Newman PLS, PP, Director of GIS-Transportation at NJ TRANSIT.</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>String</sdtstype>
+        <ptvctcnt>44</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:xdt="http://www.w3.org/2005/xpath-datatypes">
+    <detailed>
+      <enttyp>
+        <enttypl>Tran_railroad_passenger</enttypl>
+        <enttypd>Rail line right-of-way centerlines</enttypd>
+        <enttypds>NJ Transit Corporation</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RAIL_LINE</attrlabl>
+        <attrdef>Rail line branch (used mostly for subsets of regular rail lines)</attrdef>
+        <attrdefs>New Jersey Transit Corporation</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>BERGEN COUNTY LINE</edomv>
+            <edomvd>East branch (Rutherford, Garfield, Plauderville, Fair Lawn, Glen Rock Boro Hall)</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>GLADSTONE BRANCH</edomv>
+            <edomvd>South branch (New Providence, Murray Hill, Berkeley Heights, Gilette, Stirling, Millington, Lyons, Basking Ridge, Bernardsville, Far Hills, Peapack, Gladstone)</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>MAIN LINE</edomv>
+            <edomvd>West branch (Secaucus Junction, Kingland, Lyndhurst, Delawanna, Passaic, Clifton, Paterson, Hawthorne, Glen Rock-Main)</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>MONTCLAIR CONNECTION</edomv>
+            <edomvd>Hoboken-Montclair</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>MORRISTOWN LINE</edomv>
+            <edomvd>North branch (Hoboken-Summit-Denville-Hackettstown)</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>PASCACK</edomv>
+            <edomvd>no-station segment near Secaucus Junction</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>PRINCETON BR</edomv>
+            <edomvd>Branch to Northeast Corridor line (Princeton Junction) from Princeton</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>HUDSON BERGEN LIGHT RAIL</edomv>
+            <edomvd>Hudson-Bergen Light Rail, all branches</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>PATCO</edomv>
+            <edomvd>Trans-Delaware line between Philadelphia and Lindenwold, NJ, governed by Delaware River Port Authority</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>South Jersey Light Rail</edomv>
+            <edomvd>Light rail service along Route 130 Corridor and to Trenton</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SERVICE</attrlabl>
+        <attrdef>Specialized service of rail line, provided on particular trains</attrdef>
+        <attrdefs>New Jersey Transit Corporation</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>MIDTOWN DIRECT</edomv>
+            <edomvd>Single seat service from New York City Pennsylvania Station to Dover, Gladstone, and Montclair Heights</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>MONMOUTH PARK SEASONAL</edomv>
+            <edomvd>North Jersey Coast Line variant to Monnouth Park racetrack</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>PRINCETON "DINKY"</edomv>
+            <edomvd>Princeton Junction-Princeton shuttle</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>WATERFRONT CONNECTION</edomv>
+            <edomvd>Hoboken to Newark Penn Station service on North Jersey Coast Line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>#7</edomv>
+            <edomvd>Newark City subway (original, not extension)</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>CAMDEN-TRENTON LIGHT RAIL</edomv>
+            <edomvd>currently operating RIVERLINE between Camden and Trenton</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>CURRENT</edomv>
+            <edomvd>currently operating Hudson-Bergen Light Rail</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>RAIL_ID</attrlabl>
+        <attrdef>Name of rail line used for passenger service</attrdef>
+        <attrdefs>New Jersey Transit Corporation</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>34TH ST</edomv>
+            <edomvd>34th Street, Bayonne branch of Hudson-Bergen Light Rail</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>ATLANTIC CITY RAIL LINE</edomv>
+            <edomvd>Rail line from Philadelphia to Atlantic City</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>BOONTON LINE</edomv>
+            <edomvd>New York City Pennsylvania Station to Hackettstown</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>MAIN LINE &amp; BERGEN COUNTY LINE</edomv>
+            <edomvd>Hoboken to Suffern, NY. Split getween Secaucus Junction and Ridgewood</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>MAIN LINE CONNECTOR</edomv>
+            <edomvd>Secaucus Junction to Bergen County line and Pascack Valley line</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>MORRIS &amp; ESSEX</edomv>
+            <edomvd>New York City Pennsylvania Station and Hoboken to Gladstone and Hackettstown</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>NEWARK CITY SUBWAY</edomv>
+            <edomvd>Newark City Subway including extension</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>NORTH JERSEY COAST LINE</edomv>
+            <edomvd>New York City Pennsylvania Station and Hoboken to Bay Head</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>NORTHEAST CORRIDOR LINE</edomv>
+            <edomvd>New York City Pennsylvania Station to Trenton</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>PASCACK VALLEY LINE</edomv>
+            <edomvd>Hoboken to Spring Valley</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>PATH</edomv>
+            <edomvd>Newark to World Trade Center, New York to 33rd street, New York, or to Hoboken, New Jersey</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>PORT JERVIS LINE</edomv>
+            <edomvd>Suffern, NY to Port Jervis, NY (continues Main Line and Bergen County Line)</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>RARITAN VALLEY LINE</edomv>
+            <edomvd>Hoboken to High Bridge</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>SNJLRT</edomv>
+            <edomvd>Southern New Jersey Light Rail, Camden to Trenton</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>TONNELLE AVE</edomv>
+            <edomvd>Hudson-Bergen Light Rail extension to Tonnelle Ave, North Bergen</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+          <edom>
+            <edomv>WEST SIDE AVE BRANCH</edomv>
+            <edomvd>Hudson-Bergen Light Rail branch to West Side Avenue, Jersey City</edomvd>
+            <edomvds>New Jersey Transit Corporation</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Leng</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>Shape_Length</attrlabl>
+        <attrdef>Length of feature in internal units.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Positive real numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

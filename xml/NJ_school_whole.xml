@@ -1,0 +1,201 @@
+﻿<?xml-stylesheet type="text/xsl" href="./FGDC_Plus.xsl"?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <title>Point locations of New Jersey public, private and charter schools , NJ State Plane NAD83</title>
+        <geoform>vector digital data</geoform>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>Data Source: New Jersey Geographic Information Network. New Jersey public, private and charter school point locations, NJ State Plane NAD83. This dataset displays all schools, including public, private and charter schools within study area. It was clipped from New Jersey public, private and charter school point locations, NJ State Plane NAD83, which covers the whole New Jersey area. The NJ dataset is published with its own metadata: This shapefile consists of point locations of public, private, and charter schools in New Jersey, with minimal attributes. The locations of public and charter schools were derived by address-matching the table published by the New Jersey Department of Education in 2012. Private school locations have not been updated in 2012, so the old NJDOE data of 2010-2011 publication list were used this time. Most of the public schools were located in 2003 by the New Jersey Department of Environmental Protection. Numerious of the locations were checked in 2007-2012 by the NJ Office of Geoographic Information Systems (OGIS), other organizations and volunteers. Closed schools are excluded from the data set. Charter schools were located in 2011 and checked in 2012 by OGIS. There were two main sources for those school records: the NJDOE table of school districts, which also lists charter schools; and a list of contact information for all charter schools including new proposed, planned to be open in 2011-2012. New public and charter schools were address-matched, located and checked against the 2007-2010 orrhophotography, by driving directions, web-site photos, or site visits. The process of locating and checking ended October 2012.The process of private schools locating and checking was ended July 31, 2010, prior to the updated information on non-public schools that was released at the end of August, 2011.</abstract>
+      <purpose>This data set was created for general cartographic use.
+
+This data set has NOT been ground checked thoroughly. It should not be relied upon exclusively for emergency routing.</purpose>
+    </descript>
+    <spdom>
+      <bounding>
+        <westbc>-75.529506</westbc>
+        <eastbc>-73.927495</eastbc>
+        <northbc>41.053957</northbc>
+        <southbc>38.939134</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>society</themekey>
+        <themekey>education</themekey>
+        <themekey>public education</themekey>
+        <themekey>school</themekey>
+        <themekey>charter schools</themekey>
+        <themekey>private schools</themekey>
+        <themekey>elementary school</themekey>
+        <themekey>middle school</themekey>
+        <themekey>high school</themekey>
+        <themekey>school district</themekey>
+        <themekey>school districts</themekey>
+      </theme>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>The Nature Conservancy shall not be held liable for improper or incorrect use of the data described and/or contained herein. Any sale, distribution, loan, or offering for use of these digital data, in whole or in part, is prohibited without the approval of the Nature Conservancy. The use of these data to produce other GIS products and services with the intent to sell for a profit is prohibited without the written consent of the Nature Conservancy. All parties receiving these data must be informed of these restrictions. The Nature Conservancy shall be acknowledged as data contributors to any reports or other products derived from these data.</useconst>
+    <datacred>Most of the records were derived from 2003 data sets created by the New Jersey Department of Environmental Protection. Special acknowledgements are to people of the following organizations who made a significant contribution to school location verification process:  Salem county GIS; Morris County GIS;  Atlantic County GIS; Cape May County GIS;  DVRPC;  Hunterdon County GIS;  Somerset County GIS;  Warren County Prosecutor's Office;  Westfield Engineering; WFS (for Mercer, Middlesex, Burlington and Camden Co.) ; Monmouth GIS; voluneers and state employees who made site visits on their own time: Charles Colvard, Dominic Juliano, Matt Lawson, Richard Rabinowitz, Amy J. Ferdinand, Rebecca French-Mesch.
+Most of the charter schools were located in 2011 and checked in 2012 by the NJ Office of Geographic Information Systems (OGIS).
+</datacred>
+    <native>Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1; Esri ArcGIS 10.1.0.3035</native>
+  </idinfo>
+  <spdoinfo>
+    <direct>Vector</direct>
+    <ptvctinf>
+      <sdtsterm>
+        <sdtstype>Entity point</sdtstype>
+        <ptvctcnt>1929</ptvctcnt>
+      </sdtsterm>
+    </ptvctinf>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>WGS 1984 Web Mercator Auxiliary Sphere</mapprojn>
+          <mapprojp>
+            <otherprj>PROJCS["WGS_1984_Web_Mercator_Auxiliary_Sphere",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Mercator_Auxiliary_Sphere"],PARAMETER["False_Easting",0.0],PARAMETER["False_Northing",0.0],PARAMETER["Central_Meridian",0.0],PARAMETER["Standard_Parallel_1",0.0],PARAMETER["Auxiliary_Sphere_Type",0.0],UNIT["Meter",1.0],AUTHORITY["EPSG",3857]]-20037700-3024110010000-10000010000-100000100000.0010.0010.001true1021003857</otherprj>
+          </mapprojp>
+        </mapproj>
+        <planci>
+          <plance>coordinate pair</plance>
+          <coordrep>
+            <absres>0.0001</absres>
+            <ordres>0.0001</ordres>
+          </coordrep>
+          <plandu />
+        </planci>
+      </planar>
+      <geodetic>
+        <horizdn>D WGS 1984</horizdn>
+        <ellips>WGS 1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>
+Schools_NJ</enttypl>
+      </enttyp>
+      <attr>
+        <attrlabl>OBJECTID</attrlabl>
+        <attrdef>Internal feature number.</attrdef>
+        <attrdefs>Esri</attrdefs>
+        <attrdomv>
+          <udom>Sequential unique whole numbers that are automatically generated.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SHAPE</attrlabl>
+        <attrdef>Feature geometry.</attrdef>
+        <attrdefs>ESRI</attrdefs>
+        <attrdomv>
+          <udom>Coordinates defining the features.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTYCODE</attrlabl>
+        <attrdef>County Code per NJDOE</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY</attrlabl>
+        <attrdef>County Name</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>DIST_CODE</attrlabl>
+        <attrdef>School District code per NJDOE</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>DIST_NAME</attrlabl>
+        <attrdef>School District Name per NJDOE</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>SCHOOLCODE</attrlabl>
+        <attrdef>School code per NJDOE</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>SCHOOL</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SCHOOLNAME</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>SCHOOLTYPE</attrlabl>
+        <attrdef>School type per NJDOE</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESS1</attrlabl>
+        <attrdef>Primary Street Address</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>ADDRESS2</attrlabl>
+        <attrdef>Secondary (alternate) street address</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>CITY</attrlabl>
+        <attrdef>Name of Municipality</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>STATE</attrlabl>
+        <attrdef>New Jersey</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>ZIP</attrlabl>
+        <attrdef>Postage zip code</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>PHONE</attrlabl>
+        <attrdef>School phone number (per NJDOE)</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>X</attrlabl>
+        <attrdef>X coordinate </attrdef>
+      </attr>
+      <attr>
+        <attrlabl>Y</attrlabl>
+        <attrdef>Y coordinate</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>SOURCE</attrlabl>
+        <attrdef>SOURCE table for address</attrdef>
+      </attr>
+      <attr>
+        <attrlabl>ZIP_TRUNC</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>PREF_ID_NU</attrlabl>
+      </attr>
+      <attr>
+        <attrlabl>GNIS_ID</attrlabl>
+        <attrdef>Unique ID for school in the GNIS system of the US Board on Geographic Names</attrdef>
+        <attrdefs>Geographic Names Identification System</attrdefs>
+      </attr>
+      <attr>
+        <attrlabl>LOC_QUAL</attrlabl>
+        <attrdef>Quality of school location</attrdef>
+      </attr>
+    </detailed>
+    <overview>
+      <eaover>Each record represents a school with a separate school code within a county and school district.
+
+All  record and schools status values are included in the file geodatabase domain. See also Schools_data_dictionary for field definitions and descriptions. 
+
+</eaover>
+      <eadetcit>Refer to Schools_data_dictionary for field definitions and descriptions. Refer to Schools_lineage_LU for LINEAGE domain and descriptions.</eadetcit>
+    </overview>
+  </eainfo>
+  <metainfo>
+    <metd>20130926</metd>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>
