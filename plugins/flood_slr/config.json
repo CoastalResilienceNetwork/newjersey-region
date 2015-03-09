@@ -30,13 +30,13 @@
 				],
 			combos: {
 			
-				"0": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer"}],
-				"1": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer"}], 
-				"2": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer"}],
-				"3": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer"}],	
-				"4": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer"}],
-				"5": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer"}], 
-				"6": [{"type":"tiled", "url": "http://www.csc.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer"}]
+				"0": [{"type":"tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer"}],
+				"1": [{"type":"tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer"}], 
+				"2": [{"type":"tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer"}],
+				"3": [{"type":"tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer"}],	
+				"4": [{"type":"tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer"}],
+				"5": [{"type":"tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer"}], 
+				"6": [{"type":"tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer"}]
 
 			
 			}
