@@ -1,0 +1,571 @@
+{
+    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/Marsh_Restore/MapServer",
+    "methods": "plugins/restoration_techniques/njmethods.pdf",
+	"tier1Layers": [ "1", "2", "3", "4", "5", "6" ], 
+	"controls": [
+        {
+            "type": "group",
+			"level": "1",
+			"control": "radio",
+			"parentValue": "",
+			"display": "inline",
+			"header": [
+				{
+					"text": "1. Select the shoreline type",
+					"name": "level_1",
+					"helpTitle": "Shoreline Type",
+					"helpText": "A description of shoreline types",
+					"headerLevel" : "main"
+				}
+			],
+			"options": [
+				{
+                    "text": "Salt/brackish marsh",
+                    "selected": false,
+                    "value": "marsh",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                },
+				{
+                    "text": "Upland shoreline/beach",
+                    "selected": false,
+                    "value": "beach",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+		{
+			"type": "group",
+			"level": "2",
+			"control": "radio",
+			"parentValue": "marsh",
+			"display": "none",
+			"header": [
+				{
+					"text": "2. Select a disturbance process",
+					"name": "level_2a",
+					"helpTitle": "Disturbance Process",
+					"helpText": "A description of disturbance processes",
+					"headerLevel" : "main"
+				}
+			],	
+            "options": [
+                {
+                    "text": "Shoreline edge erosion",
+                    "selected": false,
+                    "value": "m_erosion",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+		{
+			"type": "group",
+			"level": "2",
+			"control": "radio",
+			"parentValue": "beach",
+			"display": "none",
+			"header": [
+				{
+					"text": "2. Select a disturbance process",
+					"name": "level_2b",
+					"helpTitle": "Disturbance Process",
+					"helpText": "A description of disturbance processes",
+					"headerLevel" : "main"					
+				}
+			],	
+            "options": [
+                {
+                    "text": "Shoreline edge erosion",
+                    "selected": false,
+                    "value": "b_erosion",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+        {
+            "type": "group",
+			"level": "3",
+			"control": "radio",
+			"parentValue": "m_erosion",
+			"display": "none",
+			"header": [
+				{
+					"text": "3. View a restoration technique",
+					"name": "level_3a",
+					"helpTitle": "Restoration Technique",
+					"helpText": "A description of restotation techniques",
+					"headerLevel" : "main"
+				}
+			],
+            "options": [
+				{
+                    "text": "Beach Restoration",
+                    "selected": false,
+                    "value": "restoration",
+					"showData": "yes",
+					"layerNumber": "1",
+					"groupsBelow" : "yes"
+				},
+                {
+                    "text": "Nature-Based Living Shoreline",
+                    "selected": false,
+                    "value": "shoreline",
+					"showData": "yes",
+					"layerNumber": "2",
+					"groupsBelow" : "yes"
+                },
+                {
+                    "text": "Marsh Sill",
+                    "selected": false,
+                    "value": "sill",
+					"showData": "yes",
+					"layerNumber": "3",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "Ecologically-Enhanced Revetment",
+                    "selected": false,
+                    "value": "revetment",
+					"showData": "yes",
+					"layerNumber": "4",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "Breakwater",
+                    "selected": false,
+                    "value": "breakwater",
+					"showData": "yes",
+					"layerNumber": "5",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "Living Reef Breakwater",
+                    "selected": false,
+                    "value": "reef",
+					"showData": "yes",
+					"layerNumber": "6",
+					"groupsBelow" : "yes"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "3",
+            "control": "radio",
+			"parentValue": "b_erosion",
+			"display": "none",
+			"header": [
+				{
+					"text": "3. Select a restoration technique",
+					"name": "level_3b",
+					"helpTitle": "Restoration Technique",
+					"helpText": "A description of restotation techniques",
+					"headerLevel" : "main"
+				}
+			],
+            "options": [
+                {
+                    "text": "Beach Restoration",
+                    "selected": false,
+                    "value": "restoration",
+					"showData": "yes",
+					"layerNumber": "1",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "Ecologically-Enhanced Revetment",
+                    "selected": false,
+                    "value": "revetment",
+					"showData": "yes",	
+					"layerNumber": "4",
+					"groupsBelow" : "yes"
+				},
+				{
+                    "text": "Breakwater",
+                    "selected": false,
+                    "value": "breakwater",
+					"showData": "yes",
+					"layerNumber": "5",
+					"groupsBelow" : "yes"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+            "control": "checkbox",
+			"parentValue": "shoreline",
+			"display": "none",
+			"header": [
+				{
+					"text": "View key environmental parameters for selected technique",
+					"name": "level_4a",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "A description of key environmental parameters",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "9",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Tidal Range: < 4 ft",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "10",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Wave Height < 1 ft",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "13",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Ice Cover: Low",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "8",
+					"groupsBelow" : "no"
+				},						
+				{
+					"text": "Shoreline Slope: < 1:10 (6.7%)",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Nearshore Slope: 1:10-1:30 out of 5'",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+            "control": "checkbox",
+			"parentValue": "sill",
+			"display": "none",
+			"header": [
+				{
+					"text": "View key environmental parameters for selected technique",
+					"name": "level_4a",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "A description of key environmental parameters",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "9",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Tidal Range: < 4 ft",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "10",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Wave Height < 3 ft",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "13",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Ice Cover: Low",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "8",
+					"groupsBelow" : "no"
+				},						
+				{
+					"text": "Shoreline Slope: < 1:15 (6.7%)",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Nearshore Slope: <1:30 (3.3%) out of 5'",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+            "control": "checkbox",
+			"parentValue": "breakwater",
+			"display": "none",
+			"header": [
+				{
+					"text": "View key environmental parameters for selected technique",
+					"name": "level_4a",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "A description of key environmental parameters",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Erosion Shoreline Change: 1-3+ ft/year",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "9",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Tidal Range: > 4 ft",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "10",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Wave Height: < 3 ft",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "13",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Ice Cover: Moderate",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "8",
+					"groupsBelow" : "no"
+				},						
+				{
+					"text": "Nearshore Slope: <1:30 (3.3%) out of 5'",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+            "control": "checkbox",
+			"parentValue": "reef",
+			"display": "none",
+			"header": [
+				{
+					"text": "View key environmental parameters for selected technique",
+					"name": "level_4a",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "A description of key environmental parameters",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "9",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Tidal Range: < 4 ft",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "10",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Wave Height < 3 ft",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "13",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Ice Cover: Moderate",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "8",
+					"groupsBelow" : "no"
+				},						
+				{
+					"text": "Shoreline Slope: < 1:15 (6.7%)",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Nearshore Slope: 1:10-1:30 (3.3%) out of 5'",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+            "control": "checkbox",
+			"parentValue": "revetment",
+			"display": "none",
+			"header": [
+				{
+					"text": "View key environmental parameters for selected technique",
+					"name": "level_4a",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "A description of key environmental parameters",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "9",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Tidal Range: < 4 ft",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "10",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Wave Height < 3 ft",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "13",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Ice Cover: High",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "8",
+					"groupsBelow" : "no"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "4",
+            "control": "checkbox",
+			"parentValue": "restoration",
+			"display": "none",
+			"header": [
+				{
+					"text": "View key environmental parameters for selected technique",
+					"name": "level_4a",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "A description of key environmental parameters",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+                {
+					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"selected": false,
+					"value": "ep_erosion",
+					"showData":"yes",
+					"layerNumber": "9",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Tidal Range: < 4 ft",
+					"selected": false,
+					"value": "ep_tidalrange",
+					"showData":"yes",
+					"layerNumber": "10",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Wave Height < 3 ft",
+					"selected": false,
+					"value": "ep_waveheight",
+					"showData":"yes",
+					"layerNumber": "13",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Wave Fetch: < 5 miles",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "12",
+					"groupsBelow" : "no"
+				},
+				{
+					"text": "Ice Cover",
+					"selected": false,
+					"value": "ep_ice",
+					"showData":"yes",
+					"layerNumber": "8",
+					"groupsBelow" : "no"
+				},						
+				{
+					"text": "Nearshore Slope: 1:10-1:30 (3.3%) out of 5'",
+					"selected": false,
+					"value": "ep_slope",
+					"showData":"yes",
+					"layerNumber": "11",
+					"groupsBelow" : "no"
+				}
+            ]
+        }
+    ]
+}
+
+
