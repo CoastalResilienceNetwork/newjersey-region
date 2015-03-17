@@ -31,7 +31,7 @@ define([
 					layerViz, $ ) {
 					
 			return declare(PluginBase, {
-				toolbarName: "Restoration Explorer1",
+				toolbarName: "Restoration Explorer",
 				toolbarType: "sidebar",
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: true,
