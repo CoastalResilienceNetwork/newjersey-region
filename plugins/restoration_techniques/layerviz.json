@@ -15,7 +15,8 @@
 					"name": "level_1",
 					"helpTitle": "Shoreline Type",
 					"helpText": "A description of shoreline types",
-					"headerLevel" : "main"
+					"headerLevel" : "main",
+					"htContents": "iceInfo"
 				}
 			],
 			"options": [
@@ -47,7 +48,8 @@
 					"name": "level_2a",
 					"helpTitle": "Disturbance Process",
 					"helpText": "A description of disturbance processes",
-					"headerLevel" : "main"
+					"headerLevel" : "main",
+					"htContents": ""
 				}
 			],	
             "options": [
@@ -72,7 +74,8 @@
 					"name": "level_2b",
 					"helpTitle": "Disturbance Process",
 					"helpText": "A description of disturbance processes",
-					"headerLevel" : "main"					
+					"headerLevel" : "main",
+					"htContents": ""					
 				}
 			],	
             "options": [
@@ -97,7 +100,8 @@
 					"name": "level_3a",
 					"helpTitle": "Restoration Technique",
 					"helpText": "A description of restotation techniques",
-					"headerLevel" : "main"
+					"headerLevel" : "main",
+					"htContents": ""
 				}
 			],
             "options": [
@@ -163,7 +167,8 @@
 					"name": "level_3b",
 					"helpTitle": "Restoration Technique",
 					"helpText": "A description of restotation techniques",
-					"headerLevel" : "main"
+					"headerLevel" : "main",
+					"htContents": ""
 				}
 			],
             "options": [
@@ -205,57 +210,64 @@
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "A description of key environmental parameters",
-					"headerLevel" : "sub"
+					"headerLevel" : "sub",
+					"htContents": ""
 				}
 			],
 			"options": [
                 {
-					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
 					"layerNumber": "9",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "erosionInfo"
 				},
 				{
-					"text": "Tidal Range: < 4 ft",
+					"text": "Tidal Range",
 					"selected": false,
 					"value": "ep_tidalrange",
 					"showData":"yes",
 					"layerNumber": "10",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "tidalInfo"
 				},
 				{
-					"text": "Wave Height < 1 ft",
+					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
 					"showData":"yes",
 					"layerNumber": "13",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "waveHeightInfo"
 				},
 				{
-					"text": "Ice Cover: Low",
+					"text": "Ice Cover",
 					"selected": false,
 					"value": "ep_ice",
 					"showData":"yes",
 					"layerNumber": "8",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "iceInfo"
 				},						
 				{
-					"text": "Shoreline Slope: < 1:10 (6.7%)",
+					"text": "Shoreline Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "shoreInfo"
 				},
 				{
-					"text": "Nearshore Slope: 1:10-1:30 out of 5'",
+					"text": "Nearshore Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "shoreInfo"
 				}
             ]
         },
@@ -271,57 +283,64 @@
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "A description of key environmental parameters",
-					"headerLevel" : "sub"
+					"headerLevel" : "sub",
+					"htContents": ""
 				}
 			],
 			"options": [
                 {
-					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
 					"layerNumber": "9",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "erosionInfo"
 				},
 				{
-					"text": "Tidal Range: < 4 ft",
+					"text": "Tidal Range",
 					"selected": false,
 					"value": "ep_tidalrange",
 					"showData":"yes",
 					"layerNumber": "10",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "tidalInfo"
 				},
 				{
-					"text": "Wave Height < 3 ft",
+					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
 					"showData":"yes",
 					"layerNumber": "13",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "waveHeightInfo"
 				},
 				{
-					"text": "Ice Cover: Low",
+					"text": "Ice Cover",
 					"selected": false,
 					"value": "ep_ice",
 					"showData":"yes",
 					"layerNumber": "8",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "iceInfo"
 				},						
 				{
-					"text": "Shoreline Slope: < 1:15 (6.7%)",
+					"text": "Shoreline Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "shoreInfo"
 				},
 				{
-					"text": "Nearshore Slope: <1:30 (3.3%) out of 5'",
+					"text": "Nearshore Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "shoreInfo"
 				}
             ]
         },
@@ -337,49 +356,55 @@
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "A description of key environmental parameters",
-					"headerLevel" : "sub"
+					"headerLevel" : "sub",
+					"htContents": ""
 				}
 			],
 			"options": [
                 {
-					"text": "Erosion Shoreline Change: 1-3+ ft/year",
+					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
 					"layerNumber": "9",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "erosionInfo"
 				},
 				{
-					"text": "Tidal Range: > 4 ft",
+					"text": "Tidal Range",
 					"selected": false,
 					"value": "ep_tidalrange",
 					"showData":"yes",
 					"layerNumber": "10",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "tidalInfo"
 				},
 				{
-					"text": "Wave Height: < 3 ft",
+					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
 					"showData":"yes",
 					"layerNumber": "13",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "waveHeightInfo"
 				},
 				{
-					"text": "Ice Cover: Moderate",
+					"text": "Ice Cover",
 					"selected": false,
 					"value": "ep_ice",
 					"showData":"yes",
 					"layerNumber": "8",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "iceInfo"
 				},						
 				{
-					"text": "Nearshore Slope: <1:30 (3.3%) out of 5'",
+					"text": "Nearshore Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "shoreInfo"
 				}
             ]
         },
@@ -395,57 +420,64 @@
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "A description of key environmental parameters",
-					"headerLevel" : "sub"
+					"headerLevel" : "sub",
+					"htContents": ""
 				}
 			],
 			"options": [
                 {
-					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
 					"layerNumber": "9",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "erosionInfo"
 				},
 				{
-					"text": "Tidal Range: < 4 ft",
+					"text": "Tidal Range",
 					"selected": false,
 					"value": "ep_tidalrange",
 					"showData":"yes",
 					"layerNumber": "10",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "tidalInfo"
 				},
 				{
-					"text": "Wave Height < 3 ft",
+					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
 					"showData":"yes",
 					"layerNumber": "13",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "waveHeightInfo"
 				},
 				{
-					"text": "Ice Cover: Moderate",
+					"text": "Ice Cover",
 					"selected": false,
 					"value": "ep_ice",
 					"showData":"yes",
 					"layerNumber": "8",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "iceInfo"
 				},						
 				{
-					"text": "Shoreline Slope: < 1:15 (6.7%)",
+					"text": "Shoreline Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "shoreInfo"
 				},
 				{
-					"text": "Nearshore Slope: 1:10-1:30 (3.3%) out of 5'",
+					"text": "Nearshore Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "shoreInfo"
 				}
             ]
         },
@@ -461,41 +493,46 @@
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "A description of key environmental parameters",
-					"headerLevel" : "sub"
+					"headerLevel" : "sub",
+					"htContents": ""
 				}
 			],
 			"options": [
                 {
-					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
 					"layerNumber": "9",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "erosionInfo"
 				},
 				{
-					"text": "Tidal Range: < 4 ft",
+					"text": "Tidal Range",
 					"selected": false,
 					"value": "ep_tidalrange",
 					"showData":"yes",
 					"layerNumber": "10",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "tidalInfo"
 				},
 				{
-					"text": "Wave Height < 3 ft",
+					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
 					"showData":"yes",
 					"layerNumber": "13",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "waveHeightInfo"
 				},
 				{
-					"text": "Ice Cover: High",
+					"text": "Ice Cover",
 					"selected": false,
 					"value": "ep_ice",
 					"showData":"yes",
 					"layerNumber": "8",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "iceInfo"
 				}
             ]
         },
@@ -509,43 +546,48 @@
 				{
 					"text": "View key environmental parameters for selected technique",
 					"name": "level_4a",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "A description of key environmental parameters",
-					"headerLevel" : "sub"
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "sub",
+					"htContents": "iceInfo"
 				}
 			],
 			"options": [
                 {
-					"text": "Erosion Shoreline Change: < 3 ft/year",
+					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
 					"layerNumber": "9",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "erosionInfo"
 				},
 				{
-					"text": "Tidal Range: < 4 ft",
+					"text": "Tidal Range",
 					"selected": false,
 					"value": "ep_tidalrange",
 					"showData":"yes",
 					"layerNumber": "10",
-					"groupsBelow" : "no"
+					"groupsBelow" : "no",
+					"helpTable": "tidalInfo"
 				},
 				{
-					"text": "Wave Height < 3 ft",
+					"text": "Wave Height",
 					"selected": false,
 					"value": "ep_waveheight",
 					"showData":"yes",
 					"layerNumber": "13",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "waveHeightInfo"
 				},
 				{
-					"text": "Wave Fetch: < 5 miles",
+					"text": "Wave Fetch",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "12",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "waveFetchInfo"
 				},
 				{
 					"text": "Ice Cover",
@@ -553,19 +595,72 @@
 					"value": "ep_ice",
 					"showData":"yes",
 					"layerNumber": "8",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "iceInfo"
 				},						
 				{
-					"text": "Nearshore Slope: 1:10-1:30 (3.3%) out of 5'",
+					"text": "Nearshore Slope",
 					"selected": false,
 					"value": "ep_slope",
 					"showData":"yes",
 					"layerNumber": "11",
-					"groupsBelow" : "no"
+					"groupsBelow": "no",
+					"helpTable": "shoreInfo"
 				}
             ]
         }
-    ]
+    ],
+	"iceInfo": [
+		{
+			"header": ["Criteria Thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["Low (0-1 in thickness)", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["Moderate (1-2 in)", "No", "No", "Yes", "Yes", "Yes"],
+			"row4": ["High (2-4 in)", "No", "No", "Yes", "Yes", "Yes"],
+			"row5": ["Highest (4-6+ in)", "No", "No", "Yes", "Yes", "Yes"]	
+		}
+	],
+	"shoreInfo": [
+		{
+			"header": ["Criteria Thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["Low (0-1 in thickness)", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["Moderate (1-2 in)", "No", "No", "Yes", "Yes", "Yes"],
+			"row4": ["High (2-4 in)", "No", "No", "Yes", "Yes", "Yes"]	
+		}
+	],
+	"waveHeightInfo": [
+		{
+			"header": ["Criteria Thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["Moderate (1-2 in)", "No", "No", "Yes", "Yes", "Yes"],
+			"row3": ["High (2-4 in)", "No", "No", "Yes", "Yes", "Yes"]	
+		}
+	],
+	"waveFetchInfo": [
+		{
+			"header": ["Criteria Thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["Moderate (1-2 in)", "No", "No", "Yes", "Yes", "Yes"]	
+		}
+	],
+	"tidalInfo": [
+		{
+			"header": ["Criteria Thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["Moderate (1-2 in)", "No", "No", "Yes", "Yes", "Yes"],
+			"row3": ["High (2-4 in)", "No", "No", "Yes", "Yes", "Yes"]			
+		}
+	],
+	"erosionInfo": [
+		{
+			"header": ["Criteria Thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"row1": ["High (2-4 in)", "No", "No", "Yes", "Yes", "Yes"],
+			"row2": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["Moderate (1-2 in)", "No", "No", "Yes", "Yes", "Yes"],
+			"row4": ["High (2-4 in)", "No", "No", "Yes", "Yes", "Yes"]			
+		}
+	]
 }
 
 
