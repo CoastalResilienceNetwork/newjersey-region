@@ -208,8 +208,8 @@
 				{
 					"text": "View key environmental parameters for selected technique",
 					"name": "level_4a",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "A description of key environmental parameters",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "sub",
 					"htContents": ""
 				}
@@ -281,8 +281,8 @@
 				{
 					"text": "View key environmental parameters for selected technique",
 					"name": "level_4a",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "A description of key environmental parameters",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "sub",
 					"htContents": ""
 				}
@@ -354,8 +354,8 @@
 				{
 					"text": "View key environmental parameters for selected technique",
 					"name": "level_4a",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "A description of key environmental parameters",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "sub",
 					"htContents": ""
 				}
@@ -418,8 +418,8 @@
 				{
 					"text": "View key environmental parameters for selected technique",
 					"name": "level_4a",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "A description of key environmental parameters",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "sub",
 					"htContents": ""
 				}
@@ -491,8 +491,8 @@
 				{
 					"text": "View key environmental parameters for selected technique",
 					"name": "level_4a",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "A description of key environmental parameters",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "sub",
 					"htContents": ""
 				}
