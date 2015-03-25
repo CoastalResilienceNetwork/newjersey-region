@@ -1,9 +1,9 @@
 .epa{
-	color:#174763;
+	color:blue;
 }
 .epa:hover{
 	cursor:pointer;
-	color:blue;
+	color:#4292d6;
 }
 .tbl{
 	border: 1px solid black;

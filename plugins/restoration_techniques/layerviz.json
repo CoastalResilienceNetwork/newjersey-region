@@ -15,8 +15,7 @@
 					"name": "level_1",
 					"helpTitle": "Shoreline Type",
 					"helpText": "A description of shoreline types",
-					"headerLevel" : "main",
-					"htContents": "iceInfo"
+					"headerLevel" : "main"
 				}
 			],
 			"options": [
@@ -48,8 +47,7 @@
 					"name": "level_2a",
 					"helpTitle": "Disturbance Process",
 					"helpText": "A description of disturbance processes",
-					"headerLevel" : "main",
-					"htContents": ""
+					"headerLevel" : "main"
 				}
 			],	
             "options": [
@@ -74,8 +72,7 @@
 					"name": "level_2b",
 					"helpTitle": "Disturbance Process",
 					"helpText": "A description of disturbance processes",
-					"headerLevel" : "main",
-					"htContents": ""					
+					"headerLevel" : "main"					
 				}
 			],	
             "options": [
@@ -100,8 +97,7 @@
 					"name": "level_3a",
 					"helpTitle": "Restoration Technique",
 					"helpText": "A description of restotation techniques",
-					"headerLevel" : "main",
-					"htContents": ""
+					"headerLevel" : "main"
 				}
 			],
             "options": [
@@ -167,8 +163,7 @@
 					"name": "level_3b",
 					"helpTitle": "Restoration Technique",
 					"helpText": "A description of restotation techniques",
-					"headerLevel" : "main",
-					"htContents": ""
+					"headerLevel" : "main"
 				}
 			],
             "options": [
@@ -210,8 +205,7 @@
 					"name": "level_4a",
 					"helpTitle": "",
 					"helpText": "",
-					"headerLevel" : "sub",
-					"htContents": ""
+					"headerLevel" : "sub"
 				}
 			],
 			"options": [
@@ -283,8 +277,7 @@
 					"name": "level_4a",
 					"helpTitle": "",
 					"helpText": "",
-					"headerLevel" : "sub",
-					"htContents": ""
+					"headerLevel" : "sub"
 				}
 			],
 			"options": [
@@ -356,8 +349,7 @@
 					"name": "level_4a",
 					"helpTitle": "",
 					"helpText": "",
-					"headerLevel" : "sub",
-					"htContents": ""
+					"headerLevel" : "sub"
 				}
 			],
 			"options": [
@@ -420,8 +412,7 @@
 					"name": "level_4a",
 					"helpTitle": "",
 					"helpText": "",
-					"headerLevel" : "sub",
-					"htContents": ""
+					"headerLevel" : "sub"
 				}
 			],
 			"options": [
@@ -493,8 +484,7 @@
 					"name": "level_4a",
 					"helpTitle": "",
 					"helpText": "",
-					"headerLevel" : "sub",
-					"htContents": ""
+					"headerLevel" : "sub"
 				}
 			],
 			"options": [

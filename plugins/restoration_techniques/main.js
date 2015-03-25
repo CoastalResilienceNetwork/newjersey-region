@@ -64,11 +64,11 @@ define([
 					declare.safeMixin(this, frameworkParameters);
 					domClass.add(this.container, "claro");
 					con = dom.byId('plugins/restoration_techniques-0');
-						domStyle.set(con, "width", "255px");
+						domStyle.set(con, "width", "245px");
 						domStyle.set(con, "height", "540px");
 					con1 = dom.byId('plugins/restoration_techniques-1');
 					if (con1 != undefined){
-						domStyle.set(con1, "width", "255px");
+						domStyle.set(con1, "width", "245px");
 						domStyle.set(con1, "height", "540px");
 					}
 					this.layerVizObject = dojo.eval("[" + layerViz + "]")[0];
@@ -223,6 +223,13 @@ define([
 							}
 							
 							if ( entry.control == "checkbox" ) {
+								/*selItems = [];
+								lyrList = this.layerVizObject[entry.showList]
+								console.log(entry.parentValue)
+								$.each(entry.listItems, function(i, v){
+									selItems.push(lyrList[v])
+								});
+								console.log(selItems)*/
 								ncontrolsnode = domConstruct.create("div", {
 									id: this.sliderpane.id + entry.header[0].name + "_" + groupid,
 									style: "margin-top:5px;" + mar1
