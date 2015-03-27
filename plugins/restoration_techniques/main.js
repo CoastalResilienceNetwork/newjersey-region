@@ -284,6 +284,9 @@ define([
 														if (rval == "No"){
 															sty = "red;"
 														}
+														if (rval == "NA"){
+															sty = "black;"
+														}
 														tbl = tbl + "<td class='tbl tdc' style='color:" + sty + "'>" + rval + "</td>"
 													})
 													$('#' + tblid + ' tbody').append("<tr>" + tbl + "</tr>")

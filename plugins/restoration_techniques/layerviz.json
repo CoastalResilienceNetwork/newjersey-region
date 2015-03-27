@@ -570,15 +570,6 @@
 					"helpTable": "waveHeightInfo"
 				},
 				{
-					"text": "Wave Fetch",
-					"selected": false,
-					"value": "ep_slope",
-					"showData":"yes",
-					"layerNumber": "12",
-					"groupsBelow": "no",
-					"helpTable": "waveFetchInfo"
-				},
-				{
 					"text": "Ice Cover",
 					"selected": false,
 					"value": "ep_ice",
@@ -642,11 +633,16 @@
 			"row6": [">4 ft", "No", "No", "No", "No", "No"]	
 		}
 	],
-	"waveFetchInfo": [
+	"salinityInfo": [
 		{
-			"header": ["Criteria Thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
-			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row2": ["Moderate (1-2 in)", "No", "No", "Yes", "Yes", "Yes"]	
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"row1": ["<5 ppt", "No", "NA", "NA", "No", "NA"],
+			"row2": ["5-10 ppt", "Yes", "NA", "NA", "Yes", "NA"],
+			"row3": ["10-15 ppt", "Yes", "NA", "NA", "Yes", "NA"],
+			"row4": ["15-20 ppt", "Yes", "NA", "NA", "Yes", "NA"],
+			"row5": ["20-25 ppt", "Yes", "NA", "NA", "Yes", "NA"],
+			"row6": ["25-30 ppt", "Yes", "NA", "NA", "Yes", "NA"],
+			"row7": [">30 ppt", "No", "NA", "NA", "No", "NA"]	
 		}
 	],
 	"tidalRangeInfo": [
