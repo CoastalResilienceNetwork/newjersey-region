@@ -446,12 +446,12 @@ define([
 							
 							this.featureLayerOD.on("mouse-over", lang.hitch(this,function(evt){
 								this.map.setMapCursor("pointer");
-								this.highlightGraphic = new Graphic(evt.graphic.geometry,this.highlightSymbol);
-								this.map.graphics.add(this.highlightGraphic);
+							//	this.highlightGraphic = new Graphic(evt.graphic.geometry,this.highlightSymbol);
+							//	this.map.graphics.add(this.highlightGraphic);
 							}));
 							this.featureLayerOD.on("mouse-out", lang.hitch(this,function(evt){
 								this.map.setMapCursor("default");
-								this.map.graphics.remove(this.highlightGraphic);
+							//	this.map.graphics.remove(this.highlightGraphic);
 							}));
 							this.featureLayerOD.on("mouse-down", lang.hitch(this,function(evt){
 								atts = evt.graphic.attributes;
@@ -459,7 +459,7 @@ define([
 								this.map.graphics.clear();
 								this.selectedGraphic = new Graphic(evt.graphic.geometry,this.pntSym);
 								this.map.graphics.add(this.selectedGraphic);
-								this.map.graphics.remove(this.highlightGraphic);
+								//this.map.graphics.remove(this.highlightGraphic);
 							}));
 							this.map.addLayer(this.featureLayerOD);
 						}
