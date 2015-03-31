@@ -107,6 +107,7 @@
                     "value": "restoration",
 					"showData": "yes",
 					"layerNumber": "1",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
                 {
@@ -115,6 +116,7 @@
                     "value": "shoreline",
 					"showData": "yes",
 					"layerNumber": "2",
+					"identifyNumber": "15",
 					"groupsBelow" : "yes"
                 },
                 {
@@ -123,6 +125,7 @@
                     "value": "sill",
 					"showData": "yes",
 					"layerNumber": "3",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -131,6 +134,7 @@
                     "value": "revetment",
 					"showData": "yes",
 					"layerNumber": "4",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -139,6 +143,7 @@
                     "value": "breakwater",
 					"showData": "yes",
 					"layerNumber": "5",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -147,6 +152,7 @@
                     "value": "reef",
 					"showData": "yes",
 					"layerNumber": "6",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				}
             ]
@@ -173,6 +179,7 @@
                     "value": "restoration",
 					"showData": "yes",
 					"layerNumber": "1",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -181,6 +188,7 @@
                     "value": "revetment",
 					"showData": "yes",	
 					"layerNumber": "4",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -189,6 +197,7 @@
                     "value": "breakwater",
 					"showData": "yes",
 					"layerNumber": "5",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				}
             ]
@@ -216,6 +225,7 @@
 					"showData":"yes",
 					"layerNumber": "9",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineChangeInfo"
 				},
 				{
@@ -225,6 +235,7 @@
 					"showData":"yes",
 					"layerNumber": "10",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
 				},
 				{
@@ -234,6 +245,7 @@
 					"showData":"yes",
 					"layerNumber": "13",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "waveHeightInfo"
 				},
 				{
@@ -243,6 +255,7 @@
 					"showData":"yes",
 					"layerNumber": "8",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "iceCoverInfo"
 				},						
 				{
@@ -252,6 +265,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineSlopeInfo"
 				},
 				{
@@ -261,6 +275,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "nearshoreSlopeInfo"
 				}
             ]
@@ -288,6 +303,7 @@
 					"showData":"yes",
 					"layerNumber": "9",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineChangeInfo"
 				},
 				{
@@ -297,6 +313,7 @@
 					"showData":"yes",
 					"layerNumber": "10",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
 				},
 				{
@@ -306,6 +323,7 @@
 					"showData":"yes",
 					"layerNumber": "13",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "waveHeightInfo"
 				},
 				{
@@ -315,6 +333,7 @@
 					"showData":"yes",
 					"layerNumber": "8",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "iceCoverInfo"
 				},						
 				{
@@ -324,6 +343,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineSlopeInfo"
 				},
 				{
@@ -333,6 +353,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "nearshoreSlopeInfo"
 				}
             ]
@@ -360,6 +381,7 @@
 					"showData":"yes",
 					"layerNumber": "9",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineChangeInfo"
 				},
 				{
@@ -369,6 +391,7 @@
 					"showData":"yes",
 					"layerNumber": "10",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
 				},
 				{
@@ -378,6 +401,7 @@
 					"showData":"yes",
 					"layerNumber": "13",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "waveHeightInfo"
 				},
 				{
@@ -387,6 +411,7 @@
 					"showData":"yes",
 					"layerNumber": "8",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "iceCoverInfo"
 				},						
 				{
@@ -396,6 +421,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "nearshoreSlopeInfo"
 				}
             ]
@@ -423,6 +449,7 @@
 					"showData":"yes",
 					"layerNumber": "9",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineChangeInfo"
 				},
 				{
@@ -432,6 +459,7 @@
 					"showData":"yes",
 					"layerNumber": "10",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
 				},
 				{
@@ -441,6 +469,7 @@
 					"showData":"yes",
 					"layerNumber": "13",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "waveHeightInfo"
 				},
 				{
@@ -450,6 +479,7 @@
 					"showData":"yes",
 					"layerNumber": "8",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "iceCoverInfo"
 				},						
 				{
@@ -459,6 +489,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineSlopeInfo"
 				},
 				{
@@ -468,6 +499,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "nearshoreSlopeInfo"
 				}
             ]
@@ -495,6 +527,7 @@
 					"showData":"yes",
 					"layerNumber": "9",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineChangeInfo"
 				},
 				{
@@ -504,6 +537,7 @@
 					"showData":"yes",
 					"layerNumber": "10",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
 				},
 				{
@@ -513,6 +547,7 @@
 					"showData":"yes",
 					"layerNumber": "13",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "waveHeightInfo"
 				},
 				{
@@ -522,6 +557,7 @@
 					"showData":"yes",
 					"layerNumber": "8",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "iceCoverInfo"
 				}
             ]
@@ -549,6 +585,7 @@
 					"showData":"yes",
 					"layerNumber": "9",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "shorelineChangeInfo"
 				},
 				{
@@ -558,6 +595,7 @@
 					"showData":"yes",
 					"layerNumber": "10",
 					"groupsBelow" : "no",
+					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
 				},
 				{
@@ -567,6 +605,7 @@
 					"showData":"yes",
 					"layerNumber": "13",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "waveHeightInfo"
 				},
 				{
@@ -576,6 +615,7 @@
 					"showData":"yes",
 					"layerNumber": "8",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "iceCoverInfo"
 				},						
 				{
@@ -585,6 +625,7 @@
 					"showData":"yes",
 					"layerNumber": "11",
 					"groupsBelow": "no",
+					"identifyNumber": "",
 					"helpTable": "nearshoreSlopeInfo"
 				}
             ]

@@ -10,10 +10,10 @@ require({
 define([
         "dojo/_base/declare", "framework/PluginBase", 'plugins/restoration_techniques/ConstrainedMoveable', 'plugins/restoration_techniques/jquery-ui-1.11.0/jquery-ui',
 		
-		"esri/layers/ArcGISDynamicMapServiceLayer", "esri/tasks/QueryTask", "esri/tasks/query", "esri/graphicsUtils",
+		"esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/FeatureLayer", "esri/tasks/QueryTask", "esri/tasks/query", "esri/graphicsUtils",
 		
 		"esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleMarkerSymbol", "esri/graphic", "esri/symbols/Font", 
-		"esri/symbols/TextSymbol", "esri/symbols/PictureMarkerSymbol", "dojo/_base/Color",		
+		"esri/symbols/TextSymbol", "esri/symbols/PictureMarkerSymbol", "dojo/_base/Color", "esri/renderers/SimpleRenderer",		
 		
 		"dijit/registry", "dijit/form/Button", "dijit/form/DropDownButton", "dijit/DropDownMenu", "dijit/MenuItem", "dijit/layout/ContentPane",
 		"dijit/form/HorizontalSlider", "dijit/form/CheckBox", "dijit/form/RadioButton", 
@@ -24,8 +24,8 @@ define([
 		"dojo/text!./layerviz.json", "jquery"
        ],
        function ( declare, PluginBase, ConstrainedMoveable, ui, 
-					ArcGISDynamicMapServiceLayer, QueryTask, esriQuery, graphicsUtils,
-					SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Font, TextSymbol, PictureMarkerSymbol, Color,
+					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils,
+					SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Font, TextSymbol, PictureMarkerSymbol, Color, SimpleRenderer,
 					registry, Button, DropDownButton, DropDownMenu, MenuItem, ContentPane, HorizontalSlider, CheckBox, RadioButton,
 					dom, domClass, domStyle, win, domConstruct, domAttr, Dialog, domGeom, array, lang, on, parser, dojoquery, NodeListtraverse, Moveable, move,
 					layerViz, $ ) {
@@ -34,7 +34,7 @@ define([
 				toolbarName: "Restoration Explorer",
 				toolbarType: "sidebar",
 				showServiceLayersInLegend: true,
-				allowIdentifyWhenActive: true,
+				allowIdentifyWhenActive: false,
 				rendered: false,
 			   
 				activate: function () {
@@ -53,7 +53,9 @@ define([
 					domStyle.set(this.infoarea.domNode, 'display', 'none');
 				},
 				hibernate: function () { 
-					domStyle.set(this.infoarea.domNode, 'display', 'none');
+					if (this.infoarea.domNode != undefined){
+						domStyle.set(this.infoarea.domNode, 'display', 'none');
+					}
 					if (this.currentLayer != undefined)  {
 						this.currentLayer.setVisibility(false);
 						this.map.graphics.clear();
@@ -95,6 +97,17 @@ define([
 				},
 				
 				render: function() {
+					this.map.on("load", function(){
+						this.map.graphics.enableMouseEvents();
+					});	
+					this.pntSym = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_SQUARE, 8,
+						new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
+						new Color([0,255,0]), 1.5),
+						new Color([255,255,0,0.1]));
+					this.highlightSymbol = new SimpleMarkerSymbol(SimpleMarkerSymbol.STYLE_SQUARE, 8,
+						new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
+						new Color([0,0,255]), 1.5),
+						new Color([255,255,0,0.3]));				
 					this.slayers = [];
 					this.tier1Layers = this.layerVizObject.tier1Layers
 					mymap = dom.byId(this.map.id);
@@ -116,6 +129,72 @@ define([
 					});
 					parser.parse();
 					dom.byId(this.container).appendChild(this.sliderpane.domNode);
+					
+					
+					//tab container
+					mymap = dom.byId(this.map.id);
+					a = dojoquery(mymap).parent();
+					this.b = makeid();
+					//console.log(this.b)	
+					
+					this.tabarea = new ContentPane({
+					  id: this.b,
+					  style:"display:none; z-index:8; position:absolute; right:105px; top:60px; min-width:250px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
+					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Identify Restoration Technique Cells</div>" +	
+						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
+						  "<p id='" + this.sliderpane.id + "idIntro'></p>" +
+						  "<div id='" + this.sliderpane.id + "idResults' style='display:none; class='idResults'>" +
+							"<b>Environmental Parameter Thresholds Met:</b><br>" +
+							"<p id='" + this.sliderpane.id + "erosion' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "tidal' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "wave' style='display:none; margin-bottom:0px;'></p>" +							
+							"<p id='" + this.sliderpane.id + "ice' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "shoreline' style='display:none; margin-bottom:0px;'></p>" +							
+							"<p id='" + this.sliderpane.id + "nearshore' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "totalc' style='display:none; margin-bottom:0px;'></p>" +
+						  "</div>" +
+						"</div>" 		
+					});
+							
+					dom.byId(a[0]).appendChild(this.tabarea.domNode)
+					
+					ta = dojoquery(this.tabarea.domNode).children(".tabareacloser");
+						this.tabareacloser = ta[0];
+					/*
+					tac = dojoquery(this.tabarea.domNode).children(".tabareacontent");
+					this.tabareacontent = tac[0];
+					*/				
+					on(this.tabareacloser, "click", lang.hitch(this,function(e){
+						domStyle.set(this.tabarea.domNode, 'display', 'none');
+						this.map.graphics.clear();
+					}));
+					
+					var p = new ConstrainedMoveable(
+						dom.byId(this.tabarea.id), {
+						handle: dom.byId(this.sliderpane.id + "tabHeader"),	
+						within: true
+					});
+					this.map.on ("extent-change", lang.hitch(this,function(e,p,b,l){	 
+						this.l = e.lod.level
+						//console.log(e.lod);	
+						if (this.l < 18){
+							this.pntSym.size = 10;
+							this.highlightSymbol.size = 10;
+							$('#' + this.sliderpane.id + 'idIntro').text("Zoom in to initialize the identify feature for this technique");
+						}
+						if (this.l == 18){
+							this.pntSym.size = 17;
+							this.highlightSymbol.size = 17;
+						}
+						if (this.l == 19){
+							this.pntSym.size = 32;
+							this.highlightSymbol.size = 32;
+						}	
+						if (this.l > 16){
+							$('#' + this.sliderpane.id + 'idIntro').text("Click on the selected technique to learn more about each grid");
+						}						
+					}));				
+					
 					this.buttonpane = new ContentPane({
 					  style:"border-top-style:groove !important; height:80px;overflow: hidden !important;background-color:#F3F3F3 !important;padding:10px !important;"
 					});
@@ -265,7 +344,7 @@ define([
 									
 									on(nslidernodeheader, "click", lang.hitch(this,function(e){
 										domStyle.set(this.infoarea.domNode, 'display', '');
-										this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;'>Environmental Parameter Criteria Thresholds: " + option.text + "</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
+										this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>Environmental Parameter Criteria Thresholds: " + option.text + "</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
 										var tblid = this.sliderpane.id + '_infoTable'
 										$.each(this.layerVizObject[option.helpTable], function(i, v){
 											$.each(v, function(key, valArray){
@@ -313,7 +392,9 @@ define([
 				},
 
 				radioClick: function(val,group) {
-					
+					if (this.featureLayer != undefined){
+						this.map.removeLayer(this.featureLayer);
+					}
 					//set all radio buttons in group to false
 					array.forEach(this.controls[group].options, lang.hitch(this,function(option, i){
 						option.selected = false;
@@ -350,6 +431,38 @@ define([
 						this.slayers = [];	
 						this.slayers.push(selectedLayer);
 						this.currentLayer.setVisibleLayers(this.slayers);
+						// set up identify functionality
+						if (this.controls[group].options[val].identifyNumber != ""){
+							$('#' + this.b).show();
+							idLyrNum = "/" + this.controls[group].options[val].identifyNumber;	
+							this.featureLayerOD = new FeatureLayer(this.layerVizObject.url + idLyrNum, {
+								mode: esri.layers.FeatureLayer.ONDEMAND,
+								opacity: "0",
+								outFields: "*"
+							});
+							this.featureLayerOD.setRenderer(new SimpleRenderer(this.pntSym));
+		
+							// call function to capture and display selected feature layer attributes
+							
+							this.featureLayerOD.on("mouse-over", lang.hitch(this,function(evt){
+								this.map.setMapCursor("pointer");
+								this.highlightGraphic = new Graphic(evt.graphic.geometry,this.highlightSymbol);
+								this.map.graphics.add(this.highlightGraphic);
+							}));
+							this.featureLayerOD.on("mouse-out", lang.hitch(this,function(evt){
+								this.map.setMapCursor("default");
+								this.map.graphics.remove(this.highlightGraphic);
+							}));
+							this.featureLayerOD.on("mouse-down", lang.hitch(this,function(evt){
+								atts = evt.graphic.attributes;
+								this.showAttributes(atts);
+								this.map.graphics.clear();
+								this.selectedGraphic = new Graphic(evt.graphic.geometry,this.pntSym);
+								this.map.graphics.add(this.selectedGraphic);
+								this.map.graphics.remove(this.highlightGraphic);
+							}));
+							this.map.addLayer(this.featureLayerOD);
+						}
 					}
 					if (this.controls[group].options[val].groupsBelow == "yes"){
 						//get value and current level
@@ -381,8 +494,7 @@ define([
 							if (entry.level == this.childlevel && entry.parentValue == this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
 							}
-						}));
-						//this.resize();
+						}));						
 					}
 				},
 				
@@ -396,6 +508,68 @@ define([
 					this.currentLayer.setVisibleLayers(this.slayers);
 				},
 				
+				showAttributes: function(atts) {
+					//console.log(atts);
+					$('#' + this.b).show();
+					$('#' + this.sliderpane.id + 'idIntro').hide();
+					$('#' + this.sliderpane.id + 'idResults').show();
+					if (atts.ErosionCriteriaThreshold == 0){
+						$('#' + this.sliderpane.id + 'erosion').hide();
+					}
+					if (atts.ErosionCriteriaThreshold == 1){
+						$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>No</b>').show();
+					}
+					if (atts.ErosionCriteriaThreshold == 2){
+						$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>Yes</b>').show();
+					}
+					if (atts.TidalRangeCriteriaThreshold == 0){
+						$('#' + this.sliderpane.id + 'tidal').hide();
+					}
+					if (atts.TidalRangeCriteriaThreshold == 1){
+						$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>No</b>').show();
+					}
+					if (atts.TidalRangeCriteriaThreshold == 2){
+						$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>Yes</b>').show();
+					}
+					if (atts.WaveHtMaxCriteriaThreshold == 0){
+						$('#' + this.sliderpane.id + 'wave').hide();
+					}
+					if (atts.WaveHtMaxCriteriaThreshold == 1){
+						$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>No</b>').show();
+					}
+					if (atts.WaveHtMaxCriteriaThreshold == 2){
+						$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>Yes</b>').show();
+					}
+					if (atts.IceCoverCriteriaThreshold == 0){
+						$('#' + this.sliderpane.id + 'ice').hide();
+					}
+					if (atts.IceCoverCriteriaThreshold == 1){
+						$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>No</b>').show();
+					}
+					if (atts.IceCoverCriteriaThreshold == 2){
+						$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>Yes</b>').show();
+					}
+					if (atts.ShorelineSlopeCriteriaThreshold == 0){
+						$('#' + this.sliderpane.id + 'shoreline').hide();
+					}
+					if (atts.ShorelineSlopeCriteriaThreshold == 1){
+						$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>No</b>').show();
+					}
+					if (atts.ShorelineSlopeCriteriaThreshold == 2){
+						$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>Yes</b>').show();
+					}
+					if (atts.NearshoreSlopeCriteriaThreshold == 0){
+						$('#' + this.sliderpane.id + 'nearshore').hide();
+					}
+					if (atts.NearshoreSlopeCriteriaThreshold == 1){
+						$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>No</b>').show();
+					}
+					if (atts.NearshoreSlopeCriteriaThreshold == 2){
+						$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>Yes</b>').show();
+					}
+					$('#' + this.sliderpane.id + 'totalc').html('Total Criteria Satisfied: <b>' + atts.TotalCriteriaSatisfied + '</b>').show();
+				},
+				
 				getState: function () { 
 			   		state = this.controls;
 					return state;
@@ -404,6 +578,15 @@ define([
 				setState: function (state) { 
 					this.controls = state;
 					this.render();		
-				},
+				}
            });
        });	   
+function makeid(){
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    for( var i=0; i < 5; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
