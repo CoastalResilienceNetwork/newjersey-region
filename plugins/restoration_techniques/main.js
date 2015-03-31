@@ -167,6 +167,8 @@ define([
 					on(this.tabareacloser, "click", lang.hitch(this,function(e){
 						domStyle.set(this.tabarea.domNode, 'display', 'none');
 						this.map.graphics.clear();
+						$('#' + this.sliderpane.id + 'idIntro').show();
+						$('#' + this.sliderpane.id + 'idResults').hide();
 					}));
 					
 					var p = new ConstrainedMoveable(
