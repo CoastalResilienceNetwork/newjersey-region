@@ -1,9 +1,25 @@
 {
-    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/Marsh_Restore/MapServer",
+    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
     "methods": "plugins/restoration_techniques/njmethods.pdf",
 	"tier1Layers": [ "1", "2", "3", "4", "5", "6" ], 
 	"controls": [
         {
+            "type": "groups",
+			"level": "0",
+			"control": "dropdown",
+			"parentValue": "",
+			"display": "inline",
+			"header": [
+				{
+					"text": "1. Select county",
+					"name": "county_menu",
+					"helpTitle": "",
+					"helpText": "",
+					"headerLevel" : "main"
+				}
+			]
+        },
+		{
             "type": "group",
 			"level": "1",
 			"control": "radio",
@@ -107,7 +123,7 @@
                     "value": "restoration",
 					"showData": "yes",
 					"layerNumber": "1",
-					"identifyNumber": "",
+					"identifyNumber": "15",
 					"groupsBelow" : "yes"
 				},
                 {
@@ -116,7 +132,7 @@
                     "value": "shoreline",
 					"showData": "yes",
 					"layerNumber": "2",
-					"identifyNumber": "15",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
                 },
                 {
@@ -179,7 +195,7 @@
                     "value": "restoration",
 					"showData": "yes",
 					"layerNumber": "1",
-					"identifyNumber": "",
+					"identifyNumber": "15",
 					"groupsBelow" : "yes"
 				},
 				{
