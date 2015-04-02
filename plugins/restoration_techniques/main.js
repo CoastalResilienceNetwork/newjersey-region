@@ -50,10 +50,7 @@ define([
 			    },
 				
 				deactivate: function () {
-					if (this.infoarea.domNode != undefined){
-						domStyle.set(this.infoarea.domNode, 'display', 'none');
-					}
-					$('#' + this.b).hide();
+					
 				},
 				hibernate: function () { 
 					if (this.infoarea.domNode != undefined){
@@ -63,6 +60,7 @@ define([
 						this.currentLayer.setVisibility(false);
 						this.map.graphics.clear();
 					}
+					$('#' + this.b).hide();
 				},
 			   
 			   	initialize: function (frameworkParameters) {		
