@@ -50,7 +50,10 @@ define([
 			    },
 				
 				deactivate: function () {
-					domStyle.set(this.infoarea.domNode, 'display', 'none');
+					if (this.infoarea.domNode != undefined){
+						domStyle.set(this.infoarea.domNode, 'display', 'none');
+					}
+					$('#' + this.b).hide();
 				},
 				hibernate: function () { 
 					if (this.infoarea.domNode != undefined){
@@ -67,11 +70,11 @@ define([
 					domClass.add(this.container, "claro");
 					con = dom.byId('plugins/restoration_techniques-0');
 						domStyle.set(con, "width", "245px");
-						domStyle.set(con, "height", "630px");
+						domStyle.set(con, "height", "580px");
 					con1 = dom.byId('plugins/restoration_techniques-1');
 					if (con1 != undefined){
 						domStyle.set(con1, "width", "245px");
-						domStyle.set(con1, "height", "630px");
+						domStyle.set(con1, "height", "580px");
 					}
 					this.layerVizObject = dojo.eval("[" + layerViz + "]")[0];
 					this.controls = this.layerVizObject.controls;
@@ -143,7 +146,7 @@ define([
 					
 					this.tabarea = new ContentPane({
 					  id: this.b,
-					  style:"display:none; z-index:8; position:absolute; right:105px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
+					  style:"display:none; z-index:8; position:absolute; right:105px; width:260px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
 					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Identify Restoration Technique Cells</div>" +	
 						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
 						  "<p id='" + this.sliderpane.id + "idIntro'></p>" +
