@@ -4,27 +4,18 @@
 	"tier1Layers": [ "1", "2", "3", "4", "5", "6" ], 
 	"controls": [
         {
-            "type": "groups",
-			"level": "0",
+            "type": "group",
 			"control": "dropdown",
-			"parentValue": "",
-			"display": "inline",
-			"header": [
-				{
-					"text": "1. Select county",
-					"name": "county_menu",
-					"helpTitle": "",
-					"helpText": "",
-					"headerLevel" : "main"
-				}
-			]
+			"layerNumber": "17",
+			"field": "COUNTY",
+			"field1": "MUN"
         },
 		{
             "type": "group",
 			"level": "1",
 			"control": "radio",
 			"parentValue": "",
-			"display": "inline",
+			"display": "none",
 			"header": [
 				{
 					"text": "1. Select the shoreline type",
@@ -145,7 +136,7 @@
 					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Ecologically-Enhanced Revetment",
+                    "text": "Marsh Planted Revetment",
                     "selected": false,
                     "value": "revetment",
 					"showData": "yes",
@@ -199,7 +190,7 @@
 					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Ecologically-Enhanced Revetment",
+                    "text": "Marsh Planted Revetment",
                     "selected": false,
                     "value": "revetment",
 					"showData": "yes",	
@@ -226,15 +217,25 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "View key environmental parameters for selected technique",
+					"text": "<b>Key Environmental Parameters</b>",
 					"name": "level_4a",
-					"helpTitle": "",
-					"helpText": "",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
 					"headerLevel" : "sub"
 				}
 			],
 			"options": [
                 {
+					"text": "Nature-Based Living Shoreline",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "2",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"leaveOn": "yes"
+				},
+				{
 					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
@@ -253,6 +254,16 @@
 					"groupsBelow" : "no",
 					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
+				},
+				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "12",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityInfo"
 				},
 				{
 					"text": "Wave Height",
@@ -304,15 +315,25 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "View key environmental parameters for selected technique",
+					"text": "<b>Key Environmental Parameters</b>",
 					"name": "level_4a",
-					"helpTitle": "",
-					"helpText": "",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
 					"headerLevel" : "sub"
 				}
 			],
 			"options": [
                 {
+					"text": "Marsh Sill",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "3",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"leaveOn": "yes"
+				},
+				{
 					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
@@ -382,15 +403,25 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "View key environmental parameters for selected technique",
+					"text": "<b>Key Environmental Parameters</b>",
 					"name": "level_4a",
-					"helpTitle": "",
-					"helpText": "",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
 					"headerLevel" : "sub"
 				}
 			],
 			"options": [
                 {
+					"text": "Breakwater",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "5",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"leaveOn": "yes"
+				},
+				{
 					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
@@ -450,15 +481,25 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "View key environmental parameters for selected technique",
+					"text": "<b>Key Environmental Parameters</b>",
 					"name": "level_4a",
-					"helpTitle": "",
-					"helpText": "",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
 					"headerLevel" : "sub"
 				}
 			],
 			"options": [
                 {
+					"text": "Living Reef Breakwater",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "6",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"leaveOn": "yes"
+				},
+				{
 					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
@@ -477,6 +518,16 @@
 					"groupsBelow" : "no",
 					"identifyNumber": "",
 					"helpTable": "tidalRangeInfo"
+				},
+				{
+					"text": "Salinity",
+					"selected": false,
+					"value": "ep_salinity",
+					"showData":"yes",
+					"layerNumber": "12",
+					"groupsBelow": "no",
+					"identifyNumber": "",
+					"helpTable": "salinityInfo"
 				},
 				{
 					"text": "Wave Height",
@@ -528,15 +579,25 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "View key environmental parameters for selected technique",
+					"text": "<b>Key Environmental Parameters</b>",
 					"name": "level_4a",
-					"helpTitle": "",
-					"helpText": "",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
 					"headerLevel" : "sub"
 				}
 			],
 			"options": [
                 {
+					"text": "Marsh Planted Revetment",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "4",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"leaveOn": "yes"
+				},
+				{
 					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
@@ -586,15 +647,25 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "View key environmental parameters for selected technique",
+					"text": "<b>Key Environmental Parameters</b>",
 					"name": "level_4a",
-					"helpTitle": "",
-					"helpText": "",
+					"helpTitle": "Key Environmental Parameters",
+					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
 					"headerLevel" : "sub"
 				}
 			],
 			"options": [
                 {
+					"text": "Beach Restoration",
+					"selected": true,
+					"value": "",
+					"showData":"yes",
+					"layerNumber": "1",
+					"groupsBelow" : "no",
+					"identifyNumber": "",
+					"leaveOn": "yes"
+				},
+				{
 					"text": "Erosion Shoreline Change",
 					"selected": false,
 					"value": "ep_erosion",
@@ -649,7 +720,7 @@
     ],
 	"iceCoverInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
 			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row2": ["Low (< 1 in. thick)", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["Moderate (1-2 in. thick)", "No", "No", "Yes", "Yes", "Yes"],
@@ -659,29 +730,29 @@
 	],	
 	"nearshoreSlopeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
-			"row1": ["No Slope", "No", "Yes", "NA", "No", "NA"],
-			"row2": ["0.1-3.3%", "No", "Yes", "NA", "No", "NA"],
-			"row3": ["3.4-6.7%", "Yes", "No", "NA", "Yes", "NA"],
-			"row4": ["6.8%-10%", "Yes", "No", "NA", "Yes", "NA"],
-			"row5": ["10.1-20%", "No", "No", "NA", "No", "NA"],
-			"row6": [">20%", "No", "No", "NA", "No", "NA"]
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"row1": ["No Slope", "No", "Yes", "NA", "NA", "No"],
+			"row2": ["0.1-3.3%", "No", "Yes", "NA", "NA", "No"],
+			"row3": ["3.4-6.7%", "Yes", "No", "NA", "NA", "Yes"],
+			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes"],
+			"row5": ["10.1-20%", "No", "No", "NA", "NA", "No"],
+			"row6": [">20%", "No", "No", "NA", "NA", "No"]
 		}
 	],
 	"shorelineSlopeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
-			"row1": ["No Slope", "Yes", "Yes", "NA", "No", "NA"],
-			"row2": ["0.1-3.3%", "Yes", "Yes", "NA", "No", "NA"],
-			"row3": ["3.4-6.7%", "Yes", "Yes", "NA", "No", "NA"],
-			"row4": ["6.8%-10%", "Yes", "No", "NA", "Yes", "NA"],
-			"row5": ["10.1-20%", "No", "No", "NA", "Yes", "NA"],
-			"row6": [">20%", "No", "No", "NA", "No", "NA"]	
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"row1": ["No Slope", "Yes", "Yes", "NA", "NA", "No"],
+			"row2": ["0.1-3.3%", "Yes", "Yes", "NA", "NA", "No"],
+			"row3": ["3.4-6.7%", "Yes", "Yes", "NA", "NA", "No"],
+			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes"],
+			"row5": ["10.1-20%", "No", "No", "NA", "NA", "Yes"],
+			"row6": [">20%", "No", "No", "NA", "NA", "No"]	
 		}
 	],
 	"waveHeightInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
 			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row2": ["1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["2 ft", "No", "Yes", "Yes", "Yes", "Yes"],
@@ -692,19 +763,19 @@
 	],
 	"salinityInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
-			"row1": ["<5 ppt", "No", "NA", "NA", "No", "NA"],
-			"row2": ["5-10 ppt", "Yes", "NA", "NA", "Yes", "NA"],
-			"row3": ["10-15 ppt", "Yes", "NA", "NA", "Yes", "NA"],
-			"row4": ["15-20 ppt", "Yes", "NA", "NA", "Yes", "NA"],
-			"row5": ["20-25 ppt", "Yes", "NA", "NA", "Yes", "NA"],
-			"row6": ["25-30 ppt", "Yes", "NA", "NA", "Yes", "NA"],
-			"row7": [">30 ppt", "No", "NA", "NA", "No", "NA"]	
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"row1": ["<5 ppt", "No", "NA", "NA", "NA", "No"],
+			"row2": ["5-10 ppt", "Yes", "NA", "NA", "NA", "Yes"],
+			"row3": ["10-15 ppt", "Yes", "NA", "NA", "NA", "Yes"],
+			"row4": ["15-20 ppt", "Yes", "NA", "NA", "NA", "Yes"],
+			"row5": ["20-25 ppt", "Yes", "NA", "NA", "NA", "Yes"],
+			"row6": ["25-30 ppt", "Yes", "NA", "NA", "NA", "Yes"],
+			"row7": [">30 ppt", "No", "NA", "NA", "NA", "No"]	
 		}
 	],
 	"tidalRangeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
 			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row2": ["1-2 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["3-4 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
@@ -714,7 +785,7 @@
 	],
 	"shorelineChangeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Sill", "Breakwater", "Living Reef", "Planted Revement"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
 			"row1": ["Accretion", "No", "No", "No", "No", "No"],
 			"row2": ["No Change", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["0-3 ft/yr", "Yes", "Yes", "Yes", "Yes", "Yes"],
