@@ -226,7 +226,7 @@
 			],
 			"options": [
                 {
-					"text": "Nature-Based Living Shoreline",
+					"text": "Nature-Based Living Shoreline (result from above)",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -324,7 +324,7 @@
 			],
 			"options": [
                 {
-					"text": "Marsh Sill",
+					"text": "Marsh Sill (result from above)",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -412,7 +412,7 @@
 			],
 			"options": [
                 {
-					"text": "Breakwater",
+					"text": "Breakwater (result from above)",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -490,7 +490,7 @@
 			],
 			"options": [
                 {
-					"text": "Living Reef Breakwater",
+					"text": "Living Reef Breakwater (result from above)",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -588,7 +588,7 @@
 			],
 			"options": [
                 {
-					"text": "Marsh Planted Revetment",
+					"text": "Marsh Planted Revetment (result from above)",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -656,7 +656,7 @@
 			],
 			"options": [
                 {
-					"text": "Beach Restoration",
+					"text": "Beach Restoration (result from above)",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
