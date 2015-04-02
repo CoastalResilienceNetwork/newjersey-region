@@ -561,8 +561,12 @@ define([
 						this.slayers = [];	
 						this.slayers.push(selectedLayer);
 						this.currentLayer.setVisibleLayers(this.slayers);
+						
 						// set up identify functionality
 						if (this.controls[group].options[val].identifyNumber != ""){
+							if (this.featureLayerOD != undefined){
+								this.map.removeLayer(this.featureLayerOD);			
+							}
 							$('#' + this.b).show();
 							idLyrNum = "/" + this.controls[group].options[val].identifyNumber;	
 							this.featureLayerOD = new FeatureLayer(this.layerVizObject.url + idLyrNum, {
@@ -592,6 +596,12 @@ define([
 								//this.map.graphics.remove(this.highlightGraphic);
 							}));
 							this.map.addLayer(this.featureLayerOD);
+						}else{
+							$('#' + this.b).hide();
+							this.map.graphics.clear();
+							if (this.featureLayerOD != undefined){
+								this.map.removeLayer(this.featureLayerOD);			
+							}
 						}
 					}
 					if (this.controls[group].options[val].groupsBelow == "yes"){
