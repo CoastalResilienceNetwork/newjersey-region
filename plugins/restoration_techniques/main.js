@@ -447,10 +447,15 @@ define([
 						maxHeight: "150"
 					});
 					domClass.add(menu.domNode, "claro");
-					
-					array.forEach(countyDD, lang.hitch(this,function(v){
+					var cl = countyDD.length - 1;
+					array.forEach(countyDD, lang.hitch(this,function(v, j){
+						if (j == cl){
+							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 1px 1px #d2e6f7 !important;";
+						}else{
+							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 0px 1px #d2e6f7 !important;";
+						}
 						menuItem = new MenuItem({
-							style: "border: 1px solid #d2e6f7;",
+							style: sty,
 							label: v,
 							onClick: lang.hitch(this,function(e) { 
 								var mun = [];
@@ -467,7 +472,7 @@ define([
 					}));
 					this.button = new DropDownButton({
 						label: "Choose a County",
-						style: "margin-bottom:6px !important",
+						style: "margin-bottom:6px !important;",
 						maxHeight: "150",
 						dropDown: menu
 					});
