@@ -217,7 +217,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>Key Environmental Parameters</b>",
+					"text": "<b>Result From Above and Key<br>Environmental Parameters</b>",
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
@@ -226,7 +226,7 @@
 			],
 			"options": [
                 {
-					"text": "Nature-Based Living Shoreline (result from above)",
+					"text": "Nature-Based Living Shoreline",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -315,7 +315,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>Key Environmental Parameters</b>",
+					"text": "<b>Result From Above and Key<br>Environmental Parameters</b>",
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
@@ -324,7 +324,7 @@
 			],
 			"options": [
                 {
-					"text": "Marsh Sill (result from above)",
+					"text": "Marsh Sill",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -403,7 +403,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>Key Environmental Parameters</b>",
+					"text": "<b>Result From Above and Key<br>Environmental Parameters</b>",
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
@@ -412,7 +412,7 @@
 			],
 			"options": [
                 {
-					"text": "Breakwater (result from above)",
+					"text": "Breakwater",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -481,7 +481,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>Key Environmental Parameters</b>",
+					"text": "<b>Result From Above and Key<br>Environmental Parameters</b>",
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
@@ -490,7 +490,7 @@
 			],
 			"options": [
                 {
-					"text": "Living Reef Breakwater (result from above)",
+					"text": "Living Reef Breakwater",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -579,7 +579,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>Key Environmental Parameters</b>",
+					"text": "<b>Result From Above and Key<br>Environmental Parameters</b>",
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
@@ -588,7 +588,7 @@
 			],
 			"options": [
                 {
-					"text": "Marsh Planted Revetment (result from above)",
+					"text": "Marsh Planted Revetment",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -647,7 +647,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>Key Environmental Parameters</b>",
+					"text": "<b>Result From Above and Key<br>Environmental Parameters</b>",
 					"name": "level_4a",
 					"helpTitle": "Key Environmental Parameters",
 					"helpText": "Use checkboxes to toggle layer visiblility. Click blue text for more information about each parameter.",
@@ -656,7 +656,7 @@
 			],
 			"options": [
                 {
-					"text": "Beach Restoration (result from above)",
+					"text": "Beach Restoration",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
