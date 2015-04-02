@@ -117,8 +117,8 @@ define([
 					mymap = dom.byId(this.map.id);
 					a = dojoquery(mymap).parent();
 					this.infoarea = new ContentPane({
-					  style:"z-index:10000; !important;position:absolute !important;left:320px !important; max-width:260px !important; top:65px !important;background-color:#FFF !important;padding:10px !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: none",
-					  innerHTML: "<div class='infoareacloser' style='float:right !important'><a href='#'>✖</a></div><div class='infoareacontent' style='padding-top:0px'>no content yet</div>"
+						style:"z-index:10000; !important;position:absolute !important;left:320px !important; top:65px !important;background-color:#FFF !important;padding:10px !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: none",
+						innerHTML: "<div class='infoareacloser' style='float:right !important'><a href='#'>✖</a></div><div class='infoareacontent' style='padding-top:0px'>no content yet</div>"
 					});
 					dom.byId(a[0]).appendChild(this.infoarea.domNode)
 					ina = dojoquery(this.infoarea.domNode).children(".infoareacloser");
@@ -143,7 +143,7 @@ define([
 					
 					this.tabarea = new ContentPane({
 					  id: this.b,
-					  style:"display:none; z-index:8; position:absolute; right:105px; top:60px; width:260px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
+					  style:"display:none; z-index:8; position:absolute; right:105px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
 					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Identify Restoration Technique Cells</div>" +	
 						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
 						  "<p id='" + this.sliderpane.id + "idIntro'></p>" +
@@ -292,7 +292,7 @@ define([
 								}
 								on(infoPic, "click", lang.hitch(this,function(e){
 									domStyle.set(this.infoarea.domNode, 'display', '');
-									this.infoareacontent.innerHTML = "<b>" + entry.header[0].helpTitle + "</b><div style='height:8px'></div>" + entry.header[0].helpText;
+									this.infoareacontent.innerHTML = "<b>" + entry.header[0].helpTitle + "</b><div style='height:8px'></div><div style='width:220px;'>" + entry.header[0].helpText + "</div>";
 								}));
 							}
 			
@@ -382,6 +382,7 @@ define([
 									
 									on(nslidernodeheader, "click", lang.hitch(this,function(e){
 										if (option.helpTable != undefined){
+//											domStyle.set(this.infoarea.domNode, 'style', '');
 											domStyle.set(this.infoarea.domNode, 'display', '');
 											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>Environmental Parameter Criteria Thresholds: " + option.text + "</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
 											var tblid = this.sliderpane.id + '_infoTable'
