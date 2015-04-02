@@ -450,6 +450,7 @@ define([
 					
 					array.forEach(countyDD, lang.hitch(this,function(v){
 						menuItem = new MenuItem({
+							style: "border: 1px solid #d2e6f7;",
 							label: v,
 							onClick: lang.hitch(this,function(e) { 
 								var mun = [];
@@ -458,7 +459,7 @@ define([
 										mun.push(c1[i].attributes[f1])
 									}
 								}
-								dojo.byId(this.button).set("label", v)
+								dojo.byId(this.button).set("label", v + " County")
 								this.updateDD(mun, v);	
 							})												
 						});
