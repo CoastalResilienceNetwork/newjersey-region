@@ -497,6 +497,7 @@ define([
 					this.menu1.destroyDescendants();
 					array.forEach(mun, lang.hitch(this,function(m){
 						menuItem1 = new MenuItem({
+							style: "border: 1px solid #d2e6f7;",
 							label: m,
 							onClick: lang.hitch(this,function(){
 								var selectMun = new esriQuery();
