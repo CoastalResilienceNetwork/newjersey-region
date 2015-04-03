@@ -339,13 +339,6 @@ define([
 							}
 							
 							if ( entry.control == "checkbox" ) {
-								/*selItems = [];
-								lyrList = this.layerVizObject[entry.showList]
-								console.log(entry.parentValue)
-								$.each(entry.listItems, function(i, v){
-									selItems.push(lyrList[v])
-								});
-								console.log(selItems)*/
 								ncontrolsnode = domConstruct.create("div", {
 									id: this.sliderpane.id + entry.header[0].name + "_" + groupid,
 									style: "margin-top:5px;" + mar1
@@ -363,7 +356,7 @@ define([
 										title: option.text,
 										checked: option.selected,
 										onClick: lang.hitch(this,function(e) { 
-											this.cbClick(option.layerNumber, e);
+											this.cbClick(option.layerNumber, e, i, groupid);
 										})
 									}, ncontrolnode);
 									
@@ -526,6 +519,7 @@ define([
 				},
 				
 				radioClick: function(val,group) {
+					console.log(val + " " + group)
 					if (this.featureLayer != undefined){
 						this.map.removeLayer(this.featureLayer);
 					}
@@ -554,46 +548,7 @@ define([
 						this.currentLayer.setVisibleLayers(this.slayers);
 						
 						// set up identify functionality
-						if (this.controls[group].options[val].identifyNumber != ""){
-							if (this.featureLayerOD != undefined){
-								this.map.removeLayer(this.featureLayerOD);			
-							}
-							$('#' + this.b).show();
-							idLyrNum = "/" + this.controls[group].options[val].identifyNumber;	
-							this.featureLayerOD = new FeatureLayer(this.layerVizObject.url + idLyrNum, {
-								mode: esri.layers.FeatureLayer.ONDEMAND,
-								opacity: "0",
-								outFields: "*"
-							});
-							this.featureLayerOD.setRenderer(new SimpleRenderer(this.pntSym));
-		
-							// call function to capture and display selected feature layer attributes
-							
-							this.featureLayerOD.on("mouse-over", lang.hitch(this,function(evt){
-								this.map.setMapCursor("pointer");
-							//	this.highlightGraphic = new Graphic(evt.graphic.geometry,this.highlightSymbol);
-							//	this.map.graphics.add(this.highlightGraphic);
-							}));
-							this.featureLayerOD.on("mouse-out", lang.hitch(this,function(evt){
-								this.map.setMapCursor("default");
-							//	this.map.graphics.remove(this.highlightGraphic);
-							}));
-							this.featureLayerOD.on("mouse-down", lang.hitch(this,function(evt){
-								atts = evt.graphic.attributes;
-								this.showAttributes(atts);
-								this.map.graphics.clear();
-								this.selectedGraphic = new Graphic(evt.graphic.geometry,this.pntSym);
-								this.map.graphics.add(this.selectedGraphic);
-								//this.map.graphics.remove(this.highlightGraphic);
-							}));
-							this.map.addLayer(this.featureLayerOD);
-						}else{
-							$('#' + this.b).hide();
-							this.map.graphics.clear();
-							if (this.featureLayerOD != undefined){
-								this.map.removeLayer(this.featureLayerOD);			
-							}
-						}
+						this.identifyFeatures(val, group);
 					}
 					if (this.controls[group].options[val].groupsBelow == "yes"){
 						//get value and current level
@@ -627,18 +582,66 @@ define([
 							if (entry.level == this.childlevel && entry.parentValue == this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
 							}
+							if (entry.level == this.childlevel && entry.parentValue == "all"){
+								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
+							}
 						}));						
 					}
 				},
 				
-				cbClick: function(lyrnum, e) {
+				cbClick: function(lyrnum, e, val, group) {
 					if (e.target.checked === true){
 						this.slayers.push(lyrnum);
+						this.identifyFeatures(val, group);
 					}else{
 						var index = this.slayers.indexOf(lyrnum)
 						this.slayers.splice(index, 1);
 					}
 					this.currentLayer.setVisibleLayers(this.slayers);
+					
+				},
+				
+				identifyFeatures: function(val, group){
+					if (this.controls[group].options[val].identifyNumber != ""){
+						if (this.featureLayerOD != undefined){
+							this.map.removeLayer(this.featureLayerOD);			
+						}
+						$('#' + this.b).show();
+						idLyrNum = "/" + this.controls[group].options[val].identifyNumber;	
+						this.featureLayerOD = new FeatureLayer(this.layerVizObject.url + idLyrNum, {
+							mode: esri.layers.FeatureLayer.ONDEMAND,
+							opacity: "0",
+							outFields: "*"
+						});
+						this.featureLayerOD.setRenderer(new SimpleRenderer(this.pntSym));
+	
+						// call function to capture and display selected feature layer attributes
+						
+						this.featureLayerOD.on("mouse-over", lang.hitch(this,function(evt){
+							this.map.setMapCursor("pointer");
+						//	this.highlightGraphic = new Graphic(evt.graphic.geometry,this.highlightSymbol);
+						//	this.map.graphics.add(this.highlightGraphic);
+						}));
+						this.featureLayerOD.on("mouse-out", lang.hitch(this,function(evt){
+							this.map.setMapCursor("default");
+						//	this.map.graphics.remove(this.highlightGraphic);
+						}));
+						this.featureLayerOD.on("mouse-down", lang.hitch(this,function(evt){
+							atts = evt.graphic.attributes;
+							this.showAttributes(atts);
+							this.map.graphics.clear();
+							this.selectedGraphic = new Graphic(evt.graphic.geometry,this.pntSym);
+							this.map.graphics.add(this.selectedGraphic);
+							//this.map.graphics.remove(this.highlightGraphic);
+						}));
+						this.map.addLayer(this.featureLayerOD);
+					}else{
+						$('#' + this.b).hide();
+						this.map.graphics.clear();
+						if (this.featureLayerOD != undefined){
+							this.map.removeLayer(this.featureLayerOD);			
+						}
+					}
 				},
 				
 				showAttributes: function(atts) {

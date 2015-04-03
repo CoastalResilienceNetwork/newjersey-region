@@ -66,7 +66,7 @@
                     "selected": true,
                     "value": "restoration",
 					"showData": "yes",
-					"layerNumber": "1",
+					"layerNumber": "18",
 					"identifyNumber": "15",
 					"groupsBelow" : "no",
 					"leaveOn": "yes"
@@ -777,6 +777,33 @@
 					"groupsBelow": "no",
 					"identifyNumber": "",
 					"helpTable": "nearshoreSlopeInfo"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "5",
+			"control": "checkbox",
+			"parentValue": "all",
+			"display": "none",
+			"header": [
+				{
+					"text": "Combined restoration techniques",
+					"name": "level_1",
+					"helpTitle": "Combined Techniques",
+					"helpText": "A description of combined techniques",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+				{
+                    "text": "Combined restoration techniques",
+                    "selected": false,
+                    "value": "restoration",
+					"showData": "yes",
+					"layerNumber": "18",
+					"identifyNumber": "15",
+					"groupsBelow" : "no"
 				}
             ]
         }
