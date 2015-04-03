@@ -36,6 +36,7 @@ define([
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: false,
 				rendered: false,
+				
 			   
 				activate: function () {
 					if (this.rendered == false) {
@@ -293,7 +294,7 @@ define([
 								}
 								on(infoPic, "click", lang.hitch(this,function(e){
 									domStyle.set(this.infoarea.domNode, 'display', '');
-									this.infoareacontent.innerHTML = "<b>" + entry.header[0].helpTitle + "</b><div style='height:8px'></div><div style='width:220px;'>" + entry.header[0].helpText + "</div>";
+									this.infoareacontent.innerHTML = "<b>" + entry.header[0].helpTitle + "</b><div style='height:8px'></div><div style='max-width:300px; max-height:530px;'>" + entry.header[0].helpText + "</div>";
 								}));
 							}
 			
