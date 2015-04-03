@@ -19,7 +19,69 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "1. Select the shoreline type",
+					"text": "1. Select data type",
+					"name": "level_1",
+					"helpTitle": "Data Type",
+					"helpText": "A description of data types",
+					"headerLevel" : "main"
+				}
+			],
+			"options": [
+				{
+                    "text": "Combined",
+                    "selected": false,
+                    "value": "combined",
+					"showData": "yes",
+					"layerNumber": "18",
+					"identifyNumber": "15",
+					"groupsBelow" : "yes"
+                },
+				{
+                    "text": "Detailed",
+                    "selected": false,
+                    "value": "detailed",
+					"showData": "no",
+					"groupsBelow" : "yes"
+                }
+            ]
+        },
+		{
+            "type": "group",
+			"level": "2",
+			"control": "checkbox",
+			"parentValue": "combined",
+			"display": "none",
+			"header": [
+				{
+					"text": "Combined restoration techniques",
+					"name": "level_1",
+					"helpTitle": "Combined Techniques",
+					"helpText": "A description of combined techniques",
+					"headerLevel" : "sub"
+				}
+			],
+			"options": [
+				{
+                    "text": "Combined restoration techniques",
+                    "selected": true,
+                    "value": "restoration",
+					"showData": "yes",
+					"layerNumber": "1",
+					"identifyNumber": "15",
+					"groupsBelow" : "no",
+					"leaveOn": "yes"
+				}
+            ]
+        },
+		{
+            "type": "group",
+			"level": "2",
+			"control": "radio",
+			"parentValue": "detailed",
+			"display": "none",
+			"header": [
+				{
+					"text": "2. Select the shoreline type",
 					"name": "level_1",
 					"helpTitle": "Shoreline Type",
 					"helpText": "A description of shoreline types",
@@ -45,13 +107,13 @@
         },
 		{
 			"type": "group",
-			"level": "2",
+			"level": "3",
 			"control": "radio",
 			"parentValue": "marsh",
 			"display": "none",
 			"header": [
 				{
-					"text": "2. Select a disturbance process",
+					"text": "3. Select a disturbance process",
 					"name": "level_2a",
 					"helpTitle": "Disturbance Process",
 					"helpText": "A description of disturbance processes",
@@ -70,13 +132,13 @@
         },
 		{
 			"type": "group",
-			"level": "2",
+			"level": "3",
 			"control": "radio",
 			"parentValue": "beach",
 			"display": "none",
 			"header": [
 				{
-					"text": "2. Select a disturbance process",
+					"text": "3. Select a disturbance process",
 					"name": "level_2b",
 					"helpTitle": "Disturbance Process",
 					"helpText": "A description of disturbance processes",
@@ -95,13 +157,13 @@
         },
         {
             "type": "group",
-			"level": "3",
+			"level": "4",
 			"control": "radio",
 			"parentValue": "m_erosion",
 			"display": "none",
 			"header": [
 				{
-					"text": "3. View a restoration technique",
+					"text": "4. View a restoration technique",
 					"name": "level_3a",
 					"helpTitle": "Definitions for Living Shoreline Techniques",
 					"helpText": "1.	<b>Beach Restoration:</b>  Restoring beaches requires placing sand along a shoreline to help maintain habitat for key species - like horseshoe crabs, red knots and piping plovers - that use sandy beaches for spawning or feeding. The natural sloping beach allows waves to break across the sand, minimizing erosion of the shoreline edge.<br><br>2.	<b>Nature-Based Living Shoreline:</b>  Nature-based living shorelines are best in low-energy areas. “Biological enhancements,” like biodegradable fiber logs (which also provide habitat for ribbed mussels) or Christmas trees, are placed along the tidal marsh edge to provide a contained area for sediment to accumulate and marsh vegetation to grow. Once sediment has accumulated and vegetation grows, a new marsh edge is more resistant to erosion.<br><br><b>Marsh Sill:</b> Marsh sills are low elevation structures that run parallel to the shoreline. Marsh sills, which are below water at high tide, protect the marsh from erosion by causing waves to break offshore, rather than directly on shore. The area between the sill and the marsh is often filled and planted with marsh vegetation to speed up shoreline stabilization.<br><br>4.	<b>Ecologically-Enhanced Revetment:</b>  Ecologically-enhanced revetments are porous, vegetated structures attached to the shore that prevent erosion of the marsh or upland edge.  They are typically constructed from rock or broken up concrete, although materials such as gabion baskets, rubble/debris, and even felled trees can also be used.  They can be used at both open coastal locations and on lower energy sheltered coasts.<br><br>	5.	<b>Breakwater:</b> Breakwaters are structures typically constructed parallel to the shoreline, designed to reduce the amount of wave energy experienced by the shoreline directly behind them and sometimes allow for the establishment of a vegetated (typically marsh) shoreline behind the breakwater itself.  Unlike marsh sills, they are typically constructed in deeper water and in more energetic wave climates. They also tend to be slightly larger and are typically still visable at high tide.<br><br>6.	<b>Living Reef Breakwaters:</b> Living reef breakwaters function similarly to constructed breakwaters, but are built to provide habitat for baby oysters or mussels to settle upon. Reef balls, oyster castles, bagged shell and other reef structures are typically used to provide a durable and heavily-weighted substrate.  These structures may also be “seeded” with shellfish before placement. Over time, large reef structures can form that not only serve as a natural breakwater, but also provide critical aquatic habitat. ",
@@ -115,7 +177,7 @@
                     "value": "restoration",
 					"showData": "yes",
 					"layerNumber": "1",
-					"identifyNumber": "15",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
                 {
@@ -137,7 +199,7 @@
 					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Marsh Planted Revetment",
+                    "text": "Ecologically Enhanced Revetment",
                     "selected": false,
                     "value": "revetment",
 					"showData": "yes",
@@ -167,13 +229,13 @@
         },
 		{
             "type": "group",
-			"level": "3",
+			"level": "4",
             "control": "radio",
 			"parentValue": "b_erosion",
 			"display": "none",
 			"header": [
 				{
-					"text": "3. Select a restoration technique",
+					"text": "4. Select a restoration technique",
 					"name": "level_3b",
 					"helpTitle": "Restoration Technique",
 					"helpText": "A description of restotation techniques",
@@ -187,11 +249,11 @@
                     "value": "restoration",
 					"showData": "yes",
 					"layerNumber": "1",
-					"identifyNumber": "15",
+					"identifyNumber": "",
 					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Marsh Planted Revetment",
+                    "text": "Ecologically Enhanced Revetment",
                     "selected": false,
                     "value": "revetment",
 					"showData": "yes",	
@@ -212,7 +274,7 @@
         },
 		{
             "type": "group",
-			"level": "4",
+			"level": "5",
             "control": "checkbox",
 			"parentValue": "shoreline",
 			"display": "none",
@@ -310,7 +372,7 @@
         },
 		{
             "type": "group",
-			"level": "4",
+			"level": "5",
             "control": "checkbox",
 			"parentValue": "sill",
 			"display": "none",
@@ -398,7 +460,7 @@
         },
 		{
             "type": "group",
-			"level": "4",
+			"level": "5",
             "control": "checkbox",
 			"parentValue": "breakwater",
 			"display": "none",
@@ -476,7 +538,7 @@
         },
 		{
             "type": "group",
-			"level": "4",
+			"level": "5",
             "control": "checkbox",
 			"parentValue": "reef",
 			"display": "none",
@@ -574,7 +636,7 @@
         },
 		{
             "type": "group",
-			"level": "4",
+			"level": "5",
             "control": "checkbox",
 			"parentValue": "revetment",
 			"display": "none",
@@ -589,7 +651,7 @@
 			],
 			"options": [
                 {
-					"text": "Marsh Planted Revetment",
+					"text": "Ecologically Enhanced Revetment",
 					"selected": true,
 					"value": "",
 					"showData":"yes",
@@ -642,7 +704,7 @@
         },
 		{
             "type": "group",
-			"level": "4",
+			"level": "5",
             "control": "checkbox",
 			"parentValue": "restoration",
 			"display": "none",
@@ -721,7 +783,7 @@
     ],
 	"iceCoverInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
 			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row2": ["Low (< 1 in. thick)", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["Moderate (1-2 in. thick)", "No", "No", "Yes", "Yes", "Yes"],
@@ -731,7 +793,7 @@
 	],	
 	"nearshoreSlopeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
 			"row1": ["No Slope", "No", "Yes", "NA", "NA", "No"],
 			"row2": ["0.1-3.3%", "No", "Yes", "NA", "NA", "No"],
 			"row3": ["3.4-6.7%", "Yes", "No", "NA", "NA", "Yes"],
@@ -742,7 +804,7 @@
 	],
 	"shorelineSlopeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
 			"row1": ["No Slope", "Yes", "Yes", "NA", "NA", "No"],
 			"row2": ["0.1-3.3%", "Yes", "Yes", "NA", "NA", "No"],
 			"row3": ["3.4-6.7%", "Yes", "Yes", "NA", "NA", "No"],
@@ -753,7 +815,7 @@
 	],
 	"waveHeightInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
 			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row2": ["1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["2 ft", "No", "Yes", "Yes", "Yes", "Yes"],
@@ -764,7 +826,7 @@
 	],
 	"salinityInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
 			"row1": ["<5 ppt", "No", "NA", "NA", "NA", "No"],
 			"row2": ["5-10 ppt", "Yes", "NA", "NA", "NA", "Yes"],
 			"row3": ["10-15 ppt", "Yes", "NA", "NA", "NA", "Yes"],
@@ -776,7 +838,7 @@
 	],
 	"tidalRangeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
 			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row2": ["1-2 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["3-4 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
@@ -786,7 +848,7 @@
 	],
 	"shorelineChangeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Marsh Planted Revement", "Breakwater", "Living Reef"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
 			"row1": ["Accretion", "No", "No", "No", "No", "No"],
 			"row2": ["No Change", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["0-3 ft/yr", "Yes", "Yes", "Yes", "Yes", "Yes"],

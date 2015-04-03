@@ -503,6 +503,7 @@ define([
 					$('#' + this.sliderpane.id + 'button1Div').show();
 					dojo.byId(this.button1).set("label", "Choose a Municipality")
 					this.menu1.destroyDescendants();
+					mun.sort()
 					array.forEach(mun, lang.hitch(this,function(m){
 						menuItem1 = new MenuItem({
 							style: "border: 1px solid #d2e6f7;",
@@ -538,28 +539,15 @@ define([
 					if (this.controls[group].options[val].showData == "no"){
 						this.slayers = [];	
 						this.currentLayer.setVisibleLayers(this.slayers);
+						$('#' + this.b).hide();
+						this.map.graphics.clear();
+						if (this.featureLayerOD != undefined){
+							this.map.removeLayer(this.featureLayerOD);			
+						}
 					}
 					if (this.controls[group].options[val].showData == "yes"){
 						var selectedLayer = this.controls[group].options[val].layerNumber
-					//	t1L = "no"
-						// 	check if selected layer is part of tier1Layers
-					//	array.forEach(this.tier1Layers, lang.hitch(this,function(t){
-					//		if (t == selectedLayer){
-					//			t1L = "yes"
-					//		}
-					//	}));
-						// if yes, clear visible layer array
-					//	if (t1L == "yes"){
-					//		this.slayers = [];
-						// if no, remove the non tier 1 layers from visible array 	
-					//	}else{
-					//		array.forEach(this.slayers, lang.hitch(this,function(s){
-					//			if($.inArray(s, this.tier1Layers) == -1) {
-					//				var index = this.slayers.indexOf(s)
-					//				this.slayers.splice(index, 1);
-					//			} 
-					//		}));	
-					//	}
+
 						// add newly selected layer to visible layer array
 						this.slayers = [];	
 						this.slayers.push(selectedLayer);
