@@ -323,7 +323,7 @@
 			],
 			"options": [
 				{
-                    "text": "All Marsh Shoreline Techniques",
+                    "text": "All Upland/Beach Shoreline Techniques",
                     "selected": true,
                     "value": "m_techniques",
 					"showData": "yes",
