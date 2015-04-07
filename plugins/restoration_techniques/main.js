@@ -519,7 +519,6 @@ define([
 				},
 				
 				radioClick: function(val,group) {
-					console.log(val + " " + group)
 					if (this.featureLayer != undefined){
 						this.map.removeLayer(this.featureLayer);
 					}
@@ -588,13 +587,11 @@ define([
 				
 				cbClick: function(lyrnum, e, val, group) {
 					if (e.target.checked == true){
-						console.log("true")
 						this.slayers.push(lyrnum);
 						this.slayers = unique(this.slayers)
 						this.identifyFeatures(val, group);
 					}else{
 						var index = this.slayers.indexOf(lyrnum)
-						console.log("false")
 						this.slayers.splice(index, 1);
 					}
 					this.currentLayer.setVisibleLayers(this.slayers);
