@@ -68,11 +68,11 @@ define([
 					declare.safeMixin(this, frameworkParameters);
 					domClass.add(this.container, "claro");
 					con = dom.byId('plugins/restoration_techniques-0');
-						domStyle.set(con, "width", "245px");
+						domStyle.set(con, "width", "295px");
 						domStyle.set(con, "height", "580px");
 					con1 = dom.byId('plugins/restoration_techniques-1');
 					if (con1 != undefined){
-						domStyle.set(con1, "width", "245px");
+						domStyle.set(con1, "width", "295px");
 						domStyle.set(con1, "height", "580px");
 					}
 					this.layerVizObject = dojo.eval("[" + layerViz + "]")[0];
@@ -119,7 +119,7 @@ define([
 					mymap = dom.byId(this.map.id);
 					a = dojoquery(mymap).parent();
 					this.infoarea = new ContentPane({
-						style:"z-index:10000; !important;position:absolute !important;left:320px !important; top:65px !important;background-color:#FFF !important;padding:10px !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: none",
+						style:"z-index:10000; !important;position:absolute !important;left:370px !important; top:65px !important;background-color:#FFF !important;padding:10px !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: none",
 						innerHTML: "<div class='infoareacloser' style='float:right !important'><a href='#'>✖</a></div><div class='infoareacontent' style='padding-top:0px'>no content yet</div>"
 					});
 					dom.byId(a[0]).appendChild(this.infoarea.domNode)
@@ -582,19 +582,19 @@ define([
 							if (entry.level == this.childlevel && entry.parentValue == this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
 							}
-							if (entry.level == this.childlevel && entry.parentValue == "all"){
-								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
-							}
 						}));						
 					}
 				},
 				
 				cbClick: function(lyrnum, e, val, group) {
-					if (e.target.checked === true){
+					if (e.target.checked == true){
+						console.log("true")
 						this.slayers.push(lyrnum);
+						this.slayers = unique(this.slayers)
 						this.identifyFeatures(val, group);
 					}else{
 						var index = this.slayers.indexOf(lyrnum)
+						console.log("false")
 						this.slayers.splice(index, 1);
 					}
 					this.currentLayer.setVisibleLayers(this.slayers);
