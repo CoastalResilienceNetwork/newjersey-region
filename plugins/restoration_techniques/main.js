@@ -379,7 +379,7 @@ define([
 										if (option.helpTable != undefined){
 //											domStyle.set(this.infoarea.domNode, 'style', '');
 											domStyle.set(this.infoarea.domNode, 'display', '');
-											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>Environmental Parameter Criteria Thresholds: " + option.text + "</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
+											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>How each restoration technique meets the " + option.text + " parameter</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
 											var tblid = this.sliderpane.id + '_infoTable'
 											$.each(this.layerVizObject[option.helpTable], function(i, v){
 												$.each(v, function(key, valArray){
