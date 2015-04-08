@@ -188,7 +188,7 @@ define([
 						if (this.l < 18){
 							this.pntSym.size = 10;
 							this.highlightSymbol.size = 10;
-							$('#' + this.sliderpane.id + 'idIntro').text("Zoom in to initialize the identify feature for this technique");
+							$('#' + this.sliderpane.id + 'idIntro').text("Zoom in to initialize the identify feature for this technique.");
 						}
 						if (this.l == 18){
 							this.pntSym.size = 17;
