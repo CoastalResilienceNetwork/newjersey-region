@@ -143,6 +143,24 @@ define([
 					this.b = makeid();
 					//console.log(this.b)	
 					
+					this.iden2Html = "<b>Environmental Parameter Thresholds Met:</b><br>" +
+							"<p id='" + this.sliderpane.id + "erosion' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "tidal' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "wave' style='display:none; margin-bottom:0px;'></p>" +							
+							"<p id='" + this.sliderpane.id + "ice' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "shoreline' style='display:none; margin-bottom:0px;'></p>" +							
+							"<p id='" + this.sliderpane.id + "nearshore' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "totalc' style='display:none; margin-bottom:0px;'></p>" 
+					
+					this.iden1Html = "<b>Restoration Techniques Met:</b><br>" +
+							"<p id='" + this.sliderpane.id + "nblsId' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "lreefId' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "msillId' style='display:none; margin-bottom:0px;'></p>" +							
+							"<p id='" + this.sliderpane.id + "breakwaterId' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "revetId' style='display:none; margin-bottom:0px;'></p>" +							
+							"<p id='" + this.sliderpane.id + "beachId' style='display:none; margin-bottom:0px;'></p>" +
+							"<p id='" + this.sliderpane.id + "totaltId' style='display:none; margin-bottom:0px;'></p>" 
+					
 					this.tabarea = new ContentPane({
 					  id: this.b,
 					  style:"display:none; z-index:8; position:absolute; right:105px; width:260px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
@@ -150,14 +168,6 @@ define([
 						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
 						  "<p id='" + this.sliderpane.id + "idIntro'></p>" +
 						  "<div id='" + this.sliderpane.id + "idResults' style='display:none; class='idResults'>" +
-							"<b>Environmental Parameter Thresholds Met:</b><br>" +
-							"<p id='" + this.sliderpane.id + "erosion' style='display:none; margin-bottom:0px;'></p>" +
-							"<p id='" + this.sliderpane.id + "tidal' style='display:none; margin-bottom:0px;'></p>" +
-							"<p id='" + this.sliderpane.id + "wave' style='display:none; margin-bottom:0px;'></p>" +							
-							"<p id='" + this.sliderpane.id + "ice' style='display:none; margin-bottom:0px;'></p>" +
-							"<p id='" + this.sliderpane.id + "shoreline' style='display:none; margin-bottom:0px;'></p>" +							
-							"<p id='" + this.sliderpane.id + "nearshore' style='display:none; margin-bottom:0px;'></p>" +
-							"<p id='" + this.sliderpane.id + "totalc' style='display:none; margin-bottom:0px;'></p>" +
 						  "</div>" +
 						"</div>" 		
 					});
@@ -519,6 +529,8 @@ define([
 				},
 				
 				radioClick: function(val,group) {
+					$('#' + this.sliderpane.id + 'idIntro').show();
+					$('#' + this.sliderpane.id + 'idResults').hide();
 					if (this.featureLayer != undefined){
 						this.map.removeLayer(this.featureLayer);
 					}
@@ -600,6 +612,7 @@ define([
 				
 				identifyFeatures: function(val, group){
 					if (this.controls[group].options[val].identifyNumber != ""){
+						var idenGroup = this.controls[group].options[val].identifyGroup;
 						if (this.featureLayerOD != undefined){
 							this.map.removeLayer(this.featureLayerOD);			
 						}
@@ -625,7 +638,7 @@ define([
 						}));
 						this.featureLayerOD.on("mouse-down", lang.hitch(this,function(evt){
 							atts = evt.graphic.attributes;
-							this.showAttributes(atts);
+							this.showAttributes(atts, idenGroup);
 							this.map.graphics.clear();
 							this.selectedGraphic = new Graphic(evt.graphic.geometry,this.pntSym);
 							this.map.graphics.add(this.selectedGraphic);
@@ -641,66 +654,131 @@ define([
 					}
 				},
 				
-				showAttributes: function(atts) {
-					//console.log(atts);
-					$('#' + this.b).show();
-					$('#' + this.sliderpane.id + 'idIntro').hide();
-					$('#' + this.sliderpane.id + 'idResults').show();
-					if (atts.ErosionCriteriaThreshold == 0){
-						$('#' + this.sliderpane.id + 'erosion').hide();
+				showAttributes: function(atts, idenGroup) {
+					$('#' + this.sliderpane.id + 'idResults').empty();
+					if (idenGroup == 2){
+						$('#' + this.sliderpane.id + 'idResults').append(this.iden2Html);
+						$('#' + this.b).show();
+						$('#' + this.sliderpane.id + 'idIntro').hide();
+						$('#' + this.sliderpane.id + 'idResults').show();
+						if (atts.ErosionCriteriaThreshold == 0){
+							$('#' + this.sliderpane.id + 'erosion').hide();
+						}
+						if (atts.ErosionCriteriaThreshold == 1){
+							$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>No</b>').show();
+						}
+						if (atts.ErosionCriteriaThreshold == 2){
+							$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>Yes</b>').show();
+						}
+						if (atts.TidalRangeCriteriaThreshold == 0){
+							$('#' + this.sliderpane.id + 'tidal').hide();
+						}
+						if (atts.TidalRangeCriteriaThreshold == 1){
+							$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>No</b>').show();
+						}
+						if (atts.TidalRangeCriteriaThreshold == 2){
+							$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>Yes</b>').show();
+						}
+						if (atts.WaveHtMaxCriteriaThreshold == 0){
+							$('#' + this.sliderpane.id + 'wave').hide();
+						}
+						if (atts.WaveHtMaxCriteriaThreshold == 1){
+							$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>No</b>').show();
+						}
+						if (atts.WaveHtMaxCriteriaThreshold == 2){
+							$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>Yes</b>').show();
+						}
+						if (atts.IceCoverCriteriaThreshold == 0){
+							$('#' + this.sliderpane.id + 'ice').hide();
+						}
+						if (atts.IceCoverCriteriaThreshold == 1){
+							$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>No</b>').show();
+						}
+						if (atts.IceCoverCriteriaThreshold == 2){
+							$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>Yes</b>').show();
+						}
+						if (atts.ShorelineSlopeCriteriaThreshold == 0){
+							$('#' + this.sliderpane.id + 'shoreline').hide();
+						}
+						if (atts.ShorelineSlopeCriteriaThreshold == 1){
+							$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>No</b>').show();
+						}
+						if (atts.ShorelineSlopeCriteriaThreshold == 2){
+							$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>Yes</b>').show();
+						}
+						if (atts.NearshoreSlopeCriteriaThreshold == 0){
+							$('#' + this.sliderpane.id + 'nearshore').hide();
+						}
+						if (atts.NearshoreSlopeCriteriaThreshold == 1){
+							$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>No</b>').show();
+						}
+						if (atts.NearshoreSlopeCriteriaThreshold == 2){
+							$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>Yes</b>').show();
+						}
+						$('#' + this.sliderpane.id + 'totalc').html('Total Criteria Satisfied: <b>' + atts.TotalCriteriaSatisfied + '</b>').show();
 					}
-					if (atts.ErosionCriteriaThreshold == 1){
-						$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>No</b>').show();
+					if (idenGroup == 1){
+						console.log(atts)
+						$('#' + this.sliderpane.id + 'idResults').append(this.iden1Html);
+						$('#' + this.b).show();
+						$('#' + this.sliderpane.id + 'idIntro').hide();
+						$('#' + this.sliderpane.id + 'idResults').show();
+						if (atts.NBLSThreshold == 0){
+							$('#' + this.sliderpane.id + 'nblsId').hide();
+						}
+						if (atts.NBLSThreshold == 1){
+							$('#' + this.sliderpane.id + 'nblsId').html('Nature-Based Living Shoreline: <b>No</b>').show();
+						}
+						if (atts.NBLSThreshold == 2){
+							$('#' + this.sliderpane.id + 'nblsId').html('Nature-Based Living Shoreline: <b>Yes</b>').show();
+						}
+						if (atts.LivingReefThreshold == 0){
+							$('#' + this.sliderpane.id + 'lreefId').hide();
+						}
+						if (atts.LivingReefThreshold == 1){
+							$('#' + this.sliderpane.id + 'lreefId').html('Living Reef Breakwater: <b>No</b>').show();
+						}
+						if (atts.LivingReefThreshold == 2){
+							$('#' + this.sliderpane.id + 'lreefId').html('Living Reef Breakwater: <b>Yes</b>').show();
+						}
+						if (atts.SillThreshold == 0){
+							$('#' + this.sliderpane.id + 'msillId').hide();
+						}
+						if (atts.SillThreshold == 1){
+							$('#' + this.sliderpane.id + 'msillId').html('Marsh Sill: <b>No</b>').show();
+						}
+						if (atts.SillThreshold == 2){
+							$('#' + this.sliderpane.id + 'msillId').html('Marsh Sill: <b>Yes</b>').show();
+						}
+						if (atts.BreakwaterThreshold == 0){
+							$('#' + this.sliderpane.id + 'breakwaterId').hide();
+						}
+						if (atts.BreakwaterThreshold == 1){
+							$('#' + this.sliderpane.id + 'breakwaterId').html('Breakwater: <b>No</b>').show();
+						}
+						if (atts.BreakwaterThreshold == 2){
+							$('#' + this.sliderpane.id + 'breakwaterId').html('Breakwater: <b>Yes</b>').show();
+						}
+						if (atts.RevetmentThreshold == 0){
+							$('#' + this.sliderpane.id + 'revetId').hide();
+						}
+						if (atts.RevetmentThreshold == 1){
+							$('#' + this.sliderpane.id + 'revetId').html('Ecologically Enhanced Revetment: <b>No</b>').show();
+						}
+						if (atts.RevetmentThreshold == 2){
+							$('#' + this.sliderpane.id + 'revetId').html('Ecologically Enhanced Revetment: <b>Yes</b>').show();
+						}
+						if (atts.BeachThreshold == 0){
+							$('#' + this.sliderpane.id + 'beachId').hide();
+						}
+						if (atts.BeachThreshold == 1){
+							$('#' + this.sliderpane.id + 'beachId').html('Beach Restoration: <b>No</b>').show();
+						}
+						if (atts.BeachThreshold == 2){
+							$('#' + this.sliderpane.id + 'beachId').html('Beach Restoration: <b>Yes</b>').show();
+						}
+						$('#' + this.sliderpane.id + 'totaltId').html('Total Techniques: <b>' + atts.TotalTechniques + '</b>').show();
 					}
-					if (atts.ErosionCriteriaThreshold == 2){
-						$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>Yes</b>').show();
-					}
-					if (atts.TidalRangeCriteriaThreshold == 0){
-						$('#' + this.sliderpane.id + 'tidal').hide();
-					}
-					if (atts.TidalRangeCriteriaThreshold == 1){
-						$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>No</b>').show();
-					}
-					if (atts.TidalRangeCriteriaThreshold == 2){
-						$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>Yes</b>').show();
-					}
-					if (atts.WaveHtMaxCriteriaThreshold == 0){
-						$('#' + this.sliderpane.id + 'wave').hide();
-					}
-					if (atts.WaveHtMaxCriteriaThreshold == 1){
-						$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>No</b>').show();
-					}
-					if (atts.WaveHtMaxCriteriaThreshold == 2){
-						$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>Yes</b>').show();
-					}
-					if (atts.IceCoverCriteriaThreshold == 0){
-						$('#' + this.sliderpane.id + 'ice').hide();
-					}
-					if (atts.IceCoverCriteriaThreshold == 1){
-						$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>No</b>').show();
-					}
-					if (atts.IceCoverCriteriaThreshold == 2){
-						$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>Yes</b>').show();
-					}
-					if (atts.ShorelineSlopeCriteriaThreshold == 0){
-						$('#' + this.sliderpane.id + 'shoreline').hide();
-					}
-					if (atts.ShorelineSlopeCriteriaThreshold == 1){
-						$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>No</b>').show();
-					}
-					if (atts.ShorelineSlopeCriteriaThreshold == 2){
-						$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>Yes</b>').show();
-					}
-					if (atts.NearshoreSlopeCriteriaThreshold == 0){
-						$('#' + this.sliderpane.id + 'nearshore').hide();
-					}
-					if (atts.NearshoreSlopeCriteriaThreshold == 1){
-						$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>No</b>').show();
-					}
-					if (atts.NearshoreSlopeCriteriaThreshold == 2){
-						$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>Yes</b>').show();
-					}
-					$('#' + this.sliderpane.id + 'totalc').html('Total Criteria Satisfied: <b>' + atts.TotalCriteriaSatisfied + '</b>').show();
 				},
 				
 				getState: function () { 
