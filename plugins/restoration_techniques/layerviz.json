@@ -116,6 +116,7 @@
 					"showData": "yes",
 					"layerNumber": "14",
 					"identifyNumber": "15",
+					"identifyGroup": "1",
 					"groupsBelow" : "yes"
                 },
 				{
@@ -150,6 +151,7 @@
 					"showData": "yes",
 					"layerNumber": "16",
 					"identifyNumber": "17",
+					"identifyGroup": "1",
 					"groupsBelow" : "yes"
                 },
 				{
@@ -184,6 +186,7 @@
 					"showData": "yes",
 					"layerNumber": "4",
 					"identifyNumber": "5",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
                 },
 				{
@@ -193,6 +196,7 @@
 					"showData": "yes",
 					"layerNumber": "12",
 					"identifyNumber": "13",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				},
                 {
@@ -202,6 +206,7 @@
 					"showData": "yes",
 					"layerNumber": "6",
 					"identifyNumber": "7",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -211,6 +216,7 @@
 					"showData": "yes",
 					"layerNumber": "10",
 					"identifyNumber": "11",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -220,6 +226,7 @@
 					"showData": "yes",
 					"layerNumber": "8",
 					"identifyNumber": "9",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				}
             ]
@@ -247,6 +254,7 @@
 					"showData": "yes",
 					"layerNumber": "2",
 					"identifyNumber": "3",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -256,6 +264,7 @@
 					"showData": "yes",
 					"layerNumber": "12",
 					"identifyNumber": "13",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -265,6 +274,7 @@
 					"showData": "yes",
 					"layerNumber": "10",
 					"identifyNumber": "11",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				},
 				{
@@ -274,6 +284,7 @@
 					"showData": "yes",	
 					"layerNumber": "8",
 					"identifyNumber": "9",
+					"identifyGroup": "2",
 					"groupsBelow" : "yes"
 				}
             ]
@@ -301,6 +312,7 @@
 					"showData": "yes",
 					"layerNumber": "14",
 					"identifyNumber": "15",
+					"identifyGroup": "1",
 					"groupsBelow" : "no",
 					"leaveOn": "yes"
 				}
@@ -329,6 +341,7 @@
 					"showData": "yes",
 					"layerNumber": "16",
 					"identifyNumber": "17",
+					"identifyGroup": "1",
 					"groupsBelow" : "no",
 					"leaveOn": "yes"
 				}
@@ -358,6 +371,7 @@
 					"layerNumber": "4",
 					"groupsBelow" : "no",
 					"identifyNumber": "5",
+					"identifyGroup": "2",
 					"leaveOn": "yes"
 				},
 				{
@@ -456,6 +470,7 @@
 					"layerNumber": "6",
 					"groupsBelow" : "no",
 					"identifyNumber": "7",
+					"identifyGroup": "2",
 					"leaveOn": "yes"
 				},
 				{
@@ -544,6 +559,7 @@
 					"layerNumber": "10",
 					"groupsBelow" : "no",
 					"identifyNumber": "11",
+					"identifyGroup": "2",
 					"leaveOn": "yes"
 				},
 				{
@@ -619,9 +635,10 @@
 					"selected": true,
 					"value": "",
 					"showData":"yes",
-					"layerNumber": "10",
+					"layerNumber": "12",
 					"groupsBelow" : "no",
-					"identifyNumber": "11",
+					"identifyNumber": "13",
+					"identifyGroup": "2",
 					"leaveOn": "yes"
 				},
 				{
@@ -720,6 +737,7 @@
 					"layerNumber": "8",
 					"groupsBelow" : "no",
 					"identifyNumber": "9",
+					"identifyGroup": "2",
 					"leaveOn": "yes"
 				},
 				{
@@ -788,6 +806,7 @@
 					"layerNumber": "2",
 					"groupsBelow" : "no",
 					"identifyNumber": "3",
+					"identifyGroup": "2",
 					"leaveOn": "yes"
 				},
 				{
@@ -845,7 +864,7 @@
     ],
 	"iceCoverInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Replenishment"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
 			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
 			"row2": ["Low (< 1 in. thick)", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
 			"row3": ["Moderate (1-2 in. thick)", "No", "No", "Yes", "Yes", "Yes", "NA"],
@@ -855,62 +874,62 @@
 	],	
 	"nearshoreSlopeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
-			"row1": ["No Slope", "No", "Yes", "NA", "NA", "No"],
-			"row2": ["0.1-3.3%", "No", "Yes", "NA", "NA", "No"],
-			"row3": ["3.4-6.7%", "Yes", "No", "NA", "NA", "Yes"],
-			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes"],
-			"row5": ["10.1-20%", "No", "No", "NA", "NA", "No"],
-			"row6": [">20%", "No", "No", "NA", "NA", "No"]
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
+			"row1": ["No Slope", "No", "Yes", "NA", "NA", "No", "Yes"],
+			"row2": ["0.1-3.3%", "No", "Yes", "NA", "NA", "No", "Yes"],
+			"row3": ["3.4-6.7%", "Yes", "No", "NA", "NA", "Yes", "Yes"],
+			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes", "Yes"],
+			"row5": ["10.1-20%", "No", "No", "NA", "NA", "No", "No"],
+			"row6": [">20%", "No", "No", "NA", "NA", "No", "No"]	
 		}
 	],
 	"shorelineSlopeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
-			"row1": ["No Slope", "Yes", "Yes", "NA", "NA", "No"],
-			"row2": ["0.1-3.3%", "Yes", "Yes", "NA", "NA", "No"],
-			"row3": ["3.4-6.7%", "Yes", "Yes", "NA", "NA", "No"],
-			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes"],
-			"row5": ["10.1-20%", "No", "No", "NA", "NA", "Yes"],
-			"row6": [">20%", "No", "No", "NA", "NA", "No"]	
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
+			"row1": ["No Slope", "Yes", "Yes", "NA", "NA", "No", "Yes"],
+			"row2": ["0.1-3.3%", "Yes", "Yes", "NA", "NA", "No", "Yes"],
+			"row3": ["3.4-6.7%", "Yes", "Yes", "NA", "NA", "No", "Yes"],
+			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes", "Yes"],
+			"row5": ["10.1-20%", "No", "No", "NA", "NA", "Yes", "Yes"],
+			"row6": [">20%", "No", "No", "NA", "NA", "No", "No"]
 		}
 	],
 	"waveHeightInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
-			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row2": ["1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row3": ["2 ft", "No", "Yes", "Yes", "Yes", "Yes"],
-			"row4": ["3 ft", "No", "Yes", "Yes", "Yes", "Yes"],
-			"row5": ["4 ft", "No", "No", "No", "No", "No"],
-			"row6": [">4 ft", "No", "No", "No", "No", "No"]	
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
+			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
+			"row2": ["1 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
+			"row3": ["2 ft", "No", "Yes", "Yes", "Yes", "Yes", "NA"],
+			"row4": ["3 ft", "No", "Yes", "Yes", "Yes", "Yes", "NA"],
+			"row5": ["4 ft", "No", "No", "No", "No", "No", "NA"],
+			"row6": [">4 ft", "No", "No", "No", "No", "No", "NA"]
 		}
 	],
 	"salinityInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
-			"row1": ["<5 ppt", "No", "NA", "NA", "NA", "No"],
-			"row2": ["5-10 ppt", "Yes", "NA", "NA", "NA", "Yes"],
-			"row3": ["10-15 ppt", "Yes", "NA", "NA", "NA", "Yes"],
-			"row4": ["15-20 ppt", "Yes", "NA", "NA", "NA", "Yes"],
-			"row5": ["20-25 ppt", "Yes", "NA", "NA", "NA", "Yes"],
-			"row6": ["25-30 ppt", "Yes", "NA", "NA", "NA", "Yes"],
-			"row7": [">30 ppt", "No", "NA", "NA", "NA", "No"]	
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
+			"row1": ["<5 ppt", "No", "NA", "NA", "NA", "No", "NA"],
+			"row2": ["5-10 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
+			"row3": ["10-15 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
+			"row4": ["15-20 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
+			"row5": ["20-25 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
+			"row6": ["25-30 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
+			"row7": [">30 ppt", "No", "NA", "NA", "NA", "No", "NA"]	
 		}
 	],
 	"tidalRangeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based living shoreline", "Marsh Sill", "Ecologically Enhanced Revetment", "Breakwater", "Living Reef"],
-			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row2": ["1-2 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row3": ["3-4 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row4": ["5-6 ft", "No", "No", "No", "No", "No"],
-			"row5": [">6 ft", "No", "No", "No", "No", "No"]		
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
+			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
+			"row2": ["1-2 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
+			"row3": ["3-4 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
+			"row4": ["5-6 ft", "No", "No", "No", "No", "No", "NA"],
+			"row5": [">6 ft", "No", "No", "No", "No", "No", "NA"]	
 		}
 	],
 	"shorelineChangeInfo": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Replenishment"],
+			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
 			"row1": ["Accretion", "No", "No", "No", "No", "No", "No"],
 			"row2": ["No Change", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row3": ["0-3 ft/yr", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"],
