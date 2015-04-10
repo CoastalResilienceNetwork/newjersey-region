@@ -36,7 +36,6 @@ define([
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: false,
 				rendered: false,
-				
 			   
 				activate: function () {
 					if (this.rendered == false) {
@@ -62,6 +61,7 @@ define([
 						this.map.graphics.clear();
 					}
 					$('#' + this.b).hide();
+					this.rendered = false;
 				},
 			   
 			   	initialize: function (frameworkParameters) {		
@@ -115,7 +115,7 @@ define([
 						new Color([161,70,18]), 2),new Color([255,255,0,0])
 					  );			
 					this.slayers = [];
-					this.tier1Layers = this.layerVizObject.tier1Layers
+					//this.tier1Layers = this.layerVizObject.tier1Layers
 					mymap = dom.byId(this.map.id);
 					a = dojoquery(mymap).parent();
 					this.infoarea = new ContentPane({
