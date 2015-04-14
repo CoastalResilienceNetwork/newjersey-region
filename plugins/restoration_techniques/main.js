@@ -38,6 +38,7 @@ define([
 				rendered: false,
 			   
 				activate: function () {
+					console.log("here")
 					if (this.rendered == false) {
 						this.rendered = true;
 						this.render();
@@ -50,17 +51,31 @@ define([
 			    },
 				
 				deactivate: function () {
-					
-				},
-				hibernate: function () { 
+					console.log(this.rendered + " Deactivate")
+				},	
+				hibernate: function () { 	
 					if (this.infoarea.domNode != undefined){
-						domStyle.set(this.infoarea.domNode, 'display', 'none');
+						this.infoarea.destroy();
+					}
+					if (this.sliderpane != undefined){
+						this.sliderpane.destroy();
 					}
 					if (this.currentLayer != undefined)  {
 						this.currentLayer.setVisibility(false);
 						this.map.graphics.clear();
 					}
-					$('#' + this.b).hide();
+					if (this.tabarea != undefined){
+						this.tabarea.destroy();
+					}
+					if (this.buttonpane !=undefined ){
+						this.buttonpane.destroy();
+					}
+					if (this.map != undefined){
+						this.map.graphics.clear();
+					}
+					if (this.munFL != undefined){
+						this.map.removeLayer(this.munFL)
+					}
 					this.rendered = false;
 				},
 			   
@@ -89,10 +104,6 @@ define([
 					domStyle.set(this.sliderpane.domNode, "height", this.sph + "px"); 
 					
 				 },
-				
-				zoomToActive: function() {
-					this.map.setExtent(this.currentLayer.fullExtent, true);				
-				},
 				
 				changeOpacity: function(e) {
 					this.currentLayer.setOpacity(1 - e)
@@ -135,7 +146,7 @@ define([
 					});
 					parser.parse();
 					dom.byId(this.container).appendChild(this.sliderpane.domNode);
-					
+					console.log(this.sliderpane)
 					
 					//tab container
 					mymap = dom.byId(this.map.id);
@@ -431,9 +442,10 @@ define([
 					}));
 					this.currentLayer = new ArcGISDynamicMapServiceLayer(this.layerVizObject.url);
 					this.map.addLayer(this.currentLayer);
-					dojo.connect(this.currentLayer, "onLoad", lang.hitch(this,function(e){
+				/*	dojo.connect(this.currentLayer, "onLoad", lang.hitch(this,function(e){
 						this.map.setExtent(this.currentLayer.fullExtent, true);
 					}));
+				*/	
 					this.resize();
 				},
 				
