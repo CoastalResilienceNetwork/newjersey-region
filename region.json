@@ -40,7 +40,6 @@
     ],
     "pluginOrder": [
         "layer_selector",
-        "restoration_techniques",
 		"flood_slr",
         "risk_explorer",
         "zoom_to",
