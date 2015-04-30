@@ -79,7 +79,7 @@
         {
             "id": "get-started",
             "title": "Getting Started",
-            "description": "Coastal Resilience is a decision support tool that provides local, state and national planners a step-wise process to guide decisions to reduce the ecological and socio-economic risks of coastal hazards",
+            "description": "Coastal Resilience is a decision support tool that provides local, state and national planners a step-wise process to guide decisions to reduce the ecological and socio-economic risks of coastal hazards. Pick a geography to start exploring the map or choose to visit our interactive map gallery. <br><br>If you need help, click on the Tour tab near the top right of the screen, or visit our <a href='http://coastalresilience.org/training' target='_blank'>Training</a> page. <br><br><img src='img/TNCLogo.jpg' />",
             "showSubRegions": true,
             "showByDefault": false,
             "categories": [
