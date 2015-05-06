@@ -10,7 +10,8 @@ require({
 define([
         "dojo/_base/declare", "framework/PluginBase", 'plugins/restoration_techniques/ConstrainedMoveable', 'plugins/restoration_techniques/jquery-ui-1.11.0/jquery-ui',
 		
-		"esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/FeatureLayer", "esri/tasks/QueryTask", "esri/tasks/query", "esri/graphicsUtils",
+		"esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/FeatureLayer", "esri/tasks/QueryTask", "esri/tasks/query", "esri/graphicsUtils", 
+		"esri/geometry/Extent", "esri/SpatialReference",
 		
 		"esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleMarkerSymbol", "esri/graphic", "esri/symbols/Font", 
 		"esri/symbols/TextSymbol", "esri/symbols/PictureMarkerSymbol", "dojo/_base/Color", "esri/renderers/SimpleRenderer",		
@@ -24,7 +25,7 @@ define([
 		"dojo/text!./layerviz.json", "jquery"
        ],
        function ( declare, PluginBase, ConstrainedMoveable, ui, 
-					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils,
+					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils, Extent, SpatialReference,
 					SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Font, TextSymbol, PictureMarkerSymbol, Color, SimpleRenderer,
 					registry, Button, DropDownButton, DropDownMenu, MenuItem, ContentPane, HorizontalSlider, CheckBox, RadioButton,
 					dom, domClass, domStyle, win, domConstruct, domAttr, Dialog, domGeom, array, lang, on, parser, dojoquery, NodeListtraverse, Moveable, move,
@@ -38,7 +39,7 @@ define([
 				rendered: false,
 			   
 				activate: function () {
-					console.log("here")
+					console.log("activate")
 					if (this.rendered == false) {
 						this.rendered = true;
 						this.render();
@@ -47,6 +48,7 @@ define([
 						if (this.currentLayer != undefined)  {
 							this.currentLayer.setVisibility(true);	
 						}
+						this.resize();
 					}
 			    },
 				
@@ -79,7 +81,8 @@ define([
 					this.rendered = false;
 				},
 			   
-			   	initialize: function (frameworkParameters) {		
+			   	initialize: function (frameworkParameters) {
+					console.log("initialize")					
 					declare.safeMixin(this, frameworkParameters);
 					domClass.add(this.container, "claro");
 					con = dom.byId('plugins/restoration_techniques-0');
@@ -90,11 +93,12 @@ define([
 						domStyle.set(con1, "width", "295px");
 						domStyle.set(con1, "height", "580px");
 					}
-					this.layerVizObject = dojo.eval("[" + layerViz + "]")[0];
-					this.controls = this.layerVizObject.controls;
+					this.config = dojo.eval("[" + layerViz + "]")[0];	
+					this.controls = this.config.controls;
 				},
 				
 				resize: function(w, h) {
+					console.log("resize")	
 					cdg = domGeom.position(this.container);
 					if (cdg.h == 0) {
 						this.sph = this.height - 120 	
@@ -103,13 +107,14 @@ define([
 					}
 					domStyle.set(this.sliderpane.domNode, "height", this.sph + "px"); 
 					
-				 },
+				},
 				
 				changeOpacity: function(e) {
 					this.currentLayer.setOpacity(1 - e)
 				},
 				
 				render: function() {
+					console.log("render")	
 					this.map.on("load", function(){
 						this.map.graphics.enableMouseEvents();
 					});	
@@ -125,28 +130,28 @@ define([
 						new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
 						new Color([161,70,18]), 2),new Color([255,255,0,0])
 					  );			
-					this.slayers = [];
-					//this.tier1Layers = this.layerVizObject.tier1Layers
+					//this.slayers = [];
+					
 					mymap = dom.byId(this.map.id);
 					a = dojoquery(mymap).parent();
 					this.infoarea = new ContentPane({
-						style:"z-index:10000; !important;position:absolute !important;left:370px !important; top:65px !important;background-color:#FFF !important;padding:10px !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: none",
-						innerHTML: "<div class='infoareacloser' style='float:right !important'><a href='#'>✖</a></div><div class='infoareacontent' style='padding-top:0px'>no content yet</div>"
+						style:"z-index:100; !important;position:absolute !important;left:370px !important; top:65px !important;background-color:#FFF !important;padding:10px !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: " + this.config.infoDisplay,
+						innerHTML: "<div class='infoareacloser' style='float:right !important'><a href='#'>✖</a></div><div class='infoareacontent' style='padding-top:0px'>" + this.config.infoContent + "</div>"
 					});
 					dom.byId(a[0]).appendChild(this.infoarea.domNode)
 					ina = dojoquery(this.infoarea.domNode).children(".infoareacloser");
 					this.infoAreaCloser = ina[0];
 					inac = dojoquery(this.infoarea.domNode).children(".infoareacontent");
-					this.infoareacontent = inac[0];
+					this.infoareacontent = inac[0];		
 					on(this.infoAreaCloser, "click", lang.hitch(this,function(e){
 						domStyle.set(this.infoarea.domNode, 'display', 'none');
+						this.config.infoDisplay = "none";
 					}));
 					this.sliderpane = new ContentPane({
 					  //style:"height:" + this.sph + "px !important"
 					});
 					parser.parse();
 					dom.byId(this.container).appendChild(this.sliderpane.domNode);
-					console.log(this.sliderpane)
 					
 					//tab container
 					mymap = dom.byId(this.map.id);
@@ -222,18 +227,18 @@ define([
 						}	
 						if (this.l > 16){
 							$('#' + this.sliderpane.id + 'idIntro').text("Click on the selected technique to learn more about each grid");
-						}						
+						}
 					}));				
 					
 					this.buttonpane = new ContentPane({
 					  style:"border-top-style:groove !important; height:80px;overflow: hidden !important;background-color:#F3F3F3 !important;padding:10px !important;"
 					});
 					dom.byId(this.container).appendChild(this.buttonpane.domNode);	
-					if (this.layerVizObject.methods != undefined) {
+					if (this.config.methods != undefined) {
 						methodsButton = new Button({
 							label: "Methods",
 							style:  "float:right !important; margin-right:-7px !important; margin-top:-7px !important;",
-							onClick: lang.hitch(this,function(){window.open(this.layerVizObject.methods)})  //function(){window.open(this.layerVizObject.methods)}
+							onClick: lang.hitch(this,function(){window.open(this.config.methods)})  //function(){window.open(this.config.methods)}
 							});	
 						this.buttonpane.domNode.appendChild(methodsButton.domNode);
 					}					
@@ -270,19 +275,24 @@ define([
 								this.field = entry.field;
 								this.field1 = entry.field1;
 								this.ln = entry.layerNumber;
-								this.countyFL = new FeatureLayer(this.layerVizObject.url + "/" + this.ln, { mode: esri.layers.FeatureLayer.MODE_SELECTION, outFields: "*"});
+								this.countyFL = new FeatureLayer(this.config.url + "/" + this.ln, { mode: esri.layers.FeatureLayer.MODE_SELECTION, outFields: "*"});
 								dojo.connect(this.countyFL, "onSelectionComplete", lang.hitch(this,function(features){
-									this.addFirstDropdown(features);
+									this.addFirstDropdown(features, groupid);
 								}));
 								var selectCounties = new esriQuery();
 								selectCounties.where = this.field + " Like '%'";
 								this.countyFL.selectFeatures(selectCounties, FeatureLayer.SELECTION_NEW); 
-								this.munFL = new FeatureLayer(this.layerVizObject.url + "/" + this.ln, { mode: esri.layers.FeatureLayer.MODE_SELECTION, outFields: "*"});
+								this.munFL = new FeatureLayer(this.config.url + "/" + this.ln, { mode: esri.layers.FeatureLayer.MODE_SELECTION, outFields: "*"});
 								dojo.connect(this.munFL, "onSelectionComplete", lang.hitch(this,function(f){
 									this.zoomToSel(f);
 								}));
 								this.munFL.setSelectionSymbol(this.sfs);
 								this.map.addLayer(this.munFL);
+								if (this.controls[groupid].selectedMun != ""){
+									var selectMun = new esriQuery();
+									selectMun.where = this.field  + " = '" + this.controls[groupid].selectedCounty + "' AND " + this.field1 + " = '" + this.controls[groupid].selectedMun + "'";
+									this.munFL.selectFeatures(selectMun, FeatureLayer.SELECTION_NEW); 
+								}
 							}
 							if (entry.header != undefined){
 								// Add header text and info icon
@@ -314,8 +324,10 @@ define([
 									nslidernodeheader.appendChild(infoPic);
 								}
 								on(infoPic, "click", lang.hitch(this,function(e){
-									domStyle.set(this.infoarea.domNode, 'display', '');
+									domStyle.set(this.infoarea.domNode, 'display', 'block');
+									this.config.infoDisplay = "block";
 									this.infoareacontent.innerHTML = "<b>" + entry.header[0].helpTitle + "</b><div style='height:8px'></div><div style='max-width:300px; max-height:530px;'>" + entry.header[0].helpText + "</div>";
+									this.config.infoContent = this.infoareacontent.innerHTML
 								}));
 							}
 			
@@ -398,11 +410,12 @@ define([
 									
 									on(nslidernodeheader, "click", lang.hitch(this,function(e){
 										if (option.helpTable != undefined){
-//											domStyle.set(this.infoarea.domNode, 'style', '');
-											domStyle.set(this.infoarea.domNode, 'display', '');
+											domStyle.set(this.infoarea.domNode, 'display', 'block');
+											this.config.infoDisplay = "block";
 											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>How each restoration technique meets the " + option.text + " parameter</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
+											this.config.infoContent = this.infoareacontent.innerHTML
 											var tblid = this.sliderpane.id + '_infoTable'
-											$.each(this.layerVizObject[option.helpTable], function(i, v){
+											$.each(this.config[option.helpTable], function(i, v){
 												$.each(v, function(key, valArray){
 													if (key == "header"){
 														$.each(valArray, function(i2, hval){
@@ -440,16 +453,15 @@ define([
 						ncontrolsnode = domConstruct.create("div");
 						this.sliderpane.domNode.appendChild(ncontrolsnode);
 					}));
-					this.currentLayer = new ArcGISDynamicMapServiceLayer(this.layerVizObject.url);
+					this.currentLayer = new ArcGISDynamicMapServiceLayer(this.config.url);
 					this.map.addLayer(this.currentLayer);
-				/*	dojo.connect(this.currentLayer, "onLoad", lang.hitch(this,function(e){
-						this.map.setExtent(this.currentLayer.fullExtent, true);
-					}));
-				*/	
+					if (this.config.visibleLayers != []){						
+						this.currentLayer.setVisibleLayers(this.config.visibleLayers);
+					}
 					this.resize();
 				},
 				
-				addFirstDropdown: function(c){
+				addFirstDropdown: function(c, groupid){
 					var f = this.field;
 					var f1 = this.field1;
 		
@@ -483,7 +495,9 @@ define([
 									}
 								}
 								dojo.byId(this.button).set("label", v + " County")
-								this.updateDD(mun, v);	
+								this.updateDD(mun, v, groupid);	
+								this.controls[groupid].selectedCounty = v;
+								this.controls[groupid].municipalities = mun;
 							})												
 						});
 						menu.addChild(menuItem);
@@ -513,9 +527,14 @@ define([
 					
 					dojo.byId(this.sliderpane.id + "button1Div").appendChild(this.button1.domNode);
 					
+					if (this.controls[groupid].selectedCounty != ""){
+						dojo.byId(this.button).set("label", this.controls[groupid].selectedCounty + " County")
+						this.updateDD(this.controls[groupid].municipalities, this.controls[groupid].selectedCounty, groupid)
+					}
 				},
 				
-				updateDD: function(mun, v){
+				updateDD: function(mun, v, groupid){
+					console.log(groupid)
 					$('#' + this.sliderpane.id + 'button1Div').show();
 					dojo.byId(this.button1).set("label", "Choose a Municipality")
 					dojo.byId(this.button1).setAttribute('disabled', false);
@@ -529,16 +548,27 @@ define([
 								var selectMun = new esriQuery();
 								selectMun.where = this.field  + " = '" + v + "' AND " + this.field1 + " = '" + m + "'";
 								this.munFL.selectFeatures(selectMun, FeatureLayer.SELECTION_NEW); 
-								dojo.byId(this.button1).set("label", m)
+								dojo.byId(this.button1).set("label", m);
+								this.controls[groupid].selectedMun = m;
 							})
 						});
 						this.menu1.addChild(menuItem1);
 					}));
+					if (this.controls[groupid].selectedMun != ""){
+						dojo.byId(this.button1).set("label", this.controls[groupid].selectedMun);
+					}
 				},
 				
-				zoomToSel: function(f) {
-					var munExtent = f[0].geometry.getExtent();   
-					this.map.setExtent(munExtent, true); 
+				zoomToSel: function(f) {  
+					if (this.config.extent != ""){
+						console.log(this.config.extent)
+						var extent = new Extent(this.config.extent.xmin, this.config.extent.ymin, this.config.extent.xmax, this.config.extent.ymax, new SpatialReference({ wkid:4326 }))
+						this.map.setExtent(extent, true);
+						this.config.extent = "";
+					}else{
+						var munExtent = f[0].geometry.getExtent(); 
+						this.map.setExtent(munExtent, true); 
+					}
 					$('#' + this.sliderpane.id + '_1').show();
 				},
 				
@@ -557,8 +587,8 @@ define([
 					this.controls[group].options[val].selected = true;
 					//check if show data level
 					if (this.controls[group].options[val].showData == "no"){
-						this.slayers = [];	
-						this.currentLayer.setVisibleLayers(this.slayers);
+						this.config.visibleLayers = [];	
+						this.currentLayer.setVisibleLayers(this.config.visibleLayers);
 						$('#' + this.b).hide();
 						this.map.graphics.clear();
 						if (this.featureLayerOD != undefined){
@@ -569,9 +599,9 @@ define([
 						var selectedLayer = this.controls[group].options[val].layerNumber
 
 						// add newly selected layer to visible layer array
-						this.slayers = [];	
-						this.slayers.push(selectedLayer);
-						this.currentLayer.setVisibleLayers(this.slayers);
+						this.config.visibleLayers = [];	
+						this.config.visibleLayers.push(selectedLayer);
+						this.currentLayer.setVisibleLayers(this.config.visibleLayers);
 						
 						// set up identify functionality
 						this.identifyFeatures(val, group);
@@ -599,29 +629,33 @@ define([
 						array.forEach(this.controls, lang.hitch(this,function(entry, groupid){
 							if (entry.level == this.childlevel && entry.parentValue != this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).hide();
+								this.controls[groupid].display = "none";
 							}
 							if (entry.level > this.childlevel){
 								$('#' + this.sliderpane.id + "_" + groupid).hide();
+								this.controls[groupid].display = "none";
 							}
 						}));
 						array.forEach(this.controls, lang.hitch(this,function(entry, groupid){
 							if (entry.level == this.childlevel && entry.parentValue == this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
+								this.controls[groupid].display = "block";
 							}
-						}));						
+						}));				
 					}
+					console.log(this.config)
 				},
 				
 				cbClick: function(lyrnum, e, val, group) {
 					if (e.target.checked == true){
-						this.slayers.push(lyrnum);
-						this.slayers = unique(this.slayers)
+						this.config.visibleLayers.push(lyrnum);
+						this.config.visibleLayers = unique(this.config.visibleLayers)
 						this.identifyFeatures(val, group);
 					}else{
-						var index = this.slayers.indexOf(lyrnum)
-						this.slayers.splice(index, 1);
+						var index = this.config.visibleLayers.indexOf(lyrnum)
+						this.config.visibleLayers.splice(index, 1);
 					}
-					this.currentLayer.setVisibleLayers(this.slayers);
+					this.currentLayer.setVisibleLayers(this.config.visibleLayers);
 					
 				},
 				
@@ -633,7 +667,7 @@ define([
 						}
 						$('#' + this.b).show();
 						idLyrNum = "/" + this.controls[group].options[val].identifyNumber;	
-						this.featureLayerOD = new FeatureLayer(this.layerVizObject.url + idLyrNum, {
+						this.featureLayerOD = new FeatureLayer(this.config.url + idLyrNum, {
 							mode: esri.layers.FeatureLayer.ONDEMAND,
 							opacity: "0",
 							outFields: "*"
@@ -827,12 +861,17 @@ define([
 					}
 				},
 				
-				getState: function () { 
-			   		
+				getState: function () {
+					this.config.extent = this.map.geographicExtent					
+					var state = new Object();
+					state = this.config;
+					return state;
 				},
 				
 				setState: function (state) { 
-							
+					this.config = state;					
+					this.controls = this.config.controls;
+					console.log(this.config)
 				}
            });
        });	   

@@ -2,14 +2,20 @@
     "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
     "methods": "plugins/restoration_techniques/njmethods.pdf",
 	"infoGraphic": "plugins/restoration_techniques/images/reGraphic.jpg",
-	"tier1Layers": [ "1", "2", "3", "4", "5", "6" ], 
+	"visibleLayers": [],
+	"infoDisplay": "none",	
+	"infoContent": "",
+	"extent": "",
 	"controls": [
         {
             "type": "group",
 			"control": "dropdown",
 			"layerNumber": "0",
 			"field": "COUNTY",
-			"field1": "MUN"
+			"field1": "MUN",
+			"selectedCounty": "",
+			"municipalities": [],
+			"selectedMun": ""
         },
 		{
             "type": "group",
