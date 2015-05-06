@@ -39,7 +39,6 @@ define([
 				rendered: false,
 			   
 				activate: function () {
-					console.log("activate")
 					if (this.rendered == false) {
 						this.rendered = true;
 						this.render();
@@ -53,7 +52,7 @@ define([
 			    },
 				
 				deactivate: function () {
-					console.log(this.rendered + " Deactivate")
+
 				},	
 				hibernate: function () { 	
 					if (this.infoarea != undefined){
@@ -81,8 +80,7 @@ define([
 					this.rendered = false;
 				},
 			   
-			   	initialize: function (frameworkParameters) {
-					console.log("initialize")					
+			   	initialize: function (frameworkParameters) {				
 					declare.safeMixin(this, frameworkParameters);
 					domClass.add(this.container, "claro");
 					con = dom.byId('plugins/restoration_techniques-0');
@@ -98,7 +96,6 @@ define([
 				},
 				
 				resize: function(w, h) {
-					console.log("resize")	
 					cdg = domGeom.position(this.container);
 					if (cdg.h == 0) {
 						this.sph = this.height - 120 	
@@ -113,8 +110,7 @@ define([
 					this.currentLayer.setOpacity(1 - e)
 				},
 				
-				render: function() {
-					console.log("render")	
+				render: function() {	
 					this.map.on("load", function(){
 						this.map.graphics.enableMouseEvents();
 					});	
@@ -157,7 +153,6 @@ define([
 					mymap = dom.byId(this.map.id);
 					a = dojoquery(mymap).parent();
 					this.b = makeid();
-					//console.log(this.b)	
 					
 					this.iden2Html = "<p id='" + this.sliderpane.id + "techTitle'; style='font-weight:bold; margin-bottom:0px;'></p>" +
 							"<p id='" + this.sliderpane.id + "erosion' style='display:none; margin-bottom:0px;'></p>" +
@@ -210,8 +205,7 @@ define([
 						within: true
 					});
 					this.map.on ("extent-change", lang.hitch(this,function(e,p,b,l){	 
-						this.l = e.lod.level
-						//console.log(e.lod);	
+						this.l = e.lod.level	
 						if (this.l < 18){
 							this.pntSym.size = 10;
 							this.highlightSymbol.size = 10;
@@ -459,10 +453,12 @@ define([
 						this.currentLayer.setVisibleLayers(this.config.visibleLayers);
 					}
 					if (this.config.extent != ""){
-						console.log(this.config.extent)
+						this.extentCheck = "first";
 						var extent = new Extent(this.config.extent.xmin, this.config.extent.ymin, this.config.extent.xmax, this.config.extent.ymax, new SpatialReference({ wkid:4326 }))
 						this.map.setExtent(extent, true);
 						this.config.extent = "";
+					}else{
+						this.extentCheck = "second"	
 					}
 					this.resize();
 				},
@@ -540,7 +536,6 @@ define([
 				},
 				
 				updateDD: function(mun, v, groupid){
-					console.log(groupid)
 					$('#' + this.sliderpane.id + 'button1Div').show();
 					dojo.byId(this.button1).set("label", "Choose a Municipality")
 					dojo.byId(this.button1).setAttribute('disabled', false);
@@ -556,6 +551,7 @@ define([
 								this.munFL.selectFeatures(selectMun, FeatureLayer.SELECTION_NEW); 
 								dojo.byId(this.button1).set("label", m);
 								this.controls[groupid].selectedMun = m;
+								this.extentCheck = "second"
 							})
 						});
 						this.menu1.addChild(menuItem1);
@@ -565,12 +561,9 @@ define([
 					}
 				},
 				
-				zoomToSel: function(f) {  
-					if (this.config.extent != ""){
-						console.log(this.config.extent)
-						var extent = new Extent(this.config.extent.xmin, this.config.extent.ymin, this.config.extent.xmax, this.config.extent.ymax, new SpatialReference({ wkid:4326 }))
-						this.map.setExtent(extent, true);
-						this.config.extent = "";
+				zoomToSel: function(f) { 	
+					if (this.extentCheck == "first"){	
+						this.extentCheck = "second"
 					}else{
 						var munExtent = f[0].geometry.getExtent(); 
 						this.map.setExtent(munExtent, true); 
@@ -649,7 +642,6 @@ define([
 							}
 						}));				
 					}
-					console.log(this.config)
 				},
 				
 				cbClick: function(lyrnum, e, val, group) {
@@ -764,7 +756,6 @@ define([
 						if (atts.IceCoverCriteriaThreshold == 0){
 							$('#' + this.sliderpane.id + 'ice').hide();
 						}
-						console.log(atts.IceCoverCriteriaValue)
 						if (Math.round(atts.IceCoverCriteriaValue) == "0"){this.icv = "None"}
 						if (Math.round(atts.IceCoverCriteriaValue) == "1"){this.icv = "Low"}
 						if (Math.round(atts.IceCoverCriteriaValue) == "2"){this.icv = "Low to Moderate"}
@@ -804,7 +795,6 @@ define([
 						$('#' + this.sliderpane.id + 'totalc').html('Total Criteria Satisfied: <b>' + atts.TotalCriteriaSatisfied + '</b>').show();
 					}
 					if (idenGroup == 1){
-						console.log(atts)
 						$('#' + this.sliderpane.id + 'idResults').append(this.iden1Html);
 						$('#' + this.b).show();
 						$('#' + this.sliderpane.id + 'idIntro').hide();
@@ -877,7 +867,6 @@ define([
 				setState: function (state) { 
 					this.config = state;					
 					this.controls = this.config.controls;
-					console.log(this.config)
 				}
            });
        });	   
