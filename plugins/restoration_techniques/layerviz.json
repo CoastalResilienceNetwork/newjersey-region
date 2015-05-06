@@ -3,10 +3,12 @@
     "methods": "plugins/restoration_techniques/njmethods.pdf",
 	"infoGraphic": "plugins/restoration_techniques/images/reGraphic.jpg",
 	"visibleLayers": [],
-	"infoDisplay": "none",	
-	"idenDisplay": "none",
+	"infoDisplay": "none",
 	"infoContent": "",
+	"idenVal": "",
+	"idenGroup": "",
 	"extent": "",
+	"techName": "",
 	"controls": [
         {
             "type": "group",

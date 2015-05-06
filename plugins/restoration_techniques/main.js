@@ -175,7 +175,7 @@ define([
 					
 					this.idenWin = new ContentPane({
 					  id: this.b,
-					  style:"display:" + this.config.idenDisplay + "; z-index:8; position:absolute; right:105px; width:260px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
+					  style:"display:none; z-index:8; position:absolute; right:105px; width:260px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
 					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Identify Restoration Technique Cells</div>" +	
 						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
 						  "<p id='" + this.sliderpane.id + "idIntro'></p>" +
@@ -460,6 +460,9 @@ define([
 					}else{
 						this.extentCheck = "second"	
 					}
+					if (this.config.idenVal != ""){
+						this.identifyFeatures(this.config.idenVal, this.config.idenGroup);
+					}	
 					this.resize();
 				},
 				
@@ -572,7 +575,7 @@ define([
 				},
 				
 				radioClick: function(val,group, tech) {
-					this.techName = tech;
+					this.config.techName = tech;
 					$('#' + this.sliderpane.id + 'idIntro').show();
 					$('#' + this.sliderpane.id + 'idResults').hide();
 					if (this.featureLayer != undefined){
@@ -593,6 +596,8 @@ define([
 						if (this.featureLayerOD != undefined){
 							this.map.removeLayer(this.featureLayerOD);			
 						}
+						this.config.idenVal = "";
+						this.config.idenGroup = "";
 					}
 					if (this.controls[group].options[val].showData == "yes"){
 						var selectedLayer = this.controls[group].options[val].layerNumber
@@ -604,6 +609,8 @@ define([
 						
 						// set up identify functionality
 						this.identifyFeatures(val, group);
+						this.config.idenVal = val;
+						this.config.idenGroup = group;
 					}
 					if (this.controls[group].options[val].groupsBelow == "yes"){
 						//get value and current level
@@ -649,9 +656,13 @@ define([
 						this.config.visibleLayers.push(lyrnum);
 						this.config.visibleLayers = unique(this.config.visibleLayers)
 						this.identifyFeatures(val, group);
+						this.config.idenVal = val;
+						this.config.idenGroup = group;
 					}else{
 						var index = this.config.visibleLayers.indexOf(lyrnum)
 						this.config.visibleLayers.splice(index, 1);
+						this.config.idenVal = "";
+						this.config.idenGroup = "";
 					}
 					this.currentLayer.setVisibleLayers(this.config.visibleLayers);
 					
@@ -708,7 +719,7 @@ define([
 						$('#' + this.b).show();
 						$('#' + this.sliderpane.id + 'idIntro').hide();
 						$('#' + this.sliderpane.id + 'idResults').show();
-						$('#' + this.sliderpane.id + 'techTitle').html(this.techName + " -<br>Environmental Parameter Thresholds Met:") 
+						$('#' + this.sliderpane.id + 'techTitle').html(this.config.techName + " -<br>Environmental Parameter Thresholds Met:") 
 						if (atts.ErosionCriteriaThreshold == 0){
 							$('#' + this.sliderpane.id + 'erosion').hide();
 						}
