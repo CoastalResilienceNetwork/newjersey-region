@@ -4,6 +4,7 @@
 	"infoGraphic": "plugins/restoration_techniques/images/reGraphic.jpg",
 	"visibleLayers": [],
 	"infoDisplay": "none",	
+	"idenDisplay": "none",
 	"infoContent": "",
 	"extent": "",
 	"controls": [

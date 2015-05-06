@@ -66,8 +66,8 @@ define([
 						this.currentLayer.setVisibility(false);
 						this.map.graphics.clear();
 					}
-					if (this.tabarea != undefined){
-						this.tabarea.destroy();
+					if (this.idenWin != undefined){
+						this.idenWin.destroy();
 					}
 					if (this.buttonpane !=undefined ){
 						this.buttonpane.destroy();
@@ -178,9 +178,9 @@ define([
 							"<p id='" + this.sliderpane.id + "beachId' style='display:none; margin-bottom:0px;'></p>" +
 							"<p id='" + this.sliderpane.id + "totaltId' style='display:none; margin-bottom:0px;'></p>" 
 					
-					this.tabarea = new ContentPane({
+					this.idenWin = new ContentPane({
 					  id: this.b,
-					  style:"display:none; z-index:8; position:absolute; right:105px; width:260px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
+					  style:"display:" + this.config.idenDisplay + "; z-index:8; position:absolute; right:105px; width:260px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
 					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Identify Restoration Technique Cells</div>" +	
 						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
 						  "<p id='" + this.sliderpane.id + "idIntro'></p>" +
@@ -189,23 +189,23 @@ define([
 						"</div>" 		
 					});
 							
-					dom.byId(a[0]).appendChild(this.tabarea.domNode)
+					dom.byId(a[0]).appendChild(this.idenWin.domNode)
 					
-					ta = dojoquery(this.tabarea.domNode).children(".tabareacloser");
-						this.tabareacloser = ta[0];
+					ta = dojoquery(this.idenWin.domNode).children(".tabareacloser");
+						this.idenWincloser = ta[0];
 					/*
-					tac = dojoquery(this.tabarea.domNode).children(".tabareacontent");
-					this.tabareacontent = tac[0];
+					tac = dojoquery(this.idenWin.domNode).children(".tabareacontent");
+					this.idenWincontent = tac[0];
 					*/				
-					on(this.tabareacloser, "click", lang.hitch(this,function(e){
-						domStyle.set(this.tabarea.domNode, 'display', 'none');
+					on(this.idenWincloser, "click", lang.hitch(this,function(e){
+						domStyle.set(this.idenWin.domNode, 'display', 'none');
 						this.map.graphics.clear();
 						$('#' + this.sliderpane.id + 'idIntro').show();
 						$('#' + this.sliderpane.id + 'idResults').hide();
 					}));
 					
 					var p = new ConstrainedMoveable(
-						dom.byId(this.tabarea.id), {
+						dom.byId(this.idenWin.id), {
 						handle: dom.byId(this.sliderpane.id + "tabHeader"),	
 						within: true
 					});
@@ -457,6 +457,12 @@ define([
 					this.map.addLayer(this.currentLayer);
 					if (this.config.visibleLayers != []){						
 						this.currentLayer.setVisibleLayers(this.config.visibleLayers);
+					}
+					if (this.config.extent != ""){
+						console.log(this.config.extent)
+						var extent = new Extent(this.config.extent.xmin, this.config.extent.ymin, this.config.extent.xmax, this.config.extent.ymax, new SpatialReference({ wkid:4326 }))
+						this.map.setExtent(extent, true);
+						this.config.extent = "";
 					}
 					this.resize();
 				},
