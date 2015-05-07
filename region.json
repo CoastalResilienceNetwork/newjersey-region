@@ -2,19 +2,17 @@
     "titleMain": { "text": "Coastal Resilience", "url": "http://coastalresilience.org/" },
     "titleDetail": { "text": "New Jersey", "url": "http://coastalresilience.org/project-areas/new-jersey-introduction" },
 	"headerLinks": [
-        { "text": "GET STARTED", "launchpadId": "get-started", "url": "" },
+		{ "text": "GET STARTED", "url": "getstarted.html", "popup": true },
 		{ "text": "TOUR", "url": "javascript:;", "elementId": "help-overlay-start"},
         { "text": "GO TO", "url": "#", "items": [
-                { "text": "California", "url": "http://maps.coastalresilience.org/california" },
-                { "text": "Connecticut", "url": "http://maps.coastalresilience.org/connecticut" },
-                { "text": "Global", "url": "http://maps.coastalresilience.org/global/" },
-                { "text": "Gulf of Mexico", "url": "http://maps.coastalresilience.org/gulfmex/" },
-                { "text": "Grenada, St. Vincent & the Grenadines", "url": "http://maps.coastalresilience.org/gsvg/" },
-                { "text": "MesoAmerican Reef", "url": "http://maps.coastalresilience.org/mar/" },
-                { "text": "New York", "url": "http://maps.coastalresilience.org/newyork" },
-                { "text": "Southeast Florida", "url": "http://maps.coastalresilience.org/seflorida/" },
-                { "text": "United States", "url": "http://maps.coastalresilience.org/unitedstates/" },
-                { "text": "U.S. Virgin Islands", "url": "http://maps.coastalresilience.org/usvi/" },
+                { "text": "Entire USA", "url": "http://maps.coastalresilience.org/us/" },
+				{ "text": "California", "url": "http://maps.coastalresilience.org/ventura/" },
+				{ "text": "Florida Keys", "url": "http://maps.coastalresilience.org/flkeys/" },
+				{ "text": "Grenada, St. Vincent & the Grenadines", "url": "http://maps.coastalresilience.org/gsvg/" },
+				{ "text": "Gulf of Mexico", "url": "http://maps.coastalresilience.org/gulfmex" },
+				{ "text": "MesoAmerican Reef", "url": "http://maps.coastalresilience.org/mar/" },
+                { "text": "New York & Connecticut", "url": "http://maps.coastalresilience.org/nyct" },
+				{ "text": "U.S. Virgin Islands", "url": "http://maps.coastalresilience.org/usvi/" },
                 { "text": "Washington", "url": "http://maps.coastalresilience.org/pugetsound" }
             ]
         },
@@ -29,13 +27,13 @@
         41.364
     ],
     "basemaps": [
-        { "name": "Streets"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" },
         { "name": "Topographic"        , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" },
         { "name": "National Geographic", "url": "http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer" },
         { "name": "Ocean"              , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer" },
         { "name": "Imagery"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer" },
         { "name": "Physical"           , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer" },
         { "name": "Shaded Relief"      , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer" },
+        { "name": "Streets"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer" },
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
@@ -43,11 +41,7 @@
 		"flood_slr",
         "restoration_techniques",
         "risk_explorer",
-        "zoom_to",
-        "measure",
-        "legend_display",
-        "full_extent",
-        "subregion_toggle"
+        "measure"
     ],
     "print": {
         "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework"  
@@ -56,48 +50,6 @@
        "primary": "#26648E",
        "secondary": "#26648E"
     },
-    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
-    "subregions": {
-        "color": "#00C5CD",
-        "outlineColor": "#008000",
-        "opacity": 0.2,
-        "clickToFocus": true,
-        "hideByDefault": false,
-        "areas": [
-            {
-                "id": "Atlantic",
-                "display": "Atlantic County",
-                "details": "Atlantic County, NJ",
-                "shape": [[-74.98522251868208, 39.28856598050936], [-74.98522251868208, 39.72983141638285], [-74.3064897095255, 39.72983141638285], [-74.3064897095255, 39.28856598050936], [-74.98522251868208, 39.28856598050936]],
-                "availablePlugins": ["layer_selector", "floodSLR", "restoration_techniques"],
-                "outlineColor": "#000",
-                "noFill": true
-            }
-        ]
-    },
-     "launchpads": [
-        {
-            "id": "get-started",
-            "title": "Getting Started",
-            "description": "Coastal Resilience is a decision support tool that provides local, state and national planners a step-wise process to guide decisions to reduce the ecological and socio-economic risks of coastal hazards. Pick a geography to start exploring the map or choose to visit our interactive map gallery. <br><br>If you need help, click on the Tour tab near the top right of the screen, or visit our <a href='http://coastalresilience.org/training' target='_blank'>Training</a> page. <br><br><img src='img/TNCLogo_sm.png' />",
-            "showSubRegions": true,
-            "showByDefault": false,
-            "categories": [
-              {
-                "name": "One-click Interactive Map",
-                "description": "Custom maps for adaptation, conservation and restoration planning",
-                "issues": [
-                    {
-                      "name": "Sea Level Rise",
-                      "description": "Combined storm surge and sea level condition in Ventura County for the year 2100",
-                      "saveCode": "e34df34rd3....3434",
-                      "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky04NzA4MTI5Ljc0Mzc2xYYyN8SaecWBxJM0xZE1NTE2LsWFMjExNTTFmcS/xKl4xIgtNzkzMDkxOC4wNDDFnTMzOTTFlcWoxIg1MDc3OMWILjM4OTDFhzU5NcSaxIthdGnEllJlZmXEhMSdxLjEiSJ3a2lkxIgxMMWhxonEmmzGkGVzdFfGnsagOsaGNTfEpyJfcGFydMSiOlvErcSvxLHEs8S1xLfEucS7xr/Fp8WCxarFhcWHxYnFi8WNxY/FkcajxZQixZbHhzrFmTfFm8WdxZ83xaHFo8WlNsWnYcWpOsWrxa3Fr8WxxbPFtcW3xbnFu8eSxb06xb/GgcaDMcaFxofGiTjGi8aNxIHGtsaRxpPGlcaXxIZjxprEgMadxp/GocajxqIwxqbGqMaqxqzIhcavx7fGssazZnJhbWVJZMa6WzBdfcidxo5lbGVjxLBkQmHEmMSpcEluZMSuxIgwxrPGtm5lxKvGm8izZU51bWLGl8iwxo50xqhPZlBsdWfFgsa6xIrIocijyKXJhcmHx5QixIzJkG5zL2Zsb29kX3NsciLEmmHIpGl2ZVN1YsSEyYhvxJNudWxsxJrJk8mIyZXEs8m0yYnJl8mZyZvJncmfxLNnZW/Es27IlcaaIkNvyKjJgWwgxpRzacSNyIBlIGTGkGHJocS6xr7EvcSzxYDHlMWENMWiMjYzLsW/xoY4MsW8x5Q0N8WiNDI1LjLKr8WjMMe5xYDHoceIMsqiOMWHxZ/GosWFxbzKucevxbQyxbjKpMWGOcqzyrvGjse7xpJsxpTGlsaYyIHEs8iExq7GosakyIkixqfEsMiMxq3EiMawyJHEqGV0aMmbyYoidXJsxLlodHRwOi8vY8qJxqrElsSEyo/KkcaZLm9yZy9wcm9qyY0txrdlyKgvyLR3LcyFcsSYeS3FgnTMg2R1yaTJrcqYxpF0yKLEuVZpZXcgRsmwyozGlHDLvsSyxrPLtcS9zIPEl8SIxrwiyoTIlsS5Q8umb8SYIFN0y75tzLvLqsqAzJvEtsqGyZ7Gn8i+xJrFgsiux6LLmnbElnXGqcyxyYvIosikZcauzJXNkMSazLTKhkPGqGfLvnkgMcqYzY7JhsqGxKvEp8SAzZvMtsaQIDLNpM2PyobNo8igzZTIpcSjxJbEmM2pzLPKhc2sdCAzzbDNpsS5za/NtMmNzZbNt8SlzbrNqzrKh82tNM6BzZDEuc6AzoXNlcauxKTNuSzNqs28zoxTYcitec6QyobOj86UzbbElM24xKbInV3EqGHFglVSTMuty6/LscuzxJhydmnIgXMuy7XKisu4xqnKkMyhy7zLvmc6NsWHMC/Gt2PJiMmWy7l0L861zrfOuS9OzKJfSsaXzJHPlEpfRsm7yZzOnsmcU0xSX0TKli/En3BTxpfJpsmgxJrLtci8zLnEs8i2zLLHgcqGZMScyJXOuMqYc8umd8yxyJzEmsuqy6zOjMuuy7DLss+Qz63OuMapzrvLtsqLy7nPgMqSy73Lv8+Fz4fPiXLPi2nPjcapz4/PkdCMyZbPlXfPl8+ZZXnPm8+dz59fz6Ffz6PPpc+nyYHPqcSgz6zOtsi+yJ7Ems2jxrvEgM+3xLnPucy0z7zGjs+/zLExzqnEms2v0LrEtM2E0L3PusWBY8+90YLGuzLRhSLOgNGI0LzOjNC+z7vRjtGBb9CAxrsz0ZPOj9GW0YrRmNGM0YDEgdGQWzTOqcazyYFiyJrEgMytzJVvzLDRiM6LyofMuMy6zLzMvs2Ay7/EuMSa0ZfEgcSNyK7PryLNisivOs2NzbHRsMSByYzOlcSIzZjEmc27zLXOjM2dxLDNn3LNoc2zIs2lzpHOjM2ozpnSk82cza3OhNKczbHEudKbxJjNtc6HzqbOidKh0bfSls2/zqHOg8+90o7Opc6XxKbSr86bzo3Nvs6j0qbOgs6MzpPSjdKrzpbOp86K0rvOnc6f0rPOjNK+0qrOhtOFzonRk8+xYs+zxpvPtdC70aQi0ZnRjdGP0Z3Qgc6qy6nLq86x0IjOtNCLzrnQjs69yZ/Ov8u7yIHQlM+Ez4bKvdCY0JrQnMaq0IrOttCgz5TPls+YzJDQptCoz57Jms+gyK3Qrc+kz6bPqM+q0LTPriLQtyLQuc+205nTm9Gnz77Tnsa70YTUi9GH1I7HgtGl0L/Rm9Go1JNb0ZLUi9GV1JjPuNGm1JzUktGeW9Gg1IvRotSj0YvUm9Od1KjRq8iexrPEqc6tzq/To86z07bPktCNzrzLt9Oqy7rPgdOtz4PQltOxz4rPjC/PjtS607jQotCk07zQp07PnNO/ybzQrNCu1IXQsdSHz63QtsifxLTIlMm20ol91aDJosmkyabJqMmqZcmsya7MptWg",
-                      "faIcon": "fa fa-life-bouy",
-                      "faSize": 32
-                    }
-                  ]
-              }
-            ]
-        }
-    ]
+    "identifyBlacklist": ["OBJECTID", "OBJECTID_1"],
+	"googleUrlShortenerApiKey": "AIzaSyCGRjZtPUN9LG1wG83JGUvEqHimxYjC510"
 }
