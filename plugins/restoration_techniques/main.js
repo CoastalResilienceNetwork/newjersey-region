@@ -11,7 +11,7 @@ define([
         "dojo/_base/declare", "framework/PluginBase", 'plugins/restoration_techniques/ConstrainedMoveable', 'plugins/restoration_techniques/jquery-ui-1.11.0/jquery-ui',
 		
 		"esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/FeatureLayer", "esri/tasks/QueryTask", "esri/tasks/query", "esri/graphicsUtils", 
-		"esri/geometry/Extent", "esri/SpatialReference",
+		"esri/geometry/Extent", "esri/SpatialReference", "esri/geometry/Point",
 		
 		"esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleMarkerSymbol", "esri/graphic", "esri/symbols/Font", 
 		"esri/symbols/TextSymbol", "esri/symbols/PictureMarkerSymbol", "dojo/_base/Color", "esri/renderers/SimpleRenderer",		
@@ -25,7 +25,7 @@ define([
 		"dojo/text!./layerviz.json", "jquery"
        ],
        function ( declare, PluginBase, ConstrainedMoveable, ui, 
-					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils, Extent, SpatialReference,
+					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils, Extent, SpatialReference, Point,
 					SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Font, TextSymbol, PictureMarkerSymbol, Color, SimpleRenderer,
 					registry, Button, DropDownButton, DropDownMenu, MenuItem, ContentPane, HorizontalSlider, CheckBox, RadioButton,
 					dom, domClass, domStyle, win, domConstruct, domAttr, Dialog, domGeom, array, lang, on, parser, dojoquery, NodeListtraverse, Moveable, move,
@@ -471,6 +471,11 @@ define([
 					if (this.config.idenVal != ""){
 						this.identifyFeatures(this.config.idenVal, this.config.idenGroup);
 					}		
+					if (this.config.idenGraphic != ""){
+						var pt = new Point(this.config.idenGraphic.x,this.config.idenGraphic.y,this.map.spatialReference)
+						this.selectedGraphic = new Graphic(pt,this.pntSym);
+						this.map.graphics.add(this.selectedGraphic);
+					}		
 					this.resize();
 				},
 				
@@ -705,15 +710,16 @@ define([
 							this.showAttributes(atts, idenGroup);
 							this.map.graphics.clear();
 							this.selectedGraphic = new Graphic(evt.graphic.geometry,this.pntSym);
+							this.config.idenGraphic = evt.graphic.geometry;
 							this.map.graphics.add(this.selectedGraphic);
-							//this.map.graphics.remove(this.highlightGraphic);
 						}));
 						this.map.addLayer(this.featureLayerOD);
 					}else{
 						$('#' + this.b).hide();
 						this.map.graphics.clear();
 						if (this.featureLayerOD != undefined){
-							this.map.removeLayer(this.featureLayerOD);			
+							this.map.removeLayer(this.featureLayerOD);
+							this.config.idenGraphic = "";							
 						}
 					}
 				},
