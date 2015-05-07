@@ -460,9 +460,17 @@ define([
 					}else{
 						this.extentCheck = "second"	
 					}
-					if (this.config.idenVal != ""){
+					if (this.config.idenHTML != ""){
+						$('#' + this.sliderpane.id + 'idResults').empty();
+						$('#' + this.sliderpane.id + 'idResults').append(this.config.idenHTML);
+						$('#' + this.b).show();
+						$('#' + this.sliderpane.id + 'idIntro').hide();
+						$('#' + this.sliderpane.id + 'idResults').show();
 						this.identifyFeatures(this.config.idenVal, this.config.idenGroup);
 					}	
+					if (this.config.idenVal != ""){
+						this.identifyFeatures(this.config.idenVal, this.config.idenGroup);
+					}		
 					this.resize();
 				},
 				
@@ -609,8 +617,6 @@ define([
 						
 						// set up identify functionality
 						this.identifyFeatures(val, group);
-						this.config.idenVal = val;
-						this.config.idenGroup = group;
 					}
 					if (this.controls[group].options[val].groupsBelow == "yes"){
 						//get value and current level
@@ -656,8 +662,6 @@ define([
 						this.config.visibleLayers.push(lyrnum);
 						this.config.visibleLayers = unique(this.config.visibleLayers)
 						this.identifyFeatures(val, group);
-						this.config.idenVal = val;
-						this.config.idenGroup = group;
 					}else{
 						var index = this.config.visibleLayers.indexOf(lyrnum)
 						this.config.visibleLayers.splice(index, 1);
@@ -670,6 +674,8 @@ define([
 				
 				identifyFeatures: function(val, group){
 					if (this.controls[group].options[val].identifyNumber != ""){
+						this.config.idenVal = val;
+						this.config.idenGroup = group;
 						var idenGroup = this.controls[group].options[val].identifyGroup;
 						if (this.featureLayerOD != undefined){
 							this.map.removeLayer(this.featureLayerOD);			
@@ -869,14 +875,20 @@ define([
 				},
 				
 				getState: function () {
-					this.config.extent = this.map.geographicExtent					
+					this.config.extent = this.map.geographicExtent	
+					var iden = dom.byId(this.sliderpane.id + 'idResults')
+					var isVisible = iden.offsetWidth > 0 || iden.offsetHeight > 0;
+					if (isVisible == true){
+						this.config.idenHTML = $('#' + this.sliderpane.id + 'idResults').html()
+					}		
 					var state = new Object();
 					state = this.config;
 					return state;
 				},
 				
 				setState: function (state) { 
-					this.config = state;					
+					this.config = state;	
+					console.log(this.config)					
 					this.controls = this.config.controls;
 				}
            });
