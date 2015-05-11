@@ -1,5 +1,7 @@
 {
-    "titleMain": { "text": "Coastal Resilience", "url": "http://coastalresilience.org/" },
+    "titleMain": { "text": "Coastal Resilience", 
+	"url": "http://coastalresilience.org/" },
+	"googleUrlShortenerApiKey": "AIzaSyARaUoIR6ljJDqUXzl1PfK0agb1QEP5CdE",
     "titleDetail": { "text": "New Jersey", "url": "http://coastalresilience.org/project-areas/new-jersey-introduction" },
 	"headerLinks": [
 		{ "text": "GET STARTED", "url": "getstarted.html", "popup": true },
