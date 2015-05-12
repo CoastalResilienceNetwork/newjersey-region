@@ -93,6 +93,7 @@ define([
 					}
 					this.config = dojo.eval("[" + layerViz + "]")[0];	
 					this.controls = this.config.controls;
+					this.changes = {"radio": [], "extent": [], "visibleLayers": [], "idenGraphic": []};
 				},
 				
 				resize: function(w, h) {
@@ -595,11 +596,18 @@ define([
 						this.map.removeLayer(this.featureLayer);
 					}
 					//set all radio buttons in group to false
+					var reChanges = [];
 					array.forEach(this.controls[group].options, lang.hitch(this,function(option, i){
 						option.selected = false;
+						for (var i = this.changes.radio.length - 1; i >= 0; i--) {
+							var f = this.changes.radio[i].split("_")
+							if(f[0] == "s" && f[1] >= group){
+								this.changes.radio.splice(i,1)
+							}	
+						}	
 					}));
-					//set selected radio to true	
-					this.controls[group].options[val].selected = true;
+					this.changes.radio.push("s_" + group + "_" + val)
+					console.log(this.changes)
 					//check if show data level
 					if (this.controls[group].options[val].showData == "no"){
 						this.config.visibleLayers = [];	
@@ -881,21 +889,31 @@ define([
 				},
 				
 				getState: function () {
-					this.config.extent = this.map.geographicExtent	
+					this.changes.extent = this.map.geographicExtent;
+					this.changes.visibleLayers = this.config.visibleLayers;	
+					this.changes.idenGraphic = this.config.idenGraphic;
 					var iden = dom.byId(this.sliderpane.id + 'idResults')
 					var isVisible = iden.offsetWidth > 0 || iden.offsetHeight > 0;
 					if (isVisible == true){
 						this.config.idenHTML = $('#' + this.sliderpane.id + 'idResults').html()
 					}		
 					var state = new Object();
-					state = this.config;
+					state = this.changes;
 					return state;
 				},
 				
 				setState: function (state) { 
-					this.config = state;	
-					console.log(this.config)					
-					this.controls = this.config.controls;
+					this.config.extent = state.extent;
+					this.config.visibleLayers = state.visibleLayers;
+					this.config.idenGraphic = state.idenGraphic;
+					for (var i = state.radio.length - 1; i >= 0; i--) {
+						var f = state.radio[i].split("_")
+						console.log(f)
+						if(f[0] == "s"){
+							this.controls[f[1]].options[f[2]].selected = true;	
+							this.controls[f[1]].display = true;
+						}	
+					}
 				}
            });
        });	   
@@ -914,4 +932,16 @@ function unique(list) {
     if ($.inArray(e, result) == -1) result.push(e);
   });
   return result;
+}
+function remove_duplicates(objectsArray) {
+    var usedObjects = {};
+    for (var i=objectsArray.length - 1;i>=0;i--) {
+        var so = JSON.stringify(objectsArray[i]);
+        if (usedObjects[so]) {
+            objectsArray.splice(i, 1);
+        } else {
+            usedObjects[so] = true;          
+        }
+    }
+    return objectsArray;
 }
