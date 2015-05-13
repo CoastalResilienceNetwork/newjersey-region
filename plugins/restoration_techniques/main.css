@@ -26,4 +26,39 @@
 .tdc{
 	text-align:center;
 }
-
+.infopiccloser{
+	position:absolute !important;
+	top:5px !important;
+	right:5px !important;
+}
+.infopiccloser a:hover{
+	color:#29cea4;
+}
+.arrow-right {
+	position: absolute;
+	top: 7px;
+	right: 22px;
+	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 10px solid #29A6CE;
+}
+.arrow-left {
+	position: absolute;
+	top: 7px;
+	right: 35px;
+	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-right:10px solid #29A6CE; 
+}
+.arrow-left:hover{
+	cursor:pointer;
+	border-right:10px solid #29cea4;
+}
+.arrow-right:hover{
+	cursor:pointer;
+	border-left:10px solid #29cea4;
+}

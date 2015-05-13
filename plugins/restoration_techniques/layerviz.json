@@ -5,6 +5,8 @@
 	"visibleLayers": [],
 	"infoDisplay": "none",
 	"infoContent": "",
+	"infoPicDisplay": "none",
+	"infoPicContent": "",
 	"idenVal": "",
 	"idenGroup": "",
 	"idenHTML": "",
@@ -184,8 +186,8 @@
 				{
 					"text": "4. Select a restoration technique",
 					"name": "level_4a",
-					"helpTitle": "Definitions for Living Shoreline Techniques",
-					"helpText": "1.	<b>Beach Restoration:</b>  Restoring beaches requires placing sand along a shoreline to help maintain habitat for key species - like horseshoe crabs, red knots and piping plovers - that use sandy beaches for spawning or feeding. The natural sloping beach allows waves to break across the sand, minimizing erosion of the shoreline edge.<br><br>2.	<b>Nature-Based Living Shoreline:</b>  Nature-based living shorelines are best in low-energy areas. “Biological enhancements,” like biodegradable fiber logs (which also provide habitat for ribbed mussels) or Christmas trees, are placed along the tidal marsh edge to provide a contained area for sediment to accumulate and marsh vegetation to grow. Once sediment has accumulated and vegetation grows, a new marsh edge is more resistant to erosion.<br><br><b>Marsh Sill:</b> Marsh sills are low elevation structures that run parallel to the shoreline. Marsh sills, which are below water at high tide, protect the marsh from erosion by causing waves to break offshore, rather than directly on shore. The area between the sill and the marsh is often filled and planted with marsh vegetation to speed up shoreline stabilization.<br><br>4.	<b>Ecologically-Enhanced Revetment:</b>  Ecologically-enhanced revetments are porous, vegetated structures attached to the shore that prevent erosion of the marsh or upland edge.  They are typically constructed from rock or broken up concrete, although materials such as gabion baskets, rubble/debris, and even felled trees can also be used.  They can be used at both open coastal locations and on lower energy sheltered coasts.<br><br>	5.	<b>Breakwater:</b> Breakwaters are structures typically constructed parallel to the shoreline, designed to reduce the amount of wave energy experienced by the shoreline directly behind them and sometimes allow for the establishment of a vegetated (typically marsh) shoreline behind the breakwater itself.  Unlike marsh sills, they are typically constructed in deeper water and in more energetic wave climates. They also tend to be slightly larger and are typically still visable at high tide.<br><br>6.	<b>Living Reef Breakwaters:</b> Living reef breakwaters function similarly to constructed breakwaters, but are built to provide habitat for baby oysters or mussels to settle upon. Reef balls, oyster castles, bagged shell and other reef structures are typically used to provide a durable and heavily-weighted substrate.  These structures may also be “seeded” with shellfish before placement. Over time, large reef structures can form that not only serve as a natural breakwater, but also provide critical aquatic habitat. ",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "main"
 				}
 			],
@@ -198,7 +200,8 @@
 					"layerNumber": "4",
 					"identifyNumber": "5",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "NBLS"
                 },
 				{
                     "text": "Living Reef Breakwater",
@@ -208,7 +211,8 @@
 					"layerNumber": "12",
 					"identifyNumber": "13",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "LivingReef"
 				},
                 {
                     "text": "Marsh Sill",
@@ -218,7 +222,8 @@
 					"layerNumber": "6",
 					"identifyNumber": "7",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "MarshSill"
 				},
 				{
                     "text": "Breakwater",
@@ -228,7 +233,8 @@
 					"layerNumber": "10",
 					"identifyNumber": "11",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "Breakwater"
 				},
 				{
                     "text": "Ecologically Enhanced Revetment",
@@ -238,7 +244,8 @@
 					"layerNumber": "8",
 					"identifyNumber": "9",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "EcoRevetment"
 				}
             ]
         },
@@ -252,8 +259,8 @@
 				{
 					"text": "4. Select a restoration technique",
 					"name": "level_4b",
-					"helpTitle": "Definitions for Living Shoreline Techniques",
-					"helpText": "1.	<b>Beach Restoration:</b>  Restoring beaches requires placing sand along a shoreline to help maintain habitat for key species - like horseshoe crabs, red knots and piping plovers - that use sandy beaches for spawning or feeding. The natural sloping beach allows waves to break across the sand, minimizing erosion of the shoreline edge.<br><br>2.	<b>Nature-Based Living Shoreline:</b>  Nature-based living shorelines are best in low-energy areas. “Biological enhancements,” like biodegradable fiber logs (which also provide habitat for ribbed mussels) or Christmas trees, are placed along the tidal marsh edge to provide a contained area for sediment to accumulate and marsh vegetation to grow. Once sediment has accumulated and vegetation grows, a new marsh edge is more resistant to erosion.<br><br><b>Marsh Sill:</b> Marsh sills are low elevation structures that run parallel to the shoreline. Marsh sills, which are below water at high tide, protect the marsh from erosion by causing waves to break offshore, rather than directly on shore. The area between the sill and the marsh is often filled and planted with marsh vegetation to speed up shoreline stabilization.<br><br>4.	<b>Ecologically-Enhanced Revetment:</b>  Ecologically-enhanced revetments are porous, vegetated structures attached to the shore that prevent erosion of the marsh or upland edge.  They are typically constructed from rock or broken up concrete, although materials such as gabion baskets, rubble/debris, and even felled trees can also be used.  They can be used at both open coastal locations and on lower energy sheltered coasts.<br><br>	5.	<b>Breakwater:</b> Breakwaters are structures typically constructed parallel to the shoreline, designed to reduce the amount of wave energy experienced by the shoreline directly behind them and sometimes allow for the establishment of a vegetated (typically marsh) shoreline behind the breakwater itself.  Unlike marsh sills, they are typically constructed in deeper water and in more energetic wave climates. They also tend to be slightly larger and are typically still visable at high tide.<br><br>6.	<b>Living Reef Breakwaters:</b> Living reef breakwaters function similarly to constructed breakwaters, but are built to provide habitat for baby oysters or mussels to settle upon. Reef balls, oyster castles, bagged shell and other reef structures are typically used to provide a durable and heavily-weighted substrate.  These structures may also be “seeded” with shellfish before placement. Over time, large reef structures can form that not only serve as a natural breakwater, but also provide critical aquatic habitat. ",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "main"
 				}
 			],
@@ -266,7 +273,8 @@
 					"layerNumber": "2",
 					"identifyNumber": "3",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "BeachRestoration"
 				},
 				{
                     "text": "Living Reef Breakwater",
@@ -276,7 +284,8 @@
 					"layerNumber": "12",
 					"identifyNumber": "13",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "LivingReef"
 				},
 				{
                     "text": "Breakwater",
@@ -286,7 +295,8 @@
 					"layerNumber": "10",
 					"identifyNumber": "11",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "Breakwater"
 				},
 				{
                     "text": "Ecologically Enhanced Revetment",
@@ -296,7 +306,8 @@
 					"layerNumber": "8",
 					"identifyNumber": "9",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes"
+					"groupsBelow" : "yes",
+					"helpText": "EcoRevetment"
 				}
             ]
         },

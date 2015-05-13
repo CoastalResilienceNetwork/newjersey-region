@@ -93,7 +93,9 @@ define([
 					}
 					this.config = dojo.eval("[" + layerViz + "]")[0];	
 					this.controls = this.config.controls;
-					this.changes = {"radio": [], "extent": [], "visibleLayers": [], "idenGraphic": []};
+					this.changes = {"radio": [], "display": [], "extent": [], "visibleLayers": [],
+					"idenGraphic": [], "selectedCounty": "", "selectedMun": "", "infoContent": "",
+					"infoDisplay": ""};
 				},
 				
 				resize: function(w, h) {
@@ -127,8 +129,47 @@ define([
 						new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
 						new Color([161,70,18]), 2),new Color([255,255,0,0])
 					  );			
-					//this.slayers = [];
 					
+					this.sliderpane = new ContentPane({});
+					parser.parse();
+					dom.byId(this.container).appendChild(this.sliderpane.domNode);					
+					  
+					//info image
+					mymap = dom.byId(this.map.id);
+					a = dojoquery(mymap).parent();
+					this.infopic = new ContentPane({
+						style:"z-index:100; !important;position:absolute !important;left:76px !important; top:98px !important;background-color:#FFF !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: " + this.config.infoPicDisplay,
+						innerHTML: "<div class='infopiccloser'><a href='#'>✖</a></div>" +
+						"<div class='arrow-left'></div><div class='arrow-right'></div>" +
+						"<div class='infopiccontent' style='overflow-y: hidden !important;' id='" + this.sliderpane.id + "infoPicHandle'>" + this.config.infoPicContent + "</div>"
+					});
+					dom.byId(a[0]).appendChild(this.infopic.domNode)
+					ina = dojoquery(this.infopic.domNode).children(".infopiccloser");
+					this.infoPicCloser = ina[0];
+					on(this.infoPicCloser, "click", lang.hitch(this,function(e){
+						domStyle.set(this.infopic.domNode, 'display', 'none');
+						this.config.infoPicDisplay = "none";
+					}));
+					
+					inac = dojoquery(this.infopic.domNode).children(".infopiccontent");
+					this.infoPicContent = inac[0];		
+					// right and left arrow clicks
+					inl = dojoquery(this.infopic.domNode).children(".arrow-left");
+					this.infoPicLeft = inl[0];
+					on(this.infoPicLeft, "click", lang.hitch(this,function(){
+						this.clickDirection = "left";
+						this.updateInfoPic();
+					}));
+					inr = dojoquery(this.infopic.domNode).children(".arrow-right");
+					this.infoPicRight = inr[0];
+					on(this.infoPicRight, "click", lang.hitch(this,function(){
+						this.clickDirection = "right";
+						this.updateInfoPic();
+					}));
+					
+										
+					
+					//info text
 					mymap = dom.byId(this.map.id);
 					a = dojoquery(mymap).parent();
 					this.infoarea = new ContentPane({
@@ -144,11 +185,6 @@ define([
 						domStyle.set(this.infoarea.domNode, 'display', 'none');
 						this.config.infoDisplay = "none";
 					}));
-					this.sliderpane = new ContentPane({
-					  //style:"height:" + this.sph + "px !important"
-					});
-					parser.parse();
-					dom.byId(this.container).appendChild(this.sliderpane.domNode);
 					
 					//tab container
 					mymap = dom.byId(this.map.id);
@@ -205,7 +241,7 @@ define([
 						handle: dom.byId(this.sliderpane.id + "tabHeader"),	
 						within: true
 					});
-					this.map.on ("extent-change", lang.hitch(this,function(e,p,b,l){	 
+					this.map.on ("extent-change", lang.hitch(this,function(e,x,b,l){	 
 						this.l = e.lod.level	
 						if (this.l < 18){
 							this.pntSym.size = 10;
@@ -350,18 +386,46 @@ define([
 												this.radioClick(i, groupid, option.text);
 											}
 										})
-									}, ncontrolnode);
-									if (rlen == i){
-										inhtml = "<span style='color:#000;' id='" + this.sliderpane.id + "_lvoption_" + groupid + "_" + i + "'> " + option.text + "</span><br><br>"
+									}, ncontrolnode);	
+									if (rlen == i){	
+										if (option.helpText != undefined){
+											var htbr = "";
+											var picbr = "<br><br>";
+										}else{
+											var htbr = "<br><br>";
+										}	
+										inhtml = "<span style='color:#000;' id='" + this.sliderpane.id + "_lvoption_" + groupid + "_" + i + "'> " + option.text + "</span>" + htbr
 									}else{
-										inhtml = "<span style='color:#000;' id='" + this.sliderpane.id + "_lvoption_" + groupid + "_" + i + "'> " + option.text + "</span><br>"
+										if (option.helpText != undefined){
+											var htbr = "";
+											var picbr = "<br>";
+										}else{
+											var htbr = "<br>";
+										}
+										inhtml = "<span style='color:#000;' id='" + this.sliderpane.id + "_lvoption_" + groupid + "_" + i + "'> " + option.text + "</span>"  + htbr
 									}
 									nslidernodeheader = domConstruct.create("div", {
 										style:"display:inline;", 
 										innerHTML: inhtml
 									});									
 									ncontrolsnode.appendChild(nslidernodeheader);
-																		
+									
+									infoPic = domConstruct.create("a", {
+										style: "color:black;margin-left:3px !important;",
+										href: "#",
+										title: "Click for more information",
+										innerHTML: "<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAEZ0FNQQAAsY58+1GTAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAI2SURBVHjarJPfSxRRFMc/rrasPxpWZU2ywTaWSkRYoaeBmoVKBnwoJfIlWB8LekiaP2N76S9o3wPBKAbFEB/mIQJNHEuTdBmjUtq1mz/Xmbk95A6u+lYHzsvnnvO995xzTw3HLJfLDQNZIHPsaArIm6b54iisOZJ4ERhVFCWtaRqqqqIoCgBCCFzXxbZthBCzwIBpmquhwGHyTHd3d9wwDAqlA6a/bFMolQHobI5y41Ijnc1nsCwLx3E2gV7TNFfrDh8wWknOvy9hffoNwNNMgkKxzMu5X7z5KDCuniVrGABxx3FGgd7aXC43rCjKw6GhIV68K/J6QRBISSAl6fP1bO0HzH/bJZCSpY19dsoB9/QeHMdp13W9EAGymqaxUiwzNr+J7wehP59e5+2SqGJj85usFMtomgaQjQAZVVWZXKwO7O9SeHang8fXE1Xc9wMmFwWqqgJkIgCKorC8sYfnB6F/Xt+lIRpBSqq45wcsb+yFE6o0Ed8P8LwgnO+Mu80PcQBQxSuxFYtU5pxsjZ64SUqJlPIET7ZGEUKEAlOu69LXFT9FgFNL6OuK47ouwFQEyNu2TSoRYzDdguf9LUVLNpFqi5Fqi6Elm0I+mG4hlYhh2zZAvnZ8fHxW1/W7Qoj2B7d7Ebsec+4WzY11TCyUmFgosXcQ8LW0z/1rCZ7c7MCyLNbW1mZN03xUaeKA4zgzQHzEMOjvaeHVh58sft8B4Ep7AyO3LnD5XP3Rrzzw/5bpX9b5zwBaRXthcSp6rQAAAABJRU5ErkJggg=='>" + picbr
+									})
+									if (option.helpText != undefined){
+										nslidernodeheader.appendChild(infoPic);
+									}
+									on(infoPic, "click", lang.hitch(this,function(e){
+										domStyle.set(this.infopic.domNode, 'display', 'block');
+										this.config.infoPicDisplay = "block";
+										this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + option.helpText + ".jpg'>";
+										this.config.infoPicContent = this.infoPicContent.innerHTML
+									}));
+									
 									parser.parse()	
 								})); 
 							}
@@ -476,7 +540,7 @@ define([
 						var pt = new Point(this.config.idenGraphic.x,this.config.idenGraphic.y,this.map.spatialReference)
 						this.selectedGraphic = new Graphic(pt,this.pntSym);
 						this.map.graphics.add(this.selectedGraphic);
-					}		
+					}				
 					this.resize();
 				},
 				
@@ -655,18 +719,32 @@ define([
 							if (entry.level == this.childlevel && entry.parentValue != this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).hide();
 								this.controls[groupid].display = "none";
+								for (var i = this.changes.display.length - 1; i >= 0; i--) {
+									var f = this.changes.display[i].split("_")
+									if(f[0] == "d" && f[1] == groupid){
+										this.changes.display.splice(i,1)
+									}	
+								}
 							}
 							if (entry.level > this.childlevel){
 								$('#' + this.sliderpane.id + "_" + groupid).hide();
 								this.controls[groupid].display = "none";
+								for (var i = this.changes.display.length - 1; i >= 0; i--) {
+									var f = this.changes.display[i].split("_")
+									if(f[0] == "d" && f[1] == groupid){
+										this.changes.display.splice(i,1)
+									}	
+								}
 							}
 						}));
 						array.forEach(this.controls, lang.hitch(this,function(entry, groupid){
 							if (entry.level == this.childlevel && entry.parentValue == this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
 								this.controls[groupid].display = "block";
+								this.changes.display.push("d_" + groupid)
 							}
-						}));				
+						}));
+						console.log(this.changes.display)
 					}
 				},
 				
@@ -888,10 +966,44 @@ define([
 					}
 				},
 				
+				updateInfoPic: function () {
+					var picNames = ["NBLS", "LivingReef", "MarshSill", "Breakwater", "EcoRevetment", "BeachRestoration"]
+					var picHtml = this.infoPicContent.innerHTML;
+					var start_pos = picHtml.lastIndexOf('/') + 1;
+					var end_pos = picHtml.indexOf('.',start_pos);
+					var picName = picHtml.substring(start_pos,end_pos)
+					var sp = 0;
+					var pn = "";
+					$.each(picNames, function(i,v){
+						if (v == picName){
+							sp = i;
+						}
+					})
+					if (this.clickDirection == "left"){
+						if (sp == 0){
+							pn = picNames[5]	
+						}else{
+							pn = picNames[sp-1]	
+						}
+					}
+					if (this.clickDirection == "right"){
+						if (sp == 5){
+							pn = picNames[0]	
+						}else{
+							pn = picNames[sp+1]	
+						}
+					}					
+					this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + pn + ".jpg'>";											
+				},
+				
 				getState: function () {
 					this.changes.extent = this.map.geographicExtent;
 					this.changes.visibleLayers = this.config.visibleLayers;	
 					this.changes.idenGraphic = this.config.idenGraphic;
+					this.changes.selectedCounty = this.controls[0].selectedCounty;
+					this.changes.selectedMun = this.controls[0].selectedMun;
+					this.changes.infoContent = this.config.infoContent;
+					this.changes.infoDisplay = this.config.infoDisplay;
 					var iden = dom.byId(this.sliderpane.id + 'idResults')
 					var isVisible = iden.offsetWidth > 0 || iden.offsetHeight > 0;
 					if (isVisible == true){
@@ -906,12 +1018,23 @@ define([
 					this.config.extent = state.extent;
 					this.config.visibleLayers = state.visibleLayers;
 					this.config.idenGraphic = state.idenGraphic;
+					this.controls[0].selectedCounty = state.selectedCounty;
+					this.controls[0].selectedMun = state.selectedMun;
+					this.config.infoContent = state.infoContent;
+					this.config.infoDisplay = state.infoDisplay;
 					for (var i = state.radio.length - 1; i >= 0; i--) {
 						var f = state.radio[i].split("_")
 						console.log(f)
 						if(f[0] == "s"){
 							this.controls[f[1]].options[f[2]].selected = true;	
-							this.controls[f[1]].display = true;
+							this.controls[f[1]].display = "block";
+						}	
+					}
+					for (var i = state.display.length - 1; i >= 0; i--) {
+						var f = state.display[i].split("_")
+						console.log(f)
+						if(f[0] == "d"){
+							this.controls[f[1]].display = "block";
 						}	
 					}
 				}
