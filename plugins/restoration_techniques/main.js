@@ -37,6 +37,25 @@ define([
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: false,
 				rendered: false,
+				
+				initialize: function (frameworkParameters) {				
+					declare.safeMixin(this, frameworkParameters);
+					domClass.add(this.container, "claro");
+					con = dom.byId('plugins/restoration_techniques-0');
+						domStyle.set(con, "width", "295px");
+						domStyle.set(con, "height", "580px");
+					con1 = dom.byId('plugins/restoration_techniques-1');
+					if (con1 != undefined){
+						domStyle.set(con1, "width", "295px");
+						domStyle.set(con1, "height", "580px");
+					}
+					this.config = dojo.eval("[" + layerViz + "]")[0];	
+					this.controls = this.config.controls;
+					this.changes = { "radio": [], "extent": [], "visibleLayers": [],
+					"idenGraphic": [], "selectedCounty": "", "selectedMun": "", "infoContent": "",
+					"infoDisplay": "", "idenVal": "", "idenGroup": "", "idenType": "", "atts": "",
+					"techName": ""};
+				},
 			   
 				activate: function () {
 					if (this.rendered == false) {
@@ -78,24 +97,6 @@ define([
 						this.map.removeLayer(this.munFL)
 					}
 					this.rendered = false;
-				},
-			   
-			   	initialize: function (frameworkParameters) {				
-					declare.safeMixin(this, frameworkParameters);
-					domClass.add(this.container, "claro");
-					con = dom.byId('plugins/restoration_techniques-0');
-						domStyle.set(con, "width", "295px");
-						domStyle.set(con, "height", "580px");
-					con1 = dom.byId('plugins/restoration_techniques-1');
-					if (con1 != undefined){
-						domStyle.set(con1, "width", "295px");
-						domStyle.set(con1, "height", "580px");
-					}
-					this.config = dojo.eval("[" + layerViz + "]")[0];	
-					this.controls = this.config.controls;
-					this.changes = {"radio": [], "display": [], "extent": [], "visibleLayers": [],
-					"idenGraphic": [], "selectedCounty": "", "selectedMun": "", "infoContent": "",
-					"infoDisplay": ""};
 				},
 				
 				resize: function(w, h) {
@@ -525,13 +526,14 @@ define([
 					}else{
 						this.extentCheck = "second"	
 					}
-					if (this.config.idenHTML != ""){
-						$('#' + this.sliderpane.id + 'idResults').empty();
+					if (this.config.atts != ""){
+					/*	$('#' + this.sliderpane.id + 'idResults').empty();
 						$('#' + this.sliderpane.id + 'idResults').append(this.config.idenHTML);
 						$('#' + this.b).show();
 						$('#' + this.sliderpane.id + 'idIntro').hide();
 						$('#' + this.sliderpane.id + 'idResults').show();
-						this.identifyFeatures(this.config.idenVal, this.config.idenGroup);
+					*/	this.identifyFeatures(this.config.idenVal, this.config.idenGroup);
+						this.showAttributes(this.config.atts, this.config.idenType);
 					}	
 					if (this.config.idenVal != ""){
 						this.identifyFeatures(this.config.idenVal, this.config.idenGroup);
@@ -671,7 +673,6 @@ define([
 						}	
 					}));
 					this.changes.radio.push("s_" + group + "_" + val)
-					console.log(this.changes)
 					//check if show data level
 					if (this.controls[group].options[val].showData == "no"){
 						this.config.visibleLayers = [];	
@@ -683,6 +684,8 @@ define([
 						}
 						this.config.idenVal = "";
 						this.config.idenGroup = "";
+						this.config.idenType = "";
+						this.config.atts = "";
 					}
 					if (this.controls[group].options[val].showData == "yes"){
 						var selectedLayer = this.controls[group].options[val].layerNumber
@@ -719,20 +722,20 @@ define([
 							if (entry.level == this.childlevel && entry.parentValue != this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).hide();
 								this.controls[groupid].display = "none";
-								for (var i = this.changes.display.length - 1; i >= 0; i--) {
-									var f = this.changes.display[i].split("_")
+								for (var i = this.changes.radio.length - 1; i >= 0; i--) {
+									var f = this.changes.radio[i].split("_")
 									if(f[0] == "d" && f[1] == groupid){
-										this.changes.display.splice(i,1)
+										this.changes.radio.splice(i,1)
 									}	
 								}
 							}
 							if (entry.level > this.childlevel){
 								$('#' + this.sliderpane.id + "_" + groupid).hide();
 								this.controls[groupid].display = "none";
-								for (var i = this.changes.display.length - 1; i >= 0; i--) {
-									var f = this.changes.display[i].split("_")
+								for (var i = this.changes.radio.length - 1; i >= 0; i--) {
+									var f = this.changes.radio[i].split("_")
 									if(f[0] == "d" && f[1] == groupid){
-										this.changes.display.splice(i,1)
+										this.changes.radio.splice(i,1)
 									}	
 								}
 							}
@@ -741,10 +744,9 @@ define([
 							if (entry.level == this.childlevel && entry.parentValue == this.value){
 								$('#' + this.sliderpane.id + "_" + groupid).show('slow');
 								this.controls[groupid].display = "block";
-								this.changes.display.push("d_" + groupid)
+								this.changes.radio.push("d_" + groupid)
 							}
 						}));
-						console.log(this.changes.display)
 					}
 				},
 				
@@ -753,11 +755,19 @@ define([
 						this.config.visibleLayers.push(lyrnum);
 						this.config.visibleLayers = unique(this.config.visibleLayers)
 						this.identifyFeatures(val, group);
+						this.changes.radio.push("c_" + group + "_" + val)
 					}else{
 						var index = this.config.visibleLayers.indexOf(lyrnum)
 						this.config.visibleLayers.splice(index, 1);
 						this.config.idenVal = "";
 						this.config.idenGroup = "";
+						for (var i = this.changes.radio.length - 1; i >= 0; i--) {
+							var f = this.changes.radio[i].split("_")
+							if(f[0] == "c" && f[1] == group && f[2] == val){
+								console.log("remove value")
+								this.changes.radio.splice(i,1)
+							}	
+						}
 					}
 					this.currentLayer.setVisibleLayers(this.config.visibleLayers);
 					
@@ -767,7 +777,8 @@ define([
 					if (this.controls[group].options[val].identifyNumber != ""){
 						this.config.idenVal = val;
 						this.config.idenGroup = group;
-						var idenGroup = this.controls[group].options[val].identifyGroup;
+						var idenType = this.controls[group].options[val].identifyGroup;
+						this.config.idenType = idenType;
 						if (this.featureLayerOD != undefined){
 							this.map.removeLayer(this.featureLayerOD);			
 						}
@@ -793,7 +804,8 @@ define([
 						}));
 						this.featureLayerOD.on("mouse-down", lang.hitch(this,function(evt){
 							atts = evt.graphic.attributes;
-							this.showAttributes(atts, idenGroup);
+							this.config.atts = atts;
+							this.showAttributes(atts, idenType);
 							this.map.graphics.clear();
 							this.selectedGraphic = new Graphic(evt.graphic.geometry,this.pntSym);
 							this.config.idenGraphic = evt.graphic.geometry;
@@ -807,12 +819,16 @@ define([
 							this.map.removeLayer(this.featureLayerOD);
 							this.config.idenGraphic = "";							
 						}
+						this.config.idenType = "";
+						this.config.idenVal = "";
+						this.config.idenGroup = "";
+						this.config.atts = "";
 					}
 				},
 				
-				showAttributes: function(atts, idenGroup) {
+				showAttributes: function(atts, idenType) {
 					$('#' + this.sliderpane.id + 'idResults').empty();
-					if (idenGroup == 2){
+					if (idenType == 2){
 						$('#' + this.sliderpane.id + 'idResults').append(this.iden2Html);
 						$('#' + this.b).show();
 						$('#' + this.sliderpane.id + 'idIntro').hide();
@@ -903,7 +919,7 @@ define([
 						}
 						$('#' + this.sliderpane.id + 'totalc').html('Total Criteria Satisfied: <b>' + atts.TotalCriteriaSatisfied + '</b>').show();
 					}
-					if (idenGroup == 1){
+					if (idenType == 1){
 						$('#' + this.sliderpane.id + 'idResults').append(this.iden1Html);
 						$('#' + this.b).show();
 						$('#' + this.sliderpane.id + 'idIntro').hide();
@@ -1007,7 +1023,11 @@ define([
 					var iden = dom.byId(this.sliderpane.id + 'idResults')
 					var isVisible = iden.offsetWidth > 0 || iden.offsetHeight > 0;
 					if (isVisible == true){
-						this.config.idenHTML = $('#' + this.sliderpane.id + 'idResults').html()
+						this.changes.idenVal = this.config.idenVal;
+						this.changes.idenGroup = this.config.idenGroup;
+						this.changes.idenType = this.config.idenType;
+						this.changes.atts = this.config.atts;
+						this.changes.techName = this.config.techName;
 					}		
 					var state = new Object();
 					state = this.changes;
@@ -1022,21 +1042,24 @@ define([
 					this.controls[0].selectedMun = state.selectedMun;
 					this.config.infoContent = state.infoContent;
 					this.config.infoDisplay = state.infoDisplay;
+					this.config.idenVal = state.idenVal;
+					this.config.idenGroup = state.idenGroup;
+					this.config.idenType = state.idenType;
+					this.config.atts = state.atts;
+					this.config.techName = state.techName;
 					for (var i = state.radio.length - 1; i >= 0; i--) {
 						var f = state.radio[i].split("_")
-						console.log(f)
 						if(f[0] == "s"){
 							this.controls[f[1]].options[f[2]].selected = true;	
 							this.controls[f[1]].display = "block";
+						}
+						if(f[0] == "c"){
+							this.controls[f[1]].options[f[2]].selected = true;	
 						}	
-					}
-					for (var i = state.display.length - 1; i >= 0; i--) {
-						var f = state.display[i].split("_")
-						console.log(f)
 						if(f[0] == "d"){
 							this.controls[f[1]].display = "block";
-						}	
-					}
+						}						
+					}					
 				}
            });
        });	   
