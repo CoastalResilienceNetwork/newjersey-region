@@ -53,7 +53,7 @@ define([
 					this.controls = this.config.controls;
 					this.changes = { "radio": [], "extent": [], "visibleLayers": [],
 					"idenGraphic": [], "selectedCounty": "", "selectedMun": "", "infoContent": "",
-					"infoDisplay": "", "idenVal": "", "idenGroup": "", "idenType": "", "atts": "",
+					"infoDisplay": "", "infoPicDisplay": "infoPicContent", "": "", "idenVal": "", "idenGroup": "", "idenType": "", "atts": "",
 					"techName": ""};
 				},
 			   
@@ -150,6 +150,7 @@ define([
 					on(this.infoPicCloser, "click", lang.hitch(this,function(e){
 						domStyle.set(this.infopic.domNode, 'display', 'none');
 						this.config.infoPicDisplay = "none";
+						this.config.infoPicContent == "";
 					}));
 					
 					inac = dojoquery(this.infopic.domNode).children(".infopiccontent");
@@ -424,7 +425,7 @@ define([
 										domStyle.set(this.infopic.domNode, 'display', 'block');
 										this.config.infoPicDisplay = "block";
 										this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + option.helpText + ".jpg'>";
-										this.config.infoPicContent = this.infoPicContent.innerHTML
+										this.config.infoPicContent = this.infoPicContent.innerHTML;
 									}));
 									
 									parser.parse()	
@@ -1010,6 +1011,7 @@ define([
 						}
 					}					
 					this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + pn + ".jpg'>";											
+					this.config.infoPicContent = this.infoPicContent.innerHTML
 				},
 				
 				getState: function () {
@@ -1020,6 +1022,9 @@ define([
 					this.changes.selectedMun = this.controls[0].selectedMun;
 					this.changes.infoContent = this.config.infoContent;
 					this.changes.infoDisplay = this.config.infoDisplay;
+					this.changes.infoPicDisplay = this.config.infoPicDisplay;
+					this.changes.infoPicContent = this.config.infoPicContent;
+					console.log(this.changes.infoPicContent + " = "  + this.config.infoPicContent)
 					var iden = dom.byId(this.sliderpane.id + 'idResults')
 					var isVisible = iden.offsetWidth > 0 || iden.offsetHeight > 0;
 					if (isVisible == true){
@@ -1042,6 +1047,8 @@ define([
 					this.controls[0].selectedMun = state.selectedMun;
 					this.config.infoContent = state.infoContent;
 					this.config.infoDisplay = state.infoDisplay;
+					this.config.infoPicDisplay = state.infoPicDisplay;
+					this.config.infoPicContent = state.infoPicContent;
 					this.config.idenVal = state.idenVal;
 					this.config.idenGroup = state.idenGroup;
 					this.config.idenType = state.idenType;
