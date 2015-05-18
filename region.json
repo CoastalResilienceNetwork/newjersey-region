@@ -1,7 +1,8 @@
 {
+    "googleAnalyticsPropertyId": "7401895-14",
+    "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
     "titleMain": { "text": "Coastal Resilience", 
 	"url": "http://coastalresilience.org/" },
-	"googleUrlShortenerApiKey": "AIzaSyARaUoIR6ljJDqUXzl1PfK0agb1QEP5CdE",
     "titleDetail": { "text": "New Jersey", "url": "http://coastalresilience.org/project-areas/new-jersey-introduction" },
 	"headerLinks": [
 		{ "text": "GET STARTED", "url": "getstarted.html", "popup": true },
