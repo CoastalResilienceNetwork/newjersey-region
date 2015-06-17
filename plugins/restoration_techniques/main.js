@@ -11,7 +11,7 @@ define([
         "dojo/_base/declare", "framework/PluginBase", 'plugins/restoration_techniques/ConstrainedMoveable', 'plugins/restoration_techniques/jquery-ui-1.11.0/jquery-ui',
 		
 		"esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/FeatureLayer", "esri/tasks/QueryTask", "esri/tasks/query", "esri/graphicsUtils", 
-		"esri/geometry/Extent", "esri/SpatialReference", "esri/geometry/Point",
+		"esri/geometry/Extent", "esri/SpatialReference", "esri/geometry/Point", "esri/graphic",
 		
 		"esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleMarkerSymbol", "esri/graphic", "esri/symbols/Font", 
 		"esri/symbols/TextSymbol", "esri/symbols/PictureMarkerSymbol", "dojo/_base/Color", "esri/renderers/SimpleRenderer",		
@@ -25,7 +25,7 @@ define([
 		"dojo/text!./layerviz.json", "jquery"
        ],
        function ( declare, PluginBase, ConstrainedMoveable, ui, 
-					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils, Extent, SpatialReference, Point,
+					ArcGISDynamicMapServiceLayer, FeatureLayer, QueryTask, esriQuery, graphicsUtils, Extent, SpatialReference, Point, Graphic,
 					SimpleLineSymbol, SimpleFillSymbol, SimpleMarkerSymbol, Graphic, Font, TextSymbol, PictureMarkerSymbol, Color, SimpleRenderer,
 					registry, Button, DropDownButton, DropDownMenu, MenuItem, ContentPane, HorizontalSlider, CheckBox, RadioButton,
 					dom, domClass, domStyle, win, domConstruct, domAttr, Dialog, domGeom, array, lang, on, parser, dojoquery, NodeListtraverse, Moveable, move,
@@ -176,7 +176,8 @@ define([
 					a = dojoquery(mymap).parent();
 					this.infoarea = new ContentPane({
 						style:"z-index:100; !important;position:absolute !important;left:370px !important; top:65px !important;background-color:#FFF !important;padding:10px !important;border-style:solid;border-width:4px;border-color:#444;border-radius:5px;display: " + this.config.infoDisplay,
-						innerHTML: "<div class='infoareacloser' style='float:right !important'><a href='#'>✖</a></div><div class='infoareacontent' style='padding-top:0px'>" + this.config.infoContent + "</div>"
+						innerHTML: "<div class='infoareacloser' style='float:right !important'>" + 
+						"<a href='#'>✖</a></div><div class='infoareacontent' style='padding-top:0px'>" + this.config.infoContent + "</div>"
 					});
 					dom.byId(a[0]).appendChild(this.infoarea.domNode)
 					ina = dojoquery(this.infoarea.domNode).children(".infoareacloser");
@@ -203,7 +204,7 @@ define([
 							"<p id='" + this.sliderpane.id + "nearshore' style='display:none; margin-bottom:0px;'></p>" +
 							"<p id='" + this.sliderpane.id + "totalc' style='display:none; margin-bottom:0px;'></p>" 
 					
-					this.iden1Html = "<p style='font-weight:bold; margin-bottom:0px;'>Restoration Techniques Met:</p>" +
+					this.iden1Html = 
 							"<p id='" + this.sliderpane.id + "nblsId' style='display:none; margin-bottom:0px;'></p>" +
 							"<p id='" + this.sliderpane.id + "lreefId' style='display:none; margin-bottom:0px;'></p>" +
 							"<p id='" + this.sliderpane.id + "msillId' style='display:none; margin-bottom:0px;'></p>" +							
@@ -214,10 +215,9 @@ define([
 					
 					this.idenWin = new ContentPane({
 					  id: this.b,
-					  style:"display:none; z-index:8; position:absolute; right:105px; width:260px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
-					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Identify Restoration Technique Cells</div>" +	
+					  style:"display:none; z-index:8; position:absolute; right:105px; width:330px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
+					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Which shoreline enhancement techniques apply here</div>" +	
 						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
-						  "<p id='" + this.sliderpane.id + "idIntro'></p>" +
 						  "<div id='" + this.sliderpane.id + "idResults' style='display:none; class='idResults'>" +
 						  "</div>" +
 						"</div>" 		
@@ -234,21 +234,36 @@ define([
 					on(this.idenWincloser, "click", lang.hitch(this,function(e){
 						domStyle.set(this.idenWin.domNode, 'display', 'none');
 						this.map.graphics.clear();
-						$('#' + this.sliderpane.id + 'idIntro').show();
 						$('#' + this.sliderpane.id + 'idResults').hide();
-					}));
-					
+					}));					
 					var p = new ConstrainedMoveable(
 						dom.byId(this.idenWin.id), {
 						handle: dom.byId(this.sliderpane.id + "tabHeader"),	
 						within: true
 					});
+					
+					this.idIntro = new ContentPane({
+						id: this.sliderpane.id + 'idIntro',
+						style: "display:none;position:absolute;right:50%;top:100px;width:180px;background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;padding:10px;text-align:center;",
+						innerHTML: "<div class='idIntroCloser' style='position:absolute;top:5px;right:5px;'><a href='#' style='color:#21658c'>✖</a></div>" +
+								   "<div style='font-size:14pt;'>" +
+									"Zoom in to select individual squares for more information" + 
+								   "</div>"
+					});	
+					dom.byId(a[0]).appendChild(this.idIntro.domNode)
+					ii = dojoquery(this.idIntro.domNode).children(".idIntroCloser");
+					this.idIntroCloser = ii[0];
+					on(this.idIntroCloser, "click", lang.hitch(this,function(e){
+						domStyle.set(this.idIntro.domNode, 'display', 'none');
+					}));
+					
+					
 					this.map.on ("extent-change", lang.hitch(this,function(e,x,b,l){	 
 						this.l = e.lod.level	
 						if (this.l < 18){
 							this.pntSym.size = 10;
 							this.highlightSymbol.size = 10;
-							$('#' + this.sliderpane.id + 'idIntro').text("Zoom in to initialize the identify feature for this technique.");
+							
 						}
 						if (this.l == 18){
 							this.pntSym.size = 17;
@@ -259,8 +274,9 @@ define([
 							this.highlightSymbol.size = 32;
 						}	
 						if (this.l > 16){
-							$('#' + this.sliderpane.id + 'idIntro').text("Click on the selected technique to learn more about each grid");
+							$('#' + this.sliderpane.id + 'idIntro').hide();
 						}
+						
 					}));				
 					
 					this.buttonpane = new ContentPane({
@@ -275,7 +291,7 @@ define([
 							});	
 						this.buttonpane.domNode.appendChild(methodsButton.domNode);
 					}					
-					nslidernodetitle = domConstruct.create("span", {innerHTML: " Layer Properties: "});
+					nslidernodetitle = domConstruct.create("span", {});
 					this.buttonpane.domNode.appendChild(nslidernodetitle);
 					nslidernode = domConstruct.create("div");
 					this.buttonpane.domNode.appendChild(nslidernode); 
@@ -297,6 +313,8 @@ define([
 					array.forEach(this.controls, lang.hitch(this,function(entry, groupid){
 						if (entry.type == "group") {		
 							if ( entry.control == "dropdown" ) {
+								$(document.body).css({ 'cursor': 'wait' })
+								this.map.setMapCursor("wait");
 								ddHolder = domConstruct.create("div",{
 									id: this.sliderpane.id + "buttonDiv"
 								});
@@ -330,7 +348,7 @@ define([
 							if (entry.header != undefined){
 								// Add header text and info icon
 								if (entry.header[0].headerLevel == "main"){
-									hhtml = "<b>" + entry.header[0].text + ": </b>"
+									hhtml = "<b>" + entry.header[0].text + " </b>"
 									mar = "margin-left:0px;"
 									mar1 = "margin-left:10px;"
 								}
@@ -443,11 +461,18 @@ define([
 									ncontrolnode = domConstruct.create("div");
 									ncontrolsnode.appendChild(ncontrolnode); 
 									parser.parse();
+									var sty = "";
+									if (option.leaveOn != undefined){
+										sty = "margin-left:-10px;"
+									}else{
+										sty = "margin-left:10px;"	
+									}	
 									ncontrol = new CheckBox({
 										name: this.map.id + groupid,
 										id: this.sliderpane.id + "_radio_" + groupid + "_" + i,
 										value: option.value,
 										title: option.text,
+										style: sty,
 										checked: option.selected,
 										onClick: lang.hitch(this,function(e) { 
 											this.cbClick(option.layerNumber, e, i, groupid);
@@ -543,7 +568,20 @@ define([
 						var pt = new Point(this.config.idenGraphic.x,this.config.idenGraphic.y,this.map.spatialReference)
 						this.selectedGraphic = new Graphic(pt,this.pntSym);
 						this.map.graphics.add(this.selectedGraphic);
-					}				
+					}	
+					var e = dojo.query(".epa1")
+					on(e, "click", lang.hitch(this,function(e){
+						domStyle.set(this.infopic.domNode, 'display', 'block');
+						this.config.infoPicDisplay = "block";
+						if (e.target.innerHTML == "Nature-Based Living Shoreline"){ht = "NBLS"}	
+						if (e.target.innerHTML == "Living Reef Breakwater"){ht = "LivingReef"}	
+						if (e.target.innerHTML == "Marsh Sill"){ht = "MarshSill"}	
+						if (e.target.innerHTML == "Breakwater"){ht = "Breakwater"}	
+						if (e.target.innerHTML == "Ecologically Enhanced Revetment"){ht = "EcoRevetment"}	
+						if (e.target.innerHTML == "Beach Restoration"){ht = "BeachRestoration"}	
+						this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + ht + ".jpg'>";	
+						this.config.infoPicContent = this.infoPicContent.innerHTML;				
+					}));					
 					this.resize();
 				},
 				
@@ -617,6 +655,9 @@ define([
 						dojo.byId(this.button).set("label", this.controls[groupid].selectedCounty + " County")
 						this.updateDD(this.controls[groupid].municipalities, this.controls[groupid].selectedCounty, groupid)
 					}
+					$(document.body).css({ 'cursor': 'default' })
+					this.map.setMapCursor("default");
+					$('#' + this.sliderpane.id + '_1').show()
 				},
 				
 				updateDD: function(mun, v, groupid){
@@ -657,7 +698,7 @@ define([
 				
 				radioClick: function(val,group, tech) {
 					this.config.techName = tech;
-					$('#' + this.sliderpane.id + 'idIntro').show();
+					
 					$('#' + this.sliderpane.id + 'idResults').hide();
 					if (this.featureLayer != undefined){
 						this.map.removeLayer(this.featureLayer);
@@ -676,6 +717,7 @@ define([
 					this.changes.radio.push("s_" + group + "_" + val)
 					//check if show data level
 					if (this.controls[group].options[val].showData == "no"){
+						$('#' + this.sliderpane.id + 'idIntro').hide();
 						this.config.visibleLayers = [];	
 						this.currentLayer.setVisibleLayers(this.config.visibleLayers);
 						$('#' + this.b).hide();
@@ -689,6 +731,10 @@ define([
 						this.config.atts = "";
 					}
 					if (this.controls[group].options[val].showData == "yes"){
+						var l = this.map.getLevel()
+						if (l < 17){
+							$('#' + this.sliderpane.id + 'idIntro').show();
+						}
 						var selectedLayer = this.controls[group].options[val].layerNumber
 
 						// add newly selected layer to visible layer array
@@ -755,7 +801,7 @@ define([
 					if (e.target.checked == true){
 						this.config.visibleLayers.push(lyrnum);
 						this.config.visibleLayers = unique(this.config.visibleLayers)
-						this.identifyFeatures(val, group);
+						//this.identifyFeatures(val, group);
 						this.changes.radio.push("c_" + group + "_" + val)
 					}else{
 						var index = this.config.visibleLayers.indexOf(lyrnum)
@@ -783,7 +829,7 @@ define([
 						if (this.featureLayerOD != undefined){
 							this.map.removeLayer(this.featureLayerOD);			
 						}
-						$('#' + this.b).show();
+						//$('#' + this.b).show();
 						idLyrNum = "/" + this.controls[group].options[val].identifyNumber;	
 						this.featureLayerOD = new FeatureLayer(this.config.url + idLyrNum, {
 							mode: esri.layers.FeatureLayer.ONDEMAND,
@@ -828,13 +874,14 @@ define([
 				},
 				
 				showAttributes: function(atts, idenType) {
+					
 					$('#' + this.sliderpane.id + 'idResults').empty();
 					if (idenType == 2){
 						$('#' + this.sliderpane.id + 'idResults').append(this.iden2Html);
 						$('#' + this.b).show();
 						$('#' + this.sliderpane.id + 'idIntro').hide();
 						$('#' + this.sliderpane.id + 'idResults').show();
-						$('#' + this.sliderpane.id + 'techTitle').html(this.config.techName + " -<br>Environmental Parameter Thresholds Met:") 
+						$('#' + this.sliderpane.id + 'tabHeader').html("Which Environmental Conditions are Met in this Area?") 
 						if (atts.ErosionCriteriaThreshold == 0){
 							$('#' + this.sliderpane.id + 'erosion').hide();
 						}
@@ -925,62 +972,76 @@ define([
 						$('#' + this.b).show();
 						$('#' + this.sliderpane.id + 'idIntro').hide();
 						$('#' + this.sliderpane.id + 'idResults').show();
+						$('#' + this.sliderpane.id + 'tabHeader').html("Which Shoreline Enhancement Techniques Apply Here?") 
 						if (atts.NBLSThreshold == 0){
 							$('#' + this.sliderpane.id + 'nblsId').hide();
 						}
 						if (atts.NBLSThreshold == 1){
-							$('#' + this.sliderpane.id + 'nblsId').html('Nature-Based Living Shoreline: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>No</b>').show();
 						}
 						if (atts.NBLSThreshold == 2){
-							$('#' + this.sliderpane.id + 'nblsId').html('Nature-Based Living Shoreline: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>Yes</b>').show();
 						}
 						if (atts.LivingReefThreshold == 0){
 							$('#' + this.sliderpane.id + 'lreefId').hide();
 						}
 						if (atts.LivingReefThreshold == 1){
-							$('#' + this.sliderpane.id + 'lreefId').html('Living Reef Breakwater: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>No</b>').show();
 						}
 						if (atts.LivingReefThreshold == 2){
-							$('#' + this.sliderpane.id + 'lreefId').html('Living Reef Breakwater: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>Yes</b>').show();
 						}
 						if (atts.SillThreshold == 0){
 							$('#' + this.sliderpane.id + 'msillId').hide();
 						}
 						if (atts.SillThreshold == 1){
-							$('#' + this.sliderpane.id + 'msillId').html('Marsh Sill: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>No</b>').show();
 						}
 						if (atts.SillThreshold == 2){
-							$('#' + this.sliderpane.id + 'msillId').html('Marsh Sill: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>Yes</b>').show();
 						}
 						if (atts.BreakwaterThreshold == 0){
 							$('#' + this.sliderpane.id + 'breakwaterId').hide();
 						}
 						if (atts.BreakwaterThreshold == 1){
-							$('#' + this.sliderpane.id + 'breakwaterId').html('Breakwater: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>No</b>').show();
 						}
 						if (atts.BreakwaterThreshold == 2){
-							$('#' + this.sliderpane.id + 'breakwaterId').html('Breakwater: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>Yes</b>').show();
 						}
 						if (atts.RevetmentThreshold == 0){
 							$('#' + this.sliderpane.id + 'revetId').hide();
 						}
 						if (atts.RevetmentThreshold == 1){
-							$('#' + this.sliderpane.id + 'revetId').html('Ecologically Enhanced Revetment: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>No</b>').show();
 						}
 						if (atts.RevetmentThreshold == 2){
-							$('#' + this.sliderpane.id + 'revetId').html('Ecologically Enhanced Revetment: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>Yes</b>').show();
 						}
 						if (atts.BeachThreshold == 0){
 							$('#' + this.sliderpane.id + 'beachId').hide();
 						}
 						if (atts.BeachThreshold == 1){
-							$('#' + this.sliderpane.id + 'beachId').html('Beach Restoration: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>No</b>').show();
 						}
 						if (atts.BeachThreshold == 2){
-							$('#' + this.sliderpane.id + 'beachId').html('Beach Restoration: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>Yes</b>').show();
 						}
 						$('#' + this.sliderpane.id + 'totaltId').html('Total Techniques: <b>' + atts.TotalTechniques + '</b>').show();
 					}
+					var e = dojo.query(".epa1")
+					on(e, "click", lang.hitch(this,function(e){
+						domStyle.set(this.infopic.domNode, 'display', 'block');
+						this.config.infoPicDisplay = "block";
+						if (e.target.innerHTML == "Nature-Based Living Shoreline"){ht = "NBLS"}	
+						if (e.target.innerHTML == "Living Reef Breakwater"){ht = "LivingReef"}	
+						if (e.target.innerHTML == "Marsh Sill"){ht = "MarshSill"}	
+						if (e.target.innerHTML == "Breakwater"){ht = "Breakwater"}	
+						if (e.target.innerHTML == "Ecologically Enhanced Revetment"){ht = "EcoRevetment"}	
+						if (e.target.innerHTML == "Beach Restoration"){ht = "BeachRestoration"}	
+						this.infoPicContent.innerHTML = "<img alt='infoPic' src='plugins/restoration_techniques/images/" + ht + ".jpg'>";	
+						this.config.infoPicContent = this.infoPicContent.innerHTML;				
+					}));
 				},
 				
 				updateInfoPic: function () {

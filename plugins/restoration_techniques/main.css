@@ -8,6 +8,13 @@
 	cursor:pointer;
 	color:#4292d6;
 }
+.epa1{
+	color:blue;
+}
+.epa1:hover{
+	cursor:pointer;
+	color:#4292d6;
+}
 .tbl{
 	border: 1px solid black;
 	border-collapse: collapse;

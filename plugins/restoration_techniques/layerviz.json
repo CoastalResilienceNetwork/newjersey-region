@@ -30,7 +30,7 @@
 			"level": "1",
 			"control": "radio",
 			"parentValue": "",
-			"display": "block",
+			"display": "none",
 			"header": [
 				{
 					"text": "1. Select the shoreline type",
@@ -42,14 +42,14 @@
 			],
 			"options": [
 				{
-                    "text": "Salt or Brackish Marsh",
+                    "text": "Tidal Marsh",
                     "selected": false,
                     "value": "marsh",
 					"showData": "no",
 					"groupsBelow" : "yes"
                 },
 				{
-                    "text": "Upland Shoreline or Beach Edge",
+                    "text": "Forested, Beach or Bulkhead",
                     "selected": false,
                     "value": "beach",
 					"showData": "no",
@@ -67,8 +67,8 @@
 				{
 					"text": "2. Select a disturbance process",
 					"name": "level_2a",
-					"helpTitl2": "Disturbance Process",
-					"helpText": "A description of disturbance processes",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "main"
 				}
 			],	
@@ -92,8 +92,8 @@
 				{
 					"text": "2. Select a disturbance process",
 					"name": "level_2b",
-					"helpTitle": "Disturbance Process",
-					"helpText": "A description of disturbance processes",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "main"					
 				}
 			],	
@@ -115,10 +115,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "3. Select data type",
+					"text": "3. How would you like to view results?",
 					"name": "level_3a",
-					"helpTitle": "Data Type",
-					"helpText": "A description of data types",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "main"
 				}
 			],
@@ -150,10 +150,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "3. Select data type",
+					"text": "3. How would you like to view results?",
 					"name": "level_3b",
-					"helpTitle": "Data Type",
-					"helpText": "A description of data types",
+					"helpTitle": "",
+					"helpText": "",
 					"headerLevel" : "main"
 				}
 			],
@@ -185,7 +185,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "4. Select a restoration technique",
+					"text": "4. Select shoreline enhancement technique",
 					"name": "level_4a",
 					"helpTitle": "",
 					"helpText": "",
@@ -194,59 +194,54 @@
 			],
             "options": [
                 {
-                    "text": "Nature-Based Living Shoreline",
+                    "text": "<a class='epa1'>Nature-Based Living Shoreline</a>",
                     "selected": false,
                     "value": "shoreline",
 					"showData": "yes",
 					"layerNumber": "4",
 					"identifyNumber": "5",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "NBLS"
+					"groupsBelow" : "yes"
                 },
 				{
-                    "text": "Living Reef Breakwater",
+                    "text": "<a class='epa1'>Living Reef Breakwater</a>",
                     "selected": false,
                     "value": "reef",
 					"showData": "yes",
 					"layerNumber": "12",
 					"identifyNumber": "13",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "LivingReef"
+					"groupsBelow" : "yes"
 				},
                 {
-                    "text": "Marsh Sill",
+                    "text": "<a class='epa1'>Marsh Sill</a>",
                     "selected": false,
                     "value": "sill",
 					"showData": "yes",
 					"layerNumber": "6",
 					"identifyNumber": "7",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "MarshSill"
+					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Breakwater",
+                    "text": "<a class='epa1'>Breakwater</a>",
                     "selected": false,
                     "value": "breakwater",
 					"showData": "yes",
 					"layerNumber": "10",
 					"identifyNumber": "11",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "Breakwater"
+					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Ecologically Enhanced Revetment",
+                    "text": "<a class='epa1'>Ecologically Enhanced Revetment</a>",
                     "selected": false,
                     "value": "revetment",
 					"showData": "yes",
 					"layerNumber": "8",
 					"identifyNumber": "9",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "EcoRevetment"
+					"groupsBelow" : "yes"
 				}
             ]
         },
@@ -258,7 +253,7 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "4. Select a restoration technique",
+					"text": "4. Select shoreline enhancement technique",
 					"name": "level_4b",
 					"helpTitle": "",
 					"helpText": "",
@@ -267,48 +262,44 @@
 			],
             "options": [
                 {
-                    "text": "Beach Restoration",
+                    "text": "<a class='epa1'>Beach Restoration</a>",
                     "selected": false,
                     "value": "restoration",
 					"showData": "yes",
 					"layerNumber": "2",
 					"identifyNumber": "3",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "BeachRestoration"
+					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Living Reef Breakwater",
+                    "text": "<a class='epa1'>Living Reef Breakwater</a>",
                     "selected": false,
                     "value": "reef",
 					"showData": "yes",
 					"layerNumber": "12",
 					"identifyNumber": "13",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "LivingReef"
+					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Breakwater",
+                    "text": "<a class='epa1'>Breakwater</a>",
                     "selected": false,
                     "value": "breakwater",
 					"showData": "yes",
 					"layerNumber": "10",
 					"identifyNumber": "11",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "Breakwater"
+					"groupsBelow" : "yes"
 				},
 				{
-                    "text": "Ecologically Enhanced Revetment",
+                    "text": "<a class='epa1'>Ecologically Enhanced Revetment</a>",
                     "selected": false,
                     "value": "revetment",
 					"showData": "yes",	
 					"layerNumber": "8",
 					"identifyNumber": "9",
 					"identifyGroup": "2",
-					"groupsBelow" : "yes",
-					"helpText": "EcoRevetment"
+					"groupsBelow" : "yes"
 				}
             ]
         },
@@ -323,13 +314,13 @@
 					"text": "Show All Techniques on One Map",
 					"name": "level_4c",
 					"helpTitle": "All Techniques",
-					"helpText": "Click on individual blocks on the map to see how many of the techniques appropriate for that area",
+					"helpText": "Click on individual squares on the map to see how many of the techniques are appropriate for that area",
 					"headerLevel" : "sub"
 				}
 			],
 			"options": [
 				{
-                    "text": "All Marsh Shoreline Techniques",
+                    "text": "Turn results on or off",
                     "selected": true,
                     "value": "m_techniques",
 					"showData": "yes",
@@ -378,10 +369,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>View How Chosen Technique Meets Key Environmental Parameters</b>",
+					"text": "<b>View more information on key environmental conditions</b>",
 					"name": "level_5a",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "Use checkboxes to view data on each of the key environmental conditions. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
 					"headerLevel" : "sub"
 				}
 			],
@@ -477,10 +468,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>View How Chosen Technique Meets Key Environmental Consideration</b>",
+					"text": "<b>View more information on key environmental conditions</b>",
 					"name": "level_5b",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "Use checkboxes to view data on each of the key environmental conditions. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
 					"headerLevel" : "sub"
 				}
 			],
@@ -566,10 +557,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>View How Chosen Technique Meets Key Environmental Consideration</b>",
+					"text": "<b>View more information on key environmental conditions</b>",
 					"name": "level_5c",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "Use checkboxes to view data on each of the key environmental conditions. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
 					"headerLevel" : "sub"
 				}
 			],
@@ -645,10 +636,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>View How Chosen Technique Meets Key Environmental Consideration</b>",
+					"text": "<b>View more information on key environmental conditions</b>",
 					"name": "level_5d",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "Use checkboxes to view data on each of the key environmental conditions. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
 					"headerLevel" : "sub"
 				}
 			],
@@ -744,10 +735,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>View How Chosen Technique Meets Key Environmental Consideration</b>",
+					"text": "<b>View more information on key environmental conditions</b>",
 					"name": "level_5e",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "Use checkboxes to view data on each of the key environmental conditions. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
 					"headerLevel" : "sub"
 				}
 			],
@@ -813,10 +804,10 @@
 			"display": "none",
 			"header": [
 				{
-					"text": "<b>View How Chosen Technique Meets Key Environmental Consideration</b>",
+					"text": "<b>View more information on key environmental conditions</b>",
 					"name": "level_5f",
-					"helpTitle": "Key Environmental Parameters",
-					"helpText": "Use checkboxes to view data on each of the key environmental conditions. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
+					"helpTitle": "Key Environmental Conditions",
+					"helpText": "Use checkboxes to view data layers on each of the key environmental conditions for the shoreline enhancement technique you selected. Click blue text for more information about whether or not the environmental conditions are suitable for a particular technique.",
 					"headerLevel" : "sub"
 				}
 			],
