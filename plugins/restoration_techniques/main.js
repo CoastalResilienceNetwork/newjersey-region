@@ -280,22 +280,67 @@ define([
 					}));				
 					
 					this.buttonpane = new ContentPane({
-					  style:"border-top-style:groove !important; height:80px;overflow: hidden !important;background-color:#F3F3F3 !important;padding:10px !important;"
+					  style:"border-top-style:groove !important; height:80px;overflow: hidden !important;background-color:#F3F3F3 !important;padding-top:5px !important;"
 					});
 					dom.byId(this.container).appendChild(this.buttonpane.domNode);	
-					if (this.config.methods != undefined) {
+					/*if (this.config.methods != undefined) {
 						methodsButton = new Button({
 							label: "Methods",
 							style:  "float:right !important; margin-right:-7px !important; margin-top:-7px !important;",
 							onClick: lang.hitch(this,function(){window.open(this.config.methods)})  //function(){window.open(this.config.methods)}
 							});	
 						this.buttonpane.domNode.appendChild(methodsButton.domNode);
-					}					
-					nslidernodetitle = domConstruct.create("span", {});
-					this.buttonpane.domNode.appendChild(nslidernodetitle);
-					nslidernode = domConstruct.create("div");
+					}*/
+					moreInfo = domConstruct.create("div",{
+						id: this.sliderpane.id + "moreInfo",
+						style: "text-align:center;"
+					});
+					this.buttonpane.domNode.appendChild(moreInfo);		
+					menu = new DropDownMenu({ 
+						style: "display: none;",
+						maxHeight: "150"
+					});
+					domClass.add(menu.domNode, "claro");
+					infos = ["Community Guide","Methods","Municipal Summary","User Guide"]
+					var cl = infos.length - 1;
+					array.forEach(infos, lang.hitch(this,function(v, j){
+						if (j == cl){
+							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 1px 1px #d2e6f7 !important;";
+						}else{
+							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 0px 1px #d2e6f7 !important;";
+						}
+						menuItem = new MenuItem({
+							style: sty,
+							label: v,
+							onClick: lang.hitch(this,function(e) { 
+								if (v == "Methods"){
+									window.open(this.config.methods)
+								}
+							})												
+						});
+						menu.addChild(menuItem);
+					}));
+					this.miButton = new DropDownButton({
+						label: "Project Information",
+						style: "margin-bottom:6px !important;",
+						maxHeight: "150",
+						dropDown: menu
+					});
+					
+					dojo.byId(this.sliderpane.id + "moreInfo").appendChild(this.miButton.domNode);
+					
+
+
+										
+					
+					nslidernode = domConstruct.create("div", {});
 					this.buttonpane.domNode.appendChild(nslidernode); 
-					labelsnode = domConstruct.create("ol", {"data-dojo-type":"dijit/form/HorizontalRuleLabels", container:"bottomDecoration", style:"height:0.25em;padding-top: 10px !important;color:black !important", innerHTML: "<li>Opaque</li><li>Transparent</li>"})
+					labelsnode = domConstruct.create("ol", {
+						"data-dojo-type":"dijit/form/HorizontalRuleLabels", 
+						container:"bottomDecoration", 
+						style:"height:0.25em;padding-top: 7px !important;color:black !important", 
+						innerHTML: "<li>Opaque</li><li>Transparent</li>"
+					})
 					nslidernode.appendChild(labelsnode);
 					slider = new HorizontalSlider({
 						value: 0,
@@ -306,7 +351,7 @@ define([
 						//intermediateChanges: true,
 						//discreteValues: entry.options.length,
 						onChange: lang.hitch(this,this.changeOpacity),
-						style: "width:150px;margin-top:10px;margin-bottom:20px;margin-left:20px; background-color:#F3F3F3 !important"
+						style: "width:150px; position:absolute; left:60px; bottom:20px; background-color:#F3F3F3 !important"
 					}, nslidernode);
 					parser.parse()
 					
