@@ -37,6 +37,7 @@ define([
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: false,
 				rendered: false,
+				//infoGraphic: "plugins/restoration_techniques/images/infoGraphic.jpg",
 				
 				initialize: function (frameworkParameters) {				
 					declare.safeMixin(this, frameworkParameters);
@@ -215,7 +216,7 @@ define([
 					
 					this.idenWin = new ContentPane({
 					  id: this.b,
-					  style:"display:none; z-index:8; position:absolute; right:105px; width:330px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
+					  style:"display:none; z-index:8; position:absolute; right:105px; width:340px; top:60px; background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;",
 					  innerHTML: "<div class='tabareacloser' style='float:right !important;'><a href='#' style='color:#cecfce'>✖</a></div><div id='" + this.sliderpane.id + "tabHeader' style='background-color:#424542; color:#fff; height:28px; font-size:1em; font-weight:bold; padding:8px 0px 0px 10px; cursor:move;'>Which shoreline enhancement techniques apply here</div>" +	
 						"<div id='" + this.sliderpane.id + "idContent' class='idDiv'>" +
 						  "<div id='" + this.sliderpane.id + "idResults' style='display:none; class='idResults'>" +
