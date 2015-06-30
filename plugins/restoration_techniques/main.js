@@ -37,9 +37,11 @@ define([
 				showServiceLayersInLegend: true,
 				allowIdentifyWhenActive: false,
 				rendered: false,
-				//infoGraphic: "plugins/restoration_techniques/images/infoGraphic.jpg",
+				width: "295",
+				height: "580",
+				infoGraphic: "plugins/restoration_techniques/images/infoGraphic.jpg",
 				
-				initialize: function (frameworkParameters) {				
+				initialize: function (frameworkParameters) {
 					declare.safeMixin(this, frameworkParameters);
 					domClass.add(this.container, "claro");
 					con = dom.byId('plugins/restoration_techniques-0');
@@ -108,7 +110,6 @@ define([
 						this.sph = cdg.h-82;
 					}
 					domStyle.set(this.sliderpane.domNode, "height", this.sph + "px"); 
-					
 				},
 				
 				changeOpacity: function(e) {
