@@ -268,12 +268,12 @@ define([
 							
 						}
 						if (this.l == 18){
-							this.pntSym.size = 17;
-							this.highlightSymbol.size = 17;
+							this.pntSym.size = 20;
+							this.highlightSymbol.size = 20;
 						}
 						if (this.l == 19){
-							this.pntSym.size = 32;
-							this.highlightSymbol.size = 32;
+							this.pntSym.size = 42;
+							this.highlightSymbol.size = 42;
 						}	
 						if (this.l > 16){
 							$('#' + this.sliderpane.id + 'idIntro').hide();
@@ -1024,57 +1024,58 @@ define([
 							$('#' + this.sliderpane.id + 'nblsId').hide();
 						}
 						if (atts.NBLSThreshold == 1){
-							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>No - ' + atts.NBLSParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.NBLSThreshold == 2){
-							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>Yes - ' + atts.NBLSParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.LivingReefThreshold == 0){
 							$('#' + this.sliderpane.id + 'lreefId').hide();
 						}
 						if (atts.LivingReefThreshold == 1){
-							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>No - ' + atts.LivingReefParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.LivingReefThreshold == 2){
-							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>Yes - ' + atts.LivingReefParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.SillThreshold == 0){
 							$('#' + this.sliderpane.id + 'msillId').hide();
 						}
 						if (atts.SillThreshold == 1){
-							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>No - ' + atts.SillParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.SillThreshold == 2){
-							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>Yes - ' + atts.SillParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.BreakwaterThreshold == 0){
 							$('#' + this.sliderpane.id + 'breakwaterId').hide();
 						}
 						if (atts.BreakwaterThreshold == 1){
-							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>No - ' + atts.BreakwaterParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.BreakwaterThreshold == 2){
-							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>Yes - ' + atts.BreakwaterParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.RevetmentThreshold == 0){
 							$('#' + this.sliderpane.id + 'revetId').hide();
 						}
 						if (atts.RevetmentThreshold == 1){
-							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>No - ' + atts.RevetmentParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.RevetmentThreshold == 2){
-							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>Yes - ' + atts.RevetmentParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.BeachThreshold == 0){
 							$('#' + this.sliderpane.id + 'beachId').hide();
 						}
 						if (atts.BeachThreshold == 1){
-							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>No</b>').show();
+							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>No - ' + atts.BeachParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.BeachThreshold == 2){
-							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>Yes</b>').show();
+							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>Yes - ' + atts.BeachParametersMet + ' Parameters Met</b>').show();
 						}
 						$('#' + this.sliderpane.id + 'totaltId').html('Total Techniques: <b>' + atts.TotalTechniques + '</b>').show();
+						console.log(atts)
 					}
 					var e = dojo.query(".epa1")
 					on(e, "click", lang.hitch(this,function(e){
