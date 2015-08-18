@@ -1,7 +1,7 @@
 [
     {
         "agsSource": {
-            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_Jersey",
 			"folderTitle": "Coastal Resilience (NJ)",
             "folders": [
 				{
