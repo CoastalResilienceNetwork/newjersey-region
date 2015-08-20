@@ -303,7 +303,7 @@ define([
 						maxHeight: "150"
 					});
 					domClass.add(menu.domNode, "claro");
-					infos = ["Community Guide","Methods","Municipal Summary","User Guide"]
+					infos = ["Community Guide","Methods","User Guide"]
 					var cl = infos.length - 1;
 					array.forEach(infos, lang.hitch(this,function(v, j){
 						if (j == cl){
@@ -370,6 +370,12 @@ define([
 									id: this.sliderpane.id + "button1Div"
 								});
 								this.sliderpane.domNode.appendChild(dd1Holder);
+								munSum = domConstruct.create("div",{
+									id: this.sliderpane.id + "munSum",
+									style: "margin-left:8px; margin-bottom:10px; display:none;",
+									innerHTML: "<a id='" + this.sliderpane.id + "munSumLink' class='munSum' href='' target='_blank'>View Municipal Summary</a>"
+								});
+								this.sliderpane.domNode.appendChild(munSum);
 								this.field = entry.field;
 								this.field1 = entry.field1;
 								this.ln = entry.layerNumber;
@@ -391,6 +397,7 @@ define([
 									selectMun.where = this.field  + " = '" + this.controls[groupid].selectedCounty + "' AND " + this.field1 + " = '" + this.controls[groupid].selectedMun + "'";
 									this.munFL.selectFeatures(selectMun, FeatureLayer.SELECTION_NEW); 
 								}
+								
 							}
 							if (entry.header != undefined){
 								// Add header text and info icon
@@ -740,6 +747,11 @@ define([
 						var munExtent = f[0].geometry.getExtent(); 
 						this.map.setExtent(munExtent, true); 
 					}
+					
+					var url = "http://mosaic.njaes.rutgers.edu/snapshot/#/process?action=flood&mun_code=" + f[0].attributes.MUN_CODE
+					console.log(url)
+					$('#' + this.sliderpane.id + "munSumLink").attr("href", url)
+					$('#' + this.sliderpane.id + "munSum").show()
 					$('#' + this.sliderpane.id + '_1').show();
 				},
 				
@@ -858,7 +870,6 @@ define([
 						for (var i = this.changes.radio.length - 1; i >= 0; i--) {
 							var f = this.changes.radio[i].split("_")
 							if(f[0] == "c" && f[1] == group && f[2] == val){
-								console.log("remove value")
 								this.changes.radio.splice(i,1)
 							}	
 						}

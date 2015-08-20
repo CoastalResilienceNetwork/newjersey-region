@@ -413,7 +413,7 @@
 					"selected": false,
 					"value": "ep_salinity",
 					"showData":"yes",
-					"layerNumber": "29",
+					"layerNumber": "31",
 					"groupsBelow": "no",
 					"identifyNumber": "",
 					"helpTable": "salinityInfo"

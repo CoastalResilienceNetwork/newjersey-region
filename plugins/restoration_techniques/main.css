@@ -15,6 +15,13 @@
 	cursor:pointer;
 	color:#4292d6;
 }
+.munSum{
+	color:blue;
+}
+.munSum:hover{
+	cursor:pointer;
+	color:#4292d6;
+}
 .tbl{
 	border: 1px solid black;
 	border-collapse: collapse;
