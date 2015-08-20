@@ -655,31 +655,7 @@ define([
 						maxHeight: "150"
 					});
 					domClass.add(menu.domNode, "claro");
-					var cl = countyDD.length - 1;
-					array.forEach(countyDD, lang.hitch(this,function(v, j){
-						if (j == cl){
-							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 1px 1px #d2e6f7 !important;";
-						}else{
-							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 0px 1px #d2e6f7 !important;";
-						}
-						menuItem = new MenuItem({
-							style: sty,
-							label: v,
-							onClick: lang.hitch(this,function(e) { 
-								var mun = [];
-								for(var i = 0; i < c1.length; i++) {
-									if (v == c1[i].attributes[f]){
-										mun.push(c1[i].attributes[f1])
-									}
-								}
-								dojo.byId(this.button).set("label", v + " County")
-								this.updateDD(mun, v, groupid);	
-								this.controls[groupid].selectedCounty = v;
-								this.controls[groupid].municipalities = mun;
-							})												
-						});
-						menu.addChild(menuItem);
-					}));
+					
 					this.button = new DropDownButton({
 						label: "Choose a County",
 						style: "margin-bottom:6px !important;",
@@ -704,6 +680,36 @@ define([
 					});
 					
 					dojo.byId(this.sliderpane.id + "button1Div").appendChild(this.button1.domNode);
+					
+					
+					var cl = countyDD.length - 1;
+					array.forEach(countyDD, lang.hitch(this,function(v, j){
+						if (j == cl){
+							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 1px 1px #d2e6f7 !important;";
+						}else{
+							var sty = "border: 1px solid #d2e6f7; box-shadow: 1px 0px 1px #d2e6f7 !important;";
+						}
+						menuItem = new MenuItem({
+							style: sty,
+							label: v,
+							onClick: lang.hitch(this,function(e) { 
+								$('#' + this.sliderpane.id + "munSum").hide()
+								console.log("test")
+								var mun = [];
+								for(var i = 0; i < c1.length; i++) {
+									if (v == c1[i].attributes[f]){
+										mun.push(c1[i].attributes[f1])
+									}
+								}
+								dojo.byId(this.button).set("label", v + " County")
+								dojo.byId(this.button1).set("label", "Choose a Municipality")
+								this.updateDD(mun, v, groupid);	
+								this.controls[groupid].selectedCounty = v;
+								this.controls[groupid].municipalities = mun;
+							})												
+						});
+						menu.addChild(menuItem);
+					}));
 					
 					if (this.controls[groupid].selectedCounty != ""){
 						dojo.byId(this.button).set("label", this.controls[groupid].selectedCounty + " County")
