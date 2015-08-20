@@ -303,7 +303,7 @@ define([
 						maxHeight: "150"
 					});
 					domClass.add(menu.domNode, "claro");
-					infos = ["Community Guide","Methods","Municipal Summary","User Guide"]
+					infos = ["Community Guide","Methods","User Guide"]
 					var cl = infos.length - 1;
 					array.forEach(infos, lang.hitch(this,function(v, j){
 						if (j == cl){
