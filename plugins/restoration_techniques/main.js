@@ -694,7 +694,7 @@ define([
 							label: v,
 							onClick: lang.hitch(this,function(e) { 
 								$('#' + this.sliderpane.id + "munSum").hide()
-								console.log("test")
+
 								var mun = [];
 								for(var i = 0; i < c1.length; i++) {
 									if (v == c1[i].attributes[f]){
@@ -755,10 +755,10 @@ define([
 					}
 					
 					var url = "http://sugar.rutgers.edu/tncre/#/process?action=flood&mun_code=" + f[0].attributes.MUN_CODE
-					console.log(url)
 					$('#' + this.sliderpane.id + "munSumLink").attr("href", url)
 					$('#' + this.sliderpane.id + "munSum").show()
 					$('#' + this.sliderpane.id + '_1').show();
+					domStyle.set(this.idenWin.domNode, 'display', 'none');
 				},
 				
 				radioClick: function(val,group, tech) {
