@@ -754,7 +754,7 @@ define([
 						this.map.setExtent(munExtent, true); 
 					}
 					
-					var url = "http://mosaic.njaes.rutgers.edu/snapshot/#/process?action=flood&mun_code=" + f[0].attributes.MUN_CODE
+					var url = "http://sugar.rutgers.edu/tncre/#/process?action=flood&mun_code=" + f[0].attributes.MUN_CODE
 					console.log(url)
 					$('#' + this.sliderpane.id + "munSumLink").attr("href", url)
 					$('#' + this.sliderpane.id + "munSum").show()
