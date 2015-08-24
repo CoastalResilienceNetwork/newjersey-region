@@ -10,7 +10,7 @@
 			"controls": [
 				{"name":"Choose Storm Surge", "type": "slider", "index":0, "values":[{"selected": true,"name":"Category 1","value":"0"},{"name":"Cat 2","value":"1"},{"name":"Cat 3", "value":"2"},{"name":"Cat 4", "value":"3"},{"name":"Sandy", "value":"4"}]}
 				],
-			"mainURL": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/NJ_Flood_and_SLR_Data/MapServer",
+			"mainURL": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/NJ_Flood_and_SLR_Data/MapServer",
 			"combos": {
 			
 				"0": [{"type":"dynamic","show":[0]}],

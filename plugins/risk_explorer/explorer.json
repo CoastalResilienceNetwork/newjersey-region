@@ -83,9 +83,9 @@
                     "index": 0
                 }
             ],
-            "ancillaryUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/NJ_Risk_Explorer_Show_Me_Layers/MapServer",
+            "ancillaryUrl": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/NJ_Risk_Explorer_Show_Me_Layers/MapServer",
             "name": "New Jersey",
-            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/PostGIS/DatabaseConnection/MapServer",
 			"methods": "methods/Arkema_et_al_2013_Nature_Climate_Change.pdf",
 			"workspaceId": "postgis",
 			"geometryType": "point",
