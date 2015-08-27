@@ -246,11 +246,9 @@ define([
 					
 					this.idIntro = new ContentPane({
 						id: this.sliderpane.id + 'idIntro',
-						style: "display:none;position:absolute;right:50%;top:100px;width:180px;background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;padding:10px;text-align:center;",
+						style: "display:none;position:absolute;right:40%;top:90px;width:380px;background-color:#FFF; border-style:solid; border-width:4px; border-color:#444; border-radius:5px;padding:10px;padding-top:20px;text-align:center;",
 						innerHTML: "<div class='idIntroCloser' style='position:absolute;top:5px;right:5px;'><a href='#' style='color:#21658c'>✖</a></div>" +
-								   "<div style='font-size:14pt;'>" +
-									"Zoom in to select individual squares for more information" + 
-								   "</div>"
+								   "<div id='" + this.sliderpane.id + "idText' style='font-size:14pt;'></div>"
 					});	
 					dom.byId(a[0]).appendChild(this.idIntro.domNode)
 					ii = dojoquery(this.idIntro.domNode).children(".idIntroCloser");
@@ -606,6 +604,11 @@ define([
 					}else{
 						this.extentCheck = "second"	
 					}
+					if (this.config.munCheck != ""){
+						this.munCheck = "second"			
+					}else{
+						this.munCheck = "first"
+					}		
 					if (this.config.atts != ""){
 					/*	$('#' + this.sliderpane.id + 'idResults').empty();
 						$('#' + this.sliderpane.id + 'idResults').append(this.config.idenHTML);
@@ -717,7 +720,7 @@ define([
 					}
 					$(document.body).css({ 'cursor': 'default' })
 					this.map.setMapCursor("default");
-					$('#' + this.sliderpane.id + '_1').show()
+					//$('#' + this.sliderpane.id + '_1').show()
 				},
 				
 				updateDD: function(mun, v, groupid){
@@ -747,13 +750,30 @@ define([
 				},
 				
 				zoomToSel: function(f) { 	
+					this.munName = f[0].attributes.MUN;
+					this.shorelineMiles = f[0].attributes.TotalShorelineMiles;
 					if (this.extentCheck == "first"){	
 						this.extentCheck = "second"
 					}else{
-						var munExtent = f[0].geometry.getExtent(); 
+						var munExtent = f[0].geometry.getExtent();				
 						this.map.setExtent(munExtent, true); 
 					}
-					
+					if(this.munCheck == "first"){
+						this.munCheck = "second";
+						this.config.munCheck = "second"
+					}else{
+						this.map.graphics.clear();
+						if (this.config.techName != ""){
+							var slmHtml = ""
+							if (this.config.techName == "Show All Techniques in One Map"){
+								slmHtml = "<b>" + this.munName + "</b> has " + this.shorelineMiles + " miles of shoreline. Zoom in to see which shoreline enhancement techniques apply here."
+							}else{
+								slmHtml = "<b>" + this.munName + "</b> has " + this.shorelineMiles + " miles of shoreline. Zoom in to see if the <b>" + $(this.config.techName).html() + "</b> enhancement technique applies here."
+							}	
+							$('#' + this.sliderpane.id + 'idText').html(slmHtml)
+							$('#' + this.sliderpane.id + 'idIntro').show();		
+						}
+					}		
 					var url = "http://sugar.rutgers.edu/tncre/#/process?action=flood&mun_code=" + f[0].attributes.MUN_CODE
 					$('#' + this.sliderpane.id + "munSumLink").attr("href", url)
 					$('#' + this.sliderpane.id + "munSum").show()
@@ -762,8 +782,6 @@ define([
 				},
 				
 				radioClick: function(val,group, tech) {
-					this.config.techName = tech;
-					
 					$('#' + this.sliderpane.id + 'idResults').hide();
 					if (this.featureLayer != undefined){
 						this.map.removeLayer(this.featureLayer);
@@ -796,6 +814,15 @@ define([
 						this.config.atts = "";
 					}
 					if (this.controls[group].options[val].showData == "yes"){
+						this.config.techName = tech; 
+						var slmHtml = ""
+						if (this.config.techName == "Show All Techniques in One Map"){
+							slmHtml = "<b>" + this.munName + "</b> has " + this.shorelineMiles + " miles of shoreline. Zoom in to see which shoreline enhancement techniques apply here."
+						}else{
+							slmHtml = "<b>" + this.munName + "</b> has " + this.shorelineMiles + " miles of shoreline. Zoom in to see if the <b>" + $(this.config.techName).html() + "</b> enhancement technique applies here."
+						}	
+						$('#' + this.sliderpane.id + 'idText').html(slmHtml)
+						
 						var l = this.map.getLevel()
 						if (l < 17){
 							$('#' + this.sliderpane.id + 'idIntro').show();
@@ -809,6 +836,7 @@ define([
 						
 						// set up identify functionality
 						this.identifyFeatures(val, group);
+						$('#' + this.b).hide();
 					}
 					if (this.controls[group].options[val].groupsBelow == "yes"){
 						//get value and current level
@@ -946,6 +974,8 @@ define([
 						$('#' + this.sliderpane.id + 'idIntro').hide();
 						$('#' + this.sliderpane.id + 'idResults').show();
 						$('#' + this.sliderpane.id + 'tabHeader').html("Which Environmental Conditions are Met in this Area?") 
+						$('#' + this.sliderpane.id + 'techTitle').html($(this.config.techName).html());
+						$('#' + this.sliderpane.id + 'techTitle').show();
 						if (atts.ErosionCriteriaThreshold == 0){
 							$('#' + this.sliderpane.id + 'erosion').hide();
 						}
@@ -962,11 +992,11 @@ define([
 						}
 						if (atts.SalinityCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'salinity').html('Salinity: <b>No - ' + 
-							atts.SalinityCriteriaValue + ' PPT</b>').show();
+							Math.round(atts.SalinityCriteriaValue*10)/10 + ' ppt</b>').show();
 						}
 						if (atts.SalinityCriteriaThreshold == 2){
 							$('#' + this.sliderpane.id + 'salinity').html('Salinity: <b>Yes - ' + 
-							atts.SalinityCriteriaValue + ' PPT</b>').show();
+							Math.round(atts.SalinityCriteriaValue*10)/10 + ' ppt</b>').show();
 						}
 						if (atts.TidalRangeCriteriaThreshold == 0){
 							$('#' + this.sliderpane.id + 'tidal').hide();
@@ -984,11 +1014,11 @@ define([
 						}
 						if (atts.WaveHtMaxCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>No - ' + 
-							Math.round(atts.WaveHtMaxCriteriaValue*10)/10 + ' meters</b>').show();
+							Math.round(atts.WaveHtMaxCriteriaValue*10)/10 + ' feet</b>').show();
 						}
 						if (atts.WaveHtMaxCriteriaThreshold == 2){
 							$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>Yes - ' + 
-							Math.round(atts.WaveHtMaxCriteriaValue*10)/10 + ' meters</b>').show();
+							Math.round(atts.WaveHtMaxCriteriaValue*10)/10 + ' feet</b>').show();
 						}
 						if (atts.IceCoverCriteriaThreshold == 0){
 							$('#' + this.sliderpane.id + 'ice').hide();
