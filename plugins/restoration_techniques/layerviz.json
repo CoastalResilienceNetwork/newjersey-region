@@ -14,6 +14,7 @@
 	"idenGraphic": "",
 	"extent": "",
 	"techName": "",
+	"munCheck": "",
 	"controls": [
         {
             "type": "group",
@@ -396,7 +397,7 @@
 					"layerNumber": "27",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeMarsh"
 				},
 				{
 					"text": "Tidal Range",
@@ -406,7 +407,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeMarsh"
 				},
 				{
 					"text": "Salinity",
@@ -416,7 +417,7 @@
 					"layerNumber": "31",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "salinityInfo"
+					"helpTable": "salinityMarsh"
 				},
 				{
 					"text": "Wave Height",
@@ -426,7 +427,7 @@
 					"layerNumber": "32",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightMarsh"
 				},
 				{
 					"text": "Ice Cover",
@@ -436,7 +437,7 @@
 					"layerNumber": "26",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverMarsh"
 				},						
 				{
 					"text": "Shoreline Slope",
@@ -446,7 +447,7 @@
 					"layerNumber": "29",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineSlopeInfo"
+					"helpTable": "shorelineSlopeMarsh"
 				},
 				{
 					"text": "Nearshore Slope",
@@ -456,7 +457,7 @@
 					"layerNumber": "30",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "nearshoreSlopeInfo"
+					"helpTable": "nearshoreSlopeMarsh"
 				}
             ]
         },
@@ -495,7 +496,7 @@
 					"layerNumber": "27",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeMarsh"
 				},
 				{
 					"text": "Tidal Range",
@@ -505,7 +506,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeMarsh"
 				},
 				{
 					"text": "Salinity",
@@ -515,7 +516,7 @@
 					"layerNumber": "31",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "salinityInfo"
+					"helpTable": "salinityMarsh"
 				},
 				{
 					"text": "Wave Height",
@@ -525,7 +526,7 @@
 					"layerNumber": "32",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightMarsh"
 				},
 				{
 					"text": "Ice Cover",
@@ -535,7 +536,7 @@
 					"layerNumber": "26",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverMarsh"
 				},						
 				{
 					"text": "Shoreline Slope",
@@ -545,7 +546,7 @@
 					"layerNumber": "29",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineSlopeInfo"
+					"helpTable": "shorelineSlopeMarsh"
 				},
 				{
 					"text": "Nearshore Slope",
@@ -555,7 +556,7 @@
 					"layerNumber": "30",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "nearshoreSlopeInfo"
+					"helpTable": "nearshoreSlopeMarsh"
 				}
             ]
         },
@@ -594,7 +595,7 @@
 					"layerNumber": "27",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeMarsh"
 				},
 				{
 					"text": "Tidal Range",
@@ -604,7 +605,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeMarsh"
 				},
 				{
 					"text": "Wave Height",
@@ -614,7 +615,7 @@
 					"layerNumber": "32",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightMarsh"
 				},
 				{
 					"text": "Ice Cover",
@@ -624,7 +625,7 @@
 					"layerNumber": "26",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverMarsh"
 				},						
 				{
 					"text": "Shoreline Slope",
@@ -634,7 +635,7 @@
 					"layerNumber": "29",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineSlopeInfo"
+					"helpTable": "shorelineSlopeMarsh"
 				},
 				{
 					"text": "Nearshore Slope",
@@ -644,7 +645,7 @@
 					"layerNumber": "30",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "nearshoreSlopeInfo"
+					"helpTable": "nearshoreSlopeMarsh"
 				}
             ]
         },
@@ -683,7 +684,7 @@
 					"layerNumber": "27",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeMarsh"
 				},
 				{
 					"text": "Tidal Range",
@@ -693,7 +694,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeMarsh"
 				},
 				{
 					"text": "Wave Height",
@@ -703,7 +704,7 @@
 					"layerNumber": "32",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightMarsh"
 				},
 				{
 					"text": "Ice Cover",
@@ -713,7 +714,7 @@
 					"layerNumber": "26",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverMarsh"
 				},						
 				{
 					"text": "Nearshore Slope",
@@ -723,7 +724,7 @@
 					"layerNumber": "30",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "nearshoreSlopeInfo"
+					"helpTable": "nearshoreSlopeMarsh"
 				}
             ]
         },
@@ -762,7 +763,7 @@
 					"layerNumber": "27",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeMarsh"
 				},
 				{
 					"text": "Tidal Range",
@@ -772,7 +773,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeMarsh"
 				},
 				{
 					"text": "Wave Height",
@@ -782,7 +783,7 @@
 					"layerNumber": "32",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightMarsh"
 				},
 				{
 					"text": "Ice Cover",
@@ -792,7 +793,7 @@
 					"layerNumber": "26",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverMarsh"
 				}
             ]
         },
@@ -831,7 +832,7 @@
 					"layerNumber": "27",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeUpland"
 				},
 				{
 					"text": "Tidal Range",
@@ -841,7 +842,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeUpland"
 				},
 				{
 					"text": "Wave Height",
@@ -851,7 +852,7 @@
 					"layerNumber": "32",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightUpland"
 				},
 				{
 					"text": "Ice Cover",
@@ -861,7 +862,7 @@
 					"layerNumber": "26",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverUpland"
 				},						
 				{
 					"text": "Nearshore Slope",
@@ -871,7 +872,7 @@
 					"layerNumber": "30",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "nearshoreSlopeInfo"
+					"helpTable": "nearshoreSlopeUpland"
 				}
             ]
         },
@@ -910,7 +911,7 @@
 					"layerNumber": "27",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeUpland"
 				},
 				{
 					"text": "Tidal Range",
@@ -920,7 +921,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeUpland"
 				},
 				{
 					"text": "Salinity",
@@ -930,7 +931,7 @@
 					"layerNumber": "31",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "salinityInfo"
+					"helpTable": "salinityUpland"
 				},
 				{
 					"text": "Wave Height",
@@ -940,7 +941,7 @@
 					"layerNumber": "32",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightUpland"
 				},
 				{
 					"text": "Ice Cover",
@@ -950,7 +951,7 @@
 					"layerNumber": "26",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverUpland"
 				},						
 				{
 					"text": "Shoreline Slope",
@@ -960,7 +961,7 @@
 					"layerNumber": "29",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineSlopeInfo"
+					"helpTable": "shorelineSlopeUpland"
 				},
 				{
 					"text": "Nearshore Slope",
@@ -970,7 +971,7 @@
 					"layerNumber": "30",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "nearshoreSlopeInfo"
+					"helpTable": "nearshoreSlopeUpland"
 				}
             ]
         },
@@ -1009,7 +1010,7 @@
 					"layerNumber": "27",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeUpland"
 				},
 				{
 					"text": "Tidal Range",
@@ -1019,7 +1020,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeUpland"
 				},
 				{
 					"text": "Wave Height",
@@ -1029,7 +1030,7 @@
 					"layerNumber": "32",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightUpland"
 				},
 				{
 					"text": "Ice Cover",
@@ -1039,7 +1040,7 @@
 					"layerNumber": "26",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverUpland"
 				},						
 				{
 					"text": "Nearshore Slope",
@@ -1049,7 +1050,7 @@
 					"layerNumber": "30",
 					"groupsBelow": "no",
 					"identifyNumber": "",
-					"helpTable": "nearshoreSlopeInfo"
+					"helpTable": "nearshoreSlopeUpland"
 				}
             ]
         },
@@ -1088,7 +1089,7 @@
 					"layerNumber": "27",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "shorelineChangeInfo"
+					"helpTable": "shorelineChangeUpland"
 				},
 				{
 					"text": "Tidal Range",
@@ -1098,7 +1099,7 @@
 					"layerNumber": "28",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "tidalRangeInfo"
+					"helpTable": "tidalRangeUpland"
 				},
 				{
 					"text": "Wave Height",
@@ -1108,7 +1109,7 @@
 					"layerNumber": "32",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "waveHeightInfo"
+					"helpTable": "waveHeightUpland"
 				},
 				{
 					"text": "Ice Cover",
@@ -1118,84 +1119,148 @@
 					"layerNumber": "26",
 					"groupsBelow" : "no",
 					"identifyNumber": "",
-					"helpTable": "iceCoverInfo"
+					"helpTable": "iceCoverUpland"
 				}
             ]
         }
     ],
-	"iceCoverInfo": [
+	"iceCoverMarsh": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
-			"row1": ["No ice cover", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row2": ["Low (< 1 in. thick)", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row3": ["Moderate (1-2 in. thick)", "No", "No", "Yes", "Yes", "Yes", "NA"],
-			"row4": ["High (2-4 in. thick)", "No", "No", "Yes", "Yes", "Yes", "NA"],
-			"row5": ["Highest (> 4 in. thick)", "No", "No", "Yes", "Yes", "Yes", "NA"]
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["Low", "Yes", "Yes", "Yes", "Yes","Yes"],
+			"row2": ["Moderate", "Yes", "Yes", "Yes", "Yes","Yes"],
+			"row3": ["High", "No", "No", "No", "Yes","Yes"],
+			"row4": ["Higher", "No", "No", "No", "Yes","Yes"],
+			"row5": ["Highest", "No", "No", "No", "Yes","No"]
 		}
 	],	
-	"nearshoreSlopeInfo": [
+	
+	"iceCoverUpland": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
-			"row1": ["No Slope", "No", "Yes", "NA", "NA", "No", "Yes"],
-			"row2": ["0.1-3.3%", "No", "Yes", "NA", "NA", "No", "Yes"],
-			"row3": ["3.4-6.7%", "Yes", "No", "NA", "NA", "Yes", "Yes"],
-			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes", "Yes"],
-			"row5": ["10.1-20%", "No", "No", "NA", "NA", "No", "No"],
-			"row6": [">20%", "No", "No", "NA", "NA", "No", "No"]	
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["Low", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["Moderate", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["High", "Yes", "No", "Yes", "Yes"],
+			"row4": ["Higher", "Yes", "No", "Yes", "Yes"],
+			"row5": ["Highest", "Yes", "No", "No", "Yes"]
+		}
+	],	
+	"nearshoreSlopeMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "No", "No", "No", "Yes", "No"],
+			"row4": ["15-20%", "No", "No", "No", "Yes", "No"],
+			"row5": ["> 20%", "No", "No", "No", "Yes", "No"]
 		}
 	],
-	"shorelineSlopeInfo": [
+	"nearshoreSlopeUpland": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
-			"row1": ["No Slope", "Yes", "Yes", "NA", "NA", "No", "Yes"],
-			"row2": ["0.1-3.3%", "Yes", "Yes", "NA", "NA", "No", "Yes"],
-			"row3": ["3.4-6.7%", "Yes", "Yes", "NA", "NA", "No", "Yes"],
-			"row4": ["6.8%-10%", "Yes", "No", "NA", "NA", "Yes", "Yes"],
-			"row5": ["10.1-20%", "No", "No", "NA", "NA", "Yes", "Yes"],
-			"row6": [">20%", "No", "No", "NA", "NA", "No", "No"]
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "No", "No", "No", "Yes"],
+			"row4": ["15-20%", "No", "No", "No", "Yes"],
+			"row5": ["> 20%", "No", "No", "No", "Yes"]
 		}
 	],
-	"waveHeightInfo": [
+	"shorelineSlopeMarsh": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
-			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row2": ["1 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row3": ["2 ft", "No", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row4": ["3 ft", "No", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row5": ["4 ft", "No", "No", "No", "No", "No", "NA"],
-			"row6": [">4 ft", "No", "No", "No", "No", "No", "NA"]
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "No", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["15-20%", "No", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 20%", "No", "No", "No", "Yes", "Yes"]
 		}
 	],
-	"salinityInfo": [
+	"shorelineSlopeUpland": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
-			"row1": ["<5 ppt", "No", "NA", "NA", "NA", "No", "NA"],
-			"row2": ["5-10 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
-			"row3": ["10-15 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
-			"row4": ["15-20 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
-			"row5": ["20-25 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
-			"row6": ["25-30 ppt", "Yes", "NA", "NA", "NA", "Yes", "NA"],
-			"row7": [">30 ppt", "No", "NA", "NA", "NA", "No", "NA"]	
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-5%", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["5-10%", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["10-15%", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["15-20%", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 20%", "No", "No", "Yes", "Yes"]
 		}
 	],
-	"tidalRangeInfo": [
+	"waveHeightMarsh": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
-			"row1": ["<1 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row2": ["1-2 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row3": ["3-4 ft", "Yes", "Yes", "Yes", "Yes", "Yes", "NA"],
-			"row4": ["5-6 ft", "No", "No", "No", "No", "No", "NA"],
-			"row5": [">6 ft", "No", "No", "No", "No", "No", "NA"]	
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["<1 ft", "Yes", "Yes", "Yes", "NA", "NA"],
+			"row2": ["1-2 ft", "No", "Yes", "Yes", "Yes", "NA"],
+			"row3": ["2-3 ft", "No", "Yes", "Yes", "Yes", "NA"],
+			"row4": ["3-4 ft", "No", "No", "No", "Yes", "Yes"],
+			"row5": ["> 4 ft", "No", "No", "No", "Yes", "Yes"]
 		}
 	],
-	"shorelineChangeInfo": [
+	"waveHeightUpland": [
 		{
-			"header": ["Environmental Parameter criteria thresholds", "Nature-based Living Shoreline", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater", "Living Reef", "Beach Restoration"],
-			"row1": ["Accretion", "No", "No", "No", "No", "No", "No"],
-			"row2": ["No Change", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row3": ["0-3 ft/yr", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"],
-			"row4": ["4-6 ft/yr", "No", "No", "No", "No", "No", "No"],
-			"row5": [">6 ft/yr", "No", "No", "No", "No", "No", "No"]		
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["<1 ft", "Yes", "Yes", "NA", "NA"],
+			"row2": ["1-2 ft", "Yes", "Yes", "NA", "Yes"],
+			"row3": ["2-3 ft", "Yes", "Yes", "NA", "Yes"],
+			"row4": ["3-4 ft", "Yes", "No", "Yes", "Yes"],
+			"row5": ["> 4 ft", "Yes", "No", "Yes", "Yes"]
+		}
+	],
+	"salinityMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-1 ppt", "No", "No", "Yes", "Yes", "Yes"],
+			"row2": ["1-3 ppt", "No", "No", "Yes", "Yes", "Yes"],
+			"row3": ["3-10 ppt", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["10-30 ppt", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 30 ppt", "No", "No", "Yes", "Yes", "Yes"]
+		}
+	],
+	"salinityUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-1 ppt", "Yes", "No", "Yes", "Yes"],
+			"row2": ["1-3 ppt", "Yes", "No", "Yes", "Yes"],
+			"row3": ["3-10 ppt", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["10-30 ppt", "Yes", "Yes", "Yes", "Yes"],
+			"row5": ["> 30 ppt", "Yes", "No", "Yes", "Yes"]	
+		}
+	],
+	"tidalRangeMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["0-2 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["2-4 ft", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["4-6 ft", "No", "No", "No", "Yes", "Yes"],
+			"row4": ["> 6 ft", "No", "No", "No", "Yes", "Yes"]
+		}
+	],
+	"tidalRangeUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["0-2 ft", "Yes", "Yes", "Yes", "Yes"],
+			"row2": ["2-4 ft", "Yes", "Yes", "Yes", "Yes"],
+			"row3": ["4-6 ft", "Yes", "No", "Yes", "Yes"],
+			"row4": ["> 6 ft", "Yes", "No", "Yes", "Yes"]	
+		}
+	],
+	"shorelineChangeMarsh": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
+			"row1": ["Accretion", "NA", "NA", "NA", "NA", "NA"],
+			"row2": ["0-2 ft/yr", "Yes", "Yes", "Yes", "NA", "NA"],
+			"row3": ["2-4 ft/yr", "Yes", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["4-6 ft/yr", "No", "No", "No", "Yes", "Yes"],
+			"row5": [">6 ft/yr", "No", "No", "No", "Yes", "Yes"]		
+		}
+	],
+	"shorelineChangeUpland": [
+		{
+			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
+			"row1": ["Accretion", "NA", "NA", "NA", "NA"],
+			"row2": ["0-2 ft/yr", "Yes", "Yes", "NA", "NA"],
+			"row3": ["2-4 ft/yr", "Yes", "Yes", "Yes", "Yes"],
+			"row4": ["4-6 ft/yr", "No", "No", "Yes", "Yes"],
+			"row5": [">6 ft/yr", "No", "No", "Yes", "Yes"]
 		}
 	]
 }
