@@ -1,5 +1,5 @@
 {
-    "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
+    "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
     "methods": "plugins/restoration_techniques/njmethods.pdf",
 	"infoGraphic": "plugins/restoration_techniques/images/infoGraphic.jpg",
 	"visibleLayers": [],
@@ -1188,9 +1188,9 @@
 	"waveHeightMarsh": [
 		{
 			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
-			"row1": ["<1 ft", "Yes", "Yes", "Yes", "NA", "NA"],
-			"row2": ["1-2 ft", "No", "Yes", "Yes", "Yes", "NA"],
-			"row3": ["2-3 ft", "No", "Yes", "Yes", "Yes", "NA"],
+			"row1": ["<1 ft", "Yes", "Yes", "Yes", "NA*", "NA*"],
+			"row2": ["1-2 ft", "No", "Yes", "Yes", "Yes", "NA*"],
+			"row3": ["2-3 ft", "No", "Yes", "Yes", "Yes", "NA*"],
 			"row4": ["3-4 ft", "No", "No", "No", "Yes", "Yes"],
 			"row5": ["> 4 ft", "No", "No", "No", "Yes", "Yes"]
 		}
@@ -1198,9 +1198,9 @@
 	"waveHeightUpland": [
 		{
 			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
-			"row1": ["<1 ft", "Yes", "Yes", "NA", "NA"],
-			"row2": ["1-2 ft", "Yes", "Yes", "NA", "Yes"],
-			"row3": ["2-3 ft", "Yes", "Yes", "NA", "Yes"],
+			"row1": ["<1 ft", "Yes", "Yes", "NA*", "NA*"],
+			"row2": ["1-2 ft", "Yes", "Yes", "NA*", "Yes"],
+			"row3": ["2-3 ft", "Yes", "Yes", "NA*", "Yes"],
 			"row4": ["3-4 ft", "Yes", "No", "Yes", "Yes"],
 			"row5": ["> 4 ft", "Yes", "No", "Yes", "Yes"]
 		}
@@ -1246,8 +1246,8 @@
 	"shorelineChangeMarsh": [
 		{
 			"header": ["Environmental parameter criteria thresholds", "Nature-Based Living Shoreline", "Living Reef Breakwater", "Marsh Sill", "Ecologically Enhanced Revement", "Breakwater"],
-			"row1": ["Accretion", "NA", "NA", "NA", "NA", "NA"],
-			"row2": ["0-2 ft/yr", "Yes", "Yes", "Yes", "NA", "NA"],
+			"row1": ["Accretion", "NA*", "NA*", "NA*", "NA*", "NA*"],
+			"row2": ["0-2 ft/yr", "Yes", "Yes", "Yes", "NA*", "NA*"],
 			"row3": ["2-4 ft/yr", "Yes", "Yes", "Yes", "Yes", "Yes"],
 			"row4": ["4-6 ft/yr", "No", "No", "No", "Yes", "Yes"],
 			"row5": [">6 ft/yr", "No", "No", "No", "Yes", "Yes"]		
@@ -1256,8 +1256,8 @@
 	"shorelineChangeUpland": [
 		{
 			"header": ["Environmental parameter criteria thresholds", "Beach Restoration", "Living Reef Breakwater", "Breakwater", "Ecologically Enhanced Revement"],
-			"row1": ["Accretion", "NA", "NA", "NA", "NA"],
-			"row2": ["0-2 ft/yr", "Yes", "Yes", "NA", "NA"],
+			"row1": ["Accretion", "NA*", "NA*", "NA*", "NA*"],
+			"row2": ["0-2 ft/yr", "Yes", "Yes", "NA*", "NA*"],
 			"row3": ["2-4 ft/yr", "Yes", "Yes", "Yes", "Yes"],
 			"row4": ["4-6 ft/yr", "No", "No", "Yes", "Yes"],
 			"row5": [">6 ft/yr", "No", "No", "Yes", "Yes"]

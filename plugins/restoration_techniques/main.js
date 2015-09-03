@@ -553,6 +553,7 @@ define([
 											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>How each restoration technique meets the " + option.text + " parameter</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
 											
 											var tblid = this.sliderpane.id + '_infoTable'
+											var naPresent = "no"
 											$.each(this.config[option.helpTable], function(i, v){
 												$.each(v, function(key, valArray){
 													if (key == "header"){
@@ -570,8 +571,9 @@ define([
 															if (rval == "No"){
 																sty = "red;"
 															}
-															if (rval == "NA"){
+															if (rval == "NA*"){
 																sty = "black;"
+																naPresent = "yes"
 															}
 															tbl = tbl + "<td class='tbl tdc' style='color:" + sty + "'>" + rval + "</td>"
 														})
@@ -579,6 +581,9 @@ define([
 													}
 												});
 											});
+											if (naPresent == "yes"){
+												this.infoareacontent.innerHTML = this.infoareacontent.innerHTML + "<br><div style='width:468px; font-size:11px; margin-left:10px; '>*NA signifies that this environmental parameter is either not applicable for this technique or when a particular parameter value range is not applicable.  Where NA occurs, it is treated as a YES in determining the number of environmental conditions that have been satisfied.</div>"
+											}
 											this.config.infoContent = this.infoareacontent.innerHTML
 										}	
 									}));
