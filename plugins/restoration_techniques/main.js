@@ -551,7 +551,7 @@ define([
 											domStyle.set(this.infoarea.domNode, 'display', 'block');
 											this.config.infoDisplay = "block";
 											this.infoareacontent.innerHTML = "<p style='font-weight:bold;margin-top:10px;margin-left:0px;margin-bottom:0px;text-align:center;'>How each restoration technique meets the " + option.text + " parameter</p><table id='" + this.sliderpane.id + "_infoTable' class='tbl'><thead><tr></tr></thead><tbody class='tbodyc'></tbody></table>"
-											this.config.infoContent = this.infoareacontent.innerHTML
+											
 											var tblid = this.sliderpane.id + '_infoTable'
 											$.each(this.config[option.helpTable], function(i, v){
 												$.each(v, function(key, valArray){
@@ -579,6 +579,7 @@ define([
 													}
 												});
 											});
+											this.config.infoContent = this.infoareacontent.innerHTML
 										}	
 									}));
 									parser.parse()	
