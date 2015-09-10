@@ -987,7 +987,7 @@ define([
 						$('#' + this.sliderpane.id + 'techTitle').html($(this.config.techName).html());
 						$('#' + this.sliderpane.id + 'techTitle').show();
 						if (atts.ErosionCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'erosion').hide();
+							$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.ErosionCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'erosion').html('Erosion Shoreline Change: <b>No - ' +
@@ -998,7 +998,7 @@ define([
 							atts.ErosionCriteriaValue + ' feet/year</b>').show();
 						}
 						if (atts.SalinityCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'salinity').hide();
+							$('#' + this.sliderpane.id + 'salinity').html('Salinity: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.SalinityCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'salinity').html('Salinity: <b>No - ' + 
@@ -1009,7 +1009,7 @@ define([
 							Math.round(atts.SalinityCriteriaValue*10)/10 + ' ppt</b>').show();
 						}
 						if (atts.TidalRangeCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'tidal').hide();
+							$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.TidalRangeCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'tidal').html('Tidal Range: <b>No - ' + 
@@ -1020,7 +1020,7 @@ define([
 							Math.round(atts.TidalRangeCriteriaValue*10)/10 + ' feet</b>').show();
 						}
 						if (atts.WaveHtMaxCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'wave').hide();
+							$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.WaveHtMaxCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'wave').html('Wave Height: <b>No - ' + 
@@ -1031,14 +1031,14 @@ define([
 							Math.round(atts.WaveHtMaxCriteriaValue*10)/10 + ' feet</b>').show();
 						}
 						if (atts.IceCoverCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'ice').hide();
+							$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (Math.round(atts.IceCoverCriteriaValue) == "0"){this.icv = "None"}
-						if (Math.round(atts.IceCoverCriteriaValue) == "1"){this.icv = "Low"}
-						if (Math.round(atts.IceCoverCriteriaValue) == "2"){this.icv = "Low to Moderate"}
-						if (Math.round(atts.IceCoverCriteriaValue) == "3"){this.icv = "Moderate"}
-						if (Math.round(atts.IceCoverCriteriaValue) == "4"){this.icv = "High"}
-						if (Math.round(atts.IceCoverCriteriaValue) == "5"){this.icv = "Highest"}
+						if (Math.round(atts.IceCoverCriteriaValue) == "2"){this.icv = "Low"}
+						if (Math.round(atts.IceCoverCriteriaValue) == "4"){this.icv = "Moderate"}
+						if (Math.round(atts.IceCoverCriteriaValue) == "6"){this.icv = "High"}
+						if (Math.round(atts.IceCoverCriteriaValue) == "8"){this.icv = "Higher"}
+						if (Math.round(atts.IceCoverCriteriaValue) == "10"){this.icv = "Highest"}
 						if (atts.IceCoverCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'ice').html('Ice Cover: <b>No - ' + 
 							this.icv + '</b>').show();
@@ -1048,7 +1048,7 @@ define([
 							this.icv + '</b>').show();
 						}
 						if (atts.ShorelineSlopeCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'shoreline').hide();
+							$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.ShorelineSlopeCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'shoreline').html('Shoreline Slope: <b>No - ' +
@@ -1059,7 +1059,7 @@ define([
 							Math.round(atts.ShorelineSlopeCriteriaValue*10)/10 + '%</b>').show();
 						}
 						if (atts.NearshoreSlopeCriteriaThreshold == 0){
-							$('#' + this.sliderpane.id + 'nearshore').hide();
+							$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.NearshoreSlopeCriteriaThreshold == 1){
 							$('#' + this.sliderpane.id + 'nearshore').html('Nearshore Slope: <b>No - ' +
@@ -1078,7 +1078,7 @@ define([
 						$('#' + this.sliderpane.id + 'idResults').show();
 						$('#' + this.sliderpane.id + 'tabHeader').html("Which Shoreline Enhancement Techniques Apply Here?") 
 						if (atts.NBLSThreshold == 0){
-							$('#' + this.sliderpane.id + 'nblsId').hide();
+							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.NBLSThreshold == 1){
 							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>No - ' + atts.NBLSParametersMet + ' Parameters Met</b>').show();
@@ -1087,7 +1087,7 @@ define([
 							$('#' + this.sliderpane.id + 'nblsId').html('<a class="epa1">Nature-Based Living Shoreline</a>: <b>Yes - ' + atts.NBLSParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.LivingReefThreshold == 0){
-							$('#' + this.sliderpane.id + 'lreefId').hide();
+							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.LivingReefThreshold == 1){
 							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>No - ' + atts.LivingReefParametersMet + ' Parameters Met</b>').show();
@@ -1096,7 +1096,7 @@ define([
 							$('#' + this.sliderpane.id + 'lreefId').html('<a class="epa1">Living Reef Breakwater</a>: <b>Yes - ' + atts.LivingReefParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.SillThreshold == 0){
-							$('#' + this.sliderpane.id + 'msillId').hide();
+							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.SillThreshold == 1){
 							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>No - ' + atts.SillParametersMet + ' Parameters Met</b>').show();
@@ -1105,7 +1105,7 @@ define([
 							$('#' + this.sliderpane.id + 'msillId').html('<a class="epa1">Marsh Sill</a>: <b>Yes - ' + atts.SillParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.BreakwaterThreshold == 0){
-							$('#' + this.sliderpane.id + 'breakwaterId').hide();
+							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.BreakwaterThreshold == 1){
 							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>No - ' + atts.BreakwaterParametersMet + ' Parameters Met</b>').show();
@@ -1114,7 +1114,7 @@ define([
 							$('#' + this.sliderpane.id + 'breakwaterId').html('<a class="epa1">Breakwater</a>: <b>Yes - ' + atts.BreakwaterParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.RevetmentThreshold == 0){
-							$('#' + this.sliderpane.id + 'revetId').hide();
+							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.RevetmentThreshold == 1){
 							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>No - ' + atts.RevetmentParametersMet + ' Parameters Met</b>').show();
@@ -1123,7 +1123,7 @@ define([
 							$('#' + this.sliderpane.id + 'revetId').html('<a class="epa1">Ecologically Enhanced Revetment</a>: <b>Yes - ' + atts.RevetmentParametersMet + ' Parameters Met</b>').show();
 						}
 						if (atts.BeachThreshold == 0){
-							$('#' + this.sliderpane.id + 'beachId').hide();
+							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>Not Applicable/Not Used</b>').show();
 						}
 						if (atts.BeachThreshold == 1){
 							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>No - ' + atts.BeachParametersMet + ' Parameters Met</b>').show();
@@ -1132,7 +1132,6 @@ define([
 							$('#' + this.sliderpane.id + 'beachId').html('<a class="epa1">Beach Restoration</a>: <b>Yes - ' + atts.BeachParametersMet + ' Parameters Met</b>').show();
 						}
 						$('#' + this.sliderpane.id + 'totaltId').html('Total Techniques: <b>' + atts.TotalTechniques + '</b>').show();
-						console.log(atts)
 					}
 					var e = dojo.query(".epa1")
 					on(e, "click", lang.hitch(this,function(e){
