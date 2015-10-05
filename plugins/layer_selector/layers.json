@@ -39,7 +39,10 @@
                                 {"id":15, "parentLayerId":-1 },
                                 {"id":16, "parentLayerId":-1 },
                                 {"id":17, "parentLayerId":-1 },
-                                {"id":18, "parentLayerId":-1 }
+                                {"id":18, "parentLayerId":-1 },
+                                {"id":19, "parentLayerId":-1 },
+                                {"id":20, "parentLayerId":-1 },
+                                {"id":21, "parentLayerId":-1 }
 							]
 						}	
 					]
@@ -48,9 +51,6 @@
 					"name": "",
                     "services": [
 						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Critical Facilities", "showLayers": [				
-                                {"id":20, "parentLayerId":-1 },
-                                {"id":21, "parentLayerId":-1 },
-                                {"id":22, "parentLayerId":-1 },
                                 {"id":23, "parentLayerId":-1 },
                                 {"id":24, "parentLayerId":-1 },
                                 {"id":25, "parentLayerId":-1 },
@@ -59,7 +59,10 @@
                                 {"id":28, "parentLayerId":-1 },
                                 {"id":29, "parentLayerId":-1 },
                                 {"id":30, "parentLayerId":-1 },
-                                {"id":31, "parentLayerId":-1 }
+                                {"id":31, "parentLayerId":-1 },
+                                {"id":32, "parentLayerId":-1 },
+                                {"id":33, "parentLayerId":-1 },
+                                {"id":34, "parentLayerId":-1 }
 							]
 						}	
 					]
@@ -68,20 +71,20 @@
 					"name": "",
                     "services": [
 						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Coastal Hazards", "showLayers": [				
-                                {"id":33, "parentLayerId":-1 },
-                                {"id":34, "parentLayerId":33 },
-                                {"id":35, "parentLayerId":33 },
-                                {"id":36, "parentLayerId":33 },
-                                {"id":37, "parentLayerId":33 },
-                                {"id":38, "parentLayerId":33 },
-                                {"id":39, "parentLayerId":33 },
-                                {"id":40, "parentLayerId":33 },
-                                {"id":41, "parentLayerId":-1 },
-                                {"id":42, "parentLayerId":41 },
-                                {"id":43, "parentLayerId":41 },
-                                {"id":44, "parentLayerId":41 },
-                                {"id":45, "parentLayerId":41 },
-                                {"id":46, "parentLayerId":-1 }
+                                {"id":36, "parentLayerId":-1 },
+                                {"id":37, "parentLayerId":36 },
+                                {"id":38, "parentLayerId":36 },
+                                {"id":39, "parentLayerId":36 },
+                                {"id":40, "parentLayerId":36 },
+                                {"id":41, "parentLayerId":36 },
+                                {"id":42, "parentLayerId":36 },
+                                {"id":43, "parentLayerId":36 },
+                                {"id":44, "parentLayerId":-1 },
+                                {"id":45, "parentLayerId":44 },
+                                {"id":46, "parentLayerId":44 },
+                                {"id":47, "parentLayerId":44 },
+                                {"id":48, "parentLayerId":44 },
+                                {"id":49, "parentLayerId":-1 }
 							]
 						}	
 					]
@@ -90,7 +93,7 @@
 					"name": "",
                     "services": [
 						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Land Use", "showLayers": [				
-                                {"id":48, "parentLayerId":-1 }
+                                {"id":51, "parentLayerId":-1 }
 							]
 						}	
 					]
