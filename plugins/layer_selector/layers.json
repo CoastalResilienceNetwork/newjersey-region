@@ -1,9 +1,9 @@
 [{
     "agsSource": {
-        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey",
         "folderTitle": "Coastal Resilience (NJ)",
         "folders": [{
-            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey",
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/New_Jersey",
 			"name": "",
             "services": [{
                 "name": "Boundaries",
