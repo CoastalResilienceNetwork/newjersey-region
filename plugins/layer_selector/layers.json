@@ -1,9 +1,9 @@
 [{
     "agsSource": {
-        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey",
+        "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services",
         "folderTitle": "Coastal Resilience (NJ)",
         "folders": [{
-            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey/New_Jersey",
+            "url": "http://dev.services2.coastalresilience.org:6080/arcgis/rest/services/New_Jersey",
 			"name": "",
             "services": [{
                 "name": "Boundaries",
@@ -47,6 +47,31 @@
                 "visibleLayerIds": [2],
                 "showLayers": []
             }]
+        },  {
+            "url": "http://54.243.149.253:8080/ArcGIS/rest/services",
+            "name": "",
+            "services": [{
+                "name": "Peak_Locations",
+                "displayName": "Peak Stormtide Elevations",
+                "type": "dynamic",
+                "visibleLayerIds": [0],
+                "showLayers": []
+            }, {
+                "name": "sandy_nwis_sites",
+                "displayName": "USGS Tide Gauges",
+                "type": "dynamic",
+                "visibleLayerIds": [1],
+                "showLayers": []
+            }, {
+                "name": "sandy_storm_surge",
+                "displayName": "High Water Marks",
+                "type": "dynamic",
+                "visibleLayerIds": [6],
+                "showLayers": []
+            }]
+
         }]
+
     }
+
 }]
