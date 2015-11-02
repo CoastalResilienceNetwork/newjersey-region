@@ -47,29 +47,6 @@
                 "visibleLayerIds": [1],
                 "showLayers": []
             }]
-		},  {
-            "url": "http://54.243.149.253:8080/ArcGIS/rest/services",
-            "name": "",
-            "services": [{
-                "name": "Peak_Locations",
-                "displayName": "Peak Stormtide Elevations",
-                "type": "dynamic",
-                "visibleLayerIds": [0],
-                "showLayers": []
-            }, {
-                "name": "sandy_nwis_sites",
-                "displayName": "USGS Tide Gauges",
-                "type": "dynamic",
-                "visibleLayerIds": [1],
-                "showLayers": []
-            }, {
-                "name": "sandy_storm_surge",
-                "displayName": "High Water Marks",
-                "type": "dynamic",
-                "visibleLayerIds": [6],
-                "showLayers": []
-            }]
-
         }]
 
     }
