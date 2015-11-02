@@ -1,147 +1,77 @@
-[
-    {
-        "agsSource": {
-            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey",
-			"folderTitle": "Coastal Resilience (NJ)",
-            "folders": [
-				{
-					"name": "",
-                    "services": [
-						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Boundaries", "showLayers": [
-                                {"id":1, "parentLayerId":-1 },
-                                {"id":2, "parentLayerId":-1 },
-                                {"id":3, "parentLayerId":-1 },
-                                {"id":4, "parentLayerId":-1 },
-                                {"id":5, "parentLayerId":-1 }
-							]
-						}	
-					]
-				},
-				{
-					"name": "",
-                    "services": [
-						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Demographics", "showLayers": [				
-                                {"id":7, "parentLayerId":-1 },
-                                {"id":8, "parentLayerId":-1 },
-                                {"id":9, "parentLayerId":-1 },
-                                {"id":10, "parentLayerId":-1 },
-                                {"id":11, "parentLayerId":-1 },
-                                {"id":12, "parentLayerId":-1 },
-                                {"id":13, "parentLayerId":-1 }
-							]
-						}	
-					]
-				},
-				{
-					"name": "",
-                    "services": [
-						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Ecological", "showLayers": [
-                                {"id":15, "parentLayerId":-1 },
-                                {"id":16, "parentLayerId":-1 },
-                                {"id":17, "parentLayerId":-1 },
-                                {"id":18, "parentLayerId":-1 }
-							]
-						}	
-					]
-				},
-				{
-					"name": "",
-                    "services": [
-						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Critical Facilities", "showLayers": [				
-                                {"id":20, "parentLayerId":-1 },
-                                {"id":21, "parentLayerId":-1 },
-                                {"id":22, "parentLayerId":-1 },
-                                {"id":23, "parentLayerId":-1 },
-                                {"id":24, "parentLayerId":-1 },
-                                {"id":25, "parentLayerId":-1 },
-                                {"id":26, "parentLayerId":-1 },
-                                {"id":27, "parentLayerId":-1 },
-                                {"id":28, "parentLayerId":-1 },
-                                {"id":29, "parentLayerId":-1 },
-                                {"id":30, "parentLayerId":-1 },
-                                {"id":31, "parentLayerId":-1 }
-							]
-						}	
-					]
-				},
-				{
-					"name": "",
-                    "services": [
-						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Coastal Hazards", "showLayers": [				
-                                {"id":33, "parentLayerId":-1 },
-                                {"id":34, "parentLayerId":33 },
-                                {"id":35, "parentLayerId":33 },
-                                {"id":36, "parentLayerId":33 },
-                                {"id":37, "parentLayerId":33 },
-                                {"id":38, "parentLayerId":33 },
-                                {"id":39, "parentLayerId":33 },
-                                {"id":40, "parentLayerId":33 },
-                                {"id":41, "parentLayerId":-1 },
-                                {"id":42, "parentLayerId":41 },
-                                {"id":43, "parentLayerId":41 },
-                                {"id":44, "parentLayerId":41 },
-                                {"id":45, "parentLayerId":41 },
-                                {"id":46, "parentLayerId":-1 }
-							]
-						}	
-					]
-				},
-				{
-					"name": "",
-                    "services": [
-						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Land Use", "showLayers": [				
-                                {"id":48, "parentLayerId":-1 }
-							]
-						}	
-					]
-				}
-			]
-        }
-	},
-	{
-		"agsSource": {
-			"url": "",
-			"folderTitle": "Hurricane Sandy",
-			"folders": [{
-				"url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy",
-				"name": "",
-				"services": [{
-					"name": "SurgeBoundaries_Final_0214",
-					"displayName": "Final FEMA Surge Area - February 2013",
-					"type": "dynamic",
-					"visibleLayerIds": [0,1,2],
-					"showLayers": []
-				},  {
-					"name": "2012_Sandy",
-					"displayName": "Hurricane Sandy - County Impact Analysis",
-					"type": "dynamic",
-					"visibleLayerIds": [1],
-					"showLayers": []
-				}]
-			},  {
-				"url": "http://54.243.149.253:8080/ArcGIS/rest/services",
-				"name": "",
-				"services": [{
-					"name": "Peak_Locations",
-					"displayName": "Peak Stormtide Elevations",
-					"type": "dynamic",
-					"visibleLayerIds": [0],
-					"showLayers": []
-				}, {
-					"name": "sandy_nwis_sites",
-					"displayName": "USGS Tide Gauges",
-					"type": "dynamic",
-					"visibleLayerIds": [1],
-					"showLayers": []
-				}, {
-					"name": "sandy_storm_surge",
-					"displayName": "High Water Marks",
-					"type": "dynamic",
-					"visibleLayerIds": [6],
-					"showLayers": []
-				}]
+[{
+    "agsSource": {
+        "url": "http://services.coastalresilience.org:6080/arcgis/rest/services",
+        "folderTitle": "Coastal Resilience (NJ)",
+        "folders": [{
+            "url": "http://services.coastalresilience.org:6080/arcgis/rest/services/New_Jersey",
+			"name": "",
+            "services": [{
+                "name": "Boundaries",
+                "type": "dynamic"
+            }, {
+                "name": "Demographics",
+                "type": "dynamic"
+            }, {
+                "name": "Ecological",
+                "type": "dynamic"
+            }, {
+                "name": "Critical_Facilities",
+                "type": "dynamic"
+            }, {
+                "name": "Coastal_Hazards",
+                "type": "dynamic"
+            }, {
+                "name": "Land_Use",
+                "type": "dynamic"
+            }]
+        }]
+    }
+},
+{
+    "agsSource": {
+        "url": "",
+        "folderTitle": "Hurricane Sandy",
+        "folders": [{
+            "url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy",
+            "name": "",
+            "services": [{
+                "name": "SurgeBoundaries_Final_0214",
+                "displayName": "Final FEMA Surge Area - February 2013",
+                "type": "dynamic",
+                "visibleLayerIds": [0,1,2],
+                "showLayers": []
+            },  {
+                "name": "2012_Sandy",
+                "displayName": "Hurricane Sandy - County Impact Analysis",
+                "type": "dynamic",
+                "visibleLayerIds": [1],
+                "showLayers": []
+            }]
+		},  {
+            "url": "http://54.243.149.253:8080/ArcGIS/rest/services",
+            "name": "",
+            "services": [{
+                "name": "Peak_Locations",
+                "displayName": "Peak Stormtide Elevations",
+                "type": "dynamic",
+                "visibleLayerIds": [0],
+                "showLayers": []
+            }, {
+                "name": "sandy_nwis_sites",
+                "displayName": "USGS Tide Gauges",
+                "type": "dynamic",
+                "visibleLayerIds": [1],
+                "showLayers": []
+            }, {
+                "name": "sandy_storm_surge",
+                "displayName": "High Water Marks",
+                "type": "dynamic",
+                "visibleLayerIds": [6],
+                "showLayers": []
+            }]
 
-			}]
-		}
-	}
-]
+        }]
+
+    }
+
+}]
