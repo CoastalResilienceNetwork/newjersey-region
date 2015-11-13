@@ -42,7 +42,8 @@
                                 {"id":18, "parentLayerId":-1 },
                                 {"id":19, "parentLayerId":-1 },
                                 {"id":20, "parentLayerId":-1 },
-                                {"id":21, "parentLayerId":-1 }
+                                {"id":21, "parentLayerId":-1 },
+                                {"id":22, "parentLayerId":-1 }
 							]
 						}	
 					]
@@ -51,7 +52,6 @@
 					"name": "",
                     "services": [
 						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Critical Facilities", "showLayers": [				
-                                {"id":23, "parentLayerId":-1 },
                                 {"id":24, "parentLayerId":-1 },
                                 {"id":25, "parentLayerId":-1 },
                                 {"id":26, "parentLayerId":-1 },
@@ -62,7 +62,8 @@
                                 {"id":31, "parentLayerId":-1 },
                                 {"id":32, "parentLayerId":-1 },
                                 {"id":33, "parentLayerId":-1 },
-                                {"id":34, "parentLayerId":-1 }
+                                {"id":34, "parentLayerId":-1 },
+                                {"id":35, "parentLayerId":-1 }
 							]
 						}	
 					]
@@ -71,20 +72,20 @@
 					"name": "",
                     "services": [
 						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Coastal Hazards", "showLayers": [				
-                                {"id":36, "parentLayerId":-1 },
-                                {"id":37, "parentLayerId":36 },
-                                {"id":38, "parentLayerId":36 },
-                                {"id":39, "parentLayerId":36 },
-                                {"id":40, "parentLayerId":36 },
-                                {"id":41, "parentLayerId":36 },
-                                {"id":42, "parentLayerId":36 },
-                                {"id":43, "parentLayerId":36 },
-                                {"id":44, "parentLayerId":-1 },
-                                {"id":45, "parentLayerId":44 },
-                                {"id":46, "parentLayerId":44 },
-                                {"id":47, "parentLayerId":44 },
-                                {"id":48, "parentLayerId":44 },
-                                {"id":49, "parentLayerId":-1 }
+                                {"id":37, "parentLayerId":-1 },
+                                {"id":38, "parentLayerId":37 },
+                                {"id":39, "parentLayerId":37 },
+                                {"id":40, "parentLayerId":37 },
+                                {"id":41, "parentLayerId":37 },
+                                {"id":42, "parentLayerId":37 },
+                                {"id":43, "parentLayerId":37 },
+                                {"id":44, "parentLayerId":37 },
+                                {"id":45, "parentLayerId":-1 },
+                                {"id":46, "parentLayerId":45 },
+                                {"id":47, "parentLayerId":45 },
+                                {"id":48, "parentLayerId":45 },
+                                {"id":49, "parentLayerId":45 },
+                                {"id":50, "parentLayerId":-1 }
 							]
 						}	
 					]
