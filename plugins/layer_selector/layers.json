@@ -1,7 +1,7 @@
 [
     {
         "agsSource": {
-            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey",
+            "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_Jersey",
 			"folderTitle": "Coastal Resilience (NJ)",
             "folders": [
 				{
@@ -71,8 +71,7 @@
 				{
 					"name": "",
                     "services": [
-						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Coastal Hazards", "showLayers": [				
-<<<<<<< HEAD
+						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Coastal Hazards", "showLayers": [	
                                 {"id":37, "parentLayerId":-1 },
                                 {"id":38, "parentLayerId":37 },
                                 {"id":39, "parentLayerId":37 },
@@ -87,21 +86,6 @@
                                 {"id":48, "parentLayerId":45 },
                                 {"id":49, "parentLayerId":45 },
                                 {"id":50, "parentLayerId":-1 }
-=======
-                                {"id":36, "parentLayerId":-1 },
-                                {"id":37, "parentLayerId":36 },
-                                {"id":38, "parentLayerId":36 },
-                                {"id":39, "parentLayerId":36 },
-                                {"id":40, "parentLayerId":36 },
-                                {"id":41, "parentLayerId":36 },
-                                {"id":42, "parentLayerId":36 },
-                                {"id":43, "parentLayerId":36 },
-                                {"id":44, "parentLayerId":-1 },
-                                {"id":45, "parentLayerId":44 },
-                                {"id":46, "parentLayerId":44 },
-                                {"id":47, "parentLayerId":44 },
-                                {"id":48, "parentLayerId":44 } 
->>>>>>> origin/development
 							]
 						}	
 					]
@@ -110,7 +94,7 @@
 					"name": "",
                     "services": [
 						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Land Use", "showLayers": [				
-                                {"id":51, "parentLayerId":-1 }
+                                {"id":52, "parentLayerId":-1 }
 							]
 						}	
 					]
