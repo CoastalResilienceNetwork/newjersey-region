@@ -43,7 +43,7 @@
     "pluginOrder": [
         "layer_selector",
 		"flood_slr",
-        "restoration_techniques",
+        "restoration-explorer",
         "risk_explorer",
         "zoom_to",
         "measure",
@@ -71,7 +71,7 @@
                 "display": "Atlantic County",
                 "details": "Atlantic County, NJ",
                 "shape": [[-74.98522251868208, 39.28856598050936], [-74.98522251868208, 39.72983141638285], [-74.3064897095255, 39.72983141638285], [-74.3064897095255, 39.28856598050936], [-74.98522251868208, 39.28856598050936]],
-                "availablePlugins": ["layer_selector", "floodSLR", "restoration_techniques"],
+                "availablePlugins": ["layer_selector", "floodSLR", "restoration-explorer"],
                 "outlineColor": "#000",
                 "noFill": true
             }
