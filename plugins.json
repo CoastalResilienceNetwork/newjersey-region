@@ -7,6 +7,10 @@
     {
       "repo": "explorer",
       "name": "risk_explorer"
+    },
+	{
+      "repo": "restoration-explorer",
+      "name": "restoration-explorer"
     }
   ]
 }
