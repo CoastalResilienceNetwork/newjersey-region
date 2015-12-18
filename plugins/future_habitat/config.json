@@ -15,10 +15,14 @@
 	"methods": "http://www.coastalresilience.org",
 	"delimiter": "_",
 	"variables": [
-		{"name":"Choose a Scenario Year", "index":0, "values":[ {"name":"2007","value":"2007"},{"name":"2012","value":"2012"}]},
-		{"name":"Choose an SLR Scenario", "index":1, "values":[{"name":"1 foot", "value":"SLR1ft"}, {"name":"2 feet", "value":"SLR2ft"}, {"name":"3 feet", "value":"SLR3ft"}]}
+		{"name":"Choose a Scenario Year", "index":1, "values":[ {"name":"2007","value":"2007"},{"name":"2012","value":"2012"}]},
+		{"name":"Choose an SLR Scenario", "index":2, "values":[{"name":"1 foot", "value":"SLR1ft"}, {"name":"2 feet", "value":"SLR2ft"}, {"name":"3 feet", "value":"SLR3ft"}]}
 		],
 	"change": true,
+	"habitats": [
+			{"name":"exclude","values":[2,3,4,5]},
+			{"name":"Umimpeded Marsh Retreat Zone","values":[1]}
+		],
 	"colormap":[
 						  [0, 0, 0, 0],
 						  [1, 78, 78, 78],
