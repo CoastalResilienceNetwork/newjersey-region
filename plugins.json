@@ -8,15 +8,11 @@
       "repo": "explorer",
       "name": "risk_explorer"
     },
-<<<<<<< HEAD
     {
       "repo": "future_habitat",
       "name": "future_habitat"
     },
 	 {
-=======
-	{
->>>>>>> origin/development
       "repo": "restoration-explorer",
       "name": "restoration-explorer"
     }
