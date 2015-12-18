@@ -1,4 +1,5 @@
 {
+  "framework": "f29fa2b",
   "plugins": [
     {
       "repo": "multiSelect",
