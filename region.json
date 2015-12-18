@@ -44,8 +44,12 @@
         "layer_selector",
 		"flood_slr",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "restoration_techniques",
         "future_habitat",
+=======
+        "restoration-explorer",
+>>>>>>> origin/development
 =======
         "restoration-explorer",
 >>>>>>> origin/development
