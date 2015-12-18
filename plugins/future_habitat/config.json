@@ -10,12 +10,13 @@
 	"extent": {"xmin":-8414967.978690442,"ymin":4701042.952380676,"xmax":-8225427.978690442,"ymax":5065242.952380676,"spatialReference":{"wkid":102100,"latestWkid":3857}},
     "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Future_Habitat/NJ_Marsh_Retreat/ImageServer",
 	"cellsize": 1,
-	"root": "VA",
+	"root": "NJ",
 	"field": "name",
 	"methods": "http://www.coastalresilience.org",
 	"delimiter": "_",
 	"variables": [
-		{"name":"Choose a Scenario Year", "index":1, "values":[ {"name":"2007","value":"2007"},{"name":"2012","value":"2012"}]}
+		{"name":"Choose an SLR Scenario", "index":1, "values":[{"name":"1 foot", "value":"SLR1ft"}, {"name":"2 feet", "value":"SLR2ft"}, {"name":"3 feet", "value":"SLR3ft"}]},
+		{"name":"Choose a Scenario Year", "index":0, "values":[ {"name":"2007","value":"2007"},{"name":"2012","value":"2012"}]}
 		],
 	"change": true,
 	"colormap":[
@@ -24,28 +25,9 @@
 						  [2, 233, 229, 220],
 						  [3, 247, 129, 191],
 						  [4, 77, 175, 74],
-						  [5, 255, 127, 0],
-						  [6, 152, 78, 163],
-						  [7, 55, 126, 184],
-						  [8, 235, 199, 42],
-						  [9, 255, 255, 21],
-						  [10, 166, 86, 40],
-						  [11, 228, 26, 28],
-						  [12, 190, 210, 255],
-						  [13, 0, 0, 0],
-						  [14, 0, 0, 0],
-						  [15, 0, 0, 0],
-						  [16, 0, 0, 0],
-						  [17, 0, 0, 0],
-						  [18, 0, 0, 0],
-						  [19, 0, 0, 0],
-						  [20, 0, 0, 0],
-						  [21, 0, 0, 0],
-						  [22, 0, 0, 0],
-						  [23, 0, 0, 0],
-						  [24, 0, 0, 0],
-						  [99, 229, 196, 148]
+						  [5, 255, 127, 0]
 						],
+	"labels":{"1": "Unimpeded Marsh Retreat Zone", "2": "Impeded Marsh Retreat Zone", "3": "Marsh Conversion to Flat", "4": "Marsh Conversion to Open Water", "5": "Tidal Marsh"}
 }
 ]
 }]
