@@ -43,16 +43,8 @@
     "pluginOrder": [
         "layer_selector",
 		"flood_slr",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "restoration_techniques",
+        "restoration-explorer",
         "future_habitat",
-=======
-        "restoration-explorer",
->>>>>>> origin/development
-=======
-        "restoration-explorer",
->>>>>>> origin/development
         "risk_explorer",
         "zoom_to",
         "measure",
