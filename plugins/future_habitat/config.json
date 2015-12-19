@@ -15,8 +15,8 @@
 	"methods": "http://www.coastalresilience.org",
 	"delimiter": "_",
 	"variables": [
-		{"name":"Choose a Scenario Year", "index":1, "values":[ {"name":"2007","value":"2007"},{"name":"2012","value":"2012"}]},
-		{"name":"Choose an SLR Scenario", "index":2, "values":[{"name":"1 foot", "value":"SLR1ft"}, {"name":"2 feet", "value":"SLR2ft"}, {"name":"3 feet", "value":"SLR3ft"}]}
+		{"name":"Choose a Scenario Year", "index":1, "values":[ {"name":"2007","value":"NJ_Marsh_2007"},{"name":"2012","value":"NJ_Marsh_2012_SLR1ft"}]},
+		{"name":"Choose an SLR Scenario", "index":2, "values":[{"name":"1 foot", "value":"NJ_Marsh_2012_SLR1ft"}, {"name":"2 feet", "value":"NJ_Marsh_2012_SLR2ft"}, {"name":"3 feet", "value":"NJ_Marsh_2012_SLR3ft"}]}
 		],
 	"change": true,
 	"habitats": [
