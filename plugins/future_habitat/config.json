@@ -11,7 +11,7 @@
     "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/Future_Habitat/NJ_Marsh_Retreat/ImageServer",
 	"cellsize": 1,
 	"root": "NJ_Marsh",
-	"field": "name",
+	"field": "Name",
 	"methods": "http://www.coastalresilience.org",
 	"delimiter": "_",
 	"variables": [
