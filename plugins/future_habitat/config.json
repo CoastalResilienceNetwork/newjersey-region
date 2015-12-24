@@ -12,7 +12,7 @@
 	"cellsize": 1,
 	"root": "NJ_Marsh",
 	"field": "Name",
-	"initialCondition": "NJ_Marsh_2007_UI",
+	"initialCondition": "2007_UI",
 	"methods": "http://www.coastalresilience.org",
 	"delimiter": "_",
 	"variables": [
