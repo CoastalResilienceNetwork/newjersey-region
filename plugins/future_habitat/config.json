@@ -12,11 +12,12 @@
 	"cellsize": 1,
 	"root": "NJ_Marsh",
 	"field": "Name",
+	"initialCondition": "NJ_Marsh_2007_UI",
 	"methods": "http://www.coastalresilience.org",
 	"delimiter": "_",
 	"variables": [
-		{"name":"Choose a Scenario Year", "index":0, "values":[ {"name":"2007","value":"2007"},{"name":"2012","value":"2012"}]},
-		{"name":"Choose an SLR Scenario", "index":1, "values":[{"name":"1 foot", "value":"SLR1ft"}, {"name":"2 feet", "value":"SLR2ft"}, {"name":"3 feet", "value":"SLR3ft"}]}
+		{"name":"Choose a Scenario Year", "index":0, "values":[ {"name":"2007","value":"initialCondition"},{"name":"2012","value":"2012"}]},
+		{"name":"Choose an SLR Scenario", "index":1, "values":[{"name":"1 foot", "value":"SLR1ft_UI"}, {"name":"2 feet", "value":"SLR2ft_UI"}, {"name":"3 feet", "value":"SLR3ft_UI"}]}
 		],
 	"change": true,
 	"habitats": [
