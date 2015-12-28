@@ -20,10 +20,6 @@
 		{"name":"Choose an SLR Scenario", "index":1, "values":[{"name":"1 foot", "value":"SLR1ft_UI"}, {"name":"2 feet", "value":"SLR2ft_UI"}, {"name":"3 feet", "value":"SLR3ft_UI"}]}
 		],
 	"change": true,
-	"habitats": [
-			{"name":"exclude","values":[2,3,4,5]},
-			{"name":"Umimpeded Marsh Retreat Zone","values":[1]}
-		],
 	"colormap":[
 						  [0, 0, 0, 0],
 						  [1, 78, 78, 78],
