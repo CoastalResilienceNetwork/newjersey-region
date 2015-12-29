@@ -4,6 +4,8 @@
 	"pluginWidth": 420,
 	"pluginHeight": 600,
 	"infoGraphic": "FutureHabitat_c.jpg",
+	"ddText": "Choose Data Source",
+	"regionLabeler": "Data Source: #",
     "pluginData": [
 {
 	"name": "New Jersey",
