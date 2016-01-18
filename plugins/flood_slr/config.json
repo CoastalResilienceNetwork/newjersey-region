@@ -1,6 +1,6 @@
 {
     "name": "Flood & Sea Level Rise",
-	"pluginHeight": 500,
+	"pluginHeight": 400,
 	"ddText": "Choose Data Source",
 	"hideDisableds": false,
 	"helpWidth": "550px",
