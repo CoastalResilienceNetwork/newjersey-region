@@ -38,9 +38,6 @@
 					"name": "",
                     "services": [
 						{ "name": "New_Jersey", "type":"dynamic", "displayName":"Ecological", "showLayers": [
-                                {"id":17, "parentLayerId":-1 },
-                                {"id":18, "parentLayerId":-1 },
-                                {"id":19, "parentLayerId":-1 },
                                 {"id":20, "parentLayerId":-1 },
                                 {"id":21, "parentLayerId":20 },
                                 {"id":22, "parentLayerId":20 },
