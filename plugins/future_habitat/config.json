@@ -28,13 +28,13 @@
 		],
 	"colormap":[
 						  [0, 0, 0, 0],
-						  [1, 78, 78, 78],
-						  [2, 233, 229, 220],
-						  [3, 247, 129, 191],
-						  [4, 77, 175, 74],
-						  [5, 255, 127, 0]
+						  [1, 170, 102, 205],
+						  [2, 255, 190, 232],
+						  [3, 158, 215, 194],
+						  [4, 77, 112, 255],
+						  [5, 165, 245, 122]
 						],
-	"labels":{"1": "Unimpeded Marsh Retreat Zone", "2": "Impeded Marsh Retreat Zone", "3": "Marsh Conversion to Mudflat", "4": "Marsh Conversion to Open Water", "5": "Tidal Marsh"}
+	"labels":{"1": "Potential Marsh Migration Area", "2": "Barrier to Marsh Migration", "3": "Marsh Conversion to Mudflat", "4": "Marsh Conversion to Open Water", "5": "Tidal Marsh"}
 }
 ]
 }]
