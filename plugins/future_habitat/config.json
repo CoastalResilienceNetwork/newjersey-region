@@ -14,6 +14,7 @@
 	"cellsize": 1,
 	"root": "NJ_Marsh",
 	"field": "Name",
+	"customZoomer": "njZoomer",
 	"initialCondition": "2007_UI",
 	"methods": "http://www.coastalresilience.org",
 	"delimiter": "_",
