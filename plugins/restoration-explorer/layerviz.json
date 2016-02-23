@@ -391,7 +391,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -490,7 +490,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -589,7 +589,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -688,7 +688,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -787,7 +787,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -886,7 +886,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -985,7 +985,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -1084,7 +1084,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
@@ -1183,7 +1183,7 @@
 					"leaveOn": "yes"
 				},
 				{
-					"text": "Erosion Shoreline Change",
+					"text": "Shoreline Change Rate",
 					"selected": false,
 					"value": "ep_erosion",
 					"showData":"yes",
