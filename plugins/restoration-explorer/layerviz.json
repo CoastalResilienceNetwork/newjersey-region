@@ -2,6 +2,7 @@
     "url": "http://dev.services2.coastalresilience.org/arcgis/rest/services/New_Jersey/RestorationExplorer/MapServer",
     "methods": "plugins/restoration-explorer/njmethods.pdf",
 	"userGuide": "plugins/restoration-explorer/UserGuide.pdf",
+	"comResourceGuide": "plugins/restoration_techniques/CommunityResourceGuideForPlanningLivingShorelinesProjects.pdf",
 	"infoGraphic": "plugins/restoration-explorer/images/infoGraphic.jpg",
 	"visibleLayers": [],
 	"infoDisplay": "none",
