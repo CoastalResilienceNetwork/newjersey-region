@@ -43,6 +43,7 @@
     "pluginOrder": [
         "layer_selector",
 		"flood_slr",
+        "future_habitat",
         "restoration-explorer",
         "risk_explorer",
         "zoom_to",
