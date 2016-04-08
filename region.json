@@ -41,7 +41,6 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-        "regional-planning",
         "layer_selector",
 		"flood_slr",
         "future_habitat",
