@@ -42,6 +42,7 @@
     ],
     "pluginOrder": [
         "regional-planning",
+        "map-tree",
 		"flood_slr",
         "future_habitat",
         "restoration-explorer",
