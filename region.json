@@ -42,7 +42,6 @@
     ],
     "pluginOrder": [
         "regional-planning",
-        "layer_selector",
 		"flood_slr",
         "future_habitat",
         "restoration-explorer",
