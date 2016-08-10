@@ -227,10 +227,8 @@
                                 "displayName": "Final Surge Area"
                             }
                         ]
-                    }
-                ]
-            },
-            {
+                    },
+                    {
                 "server": {
                     "name": "2012_Sandy"
                 },
