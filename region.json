@@ -64,7 +64,7 @@
                 {
                     "title": "<img src='img/living_shoreline.png' hspace=10>Living Shoreline Explorer",
                     "description": "Brief text here",
-                    "pluginName": "restoration_explorer"
+                    "pluginName": "restoration-explorer"
                 },
                 {
                     "title": "<img src='img/flood_slr.png' hspace=10>Flood and Sea Level Rise",
