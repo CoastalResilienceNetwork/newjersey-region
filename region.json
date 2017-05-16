@@ -77,7 +77,7 @@
                     "pluginName": "future_habitat"
                 },
                 {
-                    "title": "<img src='img/coastline_change.png' hspace=10>Risk Explorer",
+                    "title": "<img src='img/risk_explorer.png' hspace=10>Risk Explorer",
                     "description": "Brief text here",
                     "pluginName": "risk_explorer"
                 }
