@@ -38,7 +38,7 @@
     ],
     "pluginOrder": [
         "regional-planning",
-		"flood_slr",
+		"flood-slr",
         "future_habitat",
         "restoration-explorer",
         "risk_explorer",
@@ -69,7 +69,7 @@
                 {
                     "title": "<img src='img/flood_slr.png' hspace=10>Flood and Sea Level Rise",
                     "description": "Shows the potential inundation effects of sea-level rise, as well as the effects of sea-level rise on wind- and wave-driven storm surge.",
-                    "pluginName": "flood_slr"
+                    "pluginName": "flood-slr"
                 },
                 {
                     "title": "<img src='img/future_habitat.png' hspace=10>Future Habitat",

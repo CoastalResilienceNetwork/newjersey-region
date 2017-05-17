@@ -1,8 +1,8 @@
 {
   "plugins": [
   {
-      "repo": "multiSelect",
-      "name": "flood_slr"
+      "repo": "flood-slr",
+      "name": "flood-slr"
     },
     {
       "repo": "future_habitat",

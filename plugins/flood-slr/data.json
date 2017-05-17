@@ -1,0 +1,19 @@
+{
+	"region": {
+		"New Jersey": {
+			"sea_level_rise|0": "slr_0ft",
+			"sea_level_rise|1": "slr_1ft",
+			"sea_level_rise|2": "slr_2ft",
+			"sea_level_rise|3": "slr_3ft",
+			"sea_level_rise|4": "slr_4ft",
+			"sea_level_rise|5": "slr_5ft",
+			"sea_level_rise|6": "slr_6ft",
+			
+			"hurricane|0": [0],
+			"hurricane|1": [1],
+			"hurricane|2": [2],
+			"hurricane|3": [3],
+			"hurricane|sandy": [4]
+		}
+	}
+}
