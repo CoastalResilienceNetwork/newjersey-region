@@ -80,6 +80,11 @@
                     "title": "<img src='img/risk_explorer.png' hspace=10>Risk Explorer",
                     "description": "Brief text here",
                     "pluginName": "risk_explorer"
+                },
+                {
+                    "title": "<img src='img/risk_explorer.png' hspace=10>Marsh Explorer",
+                    "description": "Brief text here. Need a icon for this one",
+                    "pluginName": "marsh-explorer"
                 }
             ],
             "partners": [
