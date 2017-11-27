@@ -58,41 +58,6 @@
     },
     "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
-            "title": "New Jersey Shore",
-            "description": "<p>Coastal Resilience is a decision support tool that provides local, state and national planners a step-wise process to guide decisions to reduce the ecological and socio-economic risks of coastal hazards</p>",
-            "plugins": [
-                {
-                    "title": "<img src='img/restoration_explorer.png' hspace=10>Restoration Explorer",
-                    "description": "Brief text here",
-                    "pluginName": "restoration-explorer"
-                },
-                {
-                    "title": "<img src='img/flood_slr.png' hspace=10>Flood and Sea Level Rise",
-                    "description": "Shows the potential inundation effects of sea-level rise, as well as the effects of sea-level rise on wind- and wave-driven storm surge.",
-                    "pluginName": "flood-slr"
-                },
-                {
-                    "title": "<img src='img/future_habitat.png' hspace=10>Future Habitat",
-                    "description": "Shows how the size and distribution of tidal marshes and other coastal habitats may change in response to future projected sea-level rise scenarios.",
-                    "pluginName": "future_habitat"
-                },
-                {
-                    "title": "<img src='img/risk_explorer.png' hspace=10>Risk Explorer",
-                    "description": "Brief text here",
-                    "pluginName": "risk_explorer"
-                },
-                {
-                    "title": "<img src='img/marsh_explorer.png' hspace=10>Marsh Explorer",
-                    "description": "Brief text here. Need a icon for this one",
-                    "pluginName": "marsh-explorer"
-                }
-            ],
-            "partners": [
-                {
-                    "logoPath": "img/TNCLogoPrimary_RGB.png",
-                    "link": "http://nature.org",
-                    "title": "The Nature Conservancy"
-            }
-        ]
+            "html":"true"
     }
 }
