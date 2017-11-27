@@ -1,0 +1,91 @@
+﻿<style>
+	.nj-app-wraps{
+		display:flex;
+	}
+	.nj-app-wraps h4{
+		margin-left:10px; margin-top:10px;
+	}
+	.nj-app-wraps img{
+		height:37px;
+	}
+	.nj-app-descs{
+		margin-left:5px;
+	}
+	.nj-app-button{
+		text-align:left; width:100%;
+	}
+	.nj-app-button span{
+		font-weight:bold; color:#5E94B6;
+	} 
+	.nj-hide-button{
+		display:none;
+	}
+</style>
+
+<h2>New Jersey Shore</h2>
+<div>
+    Would you like a short summary about the region here?
+</div>
+
+<h3>Restoration Explorer Apps</h3>
+<div class="button nj-app-button">	
+	<div class="nj-app-wraps">
+		<img src="img/habitat_explorer.png">
+		<h4 class="color-primary">Marsh Explorer</h4>
+	</div>
+	<div class="nj-app-descs">
+		Text describing Marsh Explorer.
+	</div>
+</div>	
+<button class="button launch-plugin nj-hide-button" data-plugin-name="marsh-explorer"></button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/restoration_explorer.png">
+		<h4 class="color-primary">Living Shoreline</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Text describing Living Shoreline.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="restoration-explorer">Go</button>
+
+<h3>Other Apps</h3>
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/flood_slr.png">
+		<h4 class="color-primary">Flood and Sea Level Rise</h4>
+	</div>
+	<div class="nj-app-descs">
+		Shows the potential inundation effects of sea-level rise, as well as the effects of sea-level rise on wind- and wave-driven storm surge.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="flood-slr">Go</button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/future_habitat.png">
+		<h4 class="color-primary">Future Habitat</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Shows how the size and distribution of tidal marshes and other coastal habitats may change in response to future projected sea-level rise scenarios.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="future_habitat">Go</button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/risk_explorer.png">
+		<h4 class="color-primary">Risk Explorer</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Explain what Risk Explorer is all about.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="risk_explorer">Go</button>
+
+<script>
+	$(".nj-app-button").click(function(c){
+		$(c.currentTarget).next().trigger("click")
+	})
+</script>
