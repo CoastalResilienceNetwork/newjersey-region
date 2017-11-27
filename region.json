@@ -37,11 +37,12 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-        "regional-planning",
-		"flood-slr",
-        "future_habitat",
+        "marsh-explorer",
         "restoration-explorer",
+        "flood-slr",
+        "future_habitat",
         "risk_explorer",
+        "regional-planning",
         "zoom_to",
         "measure",
         "legend_display",
