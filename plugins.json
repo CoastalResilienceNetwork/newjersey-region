@@ -13,6 +13,10 @@
       "name": "living-shorelines-nj"
     },
     {
+      "repo": "regional-planning",
+      "name": "regional-planning"
+    },
+    {
       "repo": "marsh-explorer",
       "name": "marsh-explorer"
     }  

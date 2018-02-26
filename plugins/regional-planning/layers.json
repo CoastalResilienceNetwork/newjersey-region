@@ -1,0 +1,240 @@
+[
+    {
+        "displayName": "Coastal Resilience (NJ)",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://dev.services.coastalresilience.org/arcgis/rest/services/New_Jersey/",
+            "name": "New_Jersey"
+        },
+        "includeLayers": [
+            {
+                "name": "Boundaries",
+                "displayName": "Boundaries",
+                "includeLayers": [
+                    {
+                        "name": "Study Area",
+                        "server": {
+                            "type": "ags",
+                            "layerType": "dynamic",
+                            "url": "http://dev.services.coastalresilience.org/arcgis/rest/services/New_Jersey/",
+                            "name": "New_Jersey"
+                        }
+                    },
+                    {
+                        "name": "Federally-protected lands"
+                    },
+                    {
+                        "name": "State-protected lands"
+                    },
+                    {
+                        "name": "Congressional Districts",
+                        "description": "This polygon layer delineates the US Congressional District boundaries in New Jersey, 2012 - 2022."
+                    },
+                    {
+                        "name": "Town,city, village",
+                        "downloadUrl": "http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_us_ua10_500k.zip"
+                    },
+                    {
+                        "name": "Counties"
+                    },
+                    {
+                        "name": "Watershed Regions"
+                    }
+                ]
+            },
+            {
+                "name": "Demographics",
+                "displayName": "Demographics",
+                "includeAllLayers": true
+            },
+            {
+                "name": "Ecological",
+                "displayName": "Ecological",
+                "includeLayers": [
+                    {
+                        "name": "Shoreline Change Rate"
+                    },
+                    {
+                        "name": "Marsh Retreat 2012"
+                    },
+                    {
+                        "name": "Levees"
+                    },
+                    {
+                        "name": "1977 Tidelands Line"
+                    },
+                    {
+                        "name": "Tidal Water"
+                    },
+                    {
+                        "name": "Tidal Marsh"
+                    },
+                    {
+                        "name": "Beaches"
+                    },
+                    {
+                        "name": "Vegetated Dune"
+                    },
+                    {
+                        "name": "NJ Marsh Retreat Zones SLR 1-3ft Scenarios - CRSSA Rutgers",
+                        "includeLayers": [
+                            {
+                                "name": "Marsh Retreat Zones: NJ SLR 1-ft (4mm/yr, 50-yr Time Frame)",
+                                "displayName": "Sea Level 1-ft (4mm/yr, 50-yr)"
+                            },
+                            {
+                                "name": "Marsh Retreat Zones: NJ SLR 2-ft (4mm/yr, 50-yr Time Frame)",
+                                "displayName": "Sea Level 2-ft (4mm/yr, 50-yr)"
+                            },
+                            {
+                                "name": "Marsh Retreat Zones: NJ SLR 3-ft (4mm/yr, 50-yr Time Frame)",
+                                "displayName": "Sea Level 3-ft (4mm/yr, 50-yr)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Critical Facilities",
+                "displayName": "Critical Facilities",
+                "includeLayers": [
+                    {
+                        "name": "Electric Power Plant"
+                    },
+                    {
+                        "name": "Airport"
+                    },
+                    {
+                        "name": "Rail Station"
+                    },
+                    {
+                        "name": "Colleges/Universities"
+                    },
+                    {
+                        "name": "Schools"
+                    },
+                    {
+                        "name": "Emergency Medical Services"
+                    },
+                    {
+                        "name": "Nursing Home"
+                    },
+                    {
+                        "name": "Fire Station"
+                    },
+                    {
+                        "name": "Police Station"
+                    },
+                    {
+                        "name": "Hospital"
+                    },
+                    {
+                        "name": "NJ Railroad"
+                    },
+                    {
+                        "name": "Evacuation Routes"
+                    }
+                ]
+            },
+            {
+                "name": "Coastal Hazards",
+                "includeLayers": [
+                    {
+                        "name": "Sea Level Rise Impact Analysis",
+                        "includeLayers": [
+                            {
+                                "name": "Current sea level",
+                                "displayName": "Sea Level (Current)"
+                            },
+                            {
+                                "name": "Sea Level Rise (1 ft.)",
+                                "displayName": "Sea Level (1-ft)"
+                            },
+                            {
+                                "name": "Sea Level Rise (2 ft.)",
+                                "displayName": "Sea Level (2-ft)"
+                            },
+                            {
+                                "name": "Sea Level Rise (3 ft.)",
+                                "displayName": "Sea Level (3-ft)"
+                            },
+                            {
+                                "name": "Sea Level Rise (4 ft.)",
+                                "displayName": "Sea Level (4ft)"
+                            },
+                            {
+                                "name": "Sea Level Rise (5 ft.)",
+                                "displayName": "Sea Level (5-ft)"
+                            },
+                            {
+                                "name": "Sea Level Rise (6 ft.)",
+                                "displayName": "Sea Level (6-ft)"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Storm Surge Scenario Analysis",
+                        "includeLayers": [
+                            {
+                                "name": "Storm Surge- Category 1 (Feet)",
+                                "displayName": "Category 1 (Feet)"
+                            },
+                            {
+                                "name": "Storm Surge- Category 2 (Feet)",
+                                "displayName": "Category 2 (Feet)"
+                            },
+                            {
+                                "name": "Storm Surge- Category 3 (Feet)",
+                                "displayName": "Category 3 (Feet)"
+                            },
+                            {
+                                "name": "Storm Surge- Category 4 (Feet)",
+                                "displayName": "Category 4 (Feet)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Land Use",
+                "displayName": "Land Use",
+                "includeAllLayers": true
+            }
+        ]
+    },
+    {
+        "displayName": "Hurricane Sandy",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy/"
+        },
+        "includeLayers": [
+            {
+                "server": {
+                    "name": "SurgeBoundaries_Final_0214"
+                },
+                "name": "FINAL - High Resolution Storm Surge Extent",
+                "displayName": "Final FEMA Surge Area - February 2013",
+                "includeLayers": [
+                        {
+                                "name": "NYC - Final Very High Resolution Surge Area - Field-Verified February 14, 2013 (click on surge for details)",
+                                "displayName": "NYC Surge Area"
+                            },
+                            {
+                                "name": "Final High Resolution Surge Area - Field-Verified February 14, 2013 (click on surge for details)",
+                                "displayName": "Final Surge Area"
+                            }
+                        ]
+                    },
+                    {
+                "server": {
+                    "name": "2012_Sandy"
+                },
+                "name": "Hurricane Sandy - County Impact Analysis (click county for summary)",
+                "displayName": "Hurricane Sandy - County Impact Analysis"
+            }
+        ]
+    }
+]
