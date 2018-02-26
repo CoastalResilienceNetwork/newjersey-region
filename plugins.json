@@ -1,8 +1,16 @@
 {
-  "plugins": [ 
-    {
-      "repo": "marsh-explorer",
-      "name": "marsh-explorer"
-    }  
-  ]
+    "plugins": [
+        {
+            "repo": "migratory-blueways",
+            "name": "migratory-blueways"
+        },
+        {
+            "repo": "tuna-fisheries",
+            "name": "tuna-fisheries"
+        },
+        {   "repo": "regional-planning",
+            "name": "regional-planning"
+        }
+    ]
 }
+ 

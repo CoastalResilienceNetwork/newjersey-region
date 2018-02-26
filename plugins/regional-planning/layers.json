@@ -1,0 +1,42 @@
+[
+    {
+    	"displayName": "Migratory Species",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "http://services.coastalresilience.org/arcgis/rest/services/Gulf_of_Mexico",
+            "name": "Conservation_Blueways"
+        },
+        "includeLayers": [
+			{
+				"name" : "Regional Data",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Fish",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Sea Turtles",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Marine Mammals",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Birds",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Multi Species Products",
+				"includeAllLayers" : true
+			},
+			{
+				"name" : "Conservation Products",
+				"includeAllLayers" : true
+			}
+		]
+	}
+]
+
