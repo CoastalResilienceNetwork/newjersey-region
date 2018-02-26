@@ -37,11 +37,6 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-        "marsh-explorer",
-        "living-shorelines-nj",
-        "flood-slr",
-        "future_habitat",
-        "regional-planning",
         "zoom_to",
         "measure",
         "legend_display",
