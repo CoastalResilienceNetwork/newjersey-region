@@ -1,7 +1,6 @@
 {
-    "height": 600,
+    "height": 500,
     "width": 400,
     "resizable": false,
-    "hasCustomPrint": true,
-    "name": "Regional Marine Planning"
+    "hasCustomPrint": true
 }
