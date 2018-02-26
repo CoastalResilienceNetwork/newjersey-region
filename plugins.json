@@ -13,6 +13,10 @@
       "name": "living-shorelines-nj"
     },
     {
+      "repo": "explorer",
+      "name": "risk_explorer"
+    },
+    {
       "repo": "regional-planning",
       "name": "regional-planning"
     },
