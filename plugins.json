@@ -1,6 +1,10 @@
 {
     "plugins": [
         {
+            "repo": "marsh-explorer",
+            "name": "marsh-explorer"
+        }, 
+        {
             "repo": "living-shorelines-nj",
             "name": "living-shorelines-nj"
         },
