@@ -1,5 +1,8 @@
 {
-  "plugins": [
-
+  "plugins": [ 
+    {
+      "repo": "marsh-explorer",
+      "name": "marsh-explorer"
+    }  
   ]
 }

@@ -37,6 +37,7 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
+        "marsh-explorer",
         "zoom_to",
         "measure",
         "legend_display",
