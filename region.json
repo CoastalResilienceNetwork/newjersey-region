@@ -1,16 +1,24 @@
 {
-    "googleAnalyticsPropertyId": "7401895-44",
+    "googleAnalyticsPropertyId": "7401895-16",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
     "titleMain": { "text": "Coastal Resilience", "url": "http://maps.coastalresilience.org/newjersey" },
     "titleDetail": { "text": "New Jersey", "url": "" },
     "headerLinks": [
         { "text": "The Nature Conservancy", "url": "http://nature.org/marine/" },
-        { "text": "Terms of Use", "url": "http://migratoryblueways.org/terms-of-use" }
+        { "text": "Legal Disclosure", "url": "http://coastalresilience.org/terms-of-use/" }
     ],
     "regionLinks": [
-            { "text": "Gulf of Mexico Coastal Resilience", "url": "http://maps.coastalresilience.org/gulfmex/" },
-            { "text": "Louisiana Freshwater Network", "url": "http://maps.freshwaternetwork.org/louisiana/" },
-            { "text": "Mississippi Freshwater Network", "url": "http://maps.freshwaternetwork.org/mississippi/" }
+            { "text": "California", "url": "http://maps.coastalresilience.org/california" },
+            { "text": "Connecticut", "url": "http://maps.coastalresilience.org/connecticut" },
+            { "text": "Global", "url": "http://maps.coastalresilience.org/global/" },
+            { "text": "Gulf of Mexico", "url": "http://maps.coastalresilience.org/gulfmex/" },
+            { "text": "Grenada, St. Vincent & the Grenadines", "url": "http://maps.coastalresilience.org/gsvg/" },
+            { "text": "MesoAmerican Reef", "url": "http://maps.coastalresilience.org/mar/" },
+            { "text": "New Jersey", "url": "http://maps.coastalresilience.org/newjersey" },
+            { "text": "Southeast Florida", "url": "http://maps.coastalresilience.org/seflorida/" },
+            { "text": "United States", "url": "http://maps.coastalresilience.org/unitedstates/" },
+            { "text": "U.S. Virgin Islands", "url": "http://maps.coastalresilience.org/usvi/" },
+            { "text": "Washington", "url": "http://maps.coastalresilience.org/pugetsound" }
     ],
     "initialExtent": [
         -74.927,
@@ -29,31 +37,27 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-		"marsh-explorer",
+        "marsh-explorer",
         "living-shorelines-nj",
+        "flood-slr",
+        "future_habitat",
         "regional-planning",
         "zoom_to",
         "measure",
         "legend_display",
         "full_extent"
-    
     ],
     "print": {
-       "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
-       "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework",
-       "headerLogoPath": "http://maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
+        "printServerUrl": "http://services.coastalresilience.org/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework"  
     },
     "colors": {
-       "primary": "#2F6384",
+        "primary": "#2F6384",
         "secondary": "#5E94B6",
         "tertiary": "#333333",
         "active": "#0096D6"
     },
-   "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
-    "identifyEnabled": true,
+    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "launchpad": {
-            "title": "Conservation for Migratory Blueways",
-            "description": "The Blueways Conservation Decision Support Tool offers a wide range of information about ocean resources and management. The focused apps and extensive spatial layers available are valuable tools for enhancing biodiversity, ecosystem-based management, and healthy human activity in the ocean. These resources may serve to support decision-making by marine planners, resource managers, commercial and recreational fishermen, and many other industries using the ocean.",
-            "html": true
+            "html":"true"
     }
 }
