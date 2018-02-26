@@ -1,10 +1,9 @@
 {
     "googleAnalyticsPropertyId": "7401895-44",
     "googleUrlShortenerApiKey": "AIzaSyDO_xBd3griGKuhlYBvv7jVN4Mt58Gl4iw",
-    "titleMain": { "text": "Blueways Conservation", "url": "" },
-    "titleDetail": { "text": "", "url": "" },
+    "titleMain": { "text": "Coastal Resilience", "url": "http://maps.coastalresilience.org/newjersey" },
+    "titleDetail": { "text": "New Jersey", "url": "" },
     "headerLinks": [
-        { "text": "Migratory Blueways", "url": "http://migratoryblueways.org" },
         { "text": "The Nature Conservancy", "url": "http://nature.org/marine/" },
         { "text": "Terms of Use", "url": "http://migratoryblueways.org/terms-of-use" }
     ],
@@ -14,10 +13,10 @@
             { "text": "Mississippi Freshwater Network", "url": "http://maps.freshwaternetwork.org/mississippi/" }
     ],
     "initialExtent": [
-        -98.61328125,
-        17.392579271057766,
-        -79.716796875,
-        31.653381399664
+        -74.927,
+        38.896,
+        -74.632,
+        41.364
     ],
     "basemaps": [
         { "name": "Ocean"              , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer" },
@@ -46,10 +45,10 @@
        "headerLogoPath": "http://maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
     },
     "colors": {
-        "primary": "#22497A",
-       "secondary": "#3A72B9",
-       "tertiary": "#333333",
-       "active": "#0096D6"
+       "primary": "#2F6384",
+        "secondary": "#5E94B6",
+        "tertiary": "#333333",
+        "active": "#0096D6"
     },
    "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "identifyEnabled": true,
