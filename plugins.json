@@ -19,7 +19,11 @@
     {
       "repo": "marsh-explorer",
       "name": "marsh-explorer"
-    }  
+    },
+    {
+      "repo": "risk-explorer",
+      "name": "risk-explorer"
+    } 
   ]
 }
  
