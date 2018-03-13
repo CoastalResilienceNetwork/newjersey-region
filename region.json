@@ -31,7 +31,8 @@
     "pluginOrder": [
 		"marsh-explorer",
         "living-shorelines-nj",
-        "flood-slr",
+        "flood_slr",
+        "risk-explorer-nj",
         "future_habitat",
         "regional-planning",
         "zoom_to",
@@ -43,7 +44,7 @@
     "print": {
        "printServerUrl": "http://services.coastalresilience.org:6080/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
        "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework",
-       "headerLogoPath": "http://maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
+       "headerLogoPath": "http://cr-org-maps.coastalresilience.org/network/img/TNCLogoPrimary_RGB2.jpg"
     },
     "colors": {
        "primary": "#2F6384",
