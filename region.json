@@ -41,23 +41,25 @@
         { "name": "Terrain"            , "url": "http://server.arcgisonline.com/ArcGIS/rest/services/World_Terrain_Base/MapServer" }
     ],
     "pluginOrder": [
-        "regional-planning",
-		"flood_slr",
+        "marsh-explorer",
+        "living-shorelines-nj",
+        "flood-slr",
         "future_habitat",
-        "restoration-explorer",
-        "risk_explorer",
+        "risk-explorer-nj",
+        "regional-planning",
         "zoom_to",
         "measure",
         "legend_display",
-        "full_extent",
-        "subregion_toggle"
+        "full_extent"
     ],
     "print": {
         "printServerUrl": "http://services.coastalresilience.org/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task", "customPrintTemplatePrefix": "Letter ANSI A GeositeFramework"  
     },
-    "colors": {
-       "primary": "#26648E",
-       "secondary": "#26648E"
+   "colors": {
+       "primary": "#2F6384",
+        "secondary": "#5E94B6",
+        "tertiary": "#333333",
+        "active": "#0096D6"
     },
     "identifyBlacklist": ["OBJECTID", "OBJECTID_1", "SHAPE", "Shape", "shape_Length", "shape_Area", "NumScen"],
     "subregions": {
