@@ -1,0 +1,91 @@
+﻿<style>
+	.nj-app-wraps{
+		display:flex;
+	}
+	.nj-app-wraps h4{
+		margin-left:10px; margin-top:10px;
+	}
+	.nj-app-wraps img{
+		height:37px;
+	}
+	.nj-app-descs{
+		margin-left:5px;
+	}
+	.nj-app-button{
+		text-align:left; width:100%;
+	}
+	.nj-app-button span{
+		font-weight:bold; color:#5E94B6;
+	} 
+	.nj-hide-button{
+		display:none;
+	}
+</style>
+
+<h2>New Jersey Shore</h2>
+<div>
+    Coastal Resilience.org is a decision support tool that incorporates the best available science and local data to enable communities and conservation practitioners to identify nature-based solutions for enhancing resilience and reducing risk where possible. For additional project information, visit the <a href="http://coastalresilience.org/project/new-jersey/" target="_blank">New Jersey home page</a>.
+</div>
+
+<h3>Restoration Explorer Apps</h3>
+<div class="button nj-app-button">	
+	<div class="nj-app-wraps">
+		<img src="img/habitat_explorer.png">
+		<h4 class="color-primary">Marsh Explorer</h4>
+	</div>
+	<div class="nj-app-descs">
+		Focused on salt marshes across New Jersey's Atlantic coast, this app shows the need for tidal marsh restoration across New Jersey's ocean coast based on the amount and size of linear ditches, marsh edge erosion, unvegetated marsh, and unused dredged lagoons.
+	</div>
+</div>	
+<button class="button launch-plugin nj-hide-button" data-plugin-name="marsh-explorer"></button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/restoration_explorer.png">
+		<h4 class="color-primary">Living Shorelines</h4>
+	</div>	
+	<div class="nj-app-descs">
+		This app shows which of 6 living shoreline techniques could be selected, at a user identified site, to reduce erosion  based on engineering and ecological criteria.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="living-shorelines-nj">Go</button>
+
+<h3>Other Apps</h3>
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/flood_slr.png">
+		<h4 class="color-primary">Flood and Sea Level Rise</h4>
+	</div>
+	<div class="nj-app-descs">
+		Shows the potential inundation extent of sea level rise, as well as the effects of sea level rise on wind and wind driven storm surge.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="flood-slr">Go</button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/future_habitat.png">
+		<h4 class="color-primary">Future Habitat</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Shows how the size and distribution of salt marshes and other coastal habitats may change in response to future projected sea level rise scenarios.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="future_habitat">Go</button>
+
+<div class="button nj-app-button">
+	<div class="nj-app-wraps">
+		<img src="img/risk_explorer.png">
+		<h4 class="color-primary">Risk Explorer</h4>
+	</div>	
+	<div class="nj-app-descs">
+		Shows how the size and distribution of salt marshes and other coastal habitats may change in response to future projected sea level rise scenarios.
+	</div>
+</div>
+<button class="button launch-plugin nj-hide-button" data-plugin-name="risk-explorer-nj">Go</button>
+
+<script>
+	$(".nj-app-button").click(function(c){
+		$(c.currentTarget).next().trigger("click")
+	})
+</script>
