@@ -78,29 +78,7 @@
             }
         ]
     },
-     "launchpads": [
-        {
-            "id": "get-started",
-            "title": "Getting Started",
-            "description": "Coastal Resilience is a decision support tool that provides local, state and national planners a step-wise process to guide decisions to reduce the ecological and socio-economic risks of coastal hazards",
-            "showSubRegions": true,
-            "showByDefault": false,
-            "categories": [
-              {
-                "name": "One-click Interactive Map",
-                "description": "Custom maps for adaptation, conservation and restoration planning",
-                "issues": [
-                    {
-                      "name": "Sea Level Rise",
-                      "description": "Combined storm surge and sea level condition in Ventura County for the year 2100",
-                      "saveCode": "e34df34rd3....3434",
-                      "saveCode": "eyJzY3JlZW4iOsSAc3BsaXRTxIPEhcSHOmZhbHNlLMSBeW5jTWFwc8SIxJXEl2V9xJptxKAwxIjEgGV4dMSGdMSsInR5cGXEiCLErsSwbsSyxJp4bWnEky04NzA4MTI5Ljc0Mzc2xYYyN8SaecWBxJM0xZE1NTE2LsWFMjExNTTFmcS/xKl4xIgtNzkzMDkxOC4wNDDFnTMzOTTFlcWoxIg1MDc3OMWILjM4OTDFhzU5NcSaxIthdGnEllJlZmXEhMSdxLjEiSJ3a2lkxIgxMMWhxonEmmzGkGVzdFfGnsagOsaGNTfEpyJfcGFydMSiOlvErcSvxLHEs8S1xLfEucS7xr/Fp8WCxarFhcWHxYnFi8WNxY/FkcajxZQixZbHhzrFmTfFm8WdxZ83xaHFo8WlNsWnYcWpOsWrxa3Fr8WxxbPFtcW3xbnFu8eSxb06xb/GgcaDMcaFxofGiTjGi8aNxIHGtsaRxpPGlcaXxIZjxprEgMadxp/GocajxqIwxqbGqMaqxqzIhcavx7fGssazZnJhbWVJZMa6WzBdfcidxo5lbGVjxLBkQmHEmMSpcEluZMSuxIgwxrPGtm5lxKvGm8izZU51bWLGl8iwxo50xqhPZlBsdWfFgsa6xIrIocijyKXJhcmHx5QixIzJkG5zL2Zsb29kX3NsciLEmmHIpGl2ZVN1YsSEyYhvxJNudWxsxJrJk8mIyZXEs8m0yYnJl8mZyZvJncmfxLNnZW/Es27IlcaaIkNvyKjJgWwgxpRzacSNyIBlIGTGkGHJocS6xr7EvcSzxYDHlMWENMWiMjYzLsW/xoY4MsW8x5Q0N8WiNDI1LjLKr8WjMMe5xYDHoceIMsqiOMWHxZ/GosWFxbzKucevxbQyxbjKpMWGOcqzyrvGjse7xpJsxpTGlsaYyIHEs8iExq7GosakyIkixqfEsMiMxq3EiMawyJHEqGV0aMmbyYoidXJsxLlodHRwOi8vY8qJxqrElsSEyo/KkcaZLm9yZy9wcm9qyY0txrdlyKgvyLR3LcyFcsSYeS3FgnTMg2R1yaTJrcqYxpF0yKLEuVZpZXcgRsmwyozGlHDLvsSyxrPLtcS9zIPEl8SIxrwiyoTIlsS5Q8umb8SYIFN0y75tzLvLqsqAzJvEtsqGyZ7Gn8i+xJrFgsiux6LLmnbElnXGqcyxyYvIosikZcauzJXNkMSazLTKhkPGqGfLvnkgMcqYzY7JhsqGxKvEp8SAzZvMtsaQIDLNpM2PyobNo8igzZTIpcSjxJbEmM2pzLPKhc2sdCAzzbDNpsS5za/NtMmNzZbNt8SlzbrNqzrKh82tNM6BzZDEuc6AzoXNlcauxKTNuSzNqs28zoxTYcitec6QyobOj86UzbbElM24xKbInV3EqGHFglVSTMuty6/LscuzxJhydmnIgXMuy7XKisu4xqnKkMyhy7zLvmc6NsWHMC/Gt2PJiMmWy7l0L861zrfOuS9OzKJfSsaXzJHPlEpfRsm7yZzOnsmcU0xSX0TKli/En3BTxpfJpsmgxJrLtci8zLnEs8i2zLLHgcqGZMScyJXOuMqYc8umd8yxyJzEmsuqy6zOjMuuy7DLss+Qz63OuMapzrvLtsqLy7nPgMqSy73Lv8+Fz4fPiXLPi2nPjcapz4/PkdCMyZbPlXfPl8+ZZXnPm8+dz59fz6Ffz6PPpc+nyYHPqcSgz6zOtsi+yJ7Ems2jxrvEgM+3xLnPucy0z7zGjs+/zLExzqnEms2v0LrEtM2E0L3PusWBY8+90YLGuzLRhSLOgNGI0LzOjNC+z7vRjtGBb9CAxrsz0ZPOj9GW0YrRmNGM0YDEgdGQWzTOqcazyYFiyJrEgMytzJVvzLDRiM6LyofMuMy6zLzMvs2Ay7/EuMSa0ZfEgcSNyK7PryLNisivOs2NzbHRsMSByYzOlcSIzZjEmc27zLXOjM2dxLDNn3LNoc2zIs2lzpHOjM2ozpnSk82cza3OhNKczbHEudKbxJjNtc6HzqbOidKh0bfSls2/zqHOg8+90o7Opc6XxKbSr86bzo3Nvs6j0qbOgs6MzpPSjdKrzpbOp86K0rvOnc6f0rPOjNK+0qrOhtOFzonRk8+xYs+zxpvPtdC70aQi0ZnRjdGP0Z3Qgc6qy6nLq86x0IjOtNCLzrnQjs69yZ/Ov8u7yIHQlM+Ez4bKvdCY0JrQnMaq0IrOttCgz5TPls+YzJDQptCoz57Jms+gyK3Qrc+kz6bPqM+q0LTPriLQtyLQuc+205nTm9Gnz77Tnsa70YTUi9GH1I7HgtGl0L/Rm9Go1JNb0ZLUi9GV1JjPuNGm1JzUktGeW9Gg1IvRotSj0YvUm9Od1KjRq8iexrPEqc6tzq/To86z07bPktCNzrzLt9Oqy7rPgdOtz4PQltOxz4rPjC/PjtS607jQotCk07zQp07PnNO/ybzQrNCu1IXQsdSHz63QtsifxLTIlMm20ol91aDJosmkyabJqMmqZcmsya7MptWg",
-                      "faIcon": "fa fa-life-bouy",
-                      "faSize": 32
-                    }
-                  ]
-              }
-            ]
-        }
-    ]
+    "launchpad": {
+            "html": true
+    }
 }
