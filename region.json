@@ -8,7 +8,7 @@
         { "text": "Terms of Use", "url": "http://migratoryblueways.org/terms-of-use" }
     ],
     "regionLinks": [
-            { "text": "Gulf of Mexico Coastal Resilience", "url": "https://maps.coastalresilience.org/gulfmex/" },
+            { "text": "Gulf of Mexico Coastal Resilience", "url": "http://maps.coastalresilience.org/gulfmex/" },
             { "text": "Louisiana Freshwater Network", "url": "https://maps.freshwaternetwork.org/louisiana/" },
             { "text": "Mississippi Freshwater Network", "url": "https://maps.freshwaternetwork.org/mississippi/" }
     ],
