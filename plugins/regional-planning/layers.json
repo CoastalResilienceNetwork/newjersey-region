@@ -4,7 +4,7 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/",
+            "url": "https://services2.coastalresilience.org/arcgis/rest/services/New_Jersey/",
             "name": "New_Jersey"
         },
         "includeLayers": [
@@ -17,7 +17,7 @@
                         "server": {
                             "type": "ags",
                             "layerType": "dynamic",
-                            "url": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/",
+                            "url": "https://services2.coastalresilience.org/arcgis/rest/services/New_Jersey/",
                             "name": "New_Jersey"
                         }
                     },
@@ -32,7 +32,7 @@
                         "description": "This polygon layer delineates the US Congressional District boundaries in New Jersey, 2012 - 2022."
                     },
                     {
-                        "name": "Town,city, village",
+                        "name": "Town, city, village",
                         "downloadUrl": "http://www2.census.gov/geo/tiger/GENZ2014/shp/cb_2014_us_ua10_500k.zip"
                     },
                     {
@@ -208,7 +208,7 @@
         "server": {
             "type": "ags",
             "layerType": "dynamic",
-            "url": "http://services.femadata.com/arcgis/rest/services/2012_Sandy/"
+            "url": "https://services.femadata.com/arcgis/rest/services/2012_Sandy/"
         },
         "includeLayers": [
             {
