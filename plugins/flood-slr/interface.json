@@ -17,16 +17,16 @@
 	},
 	"region": {
 		"New Jersey": {
-			"url": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/NJ_Flood_and_SLR_Data/MapServer",
+			"url": "https://services2.coastalresilience.org/arcgis/rest/services/New_Jersey/NJ_Flood_and_SLR_Data/MapServer",
 			"layers": {
-				"main": "http://services.coastalresilience.org/arcgis/rest/services/New_Jersey/NJ_Flood_and_SLR_Data/MapServer",
-				"slr_0ft": { "type": "tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer" },
-				"slr_1ft": { "type": "tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer" },
-				"slr_2ft": { "type": "tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer" },
-				"slr_3ft": { "type": "tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer" },
-				"slr_4ft": { "type": "tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer" },
-				"slr_5ft": { "type": "tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer" },
-				"slr_6ft": { "type": "tiled", "url": "http://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer" }
+				"main": "https://services2.coastalresilience.org/arcgis/rest/services/New_Jersey/NJ_Flood_and_SLR_Data/MapServer",
+				"slr_0ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_0ft/MapServer" },
+				"slr_1ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_1ft/MapServer" },
+				"slr_2ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_2ft/MapServer" },
+				"slr_3ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_3ft/MapServer" },
+				"slr_4ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_4ft/MapServer" },
+				"slr_5ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_5ft/MapServer" },
+				"slr_6ft": { "type": "tiled", "url": "https://maps1.coast.noaa.gov/arcgis/rest/services/dc_slr/slr_6ft/MapServer" }
 			},
 			"tooltips": {
 				"region": "Geographic areas where climate change/sea level rise vulnerability studies have been conducted.",
