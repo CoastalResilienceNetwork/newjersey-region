@@ -37,7 +37,7 @@
 						  [4, 77, 112, 255],
 						  [5, 165, 245, 122]
 						],
-	"labels":{"1": "Potential Marsh Migration Area", "2": "Barrier to Marsh Migration", "3": "Marsh Conversion to Mudflat", "4": "Marsh Conversion to Open Water", "5": "Tidal Marsh"}
+	"labels":{"1": "Unimpeded Marsh Migration Zone", "2": "Impeded Marsh Migration Zone", "3": "Marsh Conversion to Mudflat", "4": "Marsh Conversion to Open Water", "5": "Tidal Marsh"}
 }
 ]
 }]
