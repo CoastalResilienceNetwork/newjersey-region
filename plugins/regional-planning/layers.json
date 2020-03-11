@@ -202,5 +202,37 @@
                 "includeAllLayers": true
             }
         ]
-    }
+    },   
+    {
+        "displayName": "Hurricane Sandy",
+        "server": {
+            "type": "ags",
+            "layerType": "dynamic",
+            "url": "https://njmaps1.rad.rutgers.edu/arcgis/rest/services/CoastalFlooding",
+            "name": "StormSurge"
+ 
+        },
+        "includeLayers": [
+            {
+                "name": "Sandy Surge Extent",
+                "displayName": "Sandy Surge Extent"
+            },
+            {
+                "name": "Storm Surge SLOSH Category 1",
+                "displayName": "Storm Surge Category 1"
+            },
+            {
+                "name": "Storm Surge SLOSH Category 2",
+                "displayName": "Storm Surge Category 2"
+            },
+            {
+                "name": "Storm Surge SLOSH Category 3",
+                "displayName": "Storm Surge Category 3"
+            },
+            {
+                "name": "Storm Surge SLOSH Category 4",
+                "displayName": "Storm Surge Category 4"
+            }
+        ]
+    }    
 ]
