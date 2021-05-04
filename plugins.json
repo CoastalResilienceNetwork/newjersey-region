@@ -1,16 +1,8 @@
 {
   "plugins": [
     {
-      "repo": "flood-slr",
-      "name": "flood-slr"
-    },
-    {
       "repo": "living-shorelines-nj",
       "name": "living-shorelines-nj"
-    },
-    {
-      "repo": "regional-planning",
-      "name": "regional-planning"
     },
     {
       "repo": "marsh-explorer",
