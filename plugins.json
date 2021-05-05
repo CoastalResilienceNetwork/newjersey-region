@@ -11,7 +11,11 @@
     {
       "repo": "risk-explorer",
       "name": "risk-explorer"
-    } 
+    },
+    {
+      "repo": "regional-planning",
+      "name": "regional-planning"
+    }
   ]
 }
  
